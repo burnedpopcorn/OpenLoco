@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"GMLive_action",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"GMLive_action",
+  "parent":{
+    "name":"Runtime",
+    "path":"folders/Extensions/GMLive/Internal/Runtime.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

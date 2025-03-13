@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"Fmod_Functions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Fmod_Functions",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Extensions/FMOD/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

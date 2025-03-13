@@ -1,0 +1,11 @@
+image_speed = 0.35;
+show = 0;
+depth = -100;
+state = 1;
+coins = 0;
+coinmax = 10;
+coincountdown = 10;
+coincountdownmax = 10;
+countdown = 25;
+angle = random_range(0, 360);
+coinslast = 0;

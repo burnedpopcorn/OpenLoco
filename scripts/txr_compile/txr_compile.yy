@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"txr_compile",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"txr_compile",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

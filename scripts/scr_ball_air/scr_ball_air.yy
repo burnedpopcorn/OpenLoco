@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scr_ball_air",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_ball_air",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

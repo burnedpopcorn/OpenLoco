@@ -1,0 +1,10 @@
+image_speed = 0.35;
+spr_idle = spr_pizzakinshroom;
+spr_run = spr_pizzakinshroom_run;
+pizzakin = 1;
+playerid = obj_player1;
+followQueue = ds_queue_create();
+followid = playerid;
+dir = obj_player1.xscale;
+space = 0;
+set = 0;

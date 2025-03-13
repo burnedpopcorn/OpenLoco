@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scr_scareenemy",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_scareenemy",
+  "parent":{
+    "name":"Enemies",
+    "path":"folders/Scripts/Enemies.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

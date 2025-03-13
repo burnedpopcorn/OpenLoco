@@ -1,0 +1,1 @@
+targetRoom = Nlocotown_10;

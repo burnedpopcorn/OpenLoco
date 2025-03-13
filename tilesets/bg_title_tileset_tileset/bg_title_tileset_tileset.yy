@@ -1,0 +1,42 @@
+{
+  "$GMTileSet":"",
+  "%Name":"bg_title_tileset_tileset",
+  "autoTileSets":[],
+  "macroPageTiles":{
+    "SerialiseHeight":0,
+    "SerialiseWidth":0,
+    "TileSerialiseData":[],
+  },
+  "name":"bg_title_tileset_tileset",
+  "out_columns":1,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
+  "parent":{
+    "name":"Tile Sets",
+    "path":"folders/Tile Sets.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"bg_title_tileset_tileset_sprite",
+    "path":"sprites/bg_title_tileset_tileset_sprite/bg_title_tileset_tileset_sprite.yy",
+  },
+  "spriteNoExport":true,
+  "textureGroupId":{
+    "name":"pizza_group",
+    "path":"texturegroups/pizza_group",
+  },
+  "tileAnimation":{
+    "FrameData":[0,],
+    "SerialiseFrameCount":1,
+  },
+  "tileAnimationFrames":[],
+  "tileAnimationSpeed":15.0,
+  "tileHeight":540,
+  "tilehsep":4,
+  "tilevsep":4,
+  "tileWidth":960,
+  "tilexoff":2,
+  "tileyoff":2,
+  "tile_count":1,
+}

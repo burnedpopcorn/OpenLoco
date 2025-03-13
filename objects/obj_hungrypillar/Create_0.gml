@@ -1,0 +1,12 @@
+hp = 0;
+image_speed = 0.35;
+depth = 2;
+minutes = 3;
+seconds = 0;
+state = states.normal;
+hitLag = 0;
+hitX = x;
+hitY = y;
+X = x;
+Y = y;
+flash = 0;

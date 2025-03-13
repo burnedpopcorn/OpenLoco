@@ -1,0 +1,11 @@
+combo = 0;
+comboscore = 0;
+combominus = 0;
+timer_max = 1;
+timer = 0;
+title_index = 0;
+scale = 2;
+shake_timer = 0;
+scaled = false;
+depth = -6;
+alarm[0] = 1;

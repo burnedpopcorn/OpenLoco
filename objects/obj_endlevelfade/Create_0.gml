@@ -1,0 +1,14 @@
+fadealpha = 0;
+AT = 0;
+HAT = 0;
+stop = 0;
+fadein = 0;
+tutorialfinal = 0;
+depth = -600;
+music_instance = -4;
+yp = 540;
+duration = 0;
+flash = 0;
+bgX = 0;
+bgY = 0;
+bgPalette = 0;

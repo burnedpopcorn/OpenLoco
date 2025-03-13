@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"txr_sfmt",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"txr_sfmt",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

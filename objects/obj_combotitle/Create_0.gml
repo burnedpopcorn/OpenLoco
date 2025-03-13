@@ -1,0 +1,13 @@
+title_index = 0;
+title = 0;
+Y = 0;
+X = 0;
+vsp = 0;
+alpha = 3;
+x = 832;
+y = 290;
+ystart = y;
+depth = -10;
+alarm[0] = 3;
+image_speed = 0;
+scale = 1;

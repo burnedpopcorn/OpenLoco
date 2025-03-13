@@ -1,0 +1,9 @@
+ttext[0] = "I am a cow.";
+ttext[1] = "A cow who makes cow things.";
+ttext[2] = "I love begin a cow.";
+ttext[3] = "And I love doing cow things.";
+ttext[4] = "Watch me eat all the grass here.";
+ttext[5] = "...Oh wait, there isnt grass here... Only obj_solid.";
+spr_normal = spr_cow;
+spr_panic = spr_cow;
+sprite_index = spr_normal;

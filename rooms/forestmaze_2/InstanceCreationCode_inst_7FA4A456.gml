@@ -1,0 +1,1 @@
+targetRoom = forestmaze_3;

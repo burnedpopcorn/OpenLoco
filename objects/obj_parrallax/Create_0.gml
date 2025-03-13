@@ -1,0 +1,12 @@
+BG_surface = -4;
+BG_arr = [];
+BG_list = ds_list_create();
+flash = 0;
+time = 0;
+BGWave = 0;
+BGTint = 0;
+BGPanic = 0;
+BGWaveAccel = 0.1;
+panicState = 0;
+global.panicbg_surface = -4;
+global.parallaxbg_surface = -4;

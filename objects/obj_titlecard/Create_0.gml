@@ -1,0 +1,9 @@
+image_speed = 0;
+depth = -600;
+texgroups = ["hall_group"];
+title_music = "event:/music/world_1/hallway_longway/hall_title";
+music_instance = -4;
+titlecard_sprite = spr_titlecardhall;
+title_sprite = spr_titlehall;
+title_x = 0 - sprite_get_width(title_sprite);
+fade_alpha = 1;

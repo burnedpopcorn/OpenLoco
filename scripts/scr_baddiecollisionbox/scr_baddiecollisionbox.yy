@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scr_baddiecollisionbox",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_baddiecollisionbox",
+  "parent":{
+    "name":"Enemies",
+    "path":"folders/Scripts/Enemies.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

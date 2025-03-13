@@ -1,0 +1,10 @@
+event_inherited();
+image_speed = 0.35;
+yoffset = 0;
+hsp = 0;
+vsp = 0;
+grav = 0.5;
+movespeed = 3;
+playerid = obj_player1;
+spr_idle = spr_gerome_keyidle;
+spr_move = spr_gerome_keymove;

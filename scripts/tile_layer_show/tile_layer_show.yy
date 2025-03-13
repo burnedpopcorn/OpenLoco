@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"tile_layer_show",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"tile_layer_show",
+  "parent":{
+    "name":"GMS1 Compatiblity Scripts",
+    "path":"folders/Scripts/GMS1 Compatiblity Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

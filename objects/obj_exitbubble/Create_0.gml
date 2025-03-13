@@ -1,0 +1,14 @@
+instance_destroy(obj_fadeout);
+image_speed = 0.35;
+spd = 0.3;
+hub = false;
+randomize();
+xdir = irandom(360);
+ydir = irandom(360);
+alarm[0] = 150;
+alarm[1] = 30;
+state = 0;
+playingmusic = false;
+playedmusic = false;
+pitchedDown = false;
+sfx_inst = fmod_studio_event_description_create_instance(fmod_studio_system_get_event("event:/sfx/misc/exitlevel"));

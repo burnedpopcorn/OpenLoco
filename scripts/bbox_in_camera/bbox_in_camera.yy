@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"bbox_in_camera",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"bbox_in_camera",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

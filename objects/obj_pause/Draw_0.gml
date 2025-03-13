@@ -1,0 +1,3 @@
+if (cantmove == 0)
+{
+}

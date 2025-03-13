@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scr_angle_rotate",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_angle_rotate",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

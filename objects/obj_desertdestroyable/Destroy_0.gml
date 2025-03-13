@@ -1,0 +1,10 @@
+if (ds_list_find_index(global.saveroom, id) == -1)
+{
+    instance_create(x + 16, y, obj_debris);
+    instance_create(x + 16, y, obj_debris);
+    instance_create(x + 16, y, obj_debris);
+    instance_create(x + 16, y, obj_debris);
+    tile_layer_delete_at(1, x, y);
+    fmod_studio_event_oneshot_3d("event:/sfx/level_structure/destroy");
+    ds_list_add(global.saveroom, id);
+}

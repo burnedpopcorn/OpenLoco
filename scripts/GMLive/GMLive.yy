@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"GMLive",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"GMLive",
+  "parent":{
+    "name":"Internal",
+    "path":"folders/Extensions/GMLive/Internal.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

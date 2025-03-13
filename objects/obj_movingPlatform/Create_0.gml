@@ -1,0 +1,13 @@
+depth = 5;
+image_speed = 0.35;
+hsp = 0;
+vsp = 0;
+stopped = false;
+stopid = -4;
+stopSpeed = 0;
+stopSpeedMax = 4;
+stopSpeedAcc = 0.5;
+stopSpeedDecc = 0.5;
+platformDirection = targetDirection;
+trueX = x;
+trueY = y;

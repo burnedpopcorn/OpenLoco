@@ -1,0 +1,11 @@
+draw_set_alpha(1);
+draw_set_color(c_white);
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+draw_set_font(font);
+var portrait_y = obj_screen.actualHeight - sprite_get_height(portrait.sprite) - 20;
+var por_width = sprite_get_width(portrait.sprite);
+draw_sprite_ext(textbox_sprite, 0, portrait.xoff, portrait_y, textbox_xscale, 1, 0, c_white, 1);
+draw_sprite_ext(portrait.sprite, portrait.subimg, portrait.xoff, portrait_y, 1, 1, 0, c_white, 1);
+draw_set_alpha(writer.alpha);
+draw_text(portrait.xoff + por_width + 10, portrait_y + 10, writer.text);

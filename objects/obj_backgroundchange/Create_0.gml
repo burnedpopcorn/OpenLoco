@@ -1,0 +1,11 @@
+yoffest = 540;
+image_index = 0;
+image_speed = 0;
+sprite_index = spr_punchcustene;
+depth = -600;
+fade = 2;
+bgoffest = 0;
+dontrepeat = 0;
+alpha = 0;
+ending = 0;
+rock_y = 0;

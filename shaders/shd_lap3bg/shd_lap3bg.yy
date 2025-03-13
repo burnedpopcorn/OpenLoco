@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"shd_lap3bg",
+  "name":"shd_lap3bg",
+  "parent":{
+    "name":"Shaders",
+    "path":"folders/Shaders.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

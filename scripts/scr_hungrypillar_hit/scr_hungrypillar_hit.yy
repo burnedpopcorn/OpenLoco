@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scr_hungrypillar_hit",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_hungrypillar_hit",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"GMLive_roomLoader",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"GMLive_roomLoader",
+  "parent":{
+    "name":"Misc",
+    "path":"folders/Extensions/GMLive/Internal/Misc.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

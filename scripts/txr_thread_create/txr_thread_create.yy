@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"txr_thread_create",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"txr_thread_create",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

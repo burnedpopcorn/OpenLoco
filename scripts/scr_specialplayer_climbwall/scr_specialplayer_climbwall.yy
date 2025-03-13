@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scr_specialplayer_climbwall",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_specialplayer_climbwall",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,9 @@
+text = "Phase";
+image_xscale = 6;
+image_yscale = 6;
+image_alpha = 0;
+angle_sign = sign(image_angle);
+chilling = false;
+dying = false;
+y = obj_screen.actualHeight / 4;
+sheight = 0;

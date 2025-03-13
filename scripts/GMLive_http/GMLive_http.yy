@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"GMLive_http",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"GMLive_http",
+  "parent":{
+    "name":"Misc",
+    "path":"folders/Extensions/GMLive/Internal/Misc.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

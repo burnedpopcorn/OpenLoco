@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scr_destroy_destructibles",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_destroy_destructibles",
+  "parent":{
+    "name":"Utilities",
+    "path":"folders/Scripts/Utilities.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

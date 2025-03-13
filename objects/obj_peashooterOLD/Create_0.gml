@@ -1,0 +1,13 @@
+image_speed = 0.35;
+scr_collision_init();
+grav = 0.3;
+state = states.normal;
+grabber = undefined;
+distance = 400;
+type = "normal";
+paletteselect = 0;
+shooting_speed = 60;
+shots_left = 1;
+spr_idle = spr_peashooter_idle;
+spr_shoot = spr_peashooter_shoot;
+last_saw = false;

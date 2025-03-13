@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scr_savescore",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_savescore",
+  "parent":{
+    "name":"Saving",
+    "path":"folders/Scripts/Utilities/Saving.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,12 @@
+draw_set_font(global.creditsfont);
+draw_set_halign(fa_center);
+draw_set_color(c_black);
+var _ShakeX = random_range(2, -2);
+var _PosBuff = 8;
+draw_text((480 + _ShakeX) - _PosBuff, 100 + _PosBuff, "Uh oh...");
+draw_text((480 + _ShakeX) - _PosBuff, 164 + _PosBuff, "This room hasnt been set yet!");
+draw_text((480 + _ShakeX) - _PosBuff, 364 + _PosBuff, "Go back by pressing ESC.");
+draw_set_color(c_white);
+draw_text(480 + _ShakeX, 100, "Uh oh...");
+draw_text(480 + _ShakeX, 164, "This room hasnt been set yet!");
+draw_text(480 + _ShakeX, 364, "Go back by pressing ESC.");

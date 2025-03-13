@@ -1,0 +1,16 @@
+spr_normal = spr_yoshiNCP;
+spr_panic = spr_yoshiNCP;
+contentindex = 0;
+contentalpha = 0;
+contenty = 0;
+bubblealpha = 1;
+image_speed = 0.35;
+depth = -6;
+sprite_index = spr_normal;
+activatex = 0;
+bubblebox_index = 0;
+ttext[0] = "";
+sound[0] = -4;
+characterportrait = spr_yoshiportrait;
+flash = 0;
+sprbubblebox = spr_bubbleboxsmall;

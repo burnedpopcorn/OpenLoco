@@ -1,0 +1,11 @@
+shake = [0, 0, 0];
+alpha = [0, 0, 0];
+size = [2, 2, 2];
+activate = [false, false, false];
+done = [false, false, false];
+hsp = [0, 0, 0];
+vsp = [0, 0, 0];
+X = [480, 480, 480];
+Y = [120, 120, 120];
+falling = false;
+mustrack = 0;

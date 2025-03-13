@@ -1,0 +1,15 @@
+global.minutesspecial = 3;
+global.secondsspecial = 0;
+global.fillspecial = ((global.minutesspecial * 60) + global.secondsspecial) * 60;
+global.collectspecialmax = instance_number(obj_specialcollect);
+alarm[0] = 60;
+pitchmusic = 1;
+xscaletimer = 1;
+yscaletimer = 1;
+angletimer = 0;
+anglespeed = 0;
+angledirection = 1;
+dissapear = 0;
+introactive = true;
+done = 0;
+alpha = 1;

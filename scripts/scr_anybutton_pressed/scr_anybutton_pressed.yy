@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scr_anybutton_pressed",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_anybutton_pressed",
+  "parent":{
+    "name":"Input",
+    "path":"folders/Scripts/Input.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

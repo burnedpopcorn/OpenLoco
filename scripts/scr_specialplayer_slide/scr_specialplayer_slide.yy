@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scr_specialplayer_slide",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_specialplayer_slide",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

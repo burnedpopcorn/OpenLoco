@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scr_cappy_fly",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_cappy_fly",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

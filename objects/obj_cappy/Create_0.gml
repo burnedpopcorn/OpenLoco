@@ -1,0 +1,13 @@
+player_id = -4;
+state = states.normal;
+elapsed_time = 0;
+seek = false;
+vertical = false;
+hsp = 0;
+vsp = 0;
+movespeed = 0;
+starting_speed = 0;
+move = 0;
+depth = obj_player.depth;
+mask_index = spr_hat_mask;
+alarm[1] = 5;

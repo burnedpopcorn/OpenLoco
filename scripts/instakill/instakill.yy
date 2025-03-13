@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"instakill",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"instakill",
+  "parent":{
+    "name":"Enemies",
+    "path":"folders/Scripts/Enemies.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

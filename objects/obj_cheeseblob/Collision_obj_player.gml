@@ -1,0 +1,11 @@
+instance_create(x, y, obj_slimedebris);
+instance_create(x, y, obj_slimedebris);
+instance_create(x, y, obj_slimedebris);
+instance_create(x, y, obj_slimedebris);
+instance_create(x, y, obj_slimedebris);
+instance_create(x, y, obj_slimedebris);
+instance_create(x, y, obj_slimedebris);
+instance_create(x, y, obj_slimedebris);
+other.state = states.zombie;
+other.sprite_index = spr_cheesepep_intro;
+instance_destroy();

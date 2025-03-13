@@ -1,0 +1,11 @@
+obj = -4;
+zombie_y = 0;
+shake = 2;
+snd_riseup = -4;
+image_index = 0.35;
+riseup_alarm = 10;
+yoffset = 4;
+alarm[0] = riseup_alarm;
+obj_array = [];
+num = 0;
+num_max = 0;

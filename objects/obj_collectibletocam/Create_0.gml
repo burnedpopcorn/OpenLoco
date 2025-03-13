@@ -1,0 +1,9 @@
+depth = 1;
+spd = 20;
+var viewx = camera_get_view_x(view_camera[0]);
+var viewy = camera_get_view_y(view_camera[0]);
+image_speed = 0.35;
+collectx = xstart - viewx;
+collecty = ystart - viewy;
+targetx = 96;
+targety = 70;

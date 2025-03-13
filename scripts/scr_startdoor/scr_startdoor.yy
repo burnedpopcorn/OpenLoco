@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scr_startdoor",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_startdoor",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

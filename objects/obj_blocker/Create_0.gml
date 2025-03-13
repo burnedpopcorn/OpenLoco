@@ -1,0 +1,15 @@
+event_inherited();
+bubblebox_index = 0;
+contentindex = 2;
+bubblealpha = 1;
+contentalpha = 0;
+contenty = 0;
+spr_normal = spr_blocker;
+spr_panic = spr_blockersleep;
+sprbubblebox = spr_bubbleboxsmall;
+activatex = false;
+ttext[0] = "";
+sound[0] = fmod_studio_event_oneshot_3d("event:/sfx/level_structure/destroy");
+sound[1] = fmod_studio_event_oneshot_3d("event:/sfx/level_structure/destroy");
+sound[2] = fmod_studio_event_oneshot_3d("event:/sfx/level_structure/destroy");
+sound[3] = fmod_studio_event_oneshot_3d("event:/sfx/level_structure/destroy");

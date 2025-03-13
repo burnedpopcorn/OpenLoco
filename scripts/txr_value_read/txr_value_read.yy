@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"txr_value_read",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"txr_value_read",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

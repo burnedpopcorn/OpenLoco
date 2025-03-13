@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scr_enemy_rage",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_enemy_rage",
+  "parent":{
+    "name":"States",
+    "path":"folders/Scripts/Enemies/States.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

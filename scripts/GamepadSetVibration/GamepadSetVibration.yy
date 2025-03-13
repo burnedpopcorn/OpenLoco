@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"GamepadSetVibration",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"GamepadSetVibration",
+  "parent":{
+    "name":"Utilities",
+    "path":"folders/Scripts/Utilities.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

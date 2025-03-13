@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scr_tv",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_tv",
+  "parent":{
+    "name":"Utilities",
+    "path":"folders/Scripts/Utilities.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
