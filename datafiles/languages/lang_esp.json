@@ -1,0 +1,112 @@
+{
+	"mariofartdialogue": "oops I Fradedd....",
+	
+	//disclaimer obvs
+	"Disclaimer": "BIENVENIDO AL PLAYTESTING DE LOCO TOWER\n\nRECUERDA QUE ESTO ESTA EN PROGRESO,\nASI QUE NO ESTA TERMINADO\nY NO HA SALIDO AUN.\n\nRECORDAMOS QUE NO PUEDE PUBLICAR\nESTAS VERSIONES AFUERA.\n\nCASO OMISO RESULTARA\nEN LA REMOVICION DE\nTU ROLE DE PLAYTESTING.\n\nDISFRUTA DEL PLAYTESTING!",
+	
+	//title strings
+	"TitlescreenOption_StartGame": "COMENZAR",
+	"TitlescreenOption_Options": "OPCIONES",
+	"TitlescreenOption_EraseData": "BORRAR DATOS",
+	"TitlescreenOption_Credits": "CREDITOS",
+	
+	//options
+	"Options_Fullscreen": "PANTALLA COMPLETA",
+	"Options_FullscreenOn": "ON",
+	"Options_FullscreenOff": "OFF",
+	
+	"Options_Resolution": "RESOLUCIÓN",
+	
+	"Options_Language": "LENGUAJE",
+	"Options_LanguageEnglish": "ENGLISH",
+	"Options_LanguageSpanish": "ESPAÑOL",
+	
+	"Options_AudioConfig": "CONFIG DE AUDIO",
+	
+	"Options_KeyConfig": "CONFIG DE TECLADO",
+	
+	//erase game pop up thing idk anymore man I haven't seen my wife in 5 years
+	"EraseGame_YouSureBro": "¿ESTAS SEGURO?",
+	"EraseGame_Yes": "SI",
+	"EraseGame_No": "NO",
+	
+	//file select
+	"FileSelect_Delete": "¿CUAL ARCHIVO QUIERES BORRAR?",
+	"FileSelect_Choose": "ELIJE UN ARCHIVO",
+	"FileSelect_File1": "ARCHIVO 1",
+	"FileSelect_File2": "ARCHIVO 2",
+	"FileSelect_File3": "ARCHIVO 3",
+	
+	//yoshi dialouge
+	"Hub2_YoshiLine1": "Hola, Sr.Damián. Si, soy yo, Yoshi.",
+	"Hub2_YoshiLine2": "Bienvenido a la Torre, donde todo lo que hiciste o esta en la historia de tu canal aparece.",
+	"Hub2_YoshiLine3": "I'm gonna be honest, we need your help.",
+	"Hub2_YoshiLine4": "EVERYONE wants to get out of here, but our ruler, Marx, keeps us here as we abide by his rules.",
+	"Hub2_YoshiLine5": "He'll do ANYTHING to make sure he's at the top and we're all under his rule for the rest of eternity.",
+	"Hub2_YoshiLine6": "And I'm gonna be honest, I'm getting kinda sick of this dystopian hellhole, and I wanna see more of the world, so it'd be REALLY great if you could defeat him through any means.",
+	"Hub2_YoshiLine7": "He's at the top of the tower, but he sure as hell isn't defenseless - getting to the top won't be an easy job.",
+	"Hub2_YoshiLine8": "Expect to meet a lot of enemies who want to punch you in the face.",
+	"Hub2_YoshiLine9": "Some could say you'll have to fight through your entire history of content creation in a reference-heavy collage of hallways.",
+	"Hub2_YoshiLine10": "Good luck, pal!",
+	
+	//secret found message
+	//btw seg is short for segment
+	"SecretFoundSeg1": "Encontraste ",
+	"SecretFoundSeg2": " secretos de 3!",
+	
+	//blocker tutorial dialouge
+	"Tut1_BlockerLine1Seg1": "Presiona ",
+	"Tut1_BlockerLine1Seg2": " Para saltar.",
+	"Tut1_BlockerLine2": "Mientras mas lo preses, mas alto iras.",
+	
+	"Tut2_BlockerLine1Seg1": "Presiona ",
+	"Tut2_BlockerLine1Seg2": " para agacharte y poder ir por espacios de un bloque.",
+	"Tut2_BlockerLine2": "Puedes saltar mientras te agachas para ir por espacios de un bloque en el aire.",
+	
+	"Tut3_BlockerLine1Seg1": "Presiona ",
+	"Tut3_BlockerLine1Seg2": " para correr y derribar bloques.",
+	"Tut3_BlockerLine2": "Dependiendo de tu velocidad, podras pasar por determinados bloques.",
+	
+	"Tut4_BlockerLine1": "Puedes ganar momentum si corres por rampas.",
+	"Tut4_BlockerLine2": "Pruebalo aqui!",
+	
+	"Tut5_BlockerLine1Seg1": "Agarra enemigos presionando ",
+	"Tut5_BlockerLine1Seg2": " y lanzalos.",
+	"Tut5_BlockerLine2": "Haciendo eso te dejara romper bloques o otros enemigos con el.",
+	
+	"Tut6_Blocker1Line1": "Agarrar puntos te ajudan a recibir un rango. Asi que consigue los mas que puedas.",
+	
+	"Tut6_Blocker2Line1": "Agarra los peluches atrapados en cajas Si quieres conseguir mas puntos e ir a mas regiones.",
+	"Tut6_Blocker2Line2": "Estos peluches se esconden por todos lados, asi que tendras que buscarlos!",
+	
+	"Tut6_Blocker3Line1": "Destruye este patrimuralla de aqui y todo el lugar ira colapsando, y tendras que escapar antes de que el contador se acabe.",
+	"Tut6_Blocker3Line2": "Debido a que los patriblockes cambiaran sus estados al hacer esto, tendras probablemente que pasar por caminos nuevos.",
+	
+	//tv dialogue
+	"TV_Hall1Trig1": "MTS reportando las noticias como siempre! Nosotros iremos informando noticias mediante vayas por los lugares!",
+	"TV_Hall1Trig2": "Hoy este lugar nuevo esta reluciente. Es parecido a un lugar de una piramide dorada, Pero todo esta lleno de enemigos sin contexto!",
+	
+	"TV_Hall5": "Wow! Hay huevos en las paredes!? Eso si es estampar un huevo a la pared!",
+	
+	"TV_Hall6": "El sr.Patricio quiso estar en este sitio, asi que pusimos retratos de el.",
+	
+	"TV_HallEscape1": "EL LUGAR ESTA COLLAPSANDO!! CORRAN, CUBRANSE SOBRE MESAS O AGARREN SUS PARAGUAS, NINGUNO LES SALVARA DE ESTE LUGAR COLAPSANDO!!",
+	
+	//transformation info text
+	"Transfo_Zombie": ": saltar. / izq. or der. : moverse.",
+	
+	"Transfo_SkaterSeg1": ": saltar. / aire y ",
+	"Transfo_SkaterSeg2": ": burla con estilo.",
+	
+	//room names
+	"HubstartRN": "BIENVENIDO A LA TORRE",
+	"HubtutorialRN": "CAIDO A LAS INSTRUCCIONES",
+	"Hub1RN": "DISFRUTE DE SU\nESTANCIA AQUI",
+	"Hub2RN": "EL LOBBY",
+	"HubhallRN": "LA REGION HALL",
+	"HublocotownRN": "REGION LOCO TOWN",
+	"HubforestmazeRN": "REGION FOREST MAZE",
+	"HubmiddleRN": "...",
+	"HubmagmamineRN": "REGION MAGMA MINE",
+	
+}

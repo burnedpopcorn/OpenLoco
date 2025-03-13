@@ -1,0 +1,112 @@
+{
+	"mariofartdialogue": "oops I Fradedd....",
+	
+	"_comment" : "disclaimer obvs"
+	"Disclaimer": "WELCOME TO LOCO TOWER PLAYTESTING\n\nREMEMBER THAT THIS IS WIP,\nSO THINGS ARENT DONE YET\nAND THE FANGAME ISNT OUT YET.\n\nWE REMIND THAT YOU CANT LEAK\nTHE PLAYTESTING BUILDS.\n\nCASE OMMITED WILL RESULT\nIN THE REMOVAL OF YOUR\nPLAYTESTING ROLE.\n\nENJOY THIS PLAYTESTING BUILD!",
+	
+	"_comment" : "title strings"
+	"TitlescreenOption_StartGame": "START GAME",
+	"TitlescreenOption_Options": "OPTIONS",
+	"TitlescreenOption_EraseData": "ERASE DATA",
+	"TitlescreenOption_Credits": "CREDITS",
+	
+	"_comment" : "options"
+	"Options_Fullscreen": "FULLSCREEN",
+	"Options_FullscreenOn": "ON",
+	"Options_FullscreenOff": "OFF",
+	
+	"Options_Resolution": "RESOLUTION",
+	
+	"Options_Language": "LANGUAGE",
+	"Options_LanguageEnglish": "ENGLISH",
+	"Options_LanguageSpanish": "ESPAÑOL",
+	
+	"Options_AudioConfig": "AUDIO CONFIG",
+	
+	"Options_KeyConfig": "KEY CONFIG",
+	
+	"_comment" : "erase game pop up thing idk anymore man I haven't seen my wife in 5 years"
+	"EraseGame_YouSureBro": "ARE YOU SURE?",
+	"EraseGame_Yes": "YES",
+	"EraseGame_No": "NO",
+	
+	"_comment" : "file select"
+	"FileSelect_Delete": "WHICH DO YOU WANT TO DELETE?",
+	"FileSelect_Choose": "CHOOSE A FILE",
+	"FileSelect_File1": "FILE 1",
+	"FileSelect_File2": "FILE 2",
+	"FileSelect_File3": "FILE 3",
+	
+	"_comment" : "yoshi dialouge"
+	"Hub2_YoshiLine1": "Hello, Mr. Damian. Yeah, it's me, Yoshi.",
+	"Hub2_YoshiLine2": "Welcome to the Tower, where everything you've met in your time as a Youtuber resides.",
+	"Hub2_YoshiLine3": "I'm gonna be honest, we need your help.",
+	"Hub2_YoshiLine4": "EVERYONE wants to get out of here, but our ruler, Marx, keeps us here as we abide by his rules.",
+	"Hub2_YoshiLine5": "He'll do ANYTHING to make sure he's at the top and we're all under his rule for the rest of eternity.",
+	"Hub2_YoshiLine6": "And I'm gonna be honest, I'm getting kinda sick of this dystopian hellhole, and I wanna see more of the world, so it'd be REALLY great if you could defeat him through any means.",
+	"Hub2_YoshiLine7": "He's at the top of the tower, but he sure as hell isn't defenseless - getting to the top won't be an easy job.",
+	"Hub2_YoshiLine8": "Expect to meet a lot of enemies who want to punch you in the face.",
+	"Hub2_YoshiLine9": "Some could say you'll have to fight through your entire history of content creation in a reference-heavy collage of hallways.",
+	"Hub2_YoshiLine10": "Good luck, pal!",
+	
+	"_comment" : "secret found message"
+	"_comment" : "btw seg is short for segment"
+	"SecretFoundSeg1": "You found ",
+	"SecretFoundSeg2": " secrets out of 3!",
+	
+	"_comment" : "blocker tutorial dialogue"
+	"Tut1_BlockerLine1Seg1": "Press ",
+	"Tut1_BlockerLine1Seg2": " to jump.",
+	"Tut1_BlockerLine2": "The longer you hold it, the higher you jump.",
+	
+	"Tut2_BlockerLine1Seg1": "Press ",
+	"Tut2_BlockerLine1Seg2": " to duck and to be able to go under one block spaces.",
+	"Tut2_BlockerLine2": "You can jump while ducking to be able to pass through one block spaces in the air.",
+	
+	"Tut3_BlockerLine1Seg1": "Press ",
+	"Tut3_BlockerLine1Seg2": " to start running and break blocks.",
+	"Tut3_BlockerLine2": "Depending on your velocity, you can go through and break other blocks.",
+	
+	"Tut4_BlockerLine1": "You can gain momentum if you run on ramps.",
+	"Tut4_BlockerLine2": "Try it here!",
+	
+	"Tut5_BlockerLine1Seg1": "Grab the enemies by pressing ",
+	"Tut5_BlockerLine1Seg2": " and throw them.",
+	"Tut5_BlockerLine2": "Doing so will let you break enemy blocks and kill other enemies.",
+	
+	"Tut6_Blocker1Line1": "Grabbing points helps you to receive a rank. So try to grab as many as you can.",
+	
+	"Tut6_Blocker2Line1": "Grab the stuffed animals if you want to get more points and go to more levels.",
+	"Tut6_Blocker2Line2": "These guys are always hidden throughout the levels, so keep a lookout for them!",
+	
+	"Tut6_Blocker3Line1": "Destroy this patrician right here and the whole level will collapse and you have to escape the level before the timer runs out.",
+	"Tut6_Blocker3Line2": "Since the mini patrician blocks change their state by destroying him, you may unlock and have to go to new places of the level to escape.",
+	
+	"_comment" : "tv dialogue"
+	"TV_Hall1Trig1": "Today this new zone is quite shimmering (for a tower anyway). It's very similar to a level in WL4, but for some reason there are enemies from other games!",
+	"TV_Hall1Trig2": "MTS reporting here for the news as always! We will be reporting the news as you go throughout the zones!",
+	
+	"TV_Hall5": "Wow! There's giant eggs in the walls!? Now that's how you smash an egg!",
+	
+	"TV_Hall6": "Sr. Patrick wanted to be remembered in this level, so they put up framed pictures of him.",
+	
+	"TV_HallEscape1": "The zone is collapsing!! Run, cover yourselves under the tables or grab your umbrellas, neither will save you from the tower collapsing!!",
+	
+	"_comment" : "transformation info text"
+	"Transfo_Zombie": ": jump / left or right: move.",
+	
+	"Transfo_SkaterSeg1": ": jump / air and ",
+	"Transfo_SkaterSeg2": ": styled taunt.",
+	
+	"_comment" : "room names"
+	"HubstartRN": "WELCOME TO THE TOWER",
+	"HubtutorialRN": "FALLEN TO THE INSTRUCTIONS",
+	"Hub1RN": "PLEASE ENJOY YOUR STAY",
+	"Hub2RN": "THE LOBBY",
+	"HubhallRN": "THE HALL REGION",
+	"HublocotownRN": "REGION LOCO TOWN",
+	"HubforestmazeRN": "REGION FOREST MAZE",
+	"HubmiddleRN": "...",
+	"HubmagmamineRN": "REGION MAGMA MINE",
+	
+}
