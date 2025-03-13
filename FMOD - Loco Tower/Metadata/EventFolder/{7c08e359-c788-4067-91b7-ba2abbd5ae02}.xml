@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+  <object class="EventFolder" id="{7c08e359-c788-4067-91b7-ba2abbd5ae02}">
+    <property name="name">
+      <value>slip</value>
+    </property>
+    <relationship name="folder">
+      <destination>{4c3ed608-92c6-4e63-a127-dcd7ad210711}</destination>
+    </relationship>
+  </object>
+</objects>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+  <object class="EventFolder" id="{a645b9cc-dbd3-4218-8cbb-eb41ec16d9a2}">
+    <property name="name">
+      <value>secretegg</value>
+    </property>
+    <relationship name="folder">
+      <destination>{b6a8e316-c143-4e3e-8cd8-2c967867ff7e}</destination>
+    </relationship>
+  </object>
+</objects>

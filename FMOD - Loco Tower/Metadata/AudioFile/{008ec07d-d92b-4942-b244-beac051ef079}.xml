@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+  <object class="AudioFile" id="{008ec07d-d92b-4942-b244-beac051ef079}">
+    <property name="assetPath">
+      <value>SFX/sfx_marxstun.ogg</value>
+    </property>
+    <property name="frequencyInKHz">
+      <value>48</value>
+    </property>
+    <property name="channelCount">
+      <value>2</value>
+    </property>
+    <property name="length">
+      <value>3.852</value>
+    </property>
+    <relationship name="masterAssetFolder">
+      <destination>{2e44fb68-cc11-48aa-a654-689cd4eb6ada}</destination>
+    </relationship>
+  </object>
+</objects>

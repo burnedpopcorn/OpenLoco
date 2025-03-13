@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+  <object class="AudioFile" id="{9404074f-94c0-47f3-b581-c0d419690691}">
+    <property name="assetPath">
+      <value>SFX/sfx_mach2jump.ogg</value>
+    </property>
+    <property name="frequencyInKHz">
+      <value>48</value>
+    </property>
+    <property name="channelCount">
+      <value>1</value>
+    </property>
+    <property name="length">
+      <value>0.2493333</value>
+    </property>
+    <relationship name="masterAssetFolder">
+      <destination>{2e44fb68-cc11-48aa-a654-689cd4eb6ada}</destination>
+    </relationship>
+  </object>
+</objects>

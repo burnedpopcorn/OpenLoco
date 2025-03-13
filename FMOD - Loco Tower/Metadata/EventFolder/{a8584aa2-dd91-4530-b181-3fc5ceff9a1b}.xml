@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+  <object class="EventFolder" id="{a8584aa2-dd91-4530-b181-3fc5ceff9a1b}">
+    <property name="name">
+      <value>taunt</value>
+    </property>
+    <relationship name="folder">
+      <destination>{4c3ed608-92c6-4e63-a127-dcd7ad210711}</destination>
+    </relationship>
+  </object>
+</objects>

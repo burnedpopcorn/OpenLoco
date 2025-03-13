@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+  <object class="AudioFile" id="{7a7b0e24-3768-467c-85af-6173938c3154}">
+    <property name="assetPath">
+      <value>SFX/sfx_escapespawn.ogg</value>
+    </property>
+    <property name="frequencyInKHz">
+      <value>48</value>
+    </property>
+    <property name="channelCount">
+      <value>1</value>
+    </property>
+    <property name="length">
+      <value>0.7826666</value>
+    </property>
+    <relationship name="masterAssetFolder">
+      <destination>{2e44fb68-cc11-48aa-a654-689cd4eb6ada}</destination>
+    </relationship>
+  </object>
+</objects>

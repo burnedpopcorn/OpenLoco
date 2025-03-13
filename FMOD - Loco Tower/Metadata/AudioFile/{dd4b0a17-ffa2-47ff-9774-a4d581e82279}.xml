@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+  <object class="AudioFile" id="{dd4b0a17-ffa2-47ff-9774-a4d581e82279}">
+    <property name="assetPath">
+      <value>Music/mu_titlecardforestmaze.ogg</value>
+    </property>
+    <property name="frequencyInKHz">
+      <value>48</value>
+    </property>
+    <property name="channelCount">
+      <value>2</value>
+    </property>
+    <property name="length">
+      <value>7.713333</value>
+    </property>
+    <relationship name="masterAssetFolder">
+      <destination>{2e44fb68-cc11-48aa-a654-689cd4eb6ada}</destination>
+    </relationship>
+  </object>
+</objects>

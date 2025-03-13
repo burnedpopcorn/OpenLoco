@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+  <object class="AudioFile" id="{0f91e87d-8e47-42ac-a7c5-74b842351b1d}">
+    <property name="assetPath">
+      <value>SFX/sfx_lap.ogg</value>
+    </property>
+    <property name="frequencyInKHz">
+      <value>44</value>
+    </property>
+    <property name="channelCount">
+      <value>2</value>
+    </property>
+    <property name="length">
+      <value>5.9186664</value>
+    </property>
+    <relationship name="masterAssetFolder">
+      <destination>{2e44fb68-cc11-48aa-a654-689cd4eb6ada}</destination>
+    </relationship>
+  </object>
+</objects>
