@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+  <object class="AudioFile" id="{1d76b9f4-448f-4dcd-b44c-2f39a130c4eb}">
+    <property name="assetPath">
+      <value>SFX/sfx_voicehappy1_damian.ogg</value>
+    </property>
+    <property name="frequencyInKHz">
+      <value>48</value>
+    </property>
+    <property name="channelCount">
+      <value>2</value>
+    </property>
+    <property name="length">
+      <value>2.028</value>
+    </property>
+    <relationship name="masterAssetFolder">
+      <destination>{e6799016-f06a-4737-b66b-80e9fa534df8}</destination>
+    </relationship>
+  </object>
+</objects>

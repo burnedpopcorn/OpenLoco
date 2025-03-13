@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+  <object class="AudioFile" id="{fbbdb77e-0101-4018-8b09-dee8de5d9164}">
+    <property name="assetPath">
+      <value>Music/mu_patrickdepth.ogg</value>
+    </property>
+    <property name="frequencyInKHz">
+      <value>48</value>
+    </property>
+    <property name="channelCount">
+      <value>2</value>
+    </property>
+    <property name="length">
+      <value>42.646667</value>
+    </property>
+    <relationship name="masterAssetFolder">
+      <destination>{e6799016-f06a-4737-b66b-80e9fa534df8}</destination>
+    </relationship>
+  </object>
+</objects>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+  <object class="AudioFile" id="{de57b0c9-52a3-4e55-aa94-798e99acac32}">
+    <property name="assetPath">
+      <value>Music/sfx_pause.ogg</value>
+    </property>
+    <property name="frequencyInKHz">
+      <value>48</value>
+    </property>
+    <property name="channelCount">
+      <value>2</value>
+    </property>
+    <property name="length">
+      <value>0.6733333</value>
+    </property>
+    <relationship name="masterAssetFolder">
+      <destination>{e6799016-f06a-4737-b66b-80e9fa534df8}</destination>
+    </relationship>
+  </object>
+</objects>

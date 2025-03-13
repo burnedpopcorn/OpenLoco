@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+  <object class="AudioFile" id="{ddd28837-3fe8-4902-b6bc-bffb020e38b2}">
+    <property name="assetPath">
+      <value>SFX/sfx_slipbump4.ogg</value>
+    </property>
+    <property name="frequencyInKHz">
+      <value>48</value>
+    </property>
+    <property name="channelCount">
+      <value>1</value>
+    </property>
+    <property name="length">
+      <value>0.5533333</value>
+    </property>
+    <relationship name="masterAssetFolder">
+      <destination>{e6799016-f06a-4737-b66b-80e9fa534df8}</destination>
+    </relationship>
+  </object>
+</objects>

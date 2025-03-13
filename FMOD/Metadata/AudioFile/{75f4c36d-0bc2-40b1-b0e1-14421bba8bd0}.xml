@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+  <object class="AudioFile" id="{75f4c36d-0bc2-40b1-b0e1-14421bba8bd0}">
+    <property name="assetPath">
+      <value>Music/sfx_punch.ogg</value>
+    </property>
+    <property name="frequencyInKHz">
+      <value>48</value>
+    </property>
+    <property name="channelCount">
+      <value>2</value>
+    </property>
+    <property name="length">
+      <value>0.5</value>
+    </property>
+    <relationship name="masterAssetFolder">
+      <destination>{e6799016-f06a-4737-b66b-80e9fa534df8}</destination>
+    </relationship>
+  </object>
+</objects>
