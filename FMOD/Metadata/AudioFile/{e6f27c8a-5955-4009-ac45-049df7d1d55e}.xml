@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+  <object class="AudioFile" id="{e6f27c8a-5955-4009-ac45-049df7d1d55e}">
+    <property name="assetPath">
+      <value>Music/mu_pause_escape.ogg</value>
+    </property>
+    <property name="frequencyInKHz">
+      <value>48</value>
+    </property>
+    <property name="channelCount">
+      <value>2</value>
+    </property>
+    <property name="length">
+      <value>42.670666</value>
+    </property>
+    <relationship name="masterAssetFolder">
+      <destination>{ec0248fe-627f-4594-9c43-5703891426d7}</destination>
+    </relationship>
+  </object>
+</objects>

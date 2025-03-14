@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+  <object class="AudioFile" id="{d056a57a-0f49-4707-a3e2-1f2112cd2cf1}">
+    <property name="assetPath">
+      <value>SFX/sfx_enemyscream3.ogg</value>
+    </property>
+    <property name="frequencyInKHz">
+      <value>48</value>
+    </property>
+    <property name="channelCount">
+      <value>1</value>
+    </property>
+    <property name="length">
+      <value>1.4093333</value>
+    </property>
+    <relationship name="masterAssetFolder">
+      <destination>{ec0248fe-627f-4594-9c43-5703891426d7}</destination>
+    </relationship>
+  </object>
+</objects>

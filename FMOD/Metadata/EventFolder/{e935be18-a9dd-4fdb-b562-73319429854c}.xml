@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+  <object class="EventFolder" id="{e935be18-a9dd-4fdb-b562-73319429854c}">
+    <property name="name">
+      <value>patripi</value>
+    </property>
+    <relationship name="folder">
+      <destination>{c234a65f-e7ba-4792-8e1b-ced844493597}</destination>
+    </relationship>
+  </object>
+</objects>

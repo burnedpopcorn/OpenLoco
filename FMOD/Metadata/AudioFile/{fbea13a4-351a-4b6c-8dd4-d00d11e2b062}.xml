@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+  <object class="AudioFile" id="{fbea13a4-351a-4b6c-8dd4-d00d11e2b062}">
+    <property name="assetPath">
+      <value>Music/mu_menuselect.ogg</value>
+    </property>
+    <property name="frequencyInKHz">
+      <value>48</value>
+    </property>
+    <property name="channelCount">
+      <value>2</value>
+    </property>
+    <property name="length">
+      <value>119.18533</value>
+    </property>
+    <relationship name="masterAssetFolder">
+      <destination>{ec0248fe-627f-4594-9c43-5703891426d7}</destination>
+    </relationship>
+  </object>
+</objects>

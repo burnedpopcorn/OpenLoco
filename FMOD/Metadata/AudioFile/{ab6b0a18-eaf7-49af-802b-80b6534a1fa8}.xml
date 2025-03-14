@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+  <object class="AudioFile" id="{ab6b0a18-eaf7-49af-802b-80b6534a1fa8}">
+    <property name="assetPath">
+      <value>SFX/sfx_eggcrack.ogg</value>
+    </property>
+    <property name="frequencyInKHz">
+      <value>48</value>
+    </property>
+    <property name="channelCount">
+      <value>1</value>
+    </property>
+    <property name="length">
+      <value>0.8253333</value>
+    </property>
+    <relationship name="masterAssetFolder">
+      <destination>{ec0248fe-627f-4594-9c43-5703891426d7}</destination>
+    </relationship>
+  </object>
+</objects>
