@@ -20,9 +20,9 @@ Add Packages
 - FssAy Discord WebHook		(DONE)
 - NekoPresence				(DONE)
 - Official FMOD Extension	(DONE)
+- rtShell (DONE)
 
 - Mr. Unown Collisions (dont import, but take code)
-- rtShell
 
 -----------------------------------------------------------
 
