@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Trash",
-    "path":"folders/Sprites/Unsorted | Leftovers/Trash.yy",
+    "path":"folders/Sprites/Pizza Tower Leftovers/Trash.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

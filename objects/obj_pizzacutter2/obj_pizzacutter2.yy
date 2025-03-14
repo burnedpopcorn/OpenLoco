@@ -2,16 +2,16 @@
   "$GMObject":"",
   "%Name":"obj_pizzacutter2",
   "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":{"name":"obj_pizzacutter1","path":"objects/obj_pizzacutter1/obj_pizzacutter1.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":{"name":"obj_pizzacutterthwomp1","path":"objects/obj_pizzacutterthwomp1/obj_pizzacutterthwomp1.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_pizzacutter1","path":"objects/obj_pizzacutter1/obj_pizzacutter1.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_pizzacutterthwomp1","path":"objects/obj_pizzacutterthwomp1/obj_pizzacutterthwomp1.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_pizzacutter2",
   "overriddenProperties":[],
   "parent":{
     "name":"World 1",
-    "path":"folders/Objects/Room structure/World 1.yy",
+    "path":"folders/Objects/Room Structure/World 1.yy",
   },
   "parentObjectId":{
     "name":"obj_hurtbox",

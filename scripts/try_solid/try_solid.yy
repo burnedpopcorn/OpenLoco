@@ -1,12 +1,12 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"try_solid",
   "isCompatibility":false,
   "isDnD":false,
   "name":"try_solid",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"UNSORTED",
+    "path":"folders/Scripts/UNSORTED.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

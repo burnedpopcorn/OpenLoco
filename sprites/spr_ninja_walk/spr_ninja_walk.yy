@@ -29,7 +29,7 @@
   "origin":4,
   "parent":{
     "name":"Pizza Ninja",
-    "path":"folders/Sprites/Unsorted | Leftovers/Pizza Ninja.yy",
+    "path":"folders/Sprites/Pizza Tower Leftovers/Pizza Ninja.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -36,7 +36,7 @@
   "origin":4,
   "parent":{
     "name":"Pepperman",
-    "path":"folders/Sprites/Unsorted | Leftovers/Pepperman.yy",
+    "path":"folders/Sprites/Pizza Tower Leftovers/Pepperman.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -28,7 +28,7 @@
   "origin":9,
   "parent":{
     "name":"Sausageman",
-    "path":"folders/Sprites/Unsorted | Leftovers/Sausageman.yy",
+    "path":"folders/Sprites/Pizza Tower Leftovers/Sausageman.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

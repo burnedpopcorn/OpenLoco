@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"_dcw_log",
   "isCompatibility":false,
   "isDnD":false,

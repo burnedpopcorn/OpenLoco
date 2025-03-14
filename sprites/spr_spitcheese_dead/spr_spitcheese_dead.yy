@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Spit Cheese",
-    "path":"folders/Sprites/Unsorted | Leftovers/Spit Cheese.yy",
+    "path":"folders/Sprites/Pizza Tower Leftovers/Spit Cheese.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

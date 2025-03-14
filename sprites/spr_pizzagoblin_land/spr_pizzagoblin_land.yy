@@ -32,7 +32,7 @@
   "origin":4,
   "parent":{
     "name":"Bomber Goblin",
-    "path":"folders/Sprites/Unsorted | Leftovers/Bomber Goblin.yy",
+    "path":"folders/Sprites/Pizza Tower Leftovers/Bomber Goblin.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

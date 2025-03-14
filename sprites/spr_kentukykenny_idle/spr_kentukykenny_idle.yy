@@ -40,7 +40,7 @@
   "origin":4,
   "parent":{
     "name":"Kentucky Kenny",
-    "path":"folders/Sprites/Unsorted | Leftovers/Kentucky Kenny.yy",
+    "path":"folders/Sprites/Pizza Tower Leftovers/Kentucky Kenny.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -6,8 +6,8 @@
   "name":"obj_roundSlope",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Collision",
+    "path":"folders/Objects/Collision.yy",
   },
   "parentObjectId":null,
   "persistent":false,

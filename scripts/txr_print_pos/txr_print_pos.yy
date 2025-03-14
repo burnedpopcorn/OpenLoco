@@ -1,12 +1,12 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"txr_print_pos",
   "isCompatibility":false,
   "isDnD":false,
   "name":"txr_print_pos",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"UNSORTED",
+    "path":"folders/Scripts/UNSORTED.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

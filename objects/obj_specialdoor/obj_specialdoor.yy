@@ -6,8 +6,8 @@
   "name":"obj_specialdoor",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"UNSORTED",
+    "path":"folders/Objects/UNSORTED.yy",
   },
   "parentObjectId":null,
   "persistent":false,

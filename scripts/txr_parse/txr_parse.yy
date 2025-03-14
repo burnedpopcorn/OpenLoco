@@ -1,12 +1,12 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"txr_parse",
   "isCompatibility":false,
   "isDnD":false,
   "name":"txr_parse",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"UNSORTED",
+    "path":"folders/Scripts/UNSORTED.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

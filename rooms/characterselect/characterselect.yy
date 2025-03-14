@@ -1,5 +1,5 @@
 {
-  "$GMRoom":"",
+  "$GMRoom":"v1",
   "%Name":"characterselect",
   "creationCodeFile":null,
   "inheritCode":false,
@@ -13,8 +13,8 @@
   ],
   "name":"characterselect",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"Blank or Unused",
+    "path":"folders/Rooms/Testing/Blank or Unused.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

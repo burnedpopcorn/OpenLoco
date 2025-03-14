@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"GamepadSetVibration",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"colmesh_collide",
   "isCompatibility":false,
   "isDnD":false,

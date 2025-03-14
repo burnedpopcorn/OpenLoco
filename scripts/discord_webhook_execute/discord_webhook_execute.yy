@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"discord_webhook_execute",
   "isCompatibility":false,
   "isDnD":false,

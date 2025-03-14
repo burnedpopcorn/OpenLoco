@@ -29,8 +29,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Effects and particles",
-    "path":"folders/Sprites/Effects and particles.yy",
+    "name":"Effects and Particles",
+    "path":"folders/Sprites/Effects and Particles.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

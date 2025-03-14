@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"GMLive_seekSetOp",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,12 +1,12 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"action_kill_object",
   "isCompatibility":false,
   "isDnD":false,
   "name":"action_kill_object",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"UNSORTED",
+    "path":"folders/Scripts/UNSORTED.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

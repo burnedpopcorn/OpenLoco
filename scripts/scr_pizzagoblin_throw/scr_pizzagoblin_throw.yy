@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_pizzagoblin_throw",
   "isCompatibility":false,
   "isDnD":false,

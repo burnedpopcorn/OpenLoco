@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_enemy_stun",
   "isCompatibility":false,
   "isDnD":false,

@@ -2,14 +2,14 @@
   "$GMObject":"",
   "%Name":"obj_dresser",
   "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":{"name":"obj_player1","path":"objects/obj_player1/obj_player1.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_player1","path":"objects/obj_player1/obj_player1.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_dresser",
   "overriddenProperties":[],
   "parent":{
     "name":"Unused",
-    "path":"folders/Objects/Room structure/Unused.yy",
+    "path":"folders/Objects/Room Structure/Unused.yy",
   },
   "parentObjectId":null,
   "persistent":false,

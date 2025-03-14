@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Warps",
-    "path":"folders/Objects/Room structure/Generic/Warps.yy",
+    "path":"folders/Objects/Room Structure/Generic/Warps.yy",
   },
   "parentObjectId":null,
   "persistent":false,

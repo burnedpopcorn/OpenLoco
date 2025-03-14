@@ -29,7 +29,7 @@
   "origin":4,
   "parent":{
     "name":"Fencer",
-    "path":"folders/Sprites/Unsorted | Leftovers/Fencer.yy",
+    "path":"folders/Sprites/Pizza Tower Leftovers/Fencer.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

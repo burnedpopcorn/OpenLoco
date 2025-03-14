@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_deactivate_escape",
   "isCompatibility":false,
   "isDnD":false,

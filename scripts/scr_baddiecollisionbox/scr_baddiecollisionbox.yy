@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_baddiecollisionbox",
   "isCompatibility":false,
   "isDnD":false,

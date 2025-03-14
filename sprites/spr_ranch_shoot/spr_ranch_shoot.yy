@@ -41,7 +41,7 @@
   "origin":4,
   "parent":{
     "name":"Rancher",
-    "path":"folders/Sprites/Unsorted | Leftovers/Rancher.yy",
+    "path":"folders/Sprites/Pizza Tower Leftovers/Rancher.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

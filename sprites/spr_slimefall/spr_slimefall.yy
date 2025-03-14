@@ -28,7 +28,7 @@
   "origin":4,
   "parent":{
     "name":"CheeseSlime",
-    "path":"folders/Sprites/Unsorted | Leftovers/CheeseSlime.yy",
+    "path":"folders/Sprites/Pizza Tower Leftovers/CheeseSlime.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

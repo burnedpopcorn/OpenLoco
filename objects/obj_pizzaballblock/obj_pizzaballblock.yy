@@ -2,14 +2,14 @@
   "$GMObject":"",
   "%Name":"obj_pizzaballblock",
   "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_pizzaballblock",
   "overriddenProperties":[],
   "parent":{
     "name":"World 3",
-    "path":"folders/Objects/Room structure/World 3.yy",
+    "path":"folders/Objects/Room Structure/World 3.yy",
   },
   "parentObjectId":{
     "name":"obj_bombblock",

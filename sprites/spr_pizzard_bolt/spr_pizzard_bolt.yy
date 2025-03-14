@@ -29,7 +29,7 @@
   "origin":4,
   "parent":{
     "name":"Pizzard",
-    "path":"folders/Sprites/Unsorted | Leftovers/Pizzard.yy",
+    "path":"folders/Sprites/Pizza Tower Leftovers/Pizzard.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

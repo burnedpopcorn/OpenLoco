@@ -1,5 +1,5 @@
 {
-  "$GMRoom":"",
+  "$GMRoom":"v1",
   "%Name":"forestmaze_parent",
   "creationCodeFile":null,
   "inheritCode":false,

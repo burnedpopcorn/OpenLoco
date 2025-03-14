@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"get_savefile_ini",
   "isCompatibility":false,
   "isDnD":false,

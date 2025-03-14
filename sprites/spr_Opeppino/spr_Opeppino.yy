@@ -28,7 +28,7 @@
   "origin":0,
   "parent":{
     "name":"Peppino",
-    "path":"folders/Sprites/Unsorted | Leftovers/Peppino.yy",
+    "path":"folders/Sprites/Pizza Tower Leftovers/Peppino.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

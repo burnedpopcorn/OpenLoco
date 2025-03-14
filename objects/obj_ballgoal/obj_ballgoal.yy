@@ -2,14 +2,14 @@
   "$GMObject":"",
   "%Name":"obj_ballgoal",
   "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_ballgoal",
   "overriddenProperties":[],
   "parent":{
     "name":"World 3",
-    "path":"folders/Objects/Room structure/World 3.yy",
+    "path":"folders/Objects/Room Structure/World 3.yy",
   },
   "parentObjectId":null,
   "persistent":false,

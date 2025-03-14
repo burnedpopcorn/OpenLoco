@@ -28,7 +28,7 @@
   "origin":9,
   "parent":{
     "name":"Peasanto",
-    "path":"folders/Sprites/Unsorted | Leftovers/Peasanto.yy",
+    "path":"folders/Sprites/Pizza Tower Leftovers/Peasanto.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_player_Sjumpprep",
   "isCompatibility":false,
   "isDnD":false,

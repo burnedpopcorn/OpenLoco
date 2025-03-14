@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_panicbg_end",
   "isCompatibility":false,
   "isDnD":false,

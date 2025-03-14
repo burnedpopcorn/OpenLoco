@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"pal_swap_init_system",
   "isCompatibility":false,
   "isDnD":false,

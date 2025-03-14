@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_fakepeppino_walk",
   "isCompatibility":false,
   "isDnD":false,

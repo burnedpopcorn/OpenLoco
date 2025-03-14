@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_player_backkick",
   "isCompatibility":false,
   "isDnD":false,

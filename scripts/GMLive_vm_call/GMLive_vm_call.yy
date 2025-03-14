@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"GMLive_vm_call",
   "isCompatibility":false,
   "isDnD":false,

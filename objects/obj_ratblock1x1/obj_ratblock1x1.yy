@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Blocks",
-    "path":"folders/Objects/Room structure/Generic/Blocks.yy",
+    "path":"folders/Objects/Room Structure/Generic/Blocks.yy",
   },
   "parentObjectId":{
     "name":"obj_ratblock",

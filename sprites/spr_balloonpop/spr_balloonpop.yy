@@ -29,8 +29,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"Unsorted | Leftovers",
-    "path":"folders/Sprites/Unsorted | Leftovers.yy",
+    "name":"Pizza Tower Leftovers",
+    "path":"folders/Sprites/Pizza Tower Leftovers.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

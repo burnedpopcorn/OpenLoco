@@ -35,7 +35,7 @@
   "origin":4,
   "parent":{
     "name":"Cool Pineapple",
-    "path":"folders/Sprites/Unsorted | Leftovers/Cool Pineapple.yy",
+    "path":"folders/Sprites/Pizza Tower Leftovers/Cool Pineapple.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

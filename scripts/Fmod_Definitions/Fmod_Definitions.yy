@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"Fmod_Definitions",
   "isCompatibility":false,
   "isDnD":false,

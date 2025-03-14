@@ -3,8 +3,8 @@
   "%Name":"sh_colmesh_collider",
   "name":"sh_colmesh_collider",
   "parent":{
-    "name":"Shaders",
-    "path":"folders/Shaders.yy",
+    "name":"ColMesh Shaders",
+    "path":"folders/Shaders/ColMesh Shaders.yy",
   },
   "resourceType":"GMShader",
   "resourceVersion":"2.0",

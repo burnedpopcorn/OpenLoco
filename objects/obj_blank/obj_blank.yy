@@ -6,8 +6,8 @@
   "name":"obj_blank",
   "overriddenProperties":[],
   "parent":{
-    "name":"Game settings",
-    "path":"folders/Objects/Game settings.yy",
+    "name":"System",
+    "path":"folders/Objects/System.yy",
   },
   "parentObjectId":null,
   "persistent":false,

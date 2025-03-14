@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"pal_swap_draw_palette",
   "isCompatibility":false,
   "isDnD":false,

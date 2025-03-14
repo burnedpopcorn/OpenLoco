@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"The Noise",
-    "path":"folders/Sprites/Unsorted | Leftovers/The Noise.yy",
+    "path":"folders/Sprites/Pizza Tower Leftovers/The Noise.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

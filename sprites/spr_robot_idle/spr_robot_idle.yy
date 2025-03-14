@@ -28,7 +28,7 @@
   "origin":4,
   "parent":{
     "name":"PepBot",
-    "path":"folders/Sprites/Unsorted | Leftovers/PepBot.yy",
+    "path":"folders/Sprites/Pizza Tower Leftovers/PepBot.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

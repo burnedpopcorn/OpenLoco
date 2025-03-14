@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"pal_swap_set_tiles",
   "isCompatibility":false,
   "isDnD":false,

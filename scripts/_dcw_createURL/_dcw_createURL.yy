@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"_dcw_createURL",
   "isCompatibility":false,
   "isDnD":false,

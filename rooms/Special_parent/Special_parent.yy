@@ -1,5 +1,5 @@
 {
-  "$GMRoom":"",
+  "$GMRoom":"v1",
   "%Name":"Special_parent",
   "creationCodeFile":null,
   "inheritCode":false,
@@ -13,8 +13,8 @@
   ],
   "name":"Special_parent",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"Parent Rooms",
+    "path":"folders/Rooms/Testing/Parent Rooms.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

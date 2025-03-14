@@ -12,8 +12,8 @@
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
-    "name":"Tile Sets",
-    "path":"folders/Tile Sets.yy",
+    "name":"Pizza Tower Leftovers",
+    "path":"folders/Tile Sets/Pizza Tower Leftovers.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",

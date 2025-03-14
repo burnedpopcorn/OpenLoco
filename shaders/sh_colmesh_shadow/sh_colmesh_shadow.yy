@@ -3,8 +3,8 @@
   "%Name":"sh_colmesh_shadow",
   "name":"sh_colmesh_shadow",
   "parent":{
-    "name":"Shaders",
-    "path":"folders/Shaders.yy",
+    "name":"ColMesh Shaders",
+    "path":"folders/Shaders/ColMesh Shaders.yy",
   },
   "resourceType":"GMShader",
   "resourceVersion":"2.0",

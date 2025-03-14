@@ -28,7 +28,7 @@
   "origin":0,
   "parent":{
     "name":"Ratblock",
-    "path":"folders/Sprites/Unsorted | Leftovers/Ratblock.yy",
+    "path":"folders/Sprites/Pizza Tower Leftovers/Ratblock.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

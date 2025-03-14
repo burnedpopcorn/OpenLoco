@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Unused",
-    "path":"folders/Objects/Room structure/Unused.yy",
+    "path":"folders/Objects/Room Structure/Unused.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -6,8 +6,8 @@
   "name":"obj_chomper",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"UNSORTED",
+    "path":"folders/Objects/UNSORTED.yy",
   },
   "parentObjectId":{
     "name":"par_plant",

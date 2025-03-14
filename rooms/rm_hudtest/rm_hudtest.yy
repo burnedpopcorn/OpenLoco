@@ -1,5 +1,5 @@
 {
-  "$GMRoom":"",
+  "$GMRoom":"v1",
   "%Name":"rm_hudtest",
   "creationCodeFile":null,
   "inheritCode":false,
@@ -54,8 +54,8 @@
   ],
   "name":"rm_hudtest",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"Testing",
+    "path":"folders/Rooms/Testing.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

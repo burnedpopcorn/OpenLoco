@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"colmesh_vbuffer",
   "isCompatibility":false,
   "isDnD":false,

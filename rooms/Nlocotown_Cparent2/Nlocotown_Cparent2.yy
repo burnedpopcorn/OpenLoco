@@ -1,5 +1,5 @@
 {
-  "$GMRoom":"",
+  "$GMRoom":"v1",
   "%Name":"Nlocotown_Cparent2",
   "creationCodeFile":null,
   "inheritCode":false,

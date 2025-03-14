@@ -2,14 +2,14 @@
   "$GMObject":"",
   "%Name":"obj_junk",
   "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_junk",
   "overriddenProperties":[],
   "parent":{
     "name":"Unused",
-    "path":"folders/Objects/Room structure/Unused.yy",
+    "path":"folders/Objects/Room Structure/Unused.yy",
   },
   "parentObjectId":null,
   "persistent":false,

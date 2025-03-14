@@ -33,7 +33,7 @@
   "origin":4,
   "parent":{
     "name":"Pizzice",
-    "path":"folders/Sprites/Unsorted | Leftovers/Pizzice.yy",
+    "path":"folders/Sprites/Pizza Tower Leftovers/Pizzice.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

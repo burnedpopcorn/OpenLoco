@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"tile_layer_delete_at",
   "isCompatibility":false,
   "isDnD":false,

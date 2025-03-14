@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"pal_swap_enable_override",
   "isCompatibility":false,
   "isDnD":false,

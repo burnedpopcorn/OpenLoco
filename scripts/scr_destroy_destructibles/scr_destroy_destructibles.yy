@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"scr_destroy_destructibles",
   "isCompatibility":false,
   "isDnD":false,

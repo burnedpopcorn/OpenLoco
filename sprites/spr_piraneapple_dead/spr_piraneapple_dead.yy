@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"PiraneApple",
-    "path":"folders/Sprites/Unsorted | Leftovers/PiraneApple.yy",
+    "path":"folders/Sprites/Pizza Tower Leftovers/PiraneApple.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"World 4",
-    "path":"folders/Objects/Room structure/World 4.yy",
+    "path":"folders/Objects/Room Structure/World 4.yy",
   },
   "parentObjectId":{
     "name":"obj_solid",

@@ -32,7 +32,7 @@
   "origin":4,
   "parent":{
     "name":"Cigar",
-    "path":"folders/Sprites/Unsorted | Leftovers/Cigar.yy",
+    "path":"folders/Sprites/Pizza Tower Leftovers/Cigar.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -35,7 +35,7 @@
   "origin":4,
   "parent":{
     "name":"Big Cheese",
-    "path":"folders/Sprites/Unsorted | Leftovers/Big Cheese.yy",
+    "path":"folders/Sprites/Pizza Tower Leftovers/Big Cheese.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

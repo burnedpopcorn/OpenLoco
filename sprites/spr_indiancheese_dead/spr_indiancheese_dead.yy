@@ -26,7 +26,7 @@
   "origin":9,
   "parent":{
     "name":"Indian Cheese",
-    "path":"folders/Sprites/Unsorted | Leftovers/Indian Cheese.yy",
+    "path":"folders/Sprites/Pizza Tower Leftovers/Indian Cheese.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

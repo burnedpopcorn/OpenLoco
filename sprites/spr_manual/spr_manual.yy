@@ -38,7 +38,7 @@
   "origin":0,
   "parent":{
     "name":"Demo events",
-    "path":"folders/Sprites/Unsorted | Leftovers/Demo events.yy",
+    "path":"folders/Sprites/Pizza Tower Leftovers/Demo events.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

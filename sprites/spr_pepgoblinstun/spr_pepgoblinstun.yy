@@ -28,7 +28,7 @@
   "origin":9,
   "parent":{
     "name":"Goblin",
-    "path":"folders/Sprites/Unsorted | Leftovers/Goblin.yy",
+    "path":"folders/Sprites/Pizza Tower Leftovers/Goblin.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

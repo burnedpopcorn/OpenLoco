@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"GMLive_seekEval",
   "isCompatibility":false,
   "isDnD":false,

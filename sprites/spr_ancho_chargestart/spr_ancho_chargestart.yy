@@ -35,7 +35,7 @@
   "origin":4,
   "parent":{
     "name":"Ancho",
-    "path":"folders/Sprites/Unsorted | Leftovers/Ancho.yy",
+    "path":"folders/Sprites/Pizza Tower Leftovers/Ancho.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
