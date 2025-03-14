@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"txr_init",
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Scripts/UNSORTED.yy",
+    "name":"Tiny Expression Runtime",
+    "path":"folders/Scripts/Tiny Expression Runtime.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

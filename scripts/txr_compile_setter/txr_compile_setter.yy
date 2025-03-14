@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"txr_compile_setter",
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Scripts/UNSORTED.yy",
+    "name":"Compiler",
+    "path":"folders/Scripts/Tiny Expression Runtime/Compiler.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"txr_program_write",
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Scripts/UNSORTED.yy",
+    "name":"Program",
+    "path":"folders/Scripts/Tiny Expression Runtime/Serialization/Program.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

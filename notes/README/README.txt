@@ -3,7 +3,6 @@ OpenLoco - A Loco Tower Decompilation
 		
 (Of the Leaked August 2024 Build)
 
-GameMaker Version Used: 2024.2 
 Original GameMaker Version: 2024.6
 
 Some Organization was from Deggcomplanted
@@ -20,9 +19,11 @@ Add Packages
 - FssAy Discord WebHook		(DONE)
 - NekoPresence				(DONE)
 - Official FMOD Extension	(DONE)
-- rtShell (DONE)
+- rtShell					(DONE)
+- Tiny Expression Runtime	(DONE)
 
-- Mr. Unown Collisions (dont import, but take code)
+- Mr. Unown Collisions (NOT DONE)
+- ColMesh???
 
 -----------------------------------------------------------
 

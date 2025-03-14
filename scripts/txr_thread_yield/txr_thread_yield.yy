@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"txr_thread_yield",
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Scripts/UNSORTED.yy",
+    "name":"Runtime",
+    "path":"folders/Scripts/Tiny Expression Runtime/Runtime.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

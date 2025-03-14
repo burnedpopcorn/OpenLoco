@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"txr_compile_patch_break_continue",
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Scripts/UNSORTED.yy",
+    "name":"Compiler",
+    "path":"folders/Scripts/Tiny Expression Runtime/Compiler.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

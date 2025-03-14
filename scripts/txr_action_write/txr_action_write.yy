@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"txr_action_write",
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Scripts/UNSORTED.yy",
+    "name":"Action",
+    "path":"folders/Scripts/Tiny Expression Runtime/Serialization/Action.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

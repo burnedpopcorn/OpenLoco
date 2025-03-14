@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"txr_throw",
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Scripts/UNSORTED.yy",
+    "name":"Helper scripts",
+    "path":"folders/Scripts/Tiny Expression Runtime/Helper scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
