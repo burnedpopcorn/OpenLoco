@@ -32,7 +32,7 @@
   "origin":0,
   "parent":{
     "name":"Destroyable",
-    "path":"folders/Sprites/Level structure/Destroyable.yy",
+    "path":"folders/Sprites/Level Structure/Destroyable.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

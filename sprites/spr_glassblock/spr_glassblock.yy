@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Destroyable",
-    "path":"folders/Sprites/Level structure/Destroyable.yy",
+    "path":"folders/Sprites/Level Structure/Pizza Tower Leftovers/Destroyable.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

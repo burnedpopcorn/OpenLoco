@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_player_throw",
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Scripts/UNSORTED.yy",
+    "name":"States",
+    "path":"folders/Scripts/Player/States.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

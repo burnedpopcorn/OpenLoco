@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_lang",
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Scripts/UNSORTED.yy",
+    "name":"Utilities",
+    "path":"folders/Scripts/Utilities.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

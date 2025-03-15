@@ -29,8 +29,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Sprites/UNSORTED.yy",
+    "name":"TextBox",
+    "path":"folders/Sprites/HUD/TextBox.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

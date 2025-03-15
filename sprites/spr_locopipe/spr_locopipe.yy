@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Sprites/UNSORTED.yy",
+    "name":"LocoTown",
+    "path":"folders/Sprites/Level Structure/LocoTown.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

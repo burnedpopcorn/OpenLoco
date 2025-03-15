@@ -43,8 +43,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Sprites/UNSORTED.yy",
+    "name":"Mini Block",
+    "path":"folders/Sprites/Level Structure/Mini Block.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

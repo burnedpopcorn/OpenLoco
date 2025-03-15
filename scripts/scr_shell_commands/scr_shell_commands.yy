@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_shell_commands",
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Scripts/UNSORTED.yy",
+    "name":"rtShell",
+    "path":"folders/Scripts/rtShell.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -52,8 +52,8 @@
   },
   "origin":0,
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Sprites/UNSORTED.yy",
+    "name":"Lap 2",
+    "path":"folders/Sprites/Level Structure/Lap 2.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

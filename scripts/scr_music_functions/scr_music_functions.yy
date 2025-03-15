@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_music_functions",
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Scripts/UNSORTED.yy",
+    "name":"Sound",
+    "path":"folders/Scripts/Sound.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

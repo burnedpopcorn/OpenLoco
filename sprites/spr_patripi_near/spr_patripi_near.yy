@@ -31,8 +31,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Sprites/UNSORTED.yy",
+    "name":"Patripi",
+    "path":"folders/Sprites/Baddies/Patripi.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

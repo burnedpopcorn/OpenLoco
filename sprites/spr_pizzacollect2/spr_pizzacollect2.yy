@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Collectible",
-    "path":"folders/Sprites/Level structure/Collectible.yy",
+    "name":"Collectibles",
+    "path":"folders/Sprites/Level Structure/Collectibles.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

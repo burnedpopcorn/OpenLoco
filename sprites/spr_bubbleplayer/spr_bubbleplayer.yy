@@ -30,8 +30,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Sprites/UNSORTED.yy",
+    "name":"Bubble",
+    "path":"folders/Sprites/Player/Damian/Bubble.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -44,8 +44,8 @@
   },
   "origin":0,
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Sprites/UNSORTED.yy",
+    "name":"Longway Hallway",
+    "path":"folders/Sprites/Tilesets/Longway Hallway.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

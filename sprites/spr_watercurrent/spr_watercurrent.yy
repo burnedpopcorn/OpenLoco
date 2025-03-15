@@ -48,8 +48,8 @@
   },
   "origin":0,
   "parent":{
-    "name":"Pizza Tower Leftovers",
-    "path":"folders/Sprites/Pizza Tower Leftovers.yy",
+    "name":"Miscellanous",
+    "path":"folders/Sprites/Pizza Tower Leftovers/Miscellanous.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

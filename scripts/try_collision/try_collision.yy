@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"try_collision",
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Scripts/UNSORTED.yy",
+    "name":"Collision",
+    "path":"folders/Scripts/Collision.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

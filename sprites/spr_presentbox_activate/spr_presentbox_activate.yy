@@ -30,8 +30,8 @@
   "nineSlice":null,
   "origin":7,
   "parent":{
-    "name":"Level structure",
-    "path":"folders/Sprites/Level structure.yy",
+    "name":"Spring | Present Box",
+    "path":"folders/Sprites/Level Structure/Spring | Present Box.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

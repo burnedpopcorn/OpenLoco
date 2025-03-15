@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Door ID Blocks",
-    "path":"folders/Sprites/Doors/Door ID Blocks.yy",
+    "path":"folders/Sprites/Debug/Door ID Blocks.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

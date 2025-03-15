@@ -44,8 +44,8 @@
   },
   "origin":9,
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Sprites/UNSORTED.yy",
+    "name":"Pause",
+    "path":"folders/Sprites/HUD/Pause.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

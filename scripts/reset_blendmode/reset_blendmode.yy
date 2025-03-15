@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"reset_blendmode",
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Scripts/UNSORTED.yy",
+    "name":"Visual",
+    "path":"folders/Scripts/Utilities/Visual.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

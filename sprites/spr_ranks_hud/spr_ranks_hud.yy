@@ -30,8 +30,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Rank",
-    "path":"folders/Sprites/HUD/Rank.yy",
+    "name":"Rank and Score",
+    "path":"folders/Sprites/HUD/Rank and Score.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

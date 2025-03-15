@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Level structure",
-    "path":"folders/Sprites/Level structure.yy",
+    "name":"Sword Stone",
+    "path":"folders/Sprites/Level Structure/Sword Stone.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

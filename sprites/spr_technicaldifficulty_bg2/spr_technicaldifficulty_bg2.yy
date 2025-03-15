@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Sprites/UNSORTED.yy",
+    "name":"Technical Difficulty Screen",
+    "path":"folders/Sprites/HUD/Technical Difficulty Screen.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_matrix_math",
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Scripts/UNSORTED.yy",
+    "name":"Unown Collisions",
+    "path":"folders/Scripts/Collision/Unown Collisions.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

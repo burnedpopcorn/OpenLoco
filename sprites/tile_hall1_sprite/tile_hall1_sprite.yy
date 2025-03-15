@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Tilesets",
-    "path":"folders/Sprites/Tilesets.yy",
+    "name":"Longway Hallway",
+    "path":"folders/Sprites/Tilesets/Longway Hallway.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

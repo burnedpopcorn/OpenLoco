@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Sprites/UNSORTED.yy",
+    "name":"NPC",
+    "path":"folders/Sprites/NPC.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

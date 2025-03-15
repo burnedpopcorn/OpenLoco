@@ -27,8 +27,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Misc",
-    "path":"folders/Sprites/Misc.yy",
+    "name":"Sword Stone",
+    "path":"folders/Sprites/Level Structure/Sword Stone.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

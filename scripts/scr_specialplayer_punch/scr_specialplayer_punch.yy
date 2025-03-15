@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_specialplayer_punch",
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Scripts/UNSORTED.yy",
+    "name":"Special Moves",
+    "path":"folders/Scripts/Player/Special Moves.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

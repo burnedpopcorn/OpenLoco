@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Peppino",
-    "path":"folders/Sprites/Player/Peppino.yy",
+    "name":"Masks",
+    "path":"folders/Sprites/Player/Masks.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Arenas",
-    "path":"folders/Sprites/Level structure/Arenas.yy",
+    "path":"folders/Sprites/Level Structure/Pizza Tower Leftovers/Arenas.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

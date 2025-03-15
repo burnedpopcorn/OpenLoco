@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Sprites/UNSORTED.yy",
+    "name":"Showtime Timer",
+    "path":"folders/Sprites/HUD/Showtime Timer.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Sprites/UNSORTED.yy",
+    "name":"Hub",
+    "path":"folders/Sprites/Level Structure/Hub.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

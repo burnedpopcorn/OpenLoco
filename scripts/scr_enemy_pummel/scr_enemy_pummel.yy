@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_enemy_pummel",
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Scripts/UNSORTED.yy",
+    "name":"States",
+    "path":"folders/Scripts/Enemies/States.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

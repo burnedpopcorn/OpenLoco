@@ -38,8 +38,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Pizza portal",
-    "path":"folders/Sprites/Level structure/Pizza portal.yy",
+    "name":"Ring Portal",
+    "path":"folders/Sprites/Level Structure/Lap 2/Ring Portal.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

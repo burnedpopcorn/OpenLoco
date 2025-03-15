@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Sprites/UNSORTED.yy",
+    "name":"Mouse",
+    "path":"folders/Sprites/HUD/Mouse.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

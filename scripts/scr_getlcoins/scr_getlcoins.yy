@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_getlcoins",
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Scripts/UNSORTED.yy",
+    "name":"Saving",
+    "path":"folders/Scripts/Utilities/Saving.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

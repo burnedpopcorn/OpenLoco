@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Sprites/UNSORTED.yy",
+    "name":"HeatMeter",
+    "path":"folders/Sprites/HUD/HeatMeter.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

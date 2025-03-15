@@ -44,8 +44,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Warps",
-    "path":"folders/Sprites/Level structure/Warps.yy",
+    "name":"Pizza Tower Leftovers",
+    "path":"folders/Sprites/Level Structure/Pizza Tower Leftovers.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

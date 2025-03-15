@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_particle_system",
   "parent":{
-    "name":"Utilities",
-    "path":"folders/Scripts/Utilities.yy",
+    "name":"Visual",
+    "path":"folders/Scripts/Utilities/Visual.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

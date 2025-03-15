@@ -36,8 +36,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Sprites/UNSORTED.yy",
+    "name":"Other",
+    "path":"folders/Sprites/Player/Other.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

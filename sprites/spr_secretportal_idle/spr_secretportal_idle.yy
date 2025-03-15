@@ -38,8 +38,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Secret portal",
-    "path":"folders/Sprites/Level structure/Warps/Secret portal.yy",
+    "name":"Secret Egg Portal",
+    "path":"folders/Sprites/Level Structure/Warps/Secret Egg Portal.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

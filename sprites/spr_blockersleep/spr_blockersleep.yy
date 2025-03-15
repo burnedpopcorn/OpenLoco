@@ -28,8 +28,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Sprites/UNSORTED.yy",
+    "name":"Tutorial Blocky",
+    "path":"folders/Sprites/NPC/Tutorial Blocky.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

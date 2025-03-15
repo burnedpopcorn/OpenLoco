@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Tilesets",
-    "path":"folders/Sprites/Tilesets.yy",
+    "path":"folders/Sprites/Pizza Tower Leftovers/Tilesets.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Sprites/UNSORTED.yy",
+    "name":"Warps",
+    "path":"folders/Sprites/Level Structure/Warps.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

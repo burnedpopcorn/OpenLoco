@@ -33,8 +33,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"HUD",
-    "path":"folders/Sprites/HUD.yy",
+    "name":"Pizza Tower Leftovers",
+    "path":"folders/Sprites/Pizza Tower Leftovers.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

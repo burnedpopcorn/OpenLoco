@@ -36,8 +36,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Sprites/UNSORTED.yy",
+    "name":"Fonts",
+    "path":"folders/Sprites/HUD/Fonts.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

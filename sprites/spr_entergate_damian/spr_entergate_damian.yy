@@ -57,8 +57,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Sprites/UNSORTED.yy",
+    "name":"Damian",
+    "path":"folders/Sprites/Player/Damian.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

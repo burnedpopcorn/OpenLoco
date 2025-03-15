@@ -31,7 +31,7 @@
   "origin":4,
   "parent":{
     "name":"Cutscene",
-    "path":"folders/Sprites/HUD/Rank/Cutscene.yy",
+    "path":"folders/Sprites/HUD/Rank and Score/Cutscene.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

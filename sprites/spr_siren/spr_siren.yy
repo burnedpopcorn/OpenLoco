@@ -34,8 +34,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Misc",
-    "path":"folders/Sprites/Misc.yy",
+    "name":"Lap 2",
+    "path":"folders/Sprites/Level Structure/Lap 2.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

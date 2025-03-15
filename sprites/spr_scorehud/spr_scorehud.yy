@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Sprites/UNSORTED.yy",
+    "name":"Rank and Score",
+    "path":"folders/Sprites/HUD/Rank and Score.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

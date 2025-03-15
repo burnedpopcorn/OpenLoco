@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Tilesets",
-    "path":"folders/Sprites/Tilesets.yy",
+    "name":"LocoTown",
+    "path":"folders/Sprites/Tilesets/LocoTown.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

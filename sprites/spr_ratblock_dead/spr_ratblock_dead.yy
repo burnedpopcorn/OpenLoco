@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"Rat block",
-    "path":"folders/Sprites/Level structure/Rat block.yy",
+    "name":"PvZ Potato | Rat Block",
+    "path":"folders/Sprites/Level Structure/LocoTown/PvZ Potato | Rat Block.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

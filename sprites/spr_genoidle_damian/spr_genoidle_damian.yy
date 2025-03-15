@@ -39,8 +39,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Sprites/UNSORTED.yy",
+    "name":"Geno",
+    "path":"folders/Sprites/Player/Geno.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

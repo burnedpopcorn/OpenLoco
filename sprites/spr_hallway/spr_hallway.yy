@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Warps",
-    "path":"folders/Sprites/Doors/Warps.yy",
+    "path":"folders/Sprites/Debug/Warps.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Castle",
-    "path":"folders/Sprites/Backgrounds/Castle.yy",
+    "name":"Mansion",
+    "path":"folders/Sprites/Backgrounds/Pizza Tower Leftovers/Mansion.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

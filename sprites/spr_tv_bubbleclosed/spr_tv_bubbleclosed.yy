@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"TV",
-    "path":"folders/Sprites/HUD/TV.yy",
+    "name":"Eggplant TV Bubble",
+    "path":"folders/Sprites/HUD/TV/Eggplant TV Bubble.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -52,8 +52,8 @@
   },
   "origin":0,
   "parent":{
-    "name":"Level structure",
-    "path":"folders/Sprites/Level structure.yy",
+    "name":"Lap 2",
+    "path":"folders/Sprites/Level Structure/Lap 2.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_3dcheck",
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Scripts/UNSORTED.yy",
+    "name":"3D ColMesh",
+    "path":"folders/Scripts/Collision/3D ColMesh.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

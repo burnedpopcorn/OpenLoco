@@ -32,8 +32,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Sprites/UNSORTED.yy",
+    "name":"Sunflower",
+    "path":"folders/Sprites/Level Structure/LocoTown/Sunflower.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

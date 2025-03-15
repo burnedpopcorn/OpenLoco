@@ -39,7 +39,7 @@
   "origin":9,
   "parent":{
     "name":"Treasure",
-    "path":"folders/Sprites/Level structure/Collectible/Treasure.yy",
+    "path":"folders/Sprites/Level Structure/Collectibles/Treasure.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -28,8 +28,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Sprites/UNSORTED.yy",
+    "name":"Effects and Particles",
+    "path":"folders/Sprites/Effects and Particles.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

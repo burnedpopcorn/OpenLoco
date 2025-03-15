@@ -28,7 +28,7 @@
   "origin":4,
   "parent":{
     "name":"Haystacks",
-    "path":"folders/Sprites/Level structure/Haystacks.yy",
+    "path":"folders/Sprites/Level Structure/Pizza Tower Leftovers/Haystacks.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

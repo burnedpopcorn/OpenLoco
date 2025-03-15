@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_angle_rotate",
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Scripts/UNSORTED.yy",
+    "name":"Angle Collision",
+    "path":"folders/Scripts/Collision/Angle Collision.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

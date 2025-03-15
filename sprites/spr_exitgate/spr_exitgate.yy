@@ -27,7 +27,7 @@
   "origin":4,
   "parent":{
     "name":"Warps",
-    "path":"folders/Sprites/Level structure/Warps.yy",
+    "path":"folders/Sprites/Level Structure/Warps.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

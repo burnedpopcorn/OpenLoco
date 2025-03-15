@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"John",
-    "path":"folders/Sprites/Level structure/John.yy",
+    "name":"Patrick Pillar",
+    "path":"folders/Sprites/Level Structure/Lap 2/Patrick Pillar.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

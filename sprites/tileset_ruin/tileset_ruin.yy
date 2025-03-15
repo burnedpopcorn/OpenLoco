@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Pizza Tower Tiles",
-    "path":"folders/Sprites/Pizza Tower Leftovers/Pizza Tower Tiles.yy",
+    "name":"Tilesets",
+    "path":"folders/Sprites/Pizza Tower Leftovers/Tilesets.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

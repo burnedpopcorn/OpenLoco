@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":7,
   "parent":{
-    "name":"Level structure",
-    "path":"folders/Sprites/Level structure.yy",
+    "name":"Pizza Tower Leftovers",
+    "path":"folders/Sprites/Level Structure/Pizza Tower Leftovers.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

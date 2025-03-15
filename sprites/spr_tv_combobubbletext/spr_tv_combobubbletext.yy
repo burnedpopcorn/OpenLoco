@@ -34,8 +34,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"TV",
-    "path":"folders/Sprites/HUD/TV.yy",
+    "name":"Fonts",
+    "path":"folders/Sprites/HUD/Fonts.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

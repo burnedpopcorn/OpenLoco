@@ -34,8 +34,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Cheese Block",
-    "path":"folders/Sprites/Level structure/Cheese Block.yy",
+    "name":"Timed Block | Cheese Block",
+    "path":"folders/Sprites/Level Structure/Timed Block | Cheese Block.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
