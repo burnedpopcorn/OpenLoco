@@ -6,12 +6,12 @@ function approach(value, target, amount) {
 	return value + clamp(target - value, -abs(amount), abs(amount));
 }
 
-function chance(argument0)
+function chance(num)
 {
-    return argument0 > random(1);
+    return num > random(1);
 }
 
-function animation_end(argument0 = floor(image_index), argument1 = image_number - 1)
+function animation_end(imgindex = floor(image_index), imgframe = image_number - 1)
 {
-    return argument0 >= argument1;
+    return imgindex >= imgframe;
 }

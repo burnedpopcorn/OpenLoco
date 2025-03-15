@@ -3,8 +3,8 @@
   "%Name":"README",
   "name":"README",
   "parent":{
-    "name":"Notes",
-    "path":"folders/Notes.yy",
+    "name":"Loco_Tower",
+    "path":"Loco_Tower.yyp",
   },
   "resourceType":"GMNotes",
   "resourceVersion":"2.0",

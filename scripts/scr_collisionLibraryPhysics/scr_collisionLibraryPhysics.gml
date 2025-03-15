@@ -1,5 +1,3 @@
-#macro bbox_width (bbox_right - bbox_left)
-#macro bbox_height (bbox_bottom - bbox_top)
 /// @desc Initializes Collision Variables. To be used in Create Event.
 function scr_collision_init() {
 
@@ -8,15 +6,12 @@ function scr_collision_init() {
 	groundedSlope = false;	
 	terminalVelocity = 10;
 	onMovingPlatform = noone;
-
+	upsidedown = false;
 	grav = 0;		
 	hsp = 0;
 	vsp = 0;
 	prevHsp = 0;
 	prevVsp = 0;	
-	
-	fracHsp = 0;
-	fracVsp = 0;
 }
 
 /// @desc Handles Collision Physics.
@@ -48,91 +43,87 @@ function scr_collision() {
 	// Subpixel Fix
 	var true_hsp = hsp;
 	var true_vsp = vsp;
-	hsp = unown_absfloor(hsp);
-	vsp = unown_absfloor(vsp);
-	var wholePart = 0;
-	fracHsp += (true_hsp - hsp); 
-	
-	if (abs(fracHsp) >= 1) {
-	    wholePart = unown_absfloor(fracHsp);
-	    hsp += wholePart;
-	    fracHsp -= wholePart;
-	}	
-	fracVsp += (true_vsp - vsp);
-	if (abs(fracVsp) >= 1) {
-	    wholePart = unown_absfloor(fracVsp);
-	    vsp += wholePart;
-	    fracVsp -= wholePart;
-	}	
-	
-	// Horizontal
-	var move_hsp = clamp(abs(hsp), 0, bbox_width) * sign(hsp); // Calculate max units to move.
-	repeat ceil((abs(hsp) / bbox_width)) { // Repeat per Bbox Width.
-		if (!place_meeting_collision(x + move_hsp, y)) && !(place_meeting_collision(x, y + 1) && !place_meeting_collision(x + move_hsp, y + 1)) {			
-			x += move_hsp;	
-		} else { // If Collision is detected within Bbox Width.
-			repeat(abs(move_hsp)) { // Do pixel by pixel check.
-				
-				
-				// Move Up Slopes
-				y -= slope_check_up(x + sign(move_hsp), y);
-				// Move Down Slopes
-				y += slope_check_down(x + sign(move_hsp), y);	
-	
-	
-				// Move Down Upside Down Slopes
-				y += reverseSlope_check_down(x + sign(move_hsp), y);
-		
-				// Move Up Upside Down Slopes
-				if (vsp <= 0 && place_meeting_collision(x, y - 1)) {
-					y -= reverseSlope_check_up(x + sign(move_hsp), y);
-				}
-				
-				if (!place_meeting_collision(x + sign(move_hsp), y)) {
-					x += sign(move_hsp); 
-				} else {
-					true_hsp = 0;
-					move_hsp = 0;
-					hsp = 0;
-					break;
-				}
-			}
-			break;
-		}
-	}
-
-	// Vertical
-	var move_vsp = clamp(abs(vsp), 0, bbox_height) * sign(vsp); // Calculate max units to move.
-	repeat ceil((abs(vsp) / bbox_height)) { // Repeat per Bbox Height.
-		if (!place_meeting_collision(x, y + move_vsp)) {
-			y += move_vsp;	
-		} else { // If Collision is detected within Bbox Height.
-			repeat(abs(move_vsp)) { // Do pixel by pixel check.
-				
-				if (vsp < 0) {
-					// Move Left Slopes
-					x -= slope_check_left(x, y + sign(vsp));
-					// Move Right Slopes
-					x += slope_check_right(x, y + sign(vsp));
-				}			
-				
-				if (!place_meeting_collision(x, y + sign(move_vsp))) {
-					y += sign(move_vsp); 
-				} else {
-					true_vsp = 0;
-					move_vsp = 0;
-					vsp = 0;
-					break;
-				}
-			}
-			break;
-		}
-	}	
+	hsp = (hsp > 0) ? floor(hsp) : ceil(hsp);
+    vsp = (vsp > 0) ? floor(vsp) : ceil(vsp);
+    var move_hsp = clamp(abs(hsp), 0, bbox_right - bbox_left) * sign(hsp);
+    var max_units = 3;
+    move_hsp = hsp;
+    
+    if (!place_meeting_collision(x + move_hsp, y) && !(place_meeting_collision(x, y + 1) && !place_meeting_collision(x + move_hsp, y + 1)))
+    {
+        x += move_hsp;
+    }
+    else
+    {
+        repeat (abs(move_hsp))
+        {
+            var sh = sign(move_hsp);
+            
+            for (var k = 1; k < (max_units + 1); k++)
+            {
+                if (!place_meeting_collision(x + sh, y - k) && place_meeting_collision(x + sh, y))
+                    y -= k;
+                
+                if (!place_meeting_collision(x + sh, y) && !place_meeting_collision(x + sh, y + 1) && place_meeting_collision(x + sh, y + (k + 1)))
+                    y += k;
+                
+                if (vsp <= 0 && place_meeting_collision(x, y - 1) && !upsidedown)
+                {
+                    if (!place_meeting_collision(x + sh, y) && !place_meeting_collision(x + sh, y - (k + 1)) && place_meeting_collision(x + sh, y - (k + 2)))
+                        y -= k;
+                }
+                
+                if (!place_meeting_collision(x + sh, y + k) && place_meeting_collision(x + sh, y))
+                    y += k;
+            }
+            
+            if (!place_meeting_collision(x + sign(move_hsp), y))
+            {
+                x += sign(move_hsp);
+            }
+            else
+            {
+                true_hsp = 0;
+                move_hsp = 0;
+                break;
+            }
+        }
+    }
+    
+    var move_vsp = clamp(abs(vsp), 0, bbox_bottom - bbox_top) * sign(vsp);
+    
+    repeat (abs(move_vsp))
+    {
+        var sv = sign(move_vsp);
+        
+        for (var k = 1; k <= 3; k++)
+        {
+            if (vsp < 0 && !upsidedown)
+            {
+                if (place_meeting_collision(x, y + sv) && !place_meeting_collision(x - k, y + sv))
+                    x -= k;
+                
+                if (place_meeting_collision(x, y + sv) && !place_meeting_collision(x + k, y + sv))
+                    x += k;
+            }
+        }
+        
+        if (!place_meeting_collision(x, y + sign(move_vsp)))
+        {
+            y += sign(move_vsp);
+        }
+        else
+        {
+            true_vsp = 0;
+            move_vsp = 0;
+            break;
+        }
+    }
 
 	hsp = true_hsp;
 	vsp = true_vsp;	
     
-	// Gravity (Custom)
+	// Gravity
     if (vsp < terminalVelocity)
     {
         if (upsidedown)
