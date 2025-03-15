@@ -62,7 +62,7 @@ function scr_player_machfreefall()
             if (point_in_rectangle(x, y, __view_get(0, 0), __view_get(1, 0), __view_get(0, 0) + __view_get(2, 0), __view_get(1, 0) + __view_get(3, 0)))
             {
                 image_index = 0;
-                state = UnknownEnum.Value_107;
+                state = baddiestates.hit;
                 vsp = -7;
                 hsp = 0;
                 stunned = 200;

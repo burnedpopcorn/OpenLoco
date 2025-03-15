@@ -4,7 +4,7 @@ switch (state)
         scr_enemy_idle();
         break;
     
-    case UnknownEnum.Value_109:
+    case baddiestates.charge:
         scr_enemy_charge();
         break;
     
@@ -16,11 +16,11 @@ switch (state)
         scr_enemy_walk();
         break;
     
-    case UnknownEnum.Value_108:
+    case baddiestates.land:
         scr_enemy_land();
         break;
     
-    case UnknownEnum.Value_107:
+    case baddiestates.hit:
         scr_enemy_hit();
         break;
     
@@ -28,7 +28,7 @@ switch (state)
         scr_enemy_stun();
         break;
     
-    case UnknownEnum.Value_97:
+    case baddiestates.throwing:
         scr_pizzagoblin_throw();
         break;
     
@@ -62,7 +62,7 @@ scr_scareenemy();
 if (bombreset > 0)
     bombreset--;
 
-if (x != obj_player1.x && (state != UnknownEnum.Value_97 && ((obj_player1.state != states.tumble && obj_player1.state != states.slipbanana) && (bombreset == 0 && grounded))))
+if (x != obj_player1.x && (state != baddiestates.throwing && ((obj_player1.state != states.tumble && obj_player1.state != states.slipbanana) && (bombreset == 0 && grounded))))
 {
     if ((obj_player1.x > (x - 80) && obj_player1.x < (x + 80)) && (y <= (obj_player1.y + 100) && y >= (obj_player1.y - 100)))
     {
@@ -73,7 +73,7 @@ if (x != obj_player1.x && (state != UnknownEnum.Value_97 && ((obj_player1.state 
                 image_index = 0;
                 sprite_index = spr_pepgoblin_kick;
                 image_xscale = -sign(x - obj_player1.x);
-                state = UnknownEnum.Value_97;
+                state = baddiestates.throwing;
             }
             else
             {
@@ -82,13 +82,13 @@ if (x != obj_player1.x && (state != UnknownEnum.Value_97 && ((obj_player1.state 
                 image_xscale = -sign(x - obj_player1.x);
                 flash = 1;
                 alarm[4] = 5;
-                state = UnknownEnum.Value_97;
+                state = baddiestates.throwing;
             }
         }
     }
 }
 
-if (grounded && (state == UnknownEnum.Value_97 && floor(image_index) == 3))
+if (grounded && (state == baddiestates.throwing && floor(image_index) == 3))
     vsp = -5;
 
 if (boundbox == 0)

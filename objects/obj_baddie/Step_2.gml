@@ -4,7 +4,7 @@ if (state == states.grabbed)
 if (state == states.superslam)
     scr_enemy_lungeattack();
 
-if (obj_player1.state != states.lungeattack && obj_player1.state != states.chainsaw && obj_player1.state != states.handstandjump && state != states.superslam && state != UnknownEnum.Value_107 && lunged)
+if (obj_player1.state != states.lungeattack && obj_player1.state != states.chainsaw && obj_player1.state != states.handstandjump && state != states.superslam && state != baddiestates.hit && lunged)
     lunged = 0;
 
 if (state != states.grabbed && state != 126)
@@ -71,4 +71,4 @@ fmod_studio_event_instance_move(stun_snd);
 if (!fmod_studio_event_instance_is_playing(stun_snd) && state == states.capefall)
     fmod_studio_event_instance_start(stun_snd);
 else if (state != states.capefall)
-    fmod_studio_event_instance_stop(stun_snd, UnknownEnum.Value_1);
+    fmod_studio_event_instance_stop(stun_snd, FMOD_STUDIO_STOP_MODE.IMMEDIATE);

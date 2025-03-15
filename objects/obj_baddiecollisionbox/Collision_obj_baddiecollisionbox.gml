@@ -1,6 +1,6 @@
 if (instance_exists(other.baddieID) && instance_exists(baddieID))
 {
-    if (baddieID != other.baddieID && !other.baddieID.mach3destroy && baddieID.state != UnknownEnum.Value_107 && other.baddieID != id && baddieID.state != states.grabbed && !baddieID.thrown && other.baddieID.thrown)
+    if (baddieID != other.baddieID && !other.baddieID.mach3destroy && baddieID.state != baddiestates.hit && other.baddieID != id && baddieID.state != states.grabbed && !baddieID.thrown && other.baddieID.thrown)
     {
         fmod_studio_event_oneshot_3d("event:/sfx/player/punch");
         baddieID.hitLag = 5;
@@ -13,7 +13,7 @@ if (instance_exists(other.baddieID) && instance_exists(baddieID))
         
         instance_create(baddieID.x, baddieID.y, obj_parryeffect);
         baddieID.alarm[3] = 3;
-        baddieID.state = UnknownEnum.Value_107;
+        baddieID.state = baddiestates.hit;
         baddieID.hitvsp = -8;
         baddieID.hithsp = -other.baddieID.image_xscale * 15;
         baddieID.grabbedby = 0;

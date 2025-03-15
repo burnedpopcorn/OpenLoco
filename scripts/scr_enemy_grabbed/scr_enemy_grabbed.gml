@@ -441,7 +441,7 @@ function scr_enemy_grabbed()
     {
         check_grabbed_solid(_obj_player);
         
-        if (state == UnknownEnum.Value_107)
+        if (state == baddiestates.hit)
         {
             hitX = x;
             hitY = y;

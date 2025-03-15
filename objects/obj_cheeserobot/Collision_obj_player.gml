@@ -110,7 +110,7 @@ if (state != states.grabbed)
             image_index = 0;
             state = states.bump;
             
-            if (other.state == UnknownEnum.Value_108)
+            if (other.state == baddiestates.land)
                 other.state = states.normal;
         }
     }

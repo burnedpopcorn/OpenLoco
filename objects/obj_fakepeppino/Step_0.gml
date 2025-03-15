@@ -10,7 +10,7 @@ if (global.panic == 1)
             scr_fakepeppino_walk();
             break;
         
-        case UnknownEnum.Value_107:
+        case baddiestates.hit:
             scr_fakepeppino_hit();
             break;
         
@@ -37,7 +37,7 @@ if (appeartimer == 0)
 
 if (obj_player.x > (x - 200) && obj_player.x < (x + 200) && sprite_index == spr_fakepeppino_walk && y == obj_player.y)
 {
-    state = UnknownEnum.Value_107;
+    state = baddiestates.hit;
     sprite_index = spr_fakepeppino_grabdash;
     image_index = 0;
     movespeed = 8;

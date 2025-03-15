@@ -6,8 +6,8 @@ with (obj_player1)
     {
         with (global.music)
         {
-            fmod_studio_event_instance_stop(event_instance, UnknownEnum.Value_0);
-            fmod_studio_event_instance_stop(secret_event_instance, UnknownEnum.Value_0);
+            fmod_studio_event_instance_stop(event_instance, FMOD_STUDIO_STOP_MODE.ALLOWFADEOUT);
+            fmod_studio_event_instance_stop(secret_event_instance, FMOD_STUDIO_STOP_MODE.ALLOWFADEOUT);
         }
         
         global.leveltosave = other.level;

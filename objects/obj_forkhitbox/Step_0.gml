@@ -45,7 +45,7 @@ if (instance_exists(ID))
         
         if (object_index == obj_peasanto || (object_index == obj_fencer || (object_index == obj_charginchuck || (object_index == obj_ninja || (object_index == obj_pizzice || (object_index == obj_zombiewater || object_index == obj_ancho))))))
         {
-            if (state != UnknownEnum.Value_109)
+            if (state != baddiestates.charge)
             {
                 hitboxcreate = 0;
                 instance_destroy(other.id);

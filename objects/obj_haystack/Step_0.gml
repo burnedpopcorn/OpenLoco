@@ -1,6 +1,6 @@
 with (obj_peasanto)
 {
-    if (place_meeting(x + hsp, y, other.id) && (state == UnknownEnum.Value_109 && (other.sprite_index != spr_haystackburning && other.sprite_index != spr_haystackburningup)))
+    if (place_meeting(x + hsp, y, other.id) && (state == baddiestates.charge && (other.sprite_index != spr_haystackburning && other.sprite_index != spr_haystackburningup)))
         other.sprite_index = spr_haystackburningup;
 }
 

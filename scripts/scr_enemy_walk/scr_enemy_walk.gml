@@ -41,7 +41,7 @@ function scr_enemy_walk()
                     vsp = -11;
                     image_index = 0;
                     image_xscale = -sign(x - obj_player.x);
-                    state = UnknownEnum.Value_109;
+                    state = baddiestates.charge;
                 }
                 else if (object_index == obj_shyguy)
                 {

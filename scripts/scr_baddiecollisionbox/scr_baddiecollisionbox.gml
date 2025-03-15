@@ -48,7 +48,7 @@ function bcb_update(argument0)
                     }
                 }
                 
-                if (argument0.stuntouchbuffer <= 0 && argument0.state != UnknownEnum.Value_97 && argument0.vsp > 0 && (state == states.mach2 || state == states.tumble))
+                if (argument0.stuntouchbuffer <= 0 && argument0.state != baddiestates.throwing && argument0.vsp > 0 && (state == states.mach2 || state == states.tumble))
                 {
                     argument0.stuntouchbuffer = 15;
                     var lag = 0;
@@ -56,7 +56,7 @@ function bcb_update(argument0)
                     with (argument0)
                     {
                         instance_create(x, y, obj_bangeffect);
-                        state = UnknownEnum.Value_107;
+                        state = baddiestates.hit;
                         image_xscale = -other.xscale;
                         hithsp = other.xscale * 12;
                         hitvsp = (other.y - 180 - y) / 60;
@@ -82,7 +82,7 @@ function bcb_update(argument0)
                     }
                 }
                 
-                if (state == states.handstandjump && sprite_index == get_charactersprite("spr_shoulderbashstart") && argument0.state != UnknownEnum.Value_107)
+                if (state == states.handstandjump && sprite_index == get_charactersprite("spr_shoulderbashstart") && argument0.state != baddiestates.hit)
                 {
                     argument0.stuntouchbuffer = 15;
                     var lag = 10;
@@ -91,7 +91,7 @@ function bcb_update(argument0)
                     with (argument0)
                     {
                         instance_create(x, y, obj_parryeffect);
-                        state = UnknownEnum.Value_107;
+                        state = baddiestates.hit;
                         image_xscale = -other.xscale;
                         hitLag = lag;
                         thrown = 1;

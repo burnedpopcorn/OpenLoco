@@ -43,9 +43,9 @@ function update_playersounds()
     for (var i = 0; i < array_length(_snd_array); i++)
         fmod_studio_event_instance_move(_snd_array[i]);
     
-    if (_playerstate != UnknownEnum.Value_70 && _playerstate != UnknownEnum.Value_91 && _playerstate != UnknownEnum.Value_17)
+    if (_playerstate != states.mach2 && _playerstate != states.mach3 && _playerstate != states.climbwall)
     {
-        fmod_studio_event_instance_stop(machsnd, UnknownEnum.Value_1);
+        fmod_studio_event_instance_stop(machsnd, FMOD_STUDIO_STOP_MODE.IMMEDIATE);
     }
     else
     {
@@ -53,11 +53,11 @@ function update_playersounds()
         
         if (sprite_index == get_charactersprite("spr_mach1"))
             _machnum = 1;
-        else if ((_playerstate == UnknownEnum.Value_70 && grounded) || _playerstate == UnknownEnum.Value_17)
+        else if ((_playerstate == states.mach2 && grounded) || _playerstate == states.climbwall)
             _machnum = 2;
         else if (sprite_index == get_charactersprite("spr_crazyrun"))
             _machnum = 4;
-        else if (_playerstate == UnknownEnum.Value_91)
+        else if (_playerstate == states.mach3)
             _machnum = 3;
         
         fmod_studio_event_instance_set_paused(machsnd, false);
@@ -70,18 +70,18 @@ function update_playersounds()
     if (sprite_index == get_charactersprite("spr_machroll") && !fmod_studio_event_instance_is_playing(machrollsnd))
         fmod_studio_event_instance_start(machrollsnd);
     else if (sprite_index != get_charactersprite("spr_machroll"))
-        fmod_studio_event_instance_stop(machrollsnd, UnknownEnum.Value_1);
+        fmod_studio_event_instance_stop(machrollsnd, FMOD_STUDIO_STOP_MODE.IMMEDIATE);
     
     fmod_studio_event_instance_set_parameter_by_name(tumblesnd, "state", _playerstate == UnknownEnum.Value_72);
     
     if (sprite_index != get_charactersprite("spr_tumble") && sprite_index != get_charactersprite("spr_tumblestart") && sprite_index != get_charactersprite("spr_tumbleend"))
-        fmod_studio_event_instance_stop(tumblesnd, UnknownEnum.Value_1);
+        fmod_studio_event_instance_stop(tumblesnd, FMOD_STUDIO_STOP_MODE.IMMEDIATE);
     else if (!fmod_studio_event_instance_is_playing(tumblesnd))
         fmod_studio_event_instance_start(tumblesnd);
     
-    if (_playerstate == UnknownEnum.Value_65 || _playerstate == UnknownEnum.Value_63 || _playerstate == UnknownEnum.Value_33)
+    if (_playerstate == states.Sjumpprep || _playerstate == states.Sjump || _playerstate == states.chainsaw)
     {
-        var _sjumpstate = _playerstate != UnknownEnum.Value_65;
+        var _sjumpstate = _playerstate != states.Sjumpprep;
         fmod_studio_event_instance_set_parameter_by_name(superjumpsnd, "state", _sjumpstate);
         
         if (!fmod_studio_event_instance_is_playing(superjumpsnd))
@@ -89,19 +89,19 @@ function update_playersounds()
     }
     else
     {
-        fmod_studio_event_instance_stop(superjumpsnd, UnknownEnum.Value_1);
+        fmod_studio_event_instance_stop(superjumpsnd, FMOD_STUDIO_STOP_MODE.IMMEDIATE);
     }
     
-    if ((_playerstate != UnknownEnum.Value_74 && _playerstate != UnknownEnum.Value_74) || sprite_index == get_charactersprite("spr_Sjumpcancelstart"))
-        fmod_studio_event_instance_stop(groundpoundsnd, UnknownEnum.Value_1);
+    if ((_playerstate != states.freefall && _playerstate != states.freefall) || sprite_index == get_charactersprite("spr_Sjumpcancelstart"))
+        fmod_studio_event_instance_stop(groundpoundsnd, FMOD_STUDIO_STOP_MODE.IMMEDIATE);
     else if (!fmod_studio_event_instance_is_playing(groundpoundsnd))
         fmod_studio_event_instance_start(groundpoundsnd);
     
     if ((state != states.handstandjump && state != states.kungfu && state != states.zombieattack && state != states.climbwall) || (state == states.climbwall && sprite_index != get_charactersprite("spr_climbwalldash")))
-        fmod_studio_event_instance_stop(grabsnd, UnknownEnum.Value_1);
+        fmod_studio_event_instance_stop(grabsnd, FMOD_STUDIO_STOP_MODE.IMMEDIATE);
     
     if (sprite_index != get_charactersprite("spr_mach2jump") && sprite_index != get_charactersprite("spr_faceplant"))
-        fmod_studio_event_instance_stop(mach2jumpsnd, UnknownEnum.Value_1);
+        fmod_studio_event_instance_stop(mach2jumpsnd, FMOD_STUDIO_STOP_MODE.IMMEDIATE);
     else if (!fmod_studio_event_instance_is_playing(mach2jumpsnd))
         fmod_studio_event_instance_start(mach2jumpsnd);
 }

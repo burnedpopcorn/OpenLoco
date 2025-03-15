@@ -4,7 +4,7 @@ switch (state)
         scr_enemy_idle();
         break;
     
-    case UnknownEnum.Value_109:
+    case baddiestates.charge:
         scr_enemy_charge();
         break;
     
@@ -16,11 +16,11 @@ switch (state)
         scr_enemy_walk();
         break;
     
-    case UnknownEnum.Value_108:
+    case baddiestates.land:
         scr_enemy_land();
         break;
     
-    case UnknownEnum.Value_107:
+    case baddiestates.hit:
         scr_enemy_hit();
         break;
     
@@ -28,7 +28,7 @@ switch (state)
         scr_enemy_stun();
         break;
     
-    case UnknownEnum.Value_97:
+    case baddiestates.throwing:
         scr_pizzagoblin_throw();
         break;
     
@@ -93,7 +93,7 @@ if (cigar == 0)
     grabbedspr = UnknownEnum.Value_128;
 }
 
-if (cigar == 1 && (cigarcreate == 0 && (state == states.normal || (state == states.actor || (state == 98 || state == UnknownEnum.Value_108)))))
+if (cigar == 1 && (cigarcreate == 0 && (state == states.normal || (state == states.actor || (state == 98 || state == baddiestates.land)))))
 {
     cigarcreate = 1;
     

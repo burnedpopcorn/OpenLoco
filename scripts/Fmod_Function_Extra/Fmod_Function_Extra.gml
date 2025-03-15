@@ -51,7 +51,7 @@ function fmod_studio_event_oneshot_3d(argument0, argument1 = x, argument2 = y, a
 
 function fmod_studio_event_instance_kill(argument0)
 {
-    fmod_studio_event_instance_stop(argument0, UnknownEnum.Value_1);
+    fmod_studio_event_instance_stop(argument0, FMOD_STUDIO_STOP_MODE.IMMEDIATE);
     fmod_studio_event_instance_release(argument0);
 }
 

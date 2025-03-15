@@ -1,2 +1,2 @@
-if (state != states.grabbed && state != UnknownEnum.Value_107)
+if (state != states.grabbed && state != baddiestates.hit)
     instance_destroy();

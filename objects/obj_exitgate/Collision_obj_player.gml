@@ -67,8 +67,8 @@ with (obj_player)
         
         with (global.music)
         {
-            fmod_studio_event_instance_stop(event_instance, UnknownEnum.Value_1);
-            fmod_studio_event_instance_stop(secret_event_instance, UnknownEnum.Value_1);
+            fmod_studio_event_instance_stop(event_instance, FMOD_STUDIO_STOP_MODE.IMMEDIATE);
+            fmod_studio_event_instance_stop(secret_event_instance, FMOD_STUDIO_STOP_MODE.IMMEDIATE);
         }
     }
 }

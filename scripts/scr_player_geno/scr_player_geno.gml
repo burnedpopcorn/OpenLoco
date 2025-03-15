@@ -58,7 +58,7 @@ function scr_geno_normal()
     if (sprite_index == get_charactersprite("spr_genoturn"))
     {
         if (fmod_studio_event_instance_is_playing(genowalksnd))
-            fmod_studio_event_instance_stop(genowalksnd, UnknownEnum.Value_1);
+            fmod_studio_event_instance_stop(genowalksnd, FMOD_STUDIO_STOP_MODE.IMMEDIATE);
         
         if (animation_end())
             sprite_index = get_charactersprite("spr_genowalk");
@@ -71,7 +71,7 @@ function scr_geno_normal()
     else
     {
         sprite_index = get_charactersprite("spr_genoidle");
-        fmod_studio_event_instance_stop(genowalksnd, UnknownEnum.Value_1);
+        fmod_studio_event_instance_stop(genowalksnd, FMOD_STUDIO_STOP_MODE.IMMEDIATE);
     }
     
     if (sprite_index == get_charactersprite("spr_genowalk") && move != 0 && floor(image_index) == (image_number < 7))
@@ -81,7 +81,7 @@ function scr_geno_normal()
     }
     else if (move == 0)
     {
-        fmod_studio_event_instance_stop(genowalksnd, UnknownEnum.Value_1);
+        fmod_studio_event_instance_stop(genowalksnd, FMOD_STUDIO_STOP_MODE.IMMEDIATE);
     }
     
     if (key_attack2)
@@ -131,7 +131,7 @@ function scr_geno_jump()
         sprite_index = get_charactersprite("spr_genofall");
     
     if (fmod_studio_event_instance_is_playing(genowalksnd))
-        fmod_studio_event_instance_stop(genowalksnd, UnknownEnum.Value_1);
+        fmod_studio_event_instance_stop(genowalksnd, FMOD_STUDIO_STOP_MODE.IMMEDIATE);
     
     if (grounded)
     {

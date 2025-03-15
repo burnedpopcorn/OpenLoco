@@ -72,7 +72,7 @@ function instakill()
         hp--;
         instance_create(x, y, obj_parryeffect);
         alarm[3] = 3;
-        state = UnknownEnum.Value_107;
+        state = baddiestates.hit;
         image_xscale = -other.xscale;
     }
     
@@ -155,6 +155,6 @@ function bcb_doHitstun(argument0 = 10, argument1)
         argument1.hithsp = -argument1.image_xscale;
     
     argument1.hitvsp = -5;
-    argument1.state = UnknownEnum.Value_107;
+    argument1.state = baddiestates.hit;
     obj_player1.state = states.chainsaw;
 }

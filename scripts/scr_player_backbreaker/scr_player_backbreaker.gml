@@ -51,7 +51,7 @@ function scr_player_backbreaker()
             
             if (supercharged == 1 && key_up && sprite_index == get_charactersprite("spr_taunt"))
             {
-                fmod_studio_event_instance_stop(tauntsnd, UnknownEnum.Value_1);
+                fmod_studio_event_instance_stop(tauntsnd, FMOD_STUDIO_STOP_MODE.IMMEDIATE);
                 sprite_index = choose(get_charactersprite("spr_supertaunt1"), get_charactersprite("spr_supertaunt2"), get_charactersprite("spr_supertaunt3"), get_charactersprite("spr_supertaunt4"));
                 image_index = 0;
                 image_speed = 0.35;
@@ -69,7 +69,7 @@ function scr_player_backbreaker()
                     if (point_in_camera(x, y, view_camera[0]))
                     {
                         hp = -99;
-                        state = UnknownEnum.Value_107;
+                        state = baddiestates.hit;
                         hitLag = lag;
                         hitX = x;
                         hitY = y;
@@ -189,7 +189,7 @@ function scr_player_backbreaker()
         if (key_taunt2)
         {
             styledtaunts++;
-            fmod_studio_event_instance_stop(styledtauntsnd, UnknownEnum.Value_1);
+            fmod_studio_event_instance_stop(styledtauntsnd, FMOD_STUDIO_STOP_MODE.IMMEDIATE);
             fmod_studio_event_instance_start(styledtauntsnd);
             image_index = random_range(0, sprite_get_width(sprite_index) - 1);
             
@@ -202,7 +202,7 @@ function scr_player_backbreaker()
         
         if (grounded)
         {
-            fmod_studio_event_instance_stop(styledtauntsnd, UnknownEnum.Value_1);
+            fmod_studio_event_instance_stop(styledtauntsnd, FMOD_STUDIO_STOP_MODE.IMMEDIATE);
             fmod_studio_event_instance_start(styledtauntsnd);
             room_speed = 60;
             state = tauntstoredstate;
@@ -223,7 +223,7 @@ function scr_player_backbreaker()
         
         if (scr_solid(x + sign(hsp), y))
         {
-            fmod_studio_event_instance_stop(styledtauntsnd, UnknownEnum.Value_1);
+            fmod_studio_event_instance_stop(styledtauntsnd, FMOD_STUDIO_STOP_MODE.IMMEDIATE);
             fmod_studio_event_instance_start(styledtauntsnd);
             room_speed = 60;
             sprite_index = get_charactersprite("spr_mach2jump");

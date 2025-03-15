@@ -8,8 +8,8 @@ with (myplayer)
     if (state != states.parrying)
     {
         fmod_studio_event_oneshot_3d("event:/sfx/player/taunt/parry");
-        fmod_studio_event_instance_stop(tauntsnd, UnknownEnum.Value_1);
-        fmod_studio_event_instance_stop(supertauntsnd, UnknownEnum.Value_1);
+        fmod_studio_event_instance_stop(tauntsnd, FMOD_STUDIO_STOP_MODE.IMMEDIATE);
+        fmod_studio_event_instance_stop(supertauntsnd, FMOD_STUDIO_STOP_MODE.IMMEDIATE);
     }
     
     state = states.parrying;

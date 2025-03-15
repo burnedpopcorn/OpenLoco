@@ -4,7 +4,7 @@ switch (state)
         scr_enemy_idle();
         break;
     
-    case UnknownEnum.Value_109:
+    case baddiestates.charge:
         scr_enemy_charge();
         break;
     
@@ -16,11 +16,11 @@ switch (state)
         scr_enemy_walk();
         break;
     
-    case UnknownEnum.Value_108:
+    case baddiestates.land:
         scr_enemy_land();
         break;
     
-    case UnknownEnum.Value_107:
+    case baddiestates.hit:
         scr_enemy_hit();
         break;
     
@@ -28,7 +28,7 @@ switch (state)
         scr_enemy_stun();
         break;
     
-    case UnknownEnum.Value_97:
+    case baddiestates.throwing:
         scr_pizzagoblin_throw();
         break;
     

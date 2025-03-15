@@ -4,7 +4,7 @@ switch (state)
         scr_enemy_idle();
         break;
     
-    case UnknownEnum.Value_109:
+    case baddiestates.charge:
         scr_enemy_charge();
         break;
     
@@ -16,11 +16,11 @@ switch (state)
         scr_enemy_walk();
         break;
     
-    case UnknownEnum.Value_108:
+    case baddiestates.land:
         scr_enemy_land();
         break;
     
-    case UnknownEnum.Value_107:
+    case baddiestates.hit:
         scr_enemy_hit();
         break;
     
@@ -28,7 +28,7 @@ switch (state)
         scr_enemy_stun();
         break;
     
-    case UnknownEnum.Value_97:
+    case baddiestates.throwing:
         scr_pizzagoblin_throw();
         break;
     
@@ -66,7 +66,7 @@ if (state != states.capefall)
 if (bombreset > 0)
     bombreset--;
 
-if (x != obj_player.x && (state != UnknownEnum.Value_97 && bombreset == 0))
+if (x != obj_player.x && (state != baddiestates.throwing && bombreset == 0))
 {
     if ((obj_player.x > (x - 400) && obj_player.x < (x + 400)) && (y <= (obj_player.y + 20) && y >= (obj_player.y - 20)))
     {
@@ -74,7 +74,7 @@ if (x != obj_player.x && (state != UnknownEnum.Value_97 && bombreset == 0))
         {
             image_index = 0;
             image_xscale = -sign(x - obj_player.x);
-            state = UnknownEnum.Value_97;
+            state = baddiestates.throwing;
         }
     }
 }

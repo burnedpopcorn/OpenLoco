@@ -4,7 +4,7 @@ switch (state)
         scr_enemy_idle();
         break;
     
-    case UnknownEnum.Value_109:
+    case baddiestates.charge:
         scr_enemy_charge();
         break;
     
@@ -16,11 +16,11 @@ switch (state)
         scr_enemy_walk();
         break;
     
-    case UnknownEnum.Value_108:
+    case baddiestates.land:
         scr_enemy_land();
         break;
     
-    case UnknownEnum.Value_107:
+    case baddiestates.hit:
         scr_enemy_hit();
         break;
     
@@ -28,7 +28,7 @@ switch (state)
         scr_enemy_stun();
         break;
     
-    case UnknownEnum.Value_97:
+    case baddiestates.throwing:
         scr_pizzagoblin_throw();
         break;
     
@@ -61,13 +61,13 @@ if (state != states.grabbed)
 
 scr_scareenemy();
 
-if (((obj_player.x > (x - 400) && obj_player.x < (x + 400)) && (y + 200) > obj_player.y) && state != UnknownEnum.Value_109 && state != states.grabbed && state != UnknownEnum.Value_107 && state != states.capefall && state != states.normal)
+if (((obj_player.x > (x - 400) && obj_player.x < (x + 400)) && (y + 200) > obj_player.y) && state != baddiestates.charge && state != states.grabbed && state != baddiestates.hit && state != states.capefall && state != states.normal)
 {
-    if (state != UnknownEnum.Value_109)
+    if (state != baddiestates.charge)
     {
-        state = UnknownEnum.Value_109;
+        state = baddiestates.charge;
         
-        if (hitboxcreate == 0 && state == UnknownEnum.Value_109)
+        if (hitboxcreate == 0 && state == baddiestates.charge)
         {
             hitboxcreate = 1;
             

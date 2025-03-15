@@ -21,7 +21,7 @@ function scr_player_parry()
         
         with (obj_baddie)
         {
-            if (distance_to_object(other) < parry_threshold && state != UnknownEnum.Value_107 && state != states.grabbed && state != states.capefall && parryable && !(state == states.capefall && thrown == 1))
+            if (distance_to_object(other) < parry_threshold && state != baddiestates.hit && state != states.grabbed && state != states.capefall && parryable && !(state == states.capefall && thrown == 1))
             {
                 obj_player1.xscale = -image_xscale;
                 grabbedby = _grabbedby;
@@ -38,7 +38,7 @@ function scr_player_parry()
                 obj_player1.hitY = obj_player1.y;
                 instance_create(x, y, obj_parryeffect);
                 alarm[3] = 1;
-                state = UnknownEnum.Value_107;
+                state = baddiestates.hit;
                 image_xscale = -obj_player1.xscale;
                 instance_create(x, y, obj_slapstar);
                 instance_create(x, y, obj_slapstar);

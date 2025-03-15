@@ -7,7 +7,7 @@ switch (state)
             
             for (var i = 0; i < array_length(_banks); i++)
             {
-                if (fmod_studio_bank_get_loading_state(_banks[i]) == UnknownEnum.Value_2 || fmod_studio_bank_get_loading_state(_banks[i]) == UnknownEnum.Value_1)
+                if (fmod_studio_bank_get_loading_state(_banks[i]) == FMOD_STUDIO_LOADING_STATE.LOADING || fmod_studio_bank_get_loading_state(_banks[i]) == FMOD_STUDIO_LOADING_STATE.UNLOADED)
                 {
                     other.alarm[1] = 3;
                     exit;
@@ -15,7 +15,7 @@ switch (state)
                 
                 fmod_studio_bank_load_sample_data(_banks[i]);
                 
-                if (fmod_studio_bank_get_sample_loading_state(_banks[i]) == UnknownEnum.Value_2 || fmod_studio_bank_get_sample_loading_state(_banks[i]) == UnknownEnum.Value_1)
+                if (fmod_studio_bank_get_sample_loading_state(_banks[i]) == FMOD_STUDIO_LOADING_STATE.LOADING || fmod_studio_bank_get_sample_loading_state(_banks[i]) == FMOD_STUDIO_LOADING_STATE.UNLOADED)
                 {
                     other.alarm[1] = 3;
                     exit;

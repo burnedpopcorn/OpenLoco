@@ -4,7 +4,7 @@ switch (state)
         scr_enemy_idle();
         break;
     
-    case UnknownEnum.Value_109:
+    case baddiestates.charge:
         scr_enemy_charge();
         break;
     
@@ -16,11 +16,11 @@ switch (state)
         scr_enemy_walk();
         break;
     
-    case UnknownEnum.Value_108:
+    case baddiestates.land:
         scr_enemy_land();
         break;
     
-    case UnknownEnum.Value_107:
+    case baddiestates.hit:
         scr_enemy_hit();
         break;
     
@@ -28,7 +28,7 @@ switch (state)
         scr_enemy_stun();
         break;
     
-    case UnknownEnum.Value_97:
+    case baddiestates.throwing:
         scr_pizzagoblin_throw();
         break;
     
@@ -69,7 +69,7 @@ scr_scareenemy();
 
 if (sprite_index == spr_ancho_chargestart && floor(image_index) == (image_number - 1))
 {
-    if (hitboxcreate == 0 && state == UnknownEnum.Value_109)
+    if (hitboxcreate == 0 && state == baddiestates.charge)
     {
         hitboxcreate = 1;
         
@@ -81,7 +81,7 @@ if (sprite_index == spr_ancho_chargestart && floor(image_index) == (image_number
     movespeed = 10;
 }
 
-if (x != obj_player1.x && (state != UnknownEnum.Value_109 && y == ystart))
+if (x != obj_player1.x && (state != baddiestates.charge && y == ystart))
 {
     if ((obj_player1.x > (x - 200) && obj_player1.x < (x + 200)) && (y <= (obj_player1.y + 50) && y >= (obj_player1.y - 50)))
     {
@@ -89,7 +89,7 @@ if (x != obj_player1.x && (state != UnknownEnum.Value_109 && y == ystart))
         {
             image_index = 0;
             image_xscale = -sign(x - obj_player.x);
-            state = UnknownEnum.Value_109;
+            state = baddiestates.charge;
             sprite_index = spr_ancho_chargestart;
         }
     }
@@ -97,7 +97,7 @@ if (x != obj_player1.x && (state != UnknownEnum.Value_109 && y == ystart))
 
 if (instance_exists(obj_player2))
 {
-    if (x != obj_player2.x && (state != UnknownEnum.Value_109 && y == ystart))
+    if (x != obj_player2.x && (state != baddiestates.charge && y == ystart))
     {
         if ((obj_player2.x > (x - 200) && obj_player2.x < (x + 200)) && (y <= (obj_player2.y + 50) && y >= (obj_player2.y - 50)))
         {
@@ -105,7 +105,7 @@ if (instance_exists(obj_player2))
             {
                 image_index = 0;
                 image_xscale = -sign(x - obj_player.x);
-                state = UnknownEnum.Value_109;
+                state = baddiestates.charge;
                 sprite_index = spr_ancho_chargestart;
             }
         }

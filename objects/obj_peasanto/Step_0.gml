@@ -4,7 +4,7 @@ switch (state)
         scr_enemy_idle();
         break;
     
-    case UnknownEnum.Value_109:
+    case baddiestates.charge:
         scr_enemy_charge();
         break;
     
@@ -16,11 +16,11 @@ switch (state)
         scr_enemy_walk();
         break;
     
-    case UnknownEnum.Value_108:
+    case baddiestates.land:
         scr_enemy_land();
         break;
     
-    case UnknownEnum.Value_107:
+    case baddiestates.hit:
         scr_enemy_hit();
         break;
     
@@ -28,7 +28,7 @@ switch (state)
         scr_enemy_stun();
         break;
     
-    case UnknownEnum.Value_97:
+    case baddiestates.throwing:
         scr_pizzagoblin_throw();
         break;
     
@@ -48,7 +48,7 @@ if (state == states.capefall && (stunned > 40 && birdcreated == 0))
 if (state != states.capefall)
     birdcreated = 0;
 
-if (hitboxcreate == 0 && (state == UnknownEnum.Value_109 && (obj_player.state != states.mach3 && obj_player.state != states.mach2)))
+if (hitboxcreate == 0 && (state == baddiestates.charge && (obj_player.state != states.mach3 && obj_player.state != states.mach2)))
 {
     hitboxcreate = 1;
     
@@ -64,12 +64,12 @@ if (state != states.actor && (state != states.normal && angry == 0))
     grav = 0.5;
     vsp = -5;
     image_index = 0;
-    state = UnknownEnum.Value_109;
+    state = baddiestates.charge;
     angry = 1;
     thrown = 0;
 }
 
-if (state != states.capefall && (state != states.grabbed && (state != states.normal && state != UnknownEnum.Value_109)))
+if (state != states.capefall && (state != states.grabbed && (state != states.normal && state != baddiestates.charge)))
     angry = 0;
 
 if (flash == 1 && alarm[2] <= 0)
