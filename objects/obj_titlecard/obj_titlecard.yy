@@ -11,8 +11,8 @@
   "name":"obj_titlecard",
   "overriddenProperties":[],
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Objects/UNSORTED.yy",
+    "name":"Visuals",
+    "path":"folders/Objects/Visuals.yy",
   },
   "parentObjectId":null,
   "persistent":false,

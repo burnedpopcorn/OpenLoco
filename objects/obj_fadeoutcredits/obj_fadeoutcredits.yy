@@ -11,8 +11,8 @@
   "name":"obj_fadeoutcredits",
   "overriddenProperties":[],
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Objects/UNSORTED.yy",
+    "name":"OLD",
+    "path":"folders/Objects/System/Menu/OLD.yy",
   },
   "parentObjectId":null,
   "persistent":true,

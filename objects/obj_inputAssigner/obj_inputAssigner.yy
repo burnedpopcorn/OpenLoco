@@ -12,8 +12,8 @@
   "name":"obj_inputAssigner",
   "overriddenProperties":[],
   "parent":{
-    "name":"System",
-    "path":"folders/Objects/System.yy",
+    "name":"Input",
+    "path":"folders/Objects/System/Input.yy",
   },
   "parentObjectId":null,
   "persistent":true,

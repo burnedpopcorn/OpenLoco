@@ -14,8 +14,8 @@
   "name":"obj_hookshot",
   "overriddenProperties":[],
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Objects/UNSORTED.yy",
+    "name":"Miscellanous",
+    "path":"folders/Objects/Miscellanous.yy",
   },
   "parentObjectId":null,
   "persistent":false,

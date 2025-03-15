@@ -10,8 +10,8 @@
   "name":"obj_fmod_studio_manager",
   "overriddenProperties":[],
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Objects/UNSORTED.yy",
+    "name":"Sound",
+    "path":"folders/Objects/System/Sound.yy",
   },
   "parentObjectId":null,
   "persistent":true,

@@ -11,8 +11,8 @@
   "name":"obj_antileak",
   "overriddenProperties":[],
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Objects/UNSORTED.yy",
+    "name":"Camera & HUD",
+    "path":"folders/Objects/System/Camera & HUD.yy",
   },
   "parentObjectId":null,
   "persistent":false,

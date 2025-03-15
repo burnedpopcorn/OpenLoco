@@ -37,8 +37,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Damian",
-    "path":"folders/Sprites/Player/Damian.yy",
+    "name":"Pillar Hit Cutscene",
+    "path":"folders/Sprites/HUD/Pillar Hit Cutscene.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

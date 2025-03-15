@@ -12,8 +12,8 @@
   "name":"obj_parrallax",
   "overriddenProperties":[],
   "parent":{
-    "name":"System",
-    "path":"folders/Objects/System.yy",
+    "name":"Camera & HUD",
+    "path":"folders/Objects/System/Camera & HUD.yy",
   },
   "parentObjectId":null,
   "persistent":true,

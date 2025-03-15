@@ -11,8 +11,8 @@
   "name":"obj_fadeoutspecialstage",
   "overriddenProperties":[],
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Objects/UNSORTED.yy",
+    "name":"Menu",
+    "path":"folders/Objects/System/Menu.yy",
   },
   "parentObjectId":null,
   "persistent":true,

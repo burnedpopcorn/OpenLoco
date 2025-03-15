@@ -14,8 +14,8 @@
   "name":"obj_destroyable3escape",
   "overriddenProperties":[],
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Objects/UNSORTED.yy",
+    "name":"Miscellanous",
+    "path":"folders/Objects/Miscellanous.yy",
   },
   "parentObjectId":{
     "name":"obj_bigdestructibles",

@@ -16,8 +16,8 @@
   "name":"obj_discord_presence",
   "overriddenProperties":[],
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Objects/UNSORTED.yy",
+    "name":"System",
+    "path":"folders/Objects/System.yy",
   },
   "parentObjectId":null,
   "persistent":true,

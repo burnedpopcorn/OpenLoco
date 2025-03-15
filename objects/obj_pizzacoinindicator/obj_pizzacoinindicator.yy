@@ -10,8 +10,8 @@
   "name":"obj_pizzacoinindicator",
   "overriddenProperties":[],
   "parent":{
-    "name":"System",
-    "path":"folders/Objects/System.yy",
+    "name":"Miscellanous",
+    "path":"folders/Objects/Miscellanous.yy",
   },
   "parentObjectId":null,
   "persistent":true,

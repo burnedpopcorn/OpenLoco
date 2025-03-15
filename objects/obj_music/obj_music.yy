@@ -10,8 +10,8 @@
   "name":"obj_music",
   "overriddenProperties":[],
   "parent":{
-    "name":"System",
-    "path":"folders/Objects/System.yy",
+    "name":"Sound",
+    "path":"folders/Objects/System/Sound.yy",
   },
   "parentObjectId":null,
   "persistent":true,

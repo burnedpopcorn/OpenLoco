@@ -33,8 +33,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Miscellanous",
-    "path":"folders/Sprites/Miscellanous.yy",
+    "name":"Pillar Hit Cutscene",
+    "path":"folders/Sprites/HUD/Pillar Hit Cutscene.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
