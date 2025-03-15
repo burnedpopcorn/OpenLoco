@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_matrix_math",
   "parent":{
-    "name":"Unown Collisions",
-    "path":"folders/Scripts/Collision/Unown Collisions.yy",
+    "name":"3D ColMesh",
+    "path":"folders/Scripts/Collision/3D ColMesh.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

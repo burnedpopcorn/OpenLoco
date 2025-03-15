@@ -21,8 +21,9 @@ Add Packages
 - Official FMOD Extension	(DONE)
 - rtShell					(DONE)
 - Tiny Expression Runtime	(DONE)
+- YAL Twerp					(DONE)
+- Mr. Unown Collisions		(DONE)
 
-- Mr. Unown Collisions (NOT DONE)
 - ColMesh???
 
 -----------------------------------------------------------

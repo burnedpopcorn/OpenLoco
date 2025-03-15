@@ -1,6 +1,9 @@
-function approach(argument0, argument1, argument2)
-{
-    return argument0 + clamp(argument1 - argument0, -abs(argument2), abs(argument2));
+/// @description Approach the value towards target provided.
+/// @param value The value to be changed.
+/// @param target The value targetted.
+/// @param amount The amount to change.
+function approach(value, target, amount) {
+	return value + clamp(target - value, -abs(amount), abs(amount));
 }
 
 function chance(argument0)
