@@ -52,7 +52,7 @@ with (instance_nearest(x, y, obj_player))
     {
         other.stunned = 0;
         
-        if (other.state != UnknownEnum.Value_126 && !other.provoked && other.bombreset > 0)
+        if (other.state != baddiestates.unknown && !other.provoked && other.bombreset > 0)
         {
             other.bombreset = 0;
             other.provoked = true;
@@ -60,7 +60,7 @@ with (instance_nearest(x, y, obj_player))
         
         other.scaredbuffer = 0;
     }
-    else if (other.state != UnknownEnum.Value_126)
+    else if (other.state != baddiestates.unknown)
     {
         other.provoked = false;
     }

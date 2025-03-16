@@ -64,7 +64,7 @@ if (bombreset > 0)
 
 var p = instance_nearest(x, y, obj_player);
 
-if (x != p.x && (p.state != UnknownEnum.Value_18 && (p.state != UnknownEnum.Value_24 && (state != UnknownEnum.Value_126 && (bombreset == 0 && grounded)))))
+if (x != p.x && (p.state != UnknownEnum.Value_18 && (p.state != UnknownEnum.Value_24 && (state != baddiestates.unknown && (bombreset == 0 && grounded)))))
 {
     if ((p.x > (x - 400) && p.x < (x + 400)) && (y <= (p.y + 20) && y >= (p.y - 20)))
     {
@@ -73,7 +73,7 @@ if (x != p.x && (p.state != UnknownEnum.Value_18 && (p.state != UnknownEnum.Valu
             image_index = 0;
             sprite_index = spr_pizzard_shoot;
             image_xscale = -sign(x - obj_player1.x);
-            state = UnknownEnum.Value_126;
+            state = baddiestates.unknown;
         }
     }
 }

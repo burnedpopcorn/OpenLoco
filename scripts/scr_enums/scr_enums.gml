@@ -81,6 +81,7 @@ enum states
 	genobeam		= 122,
 	slidekick		= 123,
 	cappythrow		= 125,
+	unknown			= 126, // in obj_secretportal for some reason
 	cape			= 127,
 	capefall		= 128,
 	
@@ -111,8 +112,9 @@ enum baddiestates
 	grabbed			= 106,
 	rage			= 125,
 	
-	// only obj_dedede uses it im pretty sure
+	// rarely used ones
 	bounce			= 1,
+	unknown			= 126,
 }
 
 // for cappy
