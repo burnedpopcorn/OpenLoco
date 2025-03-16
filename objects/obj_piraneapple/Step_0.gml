@@ -3,10 +3,10 @@ hsp = movespeed;
 if (flash == 1 && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (state != states.grabbed)
+if (state != baddiestates.grabbed)
     depth = 0;
 
-if (state != states.grabbed)
+if (state != baddiestates.grabbed)
     thrown = 0;
 
 if ((obj_player.x > (x - 400) && obj_player.x < (x + 400)) && (y + 200) > obj_player.y)

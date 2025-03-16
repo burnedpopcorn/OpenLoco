@@ -3,22 +3,22 @@ x += vspeed;
 
 switch (type)
 {
-    default:
+    default: // grab
         image_alpha -= 0.15;
         break;
     
-    case UnknownEnum.Value_1:
+    case afterimgs.runningcolors: // run colors
         image_alpha = Wave(1, 0, 0.1, 0);
         break;
     
-    case UnknownEnum.Value_2:
+    case afterimgs.unusedimg: // seemingly unused
         image_alpha -= 0.025;
 }
 
-if (image_alpha <= 0 && type != UnknownEnum.Value_1)
+if (image_alpha <= 0 && type != afterimgs.runningcolors)
     instance_destroy();
 
-if (type != UnknownEnum.Value_2)
+if (type != afterimgs.unusedimg)
     exit;
 
 x = xstart + lengthdir_x(len * invert, dir);

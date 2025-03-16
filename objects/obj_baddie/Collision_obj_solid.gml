@@ -1,2 +1,2 @@
-if (state != states.grabbed && state != baddiestates.hit)
+if (state != baddiestates.grabbed && state != baddiestates.hit)
     instance_destroy();

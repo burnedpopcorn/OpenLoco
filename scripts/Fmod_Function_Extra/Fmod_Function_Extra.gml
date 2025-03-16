@@ -57,5 +57,5 @@ function fmod_studio_event_instance_kill(argument0)
 
 function fmod_studio_event_instance_is_playing(argument0)
 {
-    return fmod_studio_event_instance_get_playback_state(argument0) == UnknownEnum.Value_0;
+    return fmod_studio_event_instance_get_playback_state(argument0) == FMOD_STUDIO_PLAYBACK_STATE.PLAYING;
 }

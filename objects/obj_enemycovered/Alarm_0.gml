@@ -5,7 +5,7 @@ with (baddieID)
     x = other.x + 18;
     y = other.y - 18;
     vsp = -6;
-    state = states.actor;
+    state = baddiestates.walk;
     sprite_index = walkspr;
     stunned = 20;
     boundbox = 0;

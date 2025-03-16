@@ -12,7 +12,7 @@ switch (state)
         scr_enemy_turn();
         break;
     
-    case states.actor:
+    case baddiestates.walk:
         scr_enemy_walk();
         break;
     
@@ -32,7 +32,7 @@ switch (state)
         scr_pizzagoblin_throw();
         break;
     
-    case states.grabbed:
+    case baddiestates.grabbed:
         scr_enemy_grabbed();
         break;
 }
@@ -45,7 +45,7 @@ if (state == baddiestates.stun && (stunned > 100 && birdcreated == 0))
         ID = other.id;
 }
 
-if (state != states.grabbed)
+if (state != baddiestates.grabbed)
     birdcreated = 0;
 
 if (state == baddiestates.stun)
@@ -56,12 +56,12 @@ else
 if (flash == 1 && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (state != states.grabbed)
+if (state != baddiestates.grabbed)
     depth = 0;
 
 scr_scareenemy();
 
-if (((obj_player.x > (x - 400) && obj_player.x < (x + 400)) && (y + 200) > obj_player.y) && state != baddiestates.charge && state != states.grabbed && state != baddiestates.hit && state != baddiestates.stun && state != baddiestates.idle)
+if (((obj_player.x > (x - 400) && obj_player.x < (x + 400)) && (y + 200) > obj_player.y) && state != baddiestates.charge && state != baddiestates.grabbed && state != baddiestates.hit && state != baddiestates.stun && state != baddiestates.idle)
 {
     if (state != baddiestates.charge)
     {
@@ -79,7 +79,7 @@ if (((obj_player.x > (x - 400) && obj_player.x < (x + 400)) && (y + 200) > obj_p
     }
 }
 
-if (state == baddiestates.stun || state == states.actor || state == baddiestates.idle)
+if (state == baddiestates.stun || state == baddiestates.walk || state == baddiestates.idle)
     movespeed = 0;
 
 if (state != baddiestates.stun)

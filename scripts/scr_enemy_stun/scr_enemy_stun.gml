@@ -155,7 +155,7 @@ function scr_enemy_stun()
             vsp = 0;
             image_index = 0;
             sprite_index = walkspr;
-            state = states.actor;
+            state = baddiestates.walk;
             stunned = 0;
         }
     }

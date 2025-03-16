@@ -19,16 +19,16 @@ function get_attack_name(argument0)
 {
     switch (argument0)
     {
-        case UnknownEnum.Value_0:
+        case playerspecialmove.kungfu:
             return "Kung Fu";
         
-        case UnknownEnum.Value_1:
+        case playerspecialmove.shoulderbash:
             return "Shoulder Bash";
         
-        case UnknownEnum.Value_2:
+        case playerspecialmove.faceplant:
             return "Faceplant";
         
-        case UnknownEnum.Value_3:
+        case playerspecialmove.cappy:
             return "Cappy";
         
         default:

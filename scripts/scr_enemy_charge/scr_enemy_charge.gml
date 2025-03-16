@@ -81,7 +81,7 @@ function scr_enemy_charge()
                     {
                         movespeed = 0;
                         charging = 0;
-                        state = states.actor;
+                        state = baddiestates.walk;
                     }
                 }
             }
@@ -129,7 +129,7 @@ function scr_enemy_charge()
         image_speed = 0.35;
         
         if (grounded && vsp > 0)
-            state = states.actor;
+            state = baddiestates.walk;
         
         if (((scr_solid(x + 1, y) && image_xscale == 1) || (scr_solid(x - 1, y) && image_xscale == -1)) && !place_meeting(x + sign(hsp), y, obj_slope))
             image_xscale *= -1;

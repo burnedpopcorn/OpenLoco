@@ -12,7 +12,7 @@ switch (state)
         scr_enemy_turn();
         break;
     
-    case states.actor:
+    case baddiestates.walk:
         scr_enemy_walk();
         break;
     
@@ -32,7 +32,7 @@ switch (state)
         scr_pizzagoblin_throw();
         break;
     
-    case states.grabbed:
+    case baddiestates.grabbed:
         scr_enemy_grabbed();
         break;
 }
@@ -62,7 +62,7 @@ if (hitboxcreate == 0 && (state == baddiestates.charge && (obj_player.state != s
 if (attack == 0)
     sprite_index = spr_mii;
 
-if (attack == 0 && (state != states.grabbed && state != states.grabbed))
+if (attack == 0 && (state != baddiestates.grabbed && state != baddiestates.grabbed))
 {
     state = baddiestates.idle;
     roaming = 0;
@@ -75,7 +75,7 @@ if (x != obj_player.x)
 {
     if ((obj_player.x > (x - 200) && obj_player.x < (x + 200)) && obj_player.y == y)
     {
-        if (state == states.actor || state == baddiestates.idle)
+        if (state == baddiestates.walk || state == baddiestates.idle)
         {
             if (sprite_index == spr_mii)
                 instance_create(x, y, obj_balloonpop);
@@ -94,7 +94,7 @@ if (x != obj_player.x)
 if (flash == 1 && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (state != states.grabbed)
+if (state != baddiestates.grabbed)
     depth = 0;
 
 if (state != baddiestates.stun)

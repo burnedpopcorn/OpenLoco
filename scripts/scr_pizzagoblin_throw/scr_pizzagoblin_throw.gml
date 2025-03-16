@@ -42,7 +42,7 @@ function scr_pizzagoblin_throw()
         hsp = 5;
     
     if (floor(image_index) == (image_number - 1))
-        state = states.actor;
+        state = baddiestates.walk;
     
     if (bombreset == 0 && floor(image_index) == global.throw_frame[object_index])
     {

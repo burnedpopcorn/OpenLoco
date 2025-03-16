@@ -23,7 +23,7 @@ if (instance_exists(obj_noisecrusher))
     
     if (obj_player.state == states.hurt)
         noisesprite = spr_pizzagoblin_stunfall;
-    else if (obj_noisecrusher.state == states.grabbed || obj_noisecrusher.state == baddiestates.stun)
+    else if (obj_noisecrusher.state == baddiestates.grabbed || obj_noisecrusher.state == baddiestates.stun)
         noisesprite = spr_pizzagoblin_stun;
     else if (global.bosshealth <= 3)
         noisesprite = spr_pizzagoblin_stomped;

@@ -1,4 +1,4 @@
-if (state != states.grabbed)
+if (state != baddiestates.grabbed)
 {
     with (obj_player)
     {
@@ -55,7 +55,7 @@ if (state != states.grabbed)
             if (x != other.x)
                 other.image_xscale = -sign(other.x - x);
             
-            other.state = states.grabbed;
+            other.state = baddiestates.grabbed;
             image_index = 0;
             state = states.tackle;
         }
@@ -90,7 +90,7 @@ if (state != states.grabbed)
                 vsp = -10;
         }
         
-        if (attacking == 0 && ((state != states.tackle && state != states.hurt) && (!(y < other.y) && (grabbing == 0 && other.state != states.grabbed))))
+        if (attacking == 0 && ((state != states.tackle && state != states.hurt) && (!(y < other.y) && (grabbing == 0 && other.state != baddiestates.grabbed))))
         {
             if (x != other.x)
             {
@@ -104,7 +104,7 @@ if (state != states.grabbed)
             other.hsp = -other.image_xscale * 4;
             other.vsp = -4;
             
-            if (other.state == states.actor || other.state == 98)
+            if (other.state == baddiestates.walk || other.state == 98)
                 other.state = baddiestates.idle;
             
             image_index = 0;

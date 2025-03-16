@@ -1,6 +1,6 @@
 if (invframes == 0)
 {
-    if (state != states.grabbed && (obj_player.state != 15 && obj_player.state != states.bump))
+    if (state != baddiestates.grabbed && (obj_player.state != 15 && obj_player.state != states.bump))
     {
         with (obj_player)
         {
@@ -10,7 +10,7 @@ if (invframes == 0)
                 image_index = 0;
                 sprite_index = spr_haulingstart;
                 state = 46;
-                other.state = states.grabbed;
+                other.state = baddiestates.grabbed;
                 other.grabbedby = 1;
             }
             
@@ -70,7 +70,7 @@ if (invframes == 0)
                 }
             }
             
-            if (!(y < other.y) && (state != states.bump && (state != states.hurt && (other.state != states.grabbed && other.state != baddiestates.stun))))
+            if (!(y < other.y) && (state != states.bump && (state != states.hurt && (other.state != baddiestates.grabbed && other.state != baddiestates.stun))))
             {
                 instance_create(x, y, obj_bumpeffect);
                 

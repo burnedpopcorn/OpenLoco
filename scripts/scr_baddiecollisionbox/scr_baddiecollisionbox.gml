@@ -7,7 +7,7 @@ function bcb_update(argument0)
     {
         var p = instance_place(x, y, obj_player);
         
-        if (argument0.state != states.grabbed && instance_exists(argument0))
+        if (argument0.state != baddiestates.grabbed && instance_exists(argument0))
         {
             with (p)
             {
@@ -170,7 +170,7 @@ function bcb_update(argument0)
                         swingdingendcooldown = 0;
                         state = states.grab;
                         baddiegrabbedID = argument0;
-                        argument0.state = states.grabbed;
+                        argument0.state = baddiestates.grabbed;
                         argument0.grabbedby = 1;
                         
                         with (argument0)
@@ -182,7 +182,7 @@ function bcb_update(argument0)
                     else
                     {
                         baddiegrabbedID = argument0;
-                        argument0.state = states.grabbed;
+                        argument0.state = baddiestates.grabbed;
                         argument0.grabbedby = 1;
                         sprite_index = get_charactersprite("spr_piledriver");
                         vsp = -14;

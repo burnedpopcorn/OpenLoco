@@ -88,23 +88,30 @@ enum states
 	geno_jump		= 130,
 	geno_shoot		= 131,
 }
+
+enum playerspecialmove
+{
+	kungfu			= 0,
+	shoulderbash	= 1,
+	faceplant		= 2,
+	cappy			= 3,
+}
 	
-// baddiestates.stun
 enum baddiestates
 {
 	// idk man, its just like that in the original
-	idle			= 0,		// (DONE)
-	charge			= 109,		// (DONE)
-	turn			= 127,		// (DONE)
-	walk			= 110,		// states.actor
-	land			= 108,		// (DONE)
-	hit				= 107,		// (DONE)
-	stun			= 128,		// (DONE)
-	throwing		= 97,		// (DONE)
-	grabbed			= 106,		// states.grabbed
-	rage			= 125,		// (DONE)
+	idle			= 0,
+	charge			= 109,
+	turn			= 127,
+	walk			= 110,
+	land			= 108,
+	hit				= 107,
+	stun			= 128,
+	throwing		= 97,
+	grabbed			= 106,
+	rage			= 125,
 	
-	// sometimes doesn't exist
+	// only obj_dedede uses it im pretty sure
 	bounce			= 1,
 }
 
@@ -114,6 +121,14 @@ enum cappystates
 	fly				= 0,
 	enemykill		= 1,
 	comeback		= 2,
+}
+
+// player afterimages
+enum afterimgs
+{
+	grabimg			= 0,
+	runningcolors	= 1,
+	unusedimg		= 2, // never could get it to trigger
 }
 
 // patrick pillar
@@ -169,6 +184,36 @@ enum ballstates
 {
 	air				= 0,
 	land			= 1,
+}
+
+// zombie arena
+enum zarena
+{
+	idle			= 0,
+	start			= 1,
+	startcheck		= 2,
+	gameloop		= 3,
+	ending			= 4,
+}
+
+// temp enums for colmesh
+enum colmesh_enum 
+{
+    Value_0,
+    Value_1,
+    Value_2,
+    Value_3,
+    Value_4,
+    Value_5,
+    Value_6,
+    Value_7,
+    Value_8,
+    Value_9,
+    Value_10,
+    Value_11,
+    Value_12,
+    Value_13,
+    Value_14,
 }
 	
 // temporary

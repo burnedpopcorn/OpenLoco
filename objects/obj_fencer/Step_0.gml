@@ -12,7 +12,7 @@ switch (state)
         scr_enemy_turn();
         break;
     
-    case states.actor:
+    case baddiestates.walk:
         scr_enemy_walk();
         break;
     
@@ -32,7 +32,7 @@ switch (state)
         scr_pizzagoblin_throw();
         break;
     
-    case states.grabbed:
+    case baddiestates.grabbed:
         scr_enemy_grabbed();
         break;
 }
@@ -45,7 +45,7 @@ if (state == baddiestates.stun && (stunned > 100 && birdcreated == 0))
         ID = other.id;
 }
 
-if (state != states.grabbed)
+if (state != baddiestates.grabbed)
     birdcreated = 0;
 
 scr_scareenemy();
@@ -54,7 +54,7 @@ if (x != obj_player1.x && grounded)
 {
     if ((obj_player1.x > (x - 400) && obj_player1.x < (x + 400)) && (y <= (obj_player1.y + 60) && y >= (obj_player1.y - 60)))
     {
-        if (state == states.actor && charging == 0)
+        if (state == baddiestates.walk && charging == 0)
         {
             with (instance_create(x, y, obj_forkhitbox))
                 ID = other.id;
@@ -75,7 +75,7 @@ if (instance_exists(obj_player2))
     {
         if ((obj_player2.x > (x - 400) && obj_player2.x < (x + 400)) && (y <= (obj_player2.y + 20) && y >= (obj_player2.y - 20)))
         {
-            if (state == states.actor && charging == 0)
+            if (state == baddiestates.walk && charging == 0)
             {
                 with (instance_create(x, y, obj_forkhitbox))
                     ID = other.id;
@@ -90,7 +90,7 @@ if (instance_exists(obj_player2))
     }
 }
 
-if (state == baddiestates.stun || state == states.actor)
+if (state == baddiestates.stun || state == baddiestates.walk)
 {
     charging = 0;
     movespeed = 0;
@@ -102,7 +102,7 @@ if (sprite_index == spr_fencer_chargestart && floor(image_index) == (image_numbe
 if (flash == 1 && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (hitboxcreate == 0 && state == states.actor)
+if (hitboxcreate == 0 && state == baddiestates.walk)
 {
     hitboxcreate = 1;
     
@@ -110,7 +110,7 @@ if (hitboxcreate == 0 && state == states.actor)
         ID = other.id;
 }
 
-if (state != states.grabbed)
+if (state != baddiestates.grabbed)
     depth = 0;
 
 if (state != baddiestates.stun)

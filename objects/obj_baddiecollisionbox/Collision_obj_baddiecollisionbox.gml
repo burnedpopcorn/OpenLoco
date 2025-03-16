@@ -1,6 +1,6 @@
 if (instance_exists(other.baddieID) && instance_exists(baddieID))
 {
-    if (baddieID != other.baddieID && !other.baddieID.mach3destroy && baddieID.state != baddiestates.hit && other.baddieID != id && baddieID.state != states.grabbed && !baddieID.thrown && other.baddieID.thrown)
+    if (baddieID != other.baddieID && !other.baddieID.mach3destroy && baddieID.state != baddiestates.hit && other.baddieID != id && baddieID.state != baddiestates.grabbed && !baddieID.thrown && other.baddieID.thrown)
     {
         fmod_studio_event_oneshot_3d("event:/sfx/player/punch");
         baddieID.hitLag = 5;

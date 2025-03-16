@@ -11,15 +11,16 @@ Some Organization was from Deggcomplanted
 -----------------------------------------------------------
 Packages Added
 
-- GMLiveForGMS2.3			(DONE)
-- Scribble 8.8.3			(DONE)
-- FssAy Discord WebHook		(DONE)
-- NekoPresence				(DONE)
-- Official FMOD Extension	(DONE)
-- rtShell					(DONE)
-- Tiny Expression Runtime	(DONE)
-- YAL Twerp					(DONE)
-- Mr. Unown Collisions		(DONE)
+- GMLiveForGMS2.3
+- Scribble 8.8.3
+- FssAy Discord WebHook
+- NekoPresence
+- Official FMOD Extension
+- YAL Tiny Expression Runtime
+- YAL Twerp
+
+- Mr. Unown Collisions (Modified)
+- rtShell (Modified)
 
 -----------------------------------------------------------
 

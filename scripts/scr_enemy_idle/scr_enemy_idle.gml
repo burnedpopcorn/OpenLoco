@@ -8,18 +8,18 @@ function scr_enemy_idle()
     
     if (vsp >= 0 && (sprite_index == scaredspr && grounded && scaredbuffer <= 0))
     {
-        state = states.actor;
+        state = baddiestates.walk;
         sprite_index = walkspr;
     }
     
     if ((object_index == obj_ancho || object_index == obj_zombiewater) && (sprite_index == scaredspr && floor(image_index) == (image_number - 1)))
-        state = states.actor;
+        state = baddiestates.walk;
     
     if (object_index == obj_shyguy && (sprite_index == spr_forknight_turn && floor(image_index) == (image_number - 1)))
-        state = states.actor;
+        state = baddiestates.walk;
     
     if (object_index == obj_zombie && (sprite_index == spr_forknight_turn && floor(image_index) == (image_number - 1)))
-        state = states.actor;
+        state = baddiestates.walk;
     
     if ((grounded || (grounded && !place_meeting(x, y, obj_platform))) && vsp > 0)
         hsp = 0;

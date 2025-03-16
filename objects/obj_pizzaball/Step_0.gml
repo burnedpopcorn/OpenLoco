@@ -12,7 +12,7 @@ switch (state)
         scr_enemy_turn();
         break;
     
-    case states.actor:
+    case baddiestates.walk:
         scr_enemy_walk();
         break;
     
@@ -32,7 +32,7 @@ switch (state)
         scr_pizzagoblin_throw();
         break;
     
-    case states.grabbed:
+    case baddiestates.grabbed:
         scr_enemy_grabbed();
         break;
 }
@@ -45,7 +45,7 @@ if (state == baddiestates.stun && (stunned > 40 && birdcreated == 0))
         ID = other.id;
 }
 
-if (state != states.grabbed)
+if (state != baddiestates.grabbed)
     birdcreated = 0;
 
 if (flash == 1 && alarm[2] <= 0)
@@ -54,10 +54,10 @@ if (flash == 1 && alarm[2] <= 0)
 if (hp != 5)
     hp = 5;
 
-if (state != states.grabbed)
+if (state != baddiestates.grabbed)
     depth = 0;
 
-if (state != states.grabbed)
+if (state != baddiestates.grabbed)
     thrown = 0;
 
 if (boundbox == 0)

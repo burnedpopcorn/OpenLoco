@@ -19,7 +19,7 @@ function scr_boss_grabbed()
     
     image_xscale = -playerid.xscale;
     sprite_index = grabbedspr;
-    state = states.grabbed;
+    state = baddiestates.grabbed;
     stunned = 200;
     thrown = 1;
     linethrown = 1;

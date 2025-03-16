@@ -4,7 +4,7 @@ switch (state)
         scr_enemy_idle();
         break;
     
-    case UnknownEnum.Value_1:
+    case baddiestates.bounce:
         scr_enemy_bounce();
         break;
     
@@ -12,7 +12,7 @@ switch (state)
         scr_enemy_stun();
         break;
     
-    case states.grabbed:
+    case baddiestates.grabbed:
         scr_enemy_grabbed();
         break;
 }
@@ -34,7 +34,7 @@ if (state == baddiestates.idle && obj_player.x != x)
 if (flash == 1 && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (state != states.grabbed)
+if (state != baddiestates.grabbed)
     depth = 0;
 
 if (state != baddiestates.stun)

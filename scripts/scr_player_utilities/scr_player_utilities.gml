@@ -123,7 +123,7 @@ function do_specialmoves(argument0 = special_attack)
 {
     switch (argument0)
     {
-        case UnknownEnum.Value_1:
+        case playerspecialmove.shoulderbash:
             sprite_index = get_charactersprite("spr_shoulderbashstart");
             image_index = 0;
             flash = 1;
@@ -134,7 +134,7 @@ function do_specialmoves(argument0 = special_attack)
             create_particle(x, y, 5, 0);
             break;
         
-        case UnknownEnum.Value_0:
+        case playerspecialmove.kungfu:
             image_index = 0;
             sprite_index = get_charactersprite("spr_kungfu" + choose("1", "2", "3"));
             
@@ -150,7 +150,7 @@ function do_specialmoves(argument0 = special_attack)
             fmod_studio_event_instance_start(grabsnd);
             break;
         
-        case UnknownEnum.Value_2:
+        case playerspecialmove.faceplant:
             image_index = 0;
             sprite_index = get_charactersprite("spr_faceplant");
             image_speed = 0.5;

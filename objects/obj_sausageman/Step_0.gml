@@ -12,7 +12,7 @@ switch (state)
         scr_enemy_turn();
         break;
     
-    case states.actor:
+    case baddiestates.walk:
         scr_enemy_walk();
         break;
     
@@ -32,7 +32,7 @@ switch (state)
         scr_pizzagoblin_throw();
         break;
     
-    case states.grabbed:
+    case baddiestates.grabbed:
         scr_enemy_grabbed();
         break;
 }
@@ -45,7 +45,7 @@ if (state == baddiestates.stun && (stunned > 40 && birdcreated == 0))
         ID = other.id;
 }
 
-if (state != states.grabbed)
+if (state != baddiestates.grabbed)
     birdcreated = 0;
 
 if (hp <= 0)
@@ -90,10 +90,10 @@ if (cigar == 0)
     stunspr = spr_ancho_chargestart;
     recoveryspr = spr_airdash1_damian;
     stompedspr = spr_arenagate_close;
-    grabbedspr = UnknownEnum.Value_128;
+    grabbedspr = spr_baddie;//UnknownEnum.Value_128; // uh what
 }
 
-if (cigar == 1 && (cigarcreate == 0 && (state == baddiestates.idle || (state == states.actor || (state == 98 || state == baddiestates.land)))))
+if (cigar == 1 && (cigarcreate == 0 && (state == baddiestates.idle || (state == baddiestates.walk || (state == 98 || state == baddiestates.land)))))
 {
     cigarcreate = 1;
     
@@ -101,10 +101,10 @@ if (cigar == 1 && (cigarcreate == 0 && (state == baddiestates.idle || (state == 
         ID = other.id;
 }
 
-if (state != states.grabbed)
+if (state != baddiestates.grabbed)
     depth = 0;
 
-if (state != states.grabbed)
+if (state != baddiestates.grabbed)
     thrown = 0;
 
 if (flash == 1 && alarm[2] <= 0)

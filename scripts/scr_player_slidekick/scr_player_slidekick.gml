@@ -57,7 +57,7 @@ function scr_player_slidekick()
     
     if (!grounded && sprite_index != get_charactersprite("spr_mach2jump"))
     {
-        previous_state = UnknownEnum.Value_123;
+        previous_state = states.slidekick;
         particle_set_scale(5, xscale, 1);
         create_particle(x, y, 5, 0);
         flash = 0;

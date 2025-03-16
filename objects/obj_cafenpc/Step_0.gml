@@ -2,14 +2,14 @@ event_inherited();
 
 if (obj_player1.state == 8 && obj_player1.key_up2)
 {
-    if (obj_player1.special_attack == UnknownEnum.Value_3)
-        obj_player1.special_attack = UnknownEnum.Value_1;
-    else if (obj_player1.special_attack == UnknownEnum.Value_1)
-        obj_player1.special_attack = UnknownEnum.Value_2;
-    else if (obj_player1.special_attack == UnknownEnum.Value_2)
-        obj_player1.special_attack = UnknownEnum.Value_0;
-    else if (obj_player1.special_attack == UnknownEnum.Value_0)
-        obj_player1.special_attack = UnknownEnum.Value_3;
+    if (obj_player1.special_attack == playerspecialmove.cappy)
+        obj_player1.special_attack = playerspecialmove.shoulderbash;
+    else if (obj_player1.special_attack == playerspecialmove.shoulderbash)
+        obj_player1.special_attack = playerspecialmove.faceplant;
+    else if (obj_player1.special_attack == playerspecialmove.faceplant)
+        obj_player1.special_attack = playerspecialmove.kungfu;
+    else if (obj_player1.special_attack == playerspecialmove.kungfu)
+        obj_player1.special_attack = playerspecialmove.cappy;
     
     var attack_name = get_attack_name(obj_player1.special_attack);
     

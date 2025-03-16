@@ -3,7 +3,7 @@ global.ColMeshRecursionCounter = 0;
 global.ColMeshRayMap = ds_map_create();
 global.ColMeshMeshMap = ds_map_create();
 global.ColMeshDefaultParent = new colmesh_mesh();
-global.ColMeshDebugShapes = array_create(UnknownEnum.Value_14, -1);
+global.ColMeshDebugShapes = array_create(colmesh_enum.Value_14, -1);
 
 function colmesh() : colmesh_mesh() constructor
 {
@@ -28,7 +28,7 @@ function colmesh() : colmesh_mesh() constructor
     {
         if (is_struct(argument0))
         {
-            if (argument0.type == UnknownEnum.Value_0)
+            if (argument0.type == colmesh_enum.Value_0)
             {
                 var num = array_length(argument0.triangles);
                 
@@ -52,7 +52,7 @@ function colmesh() : colmesh_mesh() constructor
                 return argument0;
             }
             
-            if (argument0.type == UnknownEnum.Value_7)
+            if (argument0.type == colmesh_enum.Value_7)
                 argument0.colMesh = self;
         }
         
@@ -835,7 +835,7 @@ function colmesh() : colmesh_mesh() constructor
             {
                 if ((group & 1) == 0 && !argument1)
                 {
-                    buffer_write(tempBuff, buffer_u8, UnknownEnum.Value_8);
+                    buffer_write(tempBuff, buffer_u8, colmesh_enum.Value_8);
                 }
                 else
                 {
@@ -843,7 +843,7 @@ function colmesh() : colmesh_mesh() constructor
                     
                     switch (type)
                     {
-                        case UnknownEnum.Value_0:
+                        case colmesh_enum.Value_0:
                             var index = ds_map_find_value(meshMap, name);
                             
                             if (is_undefined(index))
@@ -860,7 +860,7 @@ function colmesh() : colmesh_mesh() constructor
                             
                             break;
                         
-                        case UnknownEnum.Value_1:
+                        case colmesh_enum.Value_1:
                             buffer_write(tempBuff, buffer_u32, group);
                             buffer_write(tempBuff, buffer_f32, x);
                             buffer_write(tempBuff, buffer_f32, y);
@@ -868,19 +868,7 @@ function colmesh() : colmesh_mesh() constructor
                             buffer_write(tempBuff, buffer_f32, R);
                             break;
                         
-                        case UnknownEnum.Value_2:
-                            buffer_write(tempBuff, buffer_u32, group);
-                            buffer_write(tempBuff, buffer_f32, x);
-                            buffer_write(tempBuff, buffer_f32, y);
-                            buffer_write(tempBuff, buffer_f32, z);
-                            buffer_write(tempBuff, buffer_f32, xup);
-                            buffer_write(tempBuff, buffer_f32, yup);
-                            buffer_write(tempBuff, buffer_f32, zup);
-                            buffer_write(tempBuff, buffer_f32, R);
-                            buffer_write(tempBuff, buffer_f32, H);
-                            break;
-                        
-                        case UnknownEnum.Value_3:
+                        case colmesh_enum.Value_2:
                             buffer_write(tempBuff, buffer_u32, group);
                             buffer_write(tempBuff, buffer_f32, x);
                             buffer_write(tempBuff, buffer_f32, y);
@@ -892,7 +880,19 @@ function colmesh() : colmesh_mesh() constructor
                             buffer_write(tempBuff, buffer_f32, H);
                             break;
                         
-                        case UnknownEnum.Value_4:
+                        case colmesh_enum.Value_3:
+                            buffer_write(tempBuff, buffer_u32, group);
+                            buffer_write(tempBuff, buffer_f32, x);
+                            buffer_write(tempBuff, buffer_f32, y);
+                            buffer_write(tempBuff, buffer_f32, z);
+                            buffer_write(tempBuff, buffer_f32, xup);
+                            buffer_write(tempBuff, buffer_f32, yup);
+                            buffer_write(tempBuff, buffer_f32, zup);
+                            buffer_write(tempBuff, buffer_f32, R);
+                            buffer_write(tempBuff, buffer_f32, H);
+                            break;
+                        
+                        case colmesh_enum.Value_4:
                             buffer_write(tempBuff, buffer_u32, group);
                             buffer_write(tempBuff, buffer_f32, x);
                             buffer_write(tempBuff, buffer_f32, y);
@@ -904,7 +904,7 @@ function colmesh() : colmesh_mesh() constructor
                             buffer_write(tempBuff, buffer_f32, r);
                             break;
                         
-                        case UnknownEnum.Value_5:
+                        case colmesh_enum.Value_5:
                             buffer_write(tempBuff, buffer_u32, group);
                             buffer_write(tempBuff, buffer_f32, x);
                             buffer_write(tempBuff, buffer_f32, y);
@@ -914,7 +914,7 @@ function colmesh() : colmesh_mesh() constructor
                             buffer_write(tempBuff, buffer_f32, halfH);
                             break;
                         
-                        case UnknownEnum.Value_6:
+                        case colmesh_enum.Value_6:
                             buffer_write(tempBuff, buffer_u32, group);
                             buffer_write(tempBuff, buffer_f32, M[0]);
                             buffer_write(tempBuff, buffer_f32, M[1]);
@@ -1028,7 +1028,7 @@ function colmesh() : colmesh_mesh() constructor
             
             switch (type)
             {
-                case UnknownEnum.Value_0:
+                case colmesh_enum.Value_0:
                     var index = buffer_read(tempBuff, buffer_u32);
                     var parent = ds_map_find_value(global.ColMeshMeshMap, array_get(meshNames, index));
                     var V = array_create(9);
@@ -1039,7 +1039,7 @@ function colmesh() : colmesh_mesh() constructor
                     addTriangle(V, parent);
                     break;
                 
-                case UnknownEnum.Value_1:
+                case colmesh_enum.Value_1:
                     var group = buffer_read(tempBuff, buffer_u32);
                     var _x = buffer_read(tempBuff, buffer_f32);
                     var _y = buffer_read(tempBuff, buffer_f32);
@@ -1048,7 +1048,7 @@ function colmesh() : colmesh_mesh() constructor
                     addShape(new colmesh_sphere(_x, _y, _z, R, group));
                     break;
                 
-                case UnknownEnum.Value_2:
+                case colmesh_enum.Value_2:
                     var group = buffer_read(tempBuff, buffer_u32);
                     var _x = buffer_read(tempBuff, buffer_f32);
                     var _y = buffer_read(tempBuff, buffer_f32);
@@ -1061,7 +1061,7 @@ function colmesh() : colmesh_mesh() constructor
                     addShape(new colmesh_capsule(_x, _y, _z, xup, yup, zup, R, H, group));
                     break;
                 
-                case UnknownEnum.Value_3:
+                case colmesh_enum.Value_3:
                     var group = buffer_read(tempBuff, buffer_u32);
                     var _x = buffer_read(tempBuff, buffer_f32);
                     var _y = buffer_read(tempBuff, buffer_f32);
@@ -1074,7 +1074,7 @@ function colmesh() : colmesh_mesh() constructor
                     addShape(new colmesh_cylinder(_x, _y, _z, xup, yup, zup, R, H, group));
                     break;
                 
-                case UnknownEnum.Value_4:
+                case colmesh_enum.Value_4:
                     var group = buffer_read(tempBuff, buffer_u32);
                     var _x = buffer_read(tempBuff, buffer_f32);
                     var _y = buffer_read(tempBuff, buffer_f32);
@@ -1087,7 +1087,7 @@ function colmesh() : colmesh_mesh() constructor
                     addShape(new colmesh_torus(_x, _y, _z, xup, yup, zup, R, r, group));
                     break;
                 
-                case UnknownEnum.Value_5:
+                case colmesh_enum.Value_5:
                     var group = buffer_read(tempBuff, buffer_u32);
                     var _x = buffer_read(tempBuff, buffer_f32);
                     var _y = buffer_read(tempBuff, buffer_f32);
@@ -1098,7 +1098,7 @@ function colmesh() : colmesh_mesh() constructor
                     addShape(new colmesh_cube(_x, _y, _z, halfW * 2, halfW * 2, halfH * 2, group));
                     break;
                 
-                case UnknownEnum.Value_6:
+                case colmesh_enum.Value_6:
                     var group = buffer_read(tempBuff, buffer_u32);
                     var M = array_create(16);
                     M[0] = buffer_read(tempBuff, buffer_f32);
@@ -1117,11 +1117,11 @@ function colmesh() : colmesh_mesh() constructor
                     addShape(new colmesh_block(M, group));
                     break;
                 
-                case UnknownEnum.Value_8:
+                case colmesh_enum.Value_8:
                     addShape(new colmesh_none());
                     break;
                 
-                case UnknownEnum.Value_7:
+                case colmesh_enum.Value_7:
                     addShape(new colmesh_none());
                     break;
             }
@@ -1148,7 +1148,7 @@ function colmesh() : colmesh_mesh() constructor
                     
                     if (is_struct(shape))
                     {
-                        if (shape.type == UnknownEnum.Value_7 || shape.type == UnknownEnum.Value_8)
+                        if (shape.type == colmesh_enum.Value_7 || shape.type == colmesh_enum.Value_8)
                             continue;
                     }
                     
@@ -1245,12 +1245,12 @@ function colmesh() : colmesh_mesh() constructor
         if (argument0 < 0)
             argument0 = shapeList;
         
-        var triVbuff = global.ColMeshDebugShapes[UnknownEnum.Value_0];
+        var triVbuff = global.ColMeshDebugShapes[colmesh_enum.Value_0];
         
         if (triVbuff < 0)
         {
-            global.ColMeshDebugShapes[UnknownEnum.Value_0] = vertex_create_buffer();
-            triVbuff = global.ColMeshDebugShapes[UnknownEnum.Value_0];
+            global.ColMeshDebugShapes[colmesh_enum.Value_0] = vertex_create_buffer();
+            triVbuff = global.ColMeshDebugShapes[colmesh_enum.Value_0];
         }
         
         if (global.ColMeshRecursionCounter == 0)
@@ -1349,7 +1349,7 @@ function colmesh() : colmesh_mesh() constructor
         return str;
     };
     
-    type = UnknownEnum.Value_13;
+    type = colmesh_enum.Value_13;
     spHash = -1;
     originX = 0;
     originY = 0;

@@ -1,4 +1,4 @@
-if (state != states.grabbed)
+if (state != baddiestates.grabbed)
 {
     with (obj_player)
     {
@@ -19,7 +19,7 @@ if (state != states.grabbed)
                     other.vsp = -5;
                     other.hsp = -other.image_xscale * 3;
                     instance_create(x, y + 50, obj_stompeffect);
-                    other.state = states.grabbed;
+                    other.state = baddiestates.grabbed;
                     stompAnim = 1;
                     other.image_index = 0;
                     vsp = -14;
@@ -30,7 +30,7 @@ if (state != states.grabbed)
                     other.vsp = -5;
                     other.hsp = -other.image_xscale * 3;
                     instance_create(x, y + 50, obj_stompeffect);
-                    other.state = states.grabbed;
+                    other.state = baddiestates.grabbed;
                     stompAnim = 1;
                     other.image_index = 0;
                     vsp = -9;
@@ -56,7 +56,7 @@ if (state != states.grabbed)
             if (x != other.x)
                 other.image_xscale = -sign(other.x - x);
             
-            other.state = states.grabbed;
+            other.state = baddiestates.grabbed;
             image_index = 0;
             state = states.tackle;
         }
@@ -69,7 +69,7 @@ if (state != states.grabbed)
             other.hsp = xscale;
             other.image_index = 0;
             other.stunned = 200;
-            other.state = states.grabbed;
+            other.state = baddiestates.grabbed;
             machpunchAnim = 1;
             
             if (!scr_solid(x, y + 1) && state != states.freefall)
@@ -103,7 +103,7 @@ if (state != states.grabbed)
             other.hsp = -other.image_xscale * 4;
             other.vsp = -4;
             
-            if (other.state == states.actor || other.state == 98)
+            if (other.state == baddiestates.walk || other.state == 98)
                 other.state = baddiestates.idle;
             
             image_index = 0;

@@ -12,7 +12,7 @@ switch (state)
         scr_enemy_turn();
         break;
     
-    case states.actor:
+    case baddiestates.walk:
         scr_enemy_walk();
         break;
     
@@ -32,7 +32,7 @@ switch (state)
         scr_pizzagoblin_throw();
         break;
     
-    case states.grabbed:
+    case baddiestates.grabbed:
         scr_enemy_grabbed();
         break;
 }
@@ -48,10 +48,10 @@ if (state == baddiestates.stun && (stunned > 100 && birdcreated == 0))
 if (state != baddiestates.stun)
     birdcreated = 0;
 
-if (state == states.actor && (y > ystart && !scr_solid(x, y - 1)))
+if (state == baddiestates.walk && (y > ystart && !scr_solid(x, y - 1)))
     y--;
 
-if (state == states.actor && (y < ystart && !scr_solid(x, y + 1)))
+if (state == baddiestates.walk && (y < ystart && !scr_solid(x, y + 1)))
     y++;
 
 if (state == baddiestates.stun)
@@ -62,7 +62,7 @@ else
 if (flash == 1 && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (state != states.grabbed)
+if (state != baddiestates.grabbed)
     depth = 0;
 
 scr_scareenemy();
@@ -85,7 +85,7 @@ if (x != obj_player1.x && (state != baddiestates.charge && y == ystart))
 {
     if ((obj_player1.x > (x - 200) && obj_player1.x < (x + 200)) && (y <= (obj_player1.y + 50) && y >= (obj_player1.y - 50)))
     {
-        if (state == states.actor)
+        if (state == baddiestates.walk)
         {
             image_index = 0;
             image_xscale = -sign(x - obj_player.x);
@@ -101,7 +101,7 @@ if (instance_exists(obj_player2))
     {
         if ((obj_player2.x > (x - 200) && obj_player2.x < (x + 200)) && (y <= (obj_player2.y + 50) && y >= (obj_player2.y - 50)))
         {
-            if (state == states.actor)
+            if (state == baddiestates.walk)
             {
                 image_index = 0;
                 image_xscale = -sign(x - obj_player.x);
@@ -112,7 +112,7 @@ if (instance_exists(obj_player2))
     }
 }
 
-if (state == baddiestates.stun || state == states.actor)
+if (state == baddiestates.stun || state == baddiestates.walk)
     movespeed = 0;
 
 if (state != baddiestates.stun)

@@ -12,7 +12,7 @@ switch (state)
         scr_enemy_turn();
         break;
     
-    case states.actor:
+    case baddiestates.walk:
         scr_enemy_walk();
         break;
     
@@ -32,7 +32,7 @@ switch (state)
         scr_pizzagoblin_throw();
         break;
     
-    case states.grabbed:
+    case baddiestates.grabbed:
         scr_enemy_grabbed();
         break;
 }
@@ -59,7 +59,7 @@ if (hitboxcreate == 0 && (state == baddiestates.charge && (obj_player.state != s
     }
 }
 
-if (state != states.actor && (state != baddiestates.idle && angry == 0))
+if (state != baddiestates.walk && (state != baddiestates.idle && angry == 0))
 {
     grav = 0.5;
     vsp = -5;
@@ -69,13 +69,13 @@ if (state != states.actor && (state != baddiestates.idle && angry == 0))
     thrown = 0;
 }
 
-if (state != baddiestates.stun && (state != states.grabbed && (state != baddiestates.idle && state != baddiestates.charge)))
+if (state != baddiestates.stun && (state != baddiestates.grabbed && (state != baddiestates.idle && state != baddiestates.charge)))
     angry = 0;
 
 if (flash == 1 && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (state != states.grabbed)
+if (state != baddiestates.grabbed)
     depth = 0;
 
 if (state != baddiestates.stun)

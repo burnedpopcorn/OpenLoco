@@ -12,7 +12,7 @@ switch (state)
         scr_enemy_turn();
         break;
     
-    case states.actor:
+    case baddiestates.walk:
         scr_enemy_walk();
         break;
     
@@ -32,7 +32,7 @@ switch (state)
         scr_pizzagoblin_throw();
         break;
     
-    case states.grabbed:
+    case baddiestates.grabbed:
         scr_enemy_grabbed();
         break;
     
@@ -48,7 +48,7 @@ if (global.laps >= 5)
 {
     var check = (image_xscale > 0) ? (player.x > x && player.x < (x + 200)) : (player.x < x && player.x > (x - 200));
     
-    if (state == states.actor)
+    if (state == baddiestates.walk)
     {
         if (check && y <= (player.y + 60) && y >= (player.y - 60))
         {
@@ -89,7 +89,7 @@ scr_scareenemy();
 if (flash == 1 && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (hitboxcreate == 0 && state == states.actor)
+if (hitboxcreate == 0 && state == baddiestates.walk)
 {
     hitboxcreate = 1;
     
@@ -97,7 +97,7 @@ if (hitboxcreate == 0 && state == states.actor)
         ID = other.id;
 }
 
-if (state != states.grabbed)
+if (state != baddiestates.grabbed)
     depth = 0;
 
 if (state != baddiestates.stun)

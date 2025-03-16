@@ -1,5 +1,5 @@
 Round = 0;
-state = states.normal;
+state = zarena.idle;
 state_jump_wait = 0;
 zombie_list = ds_list_create();
 closedGates = false;

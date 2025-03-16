@@ -12,7 +12,7 @@ switch (state)
         scr_enemy_turn();
         break;
     
-    case states.actor:
+    case baddiestates.walk:
         scr_enemy_walk();
         break;
     
@@ -32,7 +32,7 @@ switch (state)
         scr_pizzagoblin_throw();
         break;
     
-    case states.grabbed:
+    case baddiestates.grabbed:
         scr_enemy_grabbed();
         break;
 }
@@ -58,7 +58,7 @@ scr_scareenemy();
 if (flash == 1 && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (state != states.grabbed)
+if (state != baddiestates.grabbed)
     depth = 0;
 
 if (state != baddiestates.stun)
@@ -71,7 +71,7 @@ if (x != obj_player1.x && (obj_player1.state != UnknownEnum.Value_27 && (state !
 {
     if ((obj_player1.x > (x - 400) && obj_player1.x < (x + 400)) && (y <= (obj_player1.y + 20) && y >= (obj_player1.y - 20)))
     {
-        if (state == states.actor || state == baddiestates.idle)
+        if (state == baddiestates.walk || state == baddiestates.idle)
         {
             image_index = 0;
             image_xscale = -sign(x - obj_player1.x);
@@ -86,7 +86,7 @@ if (instance_exists(obj_player2))
     {
         if ((obj_player2.x > (x - 400) && obj_player2.x < (x + 400)) && (y <= (obj_player2.y + 20) && y >= (obj_player2.y - 20)))
         {
-            if (state == states.actor || state == baddiestates.idle)
+            if (state == baddiestates.walk || state == baddiestates.idle)
             {
                 image_index = 0;
                 image_xscale = -sign(x - obj_player2.x);

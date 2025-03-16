@@ -20,7 +20,7 @@ function scr_enemy_rage()
             
             if (floor(image_index) == (image_number - 1))
             {
-                state = states.actor;
+                state = baddiestates.walk;
                 sprite_index = walkspr;
             }
             
@@ -34,7 +34,7 @@ function scr_enemy_rage()
                 with (instance_create(x, y, obj_shyguy_lance))
                     image_xscale = other.image_xscale;
                 
-                state = states.actor;
+                state = baddiestates.walk;
                 sprite_index = walkspr;
             }
             

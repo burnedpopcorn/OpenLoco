@@ -1,6 +1,6 @@
 switch (state)
 {
-    case UnknownEnum.Value_1:
+    case zarena.start:
         if (!closedGates)
         {
             with (obj_zombiearena_gate)
@@ -23,26 +23,26 @@ switch (state)
             }
         }
         
-        state = states.finishingblow;
+        state = zarena.gameloop;
         break;
     
-    case states.tumble:
+    case zarena.startcheck:// unused and uneeded
         if (!instance_exists(obj_zombie_riseup))
-            state = states.finishingblow;
+            state = zarena.gameloop;
         
         break;
     
-    case states.finishingblow:
+    case zarena.gameloop:
         if (ds_list_empty(zombie_list) && !instance_exists(obj_zombie_riseup))
         {
             if (Round == totalRounds)
             {
-                state = states.ejected;
+                state = zarena.ending;
             }
             else
             {
                 Round++;
-                state = UnknownEnum.Value_1;
+                state = zarena.start;
             }
         }
         else
@@ -59,7 +59,7 @@ switch (state)
         
         break;
     
-    case states.ejected:
+    case zarena.ending:
         with (obj_zombiearena_gate)
         {
             sprite_index = spr_arenagate_open;
@@ -67,6 +67,6 @@ switch (state)
             image_speed = 0.35;
         }
         
-        state = states.normal;
+        state = zarena.idle;
         break;
 }

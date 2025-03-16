@@ -1,6 +1,6 @@
 if (invframes == 0)
 {
-    if (state != states.grabbed && (obj_player.state != 15 && obj_player.state != states.bump))
+    if (state != baddiestates.grabbed && (obj_player.state != 15 && obj_player.state != states.bump))
     {
         with (obj_player)
         {
@@ -14,7 +14,7 @@ if (invframes == 0)
                     other.stunned = 200;
                     other.vsp = -5;
                     other.hsp = -other.image_xscale * 3;
-                    other.state = states.grabbed;
+                    other.state = baddiestates.grabbed;
                     other.image_index = 0;
                 }
                 else
@@ -33,7 +33,7 @@ if (invframes == 0)
                     vsp = -9;
             }
             
-            if ((state == states.mach2 || (state == states.mach3 || state == states.grab)) && (other.grounded == 1 && other.state == states.grabbed))
+            if ((state == states.mach2 || (state == states.mach3 || state == states.grab)) && (other.grounded == 1 && other.state == baddiestates.grabbed))
             {
                 global.hit += 1;
                 instance_create(other.x, other.y, obj_slapstar);
@@ -49,7 +49,7 @@ if (invframes == 0)
                 other.hsp = xscale;
                 other.image_index = 0;
                 other.stunned = 200;
-                other.state = states.grabbed;
+                other.state = baddiestates.grabbed;
                 machpunchAnim = 1;
                 
                 if (!grounded && (state != states.freefall && key_jump2))
@@ -59,7 +59,7 @@ if (invframes == 0)
                 }
             }
             
-            if (!(y < other.y) && (state != states.bump && (state != states.hurt && other.state != states.grabbed)))
+            if (!(y < other.y) && (state != states.bump && (state != states.hurt && other.state != baddiestates.grabbed)))
             {
                 instance_create(x, y, obj_bumpeffect);
                 

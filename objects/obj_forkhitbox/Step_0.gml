@@ -12,7 +12,7 @@ if (instance_exists(ID))
     {
         if (object_index == obj_shyguy || object_index == obj_zombie || (object_index == obj_indiancheese || object_index == obj_noisey))
         {
-            if (state != states.actor)
+            if (state != baddiestates.walk)
             {
                 hitboxcreate = 0;
                 instance_destroy(other.id);
@@ -36,7 +36,7 @@ if (instance_exists(ID))
         
         if (object_index == obj_noisecrusher)
         {
-            if (state != UnknownEnum.Value_1)
+            if (state != baddiestates.bounce)
             {
                 hitboxcreate = 0;
                 instance_destroy(other.id);

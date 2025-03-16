@@ -12,7 +12,7 @@ switch (state)
         scr_enemy_turn();
         break;
     
-    case states.actor:
+    case baddiestates.walk:
         scr_enemy_walk();
         break;
     
@@ -32,7 +32,7 @@ switch (state)
         scr_pizzagoblin_throw();
         break;
     
-    case states.grabbed:
+    case baddiestates.grabbed:
         scr_enemy_grabbed();
         break;
 }
@@ -53,7 +53,7 @@ if (bombreset > 0)
 
 if (state != baddiestates.throwing && bombreset == 0)
 {
-    if (state == states.actor || state == baddiestates.idle)
+    if (state == baddiestates.walk || state == baddiestates.idle)
     {
         if (!audio_is_playing(sound_enemythrow))
             image_index = 0;
@@ -65,7 +65,7 @@ if (state != baddiestates.throwing && bombreset == 0)
 if (flash == 1 && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (state != states.grabbed)
+if (state != baddiestates.grabbed)
     depth = 0;
 
 if (state != baddiestates.stun)

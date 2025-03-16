@@ -1,4 +1,4 @@
-if (state == states.grabbed)
+if (state == baddiestates.grabbed)
     scr_enemy_grabbed();
 
 if (state == states.superslam)
@@ -7,7 +7,7 @@ if (state == states.superslam)
 if (obj_player1.state != states.lungeattack && obj_player1.state != states.chainsaw && obj_player1.state != states.handstandjump && state != states.superslam && state != baddiestates.hit && lunged)
     lunged = 0;
 
-if (state != states.grabbed && state != 126)
+if (state != baddiestates.grabbed && state != 126)
 {
     scr_collision();
     
@@ -29,10 +29,10 @@ if (y > (room_height + 100))
 if (thrown && (x > (room_width + 100) || x < -100 || y < -100))
     instance_destroy();
 
-if (state == states.actor)
+if (state == baddiestates.walk)
     image_speed = 0.35 + (global.baddiespeed * 0.05);
 
-if (obj_player1.baddiegrabbedID == id && state == states.grabbed)
+if (obj_player1.baddiegrabbedID == id && state == baddiestates.grabbed)
     persistent = true;
 else
     persistent = false;

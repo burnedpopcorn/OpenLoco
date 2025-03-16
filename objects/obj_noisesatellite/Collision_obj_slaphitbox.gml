@@ -1,13 +1,13 @@
-if (state == states.grabbed && (hp == 0 && (stunned > 40 && slapped == 0)))
+if (state == baddiestates.grabbed && (hp == 0 && (stunned > 40 && slapped == 0)))
 {
     slapped = 1;
     instance_create(x + (obj_player.xscale * 40), y, obj_punchdust);
-    state = states.grabbed;
+    state = baddiestates.grabbed;
     obj_player.state = 46;
     instance_destroy(other.id);
 }
 
-if (hp == 0 && (!(state == states.grabbed && stunned > 40) && (state != states.grabbed && slapped == 0)))
+if (hp == 0 && (!(state == baddiestates.grabbed && stunned > 40) && (state != baddiestates.grabbed && slapped == 0)))
 {
     instance_create(x, y, obj_spikehurteffect);
     other.image_xscale = image_xscale;
@@ -21,9 +21,9 @@ if (hp == 0 && (!(state == states.grabbed && stunned > 40) && (state != states.g
     
     vsp = -5;
     hsp = -image_xscale * 3;
-    state = states.grabbed;
+    state = baddiestates.grabbed;
 }
-else if (state != states.grabbed && slapped == 0)
+else if (state != baddiestates.grabbed && slapped == 0)
 {
     if (hp > 0)
         hp -= 1;
@@ -35,7 +35,7 @@ else if (state != states.grabbed && slapped == 0)
         other.image_xscale = image_xscale;
     
     slapped = 1;
-    state = states.grabbed;
+    state = baddiestates.grabbed;
     stunned = 40;
     
     if (other.x != x)

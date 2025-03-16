@@ -3,7 +3,7 @@ function scr_player_tumble()
     hsp = xscale * movespeed;
     
     if (sprite_index != get_charactersprite("spr_dive"))
-        previous_state = UnknownEnum.Value_2;
+        previous_state = states.tumble;
     
     if (!groundedSlope && (sprite_index == get_charactersprite("spr_tumblestart") && floor(image_index) < 11))
         image_index = 11;
@@ -27,7 +27,7 @@ function scr_player_tumble()
     {
         image_index = 0;
         
-        if (previous_state == UnknownEnum.Value_123)
+        if (previous_state == states.slidekick)
         {
             state = states.slidekick;
             sprite_index = get_charactersprite("spr_backslideland");

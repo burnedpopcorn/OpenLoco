@@ -1,5 +1,7 @@
 switch (state)
 {
+	// uhh idk
+	// guessing a "do nothing" state or wip state
     case 144:
         break;
     
@@ -15,7 +17,7 @@ switch (state)
         scr_enemy_turn();
         break;
     
-    case states.actor:
+    case baddiestates.walk:
         scr_enemy_walk();
         break;
     

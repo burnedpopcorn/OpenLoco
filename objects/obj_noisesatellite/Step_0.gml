@@ -8,7 +8,7 @@ switch (state)
         scr_enemy_turn();
         break;
     
-    case states.actor:
+    case baddiestates.walk:
         scr_enemy_walk();
         break;
     
@@ -24,7 +24,7 @@ switch (state)
         scr_enemy_stun();
         break;
     
-    case states.grabbed:
+    case baddiestates.grabbed:
         scr_enemy_grabbed();
         break;
 }
@@ -55,7 +55,7 @@ if (cigar == 0)
     grabbedspr = spr_noisesatellitestun;
 }
 
-if (state != states.grabbed)
+if (state != baddiestates.grabbed)
     depth = 0;
 
 if (state != baddiestates.stun)

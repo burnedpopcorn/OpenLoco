@@ -1,4 +1,4 @@
-type = UnknownEnum.Value_0;
+type = afterimgs.grabimg;
 playerid = undefined;
 len = 5;
 dir = 5;
@@ -15,7 +15,7 @@ if (!object_exists(playerid))
 if (variable_instance_exists(playerid, "angle"))
     image_angle = playerid.angle;
 
-if (type == UnknownEnum.Value_0)
+if (type == afterimgs.grabimg)
     depth = playerid.depth + 30;
 else
     depth = playerid.depth + 45;
