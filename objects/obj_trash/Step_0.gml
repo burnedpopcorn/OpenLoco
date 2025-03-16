@@ -1,6 +1,6 @@
 switch (state)
 {
-    case states.normal:
+    case baddiestates.idle:
         scr_enemy_idle();
         break;
     
@@ -53,7 +53,7 @@ if (bombreset > 0)
 
 if (state != baddiestates.throwing && bombreset == 0)
 {
-    if (state == states.actor || state == states.normal)
+    if (state == states.actor || state == baddiestates.idle)
     {
         if (!audio_is_playing(sound_enemythrow))
             image_index = 0;

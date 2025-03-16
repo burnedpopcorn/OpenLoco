@@ -64,7 +64,7 @@ draw_set_color(c_white);
 draw_rectangle(0, 0, obj_screen.actualWidth, obj_screen.actualHeight, false);
 intro_scene.white_alpha = lerp(intro_scene.white_alpha, 0, 0.3);
 
-if (state == UnknownEnum.Value_5)
+if (state == boss_states.fighting)
 {
     draw_set_alpha(phase_transit_time / 10);
     draw_set_color(c_red);
@@ -84,7 +84,7 @@ if (state == UnknownEnum.Value_5)
         phase_transit_yoff = 0;
         phase_transit_time = 0;
         hp.boss = 6;
-        state = states.ejected;
+        state = boss_states.enterfight;
         phase++;
         
         with (obj_camera)
@@ -95,7 +95,7 @@ if (state == UnknownEnum.Value_5)
     }
 }
 
-if (state >= states.ejected)
+if (state >= boss_states.enterfight)
 {
     var draw_hp_serie = function(argument0, argument1, argument2, argument3, argument4)
     {

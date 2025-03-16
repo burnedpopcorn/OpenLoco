@@ -9,7 +9,7 @@ function scr_enemy_land()
     if (floor(image_index) == (image_number - 1))
     {
         sprite_index = idlespr;
-        state = states.normal;
+        state = baddiestates.idle;
         image_index = 0;
     }
 }

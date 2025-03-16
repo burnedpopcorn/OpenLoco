@@ -1,6 +1,6 @@
 switch (state)
 {
-    case states.normal:
+    case baddiestates.idle:
         scr_enemy_idle();
         break;
     
@@ -41,7 +41,7 @@ if (flash == 1 && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
 if (state == states.actor)
-    state = states.normal;
+    state = baddiestates.idle;
 
 if (state != states.grabbed)
     depth = 0;

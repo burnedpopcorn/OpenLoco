@@ -1,5 +1,5 @@
 player_id = -4;
-state = states.normal;
+state = cappystates.fly;
 elapsed_time = 0;
 seek = false;
 vertical = false;

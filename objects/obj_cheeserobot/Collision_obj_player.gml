@@ -105,13 +105,13 @@ if (state != states.grabbed)
             other.vsp = -4;
             
             if (other.state == states.actor || other.state == 98)
-                other.state = states.normal;
+                other.state = baddiestates.idle;
             
             image_index = 0;
             state = states.bump;
             
             if (other.state == baddiestates.land)
-                other.state = states.normal;
+                other.state = baddiestates.idle;
         }
     }
 }

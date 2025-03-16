@@ -18,7 +18,7 @@ if (escape == 1 && !_destroyed && persistent == false)
     
     with (obj_escapespawn)
     {
-        if (baddieID == other.id && state != states.normal && state != 1)
+        if (baddieID == other.id && state != spawnbaddies.idle && state != spawnbaddies.checkplayer)
             b = 1;
     }
     

@@ -1,6 +1,6 @@
 switch (state)
 {
-    case states.normal:
+    case baddiestates.idle:
         scr_enemy_idle();
         break;
     
@@ -93,7 +93,7 @@ if (cigar == 0)
     grabbedspr = UnknownEnum.Value_128;
 }
 
-if (cigar == 1 && (cigarcreate == 0 && (state == states.normal || (state == states.actor || (state == 98 || state == baddiestates.land)))))
+if (cigar == 1 && (cigarcreate == 0 && (state == baddiestates.idle || (state == states.actor || (state == 98 || state == baddiestates.land)))))
 {
     cigarcreate = 1;
     

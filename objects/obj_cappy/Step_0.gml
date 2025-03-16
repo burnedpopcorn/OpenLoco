@@ -1,4 +1,4 @@
-if (state != states.tumble && !seek)
+if (state != cappystates.comeback && !seek)
 {
     x += hsp;
     y += vsp;
@@ -9,15 +9,15 @@ image_yscale = 1 - (0.5 * (abs(hsp) / 10));
 
 switch (state)
 {
-    case states.normal:
+    case cappystates.fly:
         scr_cappy_fly();
         break;
     
-    case UnknownEnum.Value_1:
+    case cappystates.enemykill:
         scr_cappy_enemycontrol();
         break;
     
-    case states.tumble:
+    case cappystates.comeback:
         scr_cappy_comeback();
         break;
 }

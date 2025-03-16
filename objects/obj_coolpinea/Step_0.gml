@@ -1,6 +1,6 @@
 switch (state)
 {
-    case states.normal:
+    case baddiestates.idle:
         scr_enemy_idle();
         break;
     
@@ -54,7 +54,7 @@ if (hp <= 0)
 if (flash == 1 && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (hitboxcreate == 0 && (state == states.normal || state == states.actor))
+if (hitboxcreate == 0 && (state == baddiestates.idle || state == states.actor))
 {
     hitboxcreate = 1;
     

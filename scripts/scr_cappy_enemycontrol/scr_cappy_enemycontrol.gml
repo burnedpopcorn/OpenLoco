@@ -33,7 +33,7 @@ function scr_cappy_enemycontrol()
         else if (place_meeting(x, y, nearest_enemy))
         {
             image_alpha = 1;
-            other.state = states.tumble;
+            other.state = cappystates.comeback;
             x = nearest_enemy.x;
             y = nearest_enemy.y;
             instance_destroy(nearest_enemy);

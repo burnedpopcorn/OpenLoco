@@ -1,6 +1,6 @@
 switch (state)
 {
-    case states.normal:
+    case baddiestates.idle:
         scr_enemy_idle();
         break;
     
@@ -53,9 +53,9 @@ if (global.miniboss == 0)
 
 if ((obj_player1.x > (x - 400) && obj_player1.x < (x + 400)) && (y <= (obj_player1.y + 60) && y >= (obj_player1.y - 60)))
 {
-    if (state != states.normal && obj_player1.state == states.mach3)
+    if (state != baddiestates.idle && obj_player1.state == states.mach3)
     {
-        state = states.normal;
+        state = baddiestates.idle;
         sprite_index = scaredspr;
         
         if (x != obj_player1.x)
@@ -67,9 +67,9 @@ if (instance_exists(obj_player2))
 {
     if ((obj_player2.x > (x - 400) && obj_player2.x < (x + 400)) && (y <= (obj_player2.y + 60) && y >= (obj_player2.y - 60)))
     {
-        if (state != states.normal && obj_player2.state == states.mach3)
+        if (state != baddiestates.idle && obj_player2.state == states.mach3)
         {
-            state = states.normal;
+            state = baddiestates.idle;
             sprite_index = scaredspr;
             
             if (x != obj_player2.x)

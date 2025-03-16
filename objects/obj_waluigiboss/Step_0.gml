@@ -3,7 +3,7 @@ switch (state)
     case 144:
         break;
     
-    case states.normal:
+    case baddiestates.idle:
         scr_enemy_idle();
         break;
     

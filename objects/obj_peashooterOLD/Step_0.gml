@@ -2,7 +2,7 @@ scr_collision();
 
 switch (state)
 {
-    case states.normal:
+    case baddiestates.idle:
         if (alarm[0] == -1)
             alarm[0] = shooting_speed;
         
@@ -17,14 +17,14 @@ switch (state)
         
         break;
     
-    case states.grabbed:
+    case baddiestates.grabbed:
         x = grabber.x;
         y = (grabber.y - sprite_height) + 10;
         sprite_index = spr_idle;
         image_xscale = grabber.xscale;
         
         if (grabber.state != states.grab && grabber.state != states.superslam)
-            state = states.normal;
+            state = baddiestates.idle;
         
         break;
 }

@@ -11,7 +11,7 @@ hp =
     boss_shakemag: 0,
     player_shakemag: 0
 };
-state = states.normal;
+state = boss_states.intro1;
 intro_scene = 
 {
     portraits_alpha: 0,

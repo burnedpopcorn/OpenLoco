@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_cappy_comeback",
   "parent":{
-    "name":"Player",
-    "path":"folders/Scripts/Player.yy",
+    "name":"Cappy",
+    "path":"folders/Scripts/Player/Cappy.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

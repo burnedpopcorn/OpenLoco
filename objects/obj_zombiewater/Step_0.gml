@@ -1,6 +1,6 @@
 switch (state)
 {
-    case states.normal:
+    case baddiestates.idle:
         scr_enemy_idle();
         break;
     
@@ -61,7 +61,7 @@ if (state != states.grabbed)
 
 scr_scareenemy();
 
-if (((obj_player.x > (x - 400) && obj_player.x < (x + 400)) && (y + 200) > obj_player.y) && state != baddiestates.charge && state != states.grabbed && state != baddiestates.hit && state != states.capefall && state != states.normal)
+if (((obj_player.x > (x - 400) && obj_player.x < (x + 400)) && (y + 200) > obj_player.y) && state != baddiestates.charge && state != states.grabbed && state != baddiestates.hit && state != states.capefall && state != baddiestates.idle)
 {
     if (state != baddiestates.charge)
     {
@@ -79,7 +79,7 @@ if (((obj_player.x > (x - 400) && obj_player.x < (x + 400)) && (y + 200) > obj_p
     }
 }
 
-if (state == states.capefall || state == states.actor || state == states.normal)
+if (state == states.capefall || state == states.actor || state == baddiestates.idle)
     movespeed = 0;
 
 if (state != states.capefall)

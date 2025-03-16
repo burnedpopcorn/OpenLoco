@@ -31,7 +31,7 @@ function scr_fakepeppino_hit()
     
     if (floor(image_index) == (image_number - 1) && sprite_index == spr_fakepeppino_grabdash)
     {
-        state = states.normal;
+        state = fakepepmoves.idle;
         image_index = 0;
         sprite_index = spr_fakepeppino_idle;
         movespeed = 0;
@@ -99,7 +99,7 @@ function scr_fakepeppino_hit()
             flash = 1;
         }
         
-        state = states.normal;
+        state = fakepepmoves.idle;
         sprite_index = spr_fakepeppino_idle;
         image_index = 0;
     }

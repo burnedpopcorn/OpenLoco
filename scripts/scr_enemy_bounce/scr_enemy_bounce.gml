@@ -158,7 +158,7 @@ function scr_enemy_bounce()
         }
         
         image_index = 0;
-        state = states.normal;
+        state = baddiestates.idle;
         sprite_index = idlespr;
     }
     

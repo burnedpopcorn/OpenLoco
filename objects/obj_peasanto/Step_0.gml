@@ -1,6 +1,6 @@
 switch (state)
 {
-    case states.normal:
+    case baddiestates.idle:
         scr_enemy_idle();
         break;
     
@@ -59,7 +59,7 @@ if (hitboxcreate == 0 && (state == baddiestates.charge && (obj_player.state != s
     }
 }
 
-if (state != states.actor && (state != states.normal && angry == 0))
+if (state != states.actor && (state != baddiestates.idle && angry == 0))
 {
     grav = 0.5;
     vsp = -5;
@@ -69,7 +69,7 @@ if (state != states.actor && (state != states.normal && angry == 0))
     thrown = 0;
 }
 
-if (state != states.capefall && (state != states.grabbed && (state != states.normal && state != baddiestates.charge)))
+if (state != states.capefall && (state != states.grabbed && (state != baddiestates.idle && state != baddiestates.charge)))
     angry = 0;
 
 if (flash == 1 && alarm[2] <= 0)

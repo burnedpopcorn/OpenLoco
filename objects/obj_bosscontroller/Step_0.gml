@@ -2,7 +2,7 @@ time++;
 
 switch (state)
 {
-    case states.normal:
+    case boss_states.intro1:
         intro_scene.p1.xoff = lerp(intro_scene.p1.xoff, 0, 0.03);
         intro_scene.p2.xoff = lerp(intro_scene.p2.xoff, 0, 0.03);
         intro_scene.back_alpha = lerp(intro_scene.back_alpha, 1, 0.03);
@@ -10,14 +10,14 @@ switch (state)
         
         if ((1 - intro_scene.portraits_alpha) < 0.04)
         {
-            state = UnknownEnum.Value_1;
+            state = boss_states.intro2;
             intro_scene.white_alpha = 1;
             intro_scene.back_shown = true;
         }
         
         break;
     
-    case UnknownEnum.Value_1:
+    case boss_states.intro2:
         intro_scene.p1.shown = true;
         intro_scene.p2.shown = true;
         intro_scene.p1.xoff += 0.3;
@@ -26,11 +26,11 @@ switch (state)
         intro_scene.title_alpha = lerp(intro_scene.title_alpha, 1, 0.1);
         
         if (intro_scene.reveal_time-- <= 0)
-            state = states.tumble;
+            state = boss_states.intro3;
         
         break;
     
-    case states.tumble:
+    case boss_states.intro3:
         intro_scene.p1.xoff = lerp(intro_scene.p1.xoff, 500, 0.04);
         intro_scene.p2.xoff = lerp(intro_scene.p2.xoff, -500, 0.04);
         intro_scene.title_alpha = lerp(intro_scene.title_alpha, 0, 0.04);
@@ -43,13 +43,13 @@ switch (state)
             intro_scene.back_alpha = 0;
             intro_scene.portraits_alpha = 0;
             intro_scene.title_alpha = 0;
-            state = states.finishingblow;
+            state = boss_states.ingameintro;
             intro_scene.reveal_time = 90;
         }
         
         break;
     
-    case states.finishingblow:
+    case boss_states.ingameintro:
         spotlight_radius = lerp(spotlight_radius, 100, 0.2);
         
         if (spotlight_radius >= 98 && intro_scene.reveal_time-- <= 0)
@@ -62,21 +62,19 @@ switch (state)
                 state = states.bossintro;
             }
             
-            state = states.ejected;
+            state = boss_states.enterfight;
         }
         
         break;
     
-    case states.ejected:
+    case boss_states.enterfight:
         spotlight_radius += spotlight_radius_spd;
         spotlight_radius_spd += 3;
         
         if (hp.boss <= 0)
         {
             if (phase < 2)
-            {
-                state = UnknownEnum.Value_5;
-            }
+                state = boss_states.fighting;//do nothing
             else
             {
                 with (obj_player)
@@ -86,7 +84,7 @@ switch (state)
                     image_speed = 0.35;
                 }
                 
-                state = states.firemouth;
+                state = boss_states.ending;
             }
         }
         
@@ -111,7 +109,7 @@ switch (state)
         
         break;
     
-    case states.firemouth:
+    case boss_states.ending:
         with (obj_player)
         {
             movespeed = 6;
@@ -126,7 +124,7 @@ switch (state)
             {
                 with (obj_bosscontroller)
                 {
-                    state = states.fireass;
+                    state = boss_states.endingcutscene;
                     instance_destroy(par_boss);
                     fmod_studio_event_oneshot_3d("event:/sfx/level_structure/collects/plushie");
                     
@@ -141,7 +139,7 @@ switch (state)
         
         break;
     
-    case states.fireass:
+    case boss_states.endingcutscene:
         if (obj_player.image_speed == 0)
         {
             if (!instance_exists(obj_boss_playerhat_follow) && hp.player > 0)
@@ -151,7 +149,7 @@ switch (state)
             }
             
             if (hp.player <= 0)
-                state = states.titlescreen;
+                state = boss_states.ended;
         }
         
         break;

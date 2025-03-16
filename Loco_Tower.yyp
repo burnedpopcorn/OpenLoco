@@ -106,6 +106,7 @@
     {"$GMFolder":"","%Name":"GMS1 Compatiblity Scripts","folderPath":"folders/Scripts/GMS1 Compatiblity Scripts.yy","name":"GMS1 Compatiblity Scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Input","folderPath":"folders/Scripts/Input.yy","name":"Input","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Player","folderPath":"folders/Scripts/Player.yy","name":"Player","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Cappy","folderPath":"folders/Scripts/Player/Cappy.yy","name":"Cappy","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Special Moves","folderPath":"folders/Scripts/Player/Special Moves.yy","name":"Special Moves","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"States","folderPath":"folders/Scripts/Player/States.yy","name":"States","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Retro Palette Swapper","folderPath":"folders/Scripts/Retro Palette Swapper.yy","name":"Retro Palette Swapper","resourceType":"GMFolder","resourceVersion":"2.0",},

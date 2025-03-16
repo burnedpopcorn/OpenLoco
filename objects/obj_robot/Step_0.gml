@@ -1,6 +1,6 @@
 switch (state)
 {
-    case states.normal:
+    case baddiestates.idle:
         scr_enemy_idle();
         break;
     
@@ -70,7 +70,7 @@ if (x != obj_player.x && (state != baddiestates.throwing && bombreset == 0))
 {
     if ((obj_player.x > (x - 400) && obj_player.x < (x + 400)) && (y <= (obj_player.y + 20) && y >= (obj_player.y - 20)))
     {
-        if (state == states.actor || state == states.normal)
+        if (state == states.actor || state == baddiestates.idle)
         {
             image_index = 0;
             image_xscale = -sign(x - obj_player.x);

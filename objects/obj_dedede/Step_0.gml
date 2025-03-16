@@ -1,6 +1,6 @@
 switch (state)
 {
-    case states.normal:
+    case baddiestates.idle:
         scr_enemy_idle();
         break;
     
@@ -28,7 +28,7 @@ if (state == states.capefall && stunned > 40 && birdcreated == 0)
 if (state != states.capefall)
     birdcreated = 0;
 
-if (state == states.normal && obj_player.x != x)
+if (state == baddiestates.idle && obj_player.x != x)
     image_xscale = sign(obj_player.x - x);
 
 if (flash == 1 && alarm[2] <= 0)

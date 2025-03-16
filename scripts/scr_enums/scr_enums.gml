@@ -89,10 +89,11 @@ enum states
 	geno_shoot		= 131,
 }
 	
+// baddiestates.idle
 enum baddiestates
 {
 	// idk man, its just like that in the original
-	idle			= 0,		// states.normal
+	idle			= 0,		// (DONE)
 	charge			= 109,		// (DONE)
 	turn			= 127,		// states.cape
 	walk			= 110,		// states.actor
@@ -102,6 +103,66 @@ enum baddiestates
 	throwing		= 97,		// (DONE)
 	grabbed			= 106,		// states.grabbed
 	rage			= 125,		// states.cappythrow
+	
+	// sometimes doesn't exist
+	bounce			= 1,
+}
+
+// for cappy
+enum cappystates
+{
+	fly				= 0,
+	enemykill		= 1,
+	comeback		= 2,
+}
+
+// patrick pillar
+enum pillar
+{
+	idle			= 0,
+	hit				= 1,
+}
+
+// for obj_gatespawnplayer CHANGE ENUM NAME
+enum gatespawn
+{
+	init			= 0,
+	spawn			= 1,
+	die				= 2,
+}
+
+// for obj_escapespawn
+enum spawnbaddies
+{
+	idle			= 0,
+	checkplayer		= 1,
+	spawn			= 2,
+	die				= 3,
+}
+
+// for obj_fakepep (unused, but still)
+enum fakepepmoves
+{
+	idle			= 0,
+	walk			= 110,
+	hit				= 107,
+	jump			= 58,
+}
+
+// obj_bosscontroller
+enum boss_states
+{
+	intro1			= 0,
+	intro2			= 1,
+	intro3			= 2,
+	ingameintro		= 3,
+	
+	enterfight		= 4,
+	fighting		= 5,//the do nothing state
+	
+	endingcutscene	= 6,
+	ending			= 7,
+	ended			= 8,
 }
 	
 // temporary

@@ -17,12 +17,12 @@ function scr_cappy_fly()
         y = approach(y, player_id.y, lengthdir_y(12 * seek, _dir));
         
         if (place_meeting(x, y, nearest_enemy))
-            state = UnknownEnum.Value_1;
+            state = cappystates.enemykill;
     }
     
     if (place_meeting(x, y, player_id) && player_id.key_jump2 && !player_id.grounded && player_id.state != states.cappythrow && state != states.tumble)
     {
-        state = states.tumble;
+        state = cappystates.comeback;
         
         with (player_id)
         {

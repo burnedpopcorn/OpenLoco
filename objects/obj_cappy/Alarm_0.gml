@@ -1,2 +1,2 @@
 if (!seek)
-    state = states.tumble;
+    state = cappystates.comeback;

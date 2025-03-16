@@ -1,4 +1,4 @@
 depth = -6;
 playerID = -4;
-state = states.normal;
+state = gatespawn.init;
 visible = false;

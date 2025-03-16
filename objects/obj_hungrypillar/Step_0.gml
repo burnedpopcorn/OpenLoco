@@ -1,10 +1,10 @@
 switch (state)
 {
-    case 0:
+    case pillar.idle:
         mask_index = spr_hungrypillar;
         break;
     
-    case 1:
+    case pillar.hit:
         scr_hungrypillar_hit();
         mask_index = spr_null;
         break;

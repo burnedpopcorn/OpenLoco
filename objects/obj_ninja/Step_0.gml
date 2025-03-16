@@ -1,6 +1,6 @@
 switch (state)
 {
-    case states.normal:
+    case baddiestates.idle:
         scr_enemy_idle();
         break;
     
@@ -64,18 +64,18 @@ if (attack == 0)
 
 if (attack == 0 && (state != states.grabbed && state != states.grabbed))
 {
-    state = states.normal;
+    state = baddiestates.idle;
     roaming = 0;
 }
 
-if (state != states.normal)
+if (state != baddiestates.idle)
     roaming = 1;
 
 if (x != obj_player.x)
 {
     if ((obj_player.x > (x - 200) && obj_player.x < (x + 200)) && obj_player.y == y)
     {
-        if (state == states.actor || state == states.normal)
+        if (state == states.actor || state == baddiestates.idle)
         {
             if (sprite_index == spr_mii)
                 instance_create(x, y, obj_balloonpop);

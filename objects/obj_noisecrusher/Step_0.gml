@@ -1,6 +1,6 @@
 switch (state)
 {
-    case states.normal:
+    case baddiestates.idle:
         scr_enemy_idle();
         break;
     
@@ -28,13 +28,13 @@ if (state == states.grabbed && stunned > 40 && birdcreated == 0)
 if (state != states.grabbed)
     birdcreated = 0;
 
-if (state == states.normal && obj_player.x != x)
+if (state == baddiestates.idle && obj_player.x != x)
     image_xscale = sign(obj_player.x - x);
 
-if (state == states.normal)
+if (state == baddiestates.idle)
     attack--;
 
-if (attack <= 0 && state == states.normal)
+if (attack <= 0 && state == baddiestates.idle)
 {
     sprite_index = jumpprepspr;
     image_index = 0;

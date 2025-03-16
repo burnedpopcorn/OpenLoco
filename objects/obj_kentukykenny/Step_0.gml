@@ -1,6 +1,6 @@
 switch (state)
 {
-    case states.normal:
+    case baddiestates.idle:
         scr_enemy_idle();
         break;
     
@@ -70,7 +70,7 @@ if (x != obj_player.x && (state != baddiestates.throwing && (bombreset == 0 && g
 {
     if ((obj_player.x > (x - 400) && obj_player.x < (x + 400)) && (y <= (obj_player.y + 20) && y >= (obj_player.y - 20)))
     {
-        if (state == states.actor || state == states.normal)
+        if (state == states.actor || state == baddiestates.idle)
         {
             sprite_index = spr_kentukykenny_throw;
             image_index = 0;

@@ -1,6 +1,6 @@
 switch (state)
 {
-    case states.normal:
+    case baddiestates.idle:
         scr_enemy_idle();
         break;
     
@@ -45,7 +45,7 @@ if (state == states.capefall && (stunned > 40 && birdcreated == 0))
         ID = other.id;
 }
 
-if (state == states.normal || state == states.actor)
+if (state == baddiestates.idle || state == states.actor)
     state = baddiestates.charge;
 
 if (hitboxcreate == 0 && (state == baddiestates.charge && (obj_player.state != states.mach3 && obj_player.state != states.mach2)))

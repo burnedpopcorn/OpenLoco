@@ -1,6 +1,6 @@
 if (playerID != -4)
 {
-    if (state != states.tumble)
+    if (state != gatespawn.die)
     {
         playerID.x = x;
         playerID.y = y;
@@ -8,14 +8,14 @@ if (playerID != -4)
     
     switch (state)
     {
-        case 0:
+        case gatespawn.init:
             visible = true;
             image_index = 0;
             image_speed = 0.25;
             state = 1;
             break;
         
-        case 1:
+        case gatespawn.spawn:
             if (floor(image_index) > 5)
             {
                 fmod_studio_event_oneshot_3d("event:/sfx/enemy/escapespawn");
@@ -29,12 +29,12 @@ if (playerID != -4)
                     state = states.slipbanana;
                 }
                 
-                state = 2;
+                state = gatespawn.die;
             }
             
             break;
         
-        case 2:
+        case gatespawn.die:
             if (floor(image_index) == (image_number - 1))
                 instance_destroy();
             
