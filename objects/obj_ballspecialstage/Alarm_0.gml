@@ -8,13 +8,9 @@ if (vspinvert == 1)
             vsp = 8;
     }
     else if (key_jump2)
-    {
         vsp = -15;
-    }
     else
-    {
         vsp = -8;
-    }
     
     fmod_studio_event_oneshot_3d("event:/sfx/player/jump");
 }
@@ -28,6 +24,6 @@ else if (hspinvert == 1)
     fmod_studio_event_oneshot_3d("event:/sfx/player/jump");
 }
 
-state = states.normal;
+state = ballstates.air;
 hspinvert = 0;
 vspinvert = 0;

@@ -7,7 +7,7 @@ if (instance_exists(ID))
     else
         y = ID.y - 40;
     
-    if (ID.state != states.capefall || ID.stunned < 100)
+    if (ID.state != baddiestates.stun || ID.stunned < 100)
     {
         ID.birdcreated = 0;
         instance_destroy();

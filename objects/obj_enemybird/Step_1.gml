@@ -1,2 +1,2 @@
-if (!instance_exists(ID) || ID.state != states.capefall)
+if (!instance_exists(ID) || ID.state != baddiestates.stun)
     instance_destroy();

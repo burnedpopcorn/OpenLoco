@@ -8,7 +8,7 @@ switch (state)
         scr_enemy_charge();
         break;
     
-    case states.cape:
+    case baddiestates.turn:
         scr_enemy_turn();
         break;
     
@@ -24,7 +24,7 @@ switch (state)
         scr_enemy_hit();
         break;
     
-    case states.capefall:
+    case baddiestates.stun:
         scr_enemy_stun();
         break;
     
@@ -37,7 +37,7 @@ switch (state)
         break;
 }
 
-if (state == states.capefall && (stunned > 100 && birdcreated == 0))
+if (state == baddiestates.stun && (stunned > 100 && birdcreated == 0))
 {
     birdcreated = 1;
     
@@ -45,7 +45,7 @@ if (state == states.capefall && (stunned > 100 && birdcreated == 0))
         ID = other.id;
 }
 
-if (state != states.capefall)
+if (state != baddiestates.stun)
     birdcreated = 0;
 
 if (flash == 1 && alarm[2] <= 0)
@@ -54,7 +54,7 @@ if (flash == 1 && alarm[2] <= 0)
 if (state != states.grabbed)
     depth = 0;
 
-if (state != states.capefall)
+if (state != baddiestates.stun)
     thrown = 0;
 
 scr_scareenemy();

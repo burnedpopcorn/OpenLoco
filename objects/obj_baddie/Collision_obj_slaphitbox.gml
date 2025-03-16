@@ -18,7 +18,7 @@ with (obj_player)
 
 if (obj_player.state != states.zombieattack)
 {
-    state = states.capefall;
+    state = baddiestates.stun;
     instance_destroy(other.id);
 }
 else

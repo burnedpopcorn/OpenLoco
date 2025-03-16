@@ -8,7 +8,7 @@ switch (state)
         scr_enemy_bounce();
         break;
     
-    case states.capefall:
+    case baddiestates.stun:
         scr_enemy_stun();
         break;
     

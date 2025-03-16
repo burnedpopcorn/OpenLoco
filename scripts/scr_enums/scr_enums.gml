@@ -89,20 +89,20 @@ enum states
 	geno_shoot		= 131,
 }
 	
-// baddiestates.idle
+// baddiestates.stun
 enum baddiestates
 {
 	// idk man, its just like that in the original
 	idle			= 0,		// (DONE)
 	charge			= 109,		// (DONE)
-	turn			= 127,		// states.cape
+	turn			= 127,		// (DONE)
 	walk			= 110,		// states.actor
 	land			= 108,		// (DONE)
 	hit				= 107,		// (DONE)
-	stun			= 128,		// states.capefall
+	stun			= 128,		// (DONE)
 	throwing		= 97,		// (DONE)
 	grabbed			= 106,		// states.grabbed
-	rage			= 125,		// states.cappythrow
+	rage			= 125,		// (DONE)
 	
 	// sometimes doesn't exist
 	bounce			= 1,
@@ -163,6 +163,12 @@ enum boss_states
 	endingcutscene	= 6,
 	ending			= 7,
 	ended			= 8,
+}
+
+enum ballstates
+{
+	air				= 0,
+	land			= 1,
 }
 	
 // temporary

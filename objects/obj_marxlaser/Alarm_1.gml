@@ -7,7 +7,7 @@ if (!instance_exists(obj_marxbaddie))
         image_xscale = -obj_marx.image_xscale;
         hsp = xscale * 5;
         vsp = -5;
-        state = states.capefall;
+        state = baddiestates.stun;
         
         if (stunned < 100)
             stunned = 100;

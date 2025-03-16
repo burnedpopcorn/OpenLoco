@@ -11,7 +11,7 @@ switch (state)
         scr_enemy_charge();
         break;
     
-    case states.cape:
+    case baddiestates.turn:
         scr_enemy_turn();
         break;
     
@@ -27,7 +27,7 @@ switch (state)
         scr_enemy_hit();
         break;
     
-    case states.capefall:
+    case baddiestates.stun:
         scr_enemy_stun();
         break;
     
@@ -39,7 +39,7 @@ switch (state)
 if (flash == 1 && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (state != states.capefall)
+if (state != baddiestates.stun)
     thrown = 0;
 
 if (boundbox == 0)

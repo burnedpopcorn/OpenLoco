@@ -1,4 +1,4 @@
-if (invframes == 0 && state == states.capefall)
+if (invframes == 0 && state == baddiestates.stun)
 {
     instance_create(x + (obj_player.xscale * 40), y, obj_punchdust);
     state = states.grabbed;

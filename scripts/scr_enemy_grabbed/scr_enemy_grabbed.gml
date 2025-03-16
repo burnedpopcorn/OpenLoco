@@ -33,7 +33,7 @@ function scr_enemy_grabbed()
         {
             other.x = x;
             other.y = y;
-            other.state = states.capefall;
+            other.state = baddiestates.stun;
             other.image_index = 0;
         }
     }
@@ -55,7 +55,7 @@ function scr_enemy_grabbed()
         x = _obj_player.x;
         vsp = 0;
         y = _obj_player.y;
-        state = states.capefall;
+        state = baddiestates.stun;
         hsp = -image_xscale * 25;
         grav = 0;
         global.combotime = 60;
@@ -118,7 +118,7 @@ function scr_enemy_grabbed()
         global.combotime = 60;
         alarm[1] = 5;
         thrown = 1;
-        state = states.capefall;
+        state = baddiestates.stun;
         
         with (_obj_player)
         {
@@ -156,7 +156,7 @@ function scr_enemy_grabbed()
         thrown = 1;
         x = _obj_player.x;
         y = _obj_player.y;
-        state = states.capefall;
+        state = baddiestates.stun;
         image_xscale *= -1;
         hsp = -image_xscale * 20;
         vsp = -7;
@@ -186,7 +186,7 @@ function scr_enemy_grabbed()
         thrown = 1;
         x = _obj_player.x;
         y = _obj_player.y;
-        state = states.capefall;
+        state = baddiestates.stun;
         
         if (_obj_player.sprite_index == get_charactersprite("spr_shoulder"))
             vsp = 15;
@@ -226,7 +226,7 @@ function scr_enemy_grabbed()
         thrown = 1;
         x = _obj_player.x;
         y = _obj_player.y;
-        state = states.capefall;
+        state = baddiestates.stun;
         hsp = -image_xscale * 8;
         vsp = -6;
         check_grabbed_solid(_obj_player);
@@ -248,7 +248,7 @@ function scr_enemy_grabbed()
         x = _obj_player.x;
         y = _obj_player.y;
         hsp = -image_xscale * 2;
-        state = states.capefall;
+        state = baddiestates.stun;
         vsp = -20;
         global.combotime = 60;
         instance_create(x, y, obj_slapstar);
@@ -360,7 +360,7 @@ function scr_enemy_grabbed()
         hp -= 5;
         alarm[1] = 5;
         thrown = 1;
-        state = states.capefall;
+        state = baddiestates.stun;
         hsp = -image_xscale * 10;
         
         with (_obj_player)
@@ -437,7 +437,7 @@ function scr_enemy_grabbed()
         }
     }
     
-    if (state != states.capefall || _obj_player.state != states.grab)
+    if (state != baddiestates.stun || _obj_player.state != states.grab)
     {
         check_grabbed_solid(_obj_player);
         

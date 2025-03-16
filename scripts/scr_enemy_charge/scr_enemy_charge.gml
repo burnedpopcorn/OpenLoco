@@ -54,7 +54,7 @@ function scr_enemy_charge()
         
         if (place_meeting(x + hsp, y, obj_solid))
         {
-            state = states.capefall;
+            state = baddiestates.stun;
             stunned = 100;
         }
     }
@@ -97,7 +97,7 @@ function scr_enemy_charge()
             movespeed = 0;
             hsp = -(image_xscale * 4);
             vsp = -5;
-            state = states.capefall;
+            state = baddiestates.stun;
             stunned = 100;
         }
     }

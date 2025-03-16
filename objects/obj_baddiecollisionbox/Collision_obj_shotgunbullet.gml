@@ -17,7 +17,7 @@ else if (instance_exists(baddieID))
     instance_create(baddieID.x, baddieID.y, obj_slapstar);
     instance_create(baddieID.x, baddieID.y, obj_baddiegibs);
     baddieID.flash = 1;
-    baddieID.state = states.capefall;
+    baddieID.state = baddiestates.stun;
     
     if (baddieID.stunned < 100)
         baddieID.stunned = 100;

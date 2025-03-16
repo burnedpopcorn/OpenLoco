@@ -37,7 +37,7 @@ switch (state)
             {
                 x = other.x;
                 y = other.y;
-                state = states.capefall;//REPLACE WITH BADDIE STATE
+                state = baddiestates.stun;
                 sprite_index = stunfallspr;
                 stunned = 20;
                 boundbox = 0;

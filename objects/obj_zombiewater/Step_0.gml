@@ -8,7 +8,7 @@ switch (state)
         scr_enemy_charge();
         break;
     
-    case states.cape:
+    case baddiestates.turn:
         scr_enemy_turn();
         break;
     
@@ -24,7 +24,7 @@ switch (state)
         scr_enemy_hit();
         break;
     
-    case states.capefall:
+    case baddiestates.stun:
         scr_enemy_stun();
         break;
     
@@ -37,7 +37,7 @@ switch (state)
         break;
 }
 
-if (state == states.capefall && (stunned > 100 && birdcreated == 0))
+if (state == baddiestates.stun && (stunned > 100 && birdcreated == 0))
 {
     birdcreated = 1;
     
@@ -48,7 +48,7 @@ if (state == states.capefall && (stunned > 100 && birdcreated == 0))
 if (state != states.grabbed)
     birdcreated = 0;
 
-if (state == states.capefall)
+if (state == baddiestates.stun)
     grav = 0.5;
 else
     grav = 0;
@@ -61,7 +61,7 @@ if (state != states.grabbed)
 
 scr_scareenemy();
 
-if (((obj_player.x > (x - 400) && obj_player.x < (x + 400)) && (y + 200) > obj_player.y) && state != baddiestates.charge && state != states.grabbed && state != baddiestates.hit && state != states.capefall && state != baddiestates.idle)
+if (((obj_player.x > (x - 400) && obj_player.x < (x + 400)) && (y + 200) > obj_player.y) && state != baddiestates.charge && state != states.grabbed && state != baddiestates.hit && state != baddiestates.stun && state != baddiestates.idle)
 {
     if (state != baddiestates.charge)
     {
@@ -79,10 +79,10 @@ if (((obj_player.x > (x - 400) && obj_player.x < (x + 400)) && (y + 200) > obj_p
     }
 }
 
-if (state == states.capefall || state == states.actor || state == baddiestates.idle)
+if (state == baddiestates.stun || state == states.actor || state == baddiestates.idle)
     movespeed = 0;
 
-if (state != states.capefall)
+if (state != baddiestates.stun)
     thrown = 0;
 
 if (boundbox == 0)

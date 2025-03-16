@@ -8,7 +8,7 @@ switch (state)
         scr_enemy_charge();
         break;
     
-    case states.cape:
+    case baddiestates.turn:
         scr_enemy_turn();
         break;
     
@@ -24,7 +24,7 @@ switch (state)
         scr_enemy_hit();
         break;
     
-    case states.capefall:
+    case baddiestates.stun:
         scr_enemy_stun();
         break;
     
@@ -36,7 +36,7 @@ switch (state)
         scr_enemy_grabbed();
         break;
     
-    case states.cappythrow:
+    case baddiestates.rage:
         scr_enemy_rage();
         break;
 }
@@ -52,9 +52,9 @@ if (global.laps >= 5)
     {
         if (check && y <= (player.y + 60) && y >= (player.y - 60))
         {
-            if (state != states.cappythrow && ragebuffer == 0)
+            if (state != baddiestates.rage && ragebuffer == 0)
             {
-                state = states.cappythrow;
+                state = baddiestates.rage;
                 sprite_index = ragespr;
                 
                 if (x != player.x)
@@ -69,11 +69,11 @@ if (global.laps >= 5)
         }
     }
     
-    if (ragebuffer > 0 && state != states.cappythrow)
+    if (ragebuffer > 0 && state != baddiestates.rage)
         ragebuffer--;
 }
 
-if (state == states.capefall && (stunned > 100 && birdcreated == 0))
+if (state == baddiestates.stun && (stunned > 100 && birdcreated == 0))
 {
     birdcreated = 1;
     
@@ -81,7 +81,7 @@ if (state == states.capefall && (stunned > 100 && birdcreated == 0))
         ID = other.id;
 }
 
-if (state != states.capefall)
+if (state != baddiestates.stun)
     birdcreated = 0;
 
 scr_scareenemy();
@@ -100,7 +100,7 @@ if (hitboxcreate == 0 && state == states.actor)
 if (state != states.grabbed)
     depth = 0;
 
-if (state != states.capefall)
+if (state != baddiestates.stun)
     thrown = 0;
 
 if (boundbox == 0)

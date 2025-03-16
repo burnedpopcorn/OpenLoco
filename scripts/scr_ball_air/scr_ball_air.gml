@@ -2,20 +2,20 @@ function scr_ball_air()
 {
     if (place_meeting(x, y - 1, obj_solid) && anglevertx == 180)
     {
-        state = 1;
+        state = ballstates.land;
         vspinvert = 1;
         alarm[0] = 5;
     }
     else if (place_meeting(x, y + vsp, obj_solid) && vsp > 0.5)
     {
-        state = 1;
+        state = ballstates.land;
         vspinvert = 1;
         alarm[0] = 5;
     }
     
     if (place_meeting(x + hsp, y, obj_solid))
     {
-        state = 1;
+        state = ballstates.land;
         hspinvert = 1;
         alarm[0] = 5;
     }

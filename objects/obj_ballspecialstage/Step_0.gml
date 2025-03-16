@@ -3,11 +3,11 @@ scr_getinput();
 
 switch (state)
 {
-    case 0:
+    case ballstates.air:
         scr_ball_air();
         break;
     
-    case 1:
+    case ballstates.land:
         scr_ball_land();
         break;
 }
@@ -27,7 +27,7 @@ if (changeangle == 1)
         angledirect = 2;
     
     changeangle = 0;
-    state = 1;
+    state = ballstates.land;
 }
 
 if (inprogrsangle == 1)
@@ -42,7 +42,7 @@ if (inprogrsangle == 1)
             changeangle = 0;
             angledirect = 0;
             inprogrsangle = 0;
-            state = states.normal;
+            state = ballstates.air;
         }
     }
     
@@ -56,7 +56,7 @@ if (inprogrsangle == 1)
             changeangle = 0;
             angledirect = 0;
             inprogrsangle = 0;
-            state = states.normal;
+            state = ballstates.air;
         }
     }
 }

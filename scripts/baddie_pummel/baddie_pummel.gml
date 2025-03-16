@@ -31,7 +31,7 @@ function baddie_pummel()
                 if (bID.elite)
                     bID.elitehit--;
                 
-                state = states.superslam;
+                state = states.superslam;//uhhhh, why 43
                 image_xscale = -obj_player1.xscale;
                 
                 if (set_throw)
@@ -43,7 +43,7 @@ function baddie_pummel()
                     hsp = image_xscale * -25;
                     hithsp = image_xscale * -25;
                     vsp = 0;
-                    state = states.capefall;
+                    state = baddiestates.stun;
                     obj_player1.vsp = -6;
                 }
                 

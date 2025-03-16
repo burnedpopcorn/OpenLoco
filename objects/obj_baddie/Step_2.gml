@@ -68,7 +68,7 @@ with (instance_nearest(x, y, obj_player))
 
 fmod_studio_event_instance_move(stun_snd);
 
-if (!fmod_studio_event_instance_is_playing(stun_snd) && state == states.capefall)
+if (!fmod_studio_event_instance_is_playing(stun_snd) && state == baddiestates.stun)
     fmod_studio_event_instance_start(stun_snd);
-else if (state != states.capefall)
+else if (state != baddiestates.stun)
     fmod_studio_event_instance_stop(stun_snd, FMOD_STUDIO_STOP_MODE.IMMEDIATE);

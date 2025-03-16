@@ -8,7 +8,7 @@ switch (state)
         scr_enemy_charge();
         break;
     
-    case states.cape:
+    case baddiestates.turn:
         scr_enemy_turn();
         break;
     
@@ -24,7 +24,7 @@ switch (state)
         scr_enemy_hit();
         break;
     
-    case states.capefall:
+    case baddiestates.stun:
         scr_enemy_stun();
         break;
     
@@ -39,7 +39,7 @@ switch (state)
 
 paletteselect = (global.laps >= 5) ? 2 : 1;
 
-if (state == states.capefall && (stunned > 100 && birdcreated == 0))
+if (state == baddiestates.stun && (stunned > 100 && birdcreated == 0))
 {
     birdcreated = 1;
     
@@ -47,7 +47,7 @@ if (state == states.capefall && (stunned > 100 && birdcreated == 0))
         ID = other.id;
 }
 
-if (state != states.capefall)
+if (state != baddiestates.stun)
     birdcreated = 0;
 
 scr_scareenemy();
@@ -66,7 +66,7 @@ if (hitboxcreate == 0 && state == states.actor)
 if (state != states.grabbed)
     depth = 0;
 
-if (state != states.capefall)
+if (state != baddiestates.stun)
     thrown = 0;
 
 create_baddiecollisionbox();

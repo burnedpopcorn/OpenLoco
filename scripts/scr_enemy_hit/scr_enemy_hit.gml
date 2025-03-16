@@ -43,6 +43,6 @@ function scr_enemy_hit()
         }
         
         stunned = 200;
-        state = states.capefall;
+        state = baddiestates.stun;
     }
 }

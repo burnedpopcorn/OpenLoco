@@ -4,7 +4,7 @@ switch (state)
         scr_enemy_idle();
         break;
     
-    case states.cape:
+    case baddiestates.turn:
         scr_enemy_turn();
         break;
     
@@ -20,7 +20,7 @@ switch (state)
         scr_enemy_hit();
         break;
     
-    case states.capefall:
+    case baddiestates.stun:
         scr_enemy_stun();
         break;
     
@@ -58,7 +58,7 @@ if (cigar == 0)
 if (state != states.grabbed)
     depth = 0;
 
-if (state != states.capefall)
+if (state != baddiestates.stun)
     thrown = 0;
 
 if (flash == 1 && alarm[2] <= 0)

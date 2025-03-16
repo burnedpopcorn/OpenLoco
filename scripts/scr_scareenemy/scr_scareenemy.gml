@@ -2,7 +2,7 @@ function scr_scareenemy()
 {
     if ((obj_player1.x > (x - 400) && obj_player1.x < (x + 400)) && (y <= (obj_player1.y + 60) && y >= (obj_player1.y - 60)))
     {
-        if (state != baddiestates.idle && state != baddiestates.hit && state != states.capefall && (obj_player1.state == states.mach3 || obj_player1.state == states.lawnmower))
+        if (state != baddiestates.idle && state != baddiestates.hit && state != baddiestates.stun && (obj_player1.state == states.mach3 || obj_player1.state == states.lawnmower))
         {
             if (irandom(100) <= 10)
                 fmod_studio_event_oneshot_3d("event:/sfx/enemy/scream");

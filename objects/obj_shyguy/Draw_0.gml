@@ -1,4 +1,4 @@
-if (state == states.capefall && thrown == 0 && object_index != obj_pizzaboy)
+if (state == baddiestates.stun && thrown == 0 && object_index != obj_pizzaboy)
     stundraw = 25;
 else
     stundraw = 0;
