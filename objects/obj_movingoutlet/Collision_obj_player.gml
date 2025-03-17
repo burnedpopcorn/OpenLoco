@@ -1,6 +1,6 @@
 with (obj_player)
 {
-    if ((state == UnknownEnum.Value_24 || (state == UnknownEnum.Value_25 || state == UnknownEnum.Value_18)) && cutscene == 0)
+    if ((state == states.unknown24 || (state == states.unknown25 || state == states.unknown18)) && cutscene == 0)
     {
         with (instance_create(x, y, obj_knightdebris))
             image_index = 0;
@@ -31,7 +31,7 @@ with (obj_player)
         obj_player.flash = 1;
         state = states.bump;
     }
-    else if (state == UnknownEnum.Value_27 && hurted == 0)
+    else if (state == states.unknown27 && hurted == 0)
     {
         instance_create(x, y, obj_bombexplosion);
     }

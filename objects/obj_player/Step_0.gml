@@ -462,7 +462,7 @@ if (state == states.gameover && y > (room_height * 2))
     room = hub_hall;
 }
 
-if (baddiegrabbedID == 0 && (state == states.grab || (state == states.superslam || state == 10)))
+if (baddiegrabbedID == 0 && (state == states.grab || (state == states.superslam || state == states.tacklecharge)))
     state = states.normal;
 
 if (!(state == states.grab || (state == states.chainsaw || (state == states.superslam || state == states.mach2))))
@@ -597,17 +597,17 @@ if (key_particles == 1)
 if (inv_frames == 0 && hurted == 0)
     image_alpha = 1;
 
-if (state == states.mach2 || (state == 10 || (state == states.lawnmower || (state == UnknownEnum.Value_24 || (state == 15 || (state == states.zombieattack || (state == UnknownEnum.Value_18 || (state == UnknownEnum.Value_25 || (state == UnknownEnum.Value_27 || (state == states.facestomp || (state == states.machfreefall || (state == states.facestomp || (state == states.machroll || (state == states.mach3 || (state == states.freefall || state == states.Sjump)))))))))))))))
+if (state == states.mach2 || (state == states.tacklecharge || (state == states.lawnmower || (state == states.unknown24 || (state == 15 || (state == states.zombieattack || (state == states.unknown18 || (state == states.unknown25 || (state == states.unknown27 || (state == states.facestomp || (state == states.machfreefall || (state == states.facestomp || (state == states.machroll || (state == states.mach3 || (state == states.freefall || state == states.Sjump)))))))))))))))
     attacking = 1;
 else
     attacking = 0;
 
-if (state == states.throwin || ((state == 47 && (sprite_index != get_charactersprite("spr_Sjumpcancelstart") && sprite_index != get_charactersprite("spr_Sjumpcancel") && sprite_index != get_charactersprite("spr_kungfujump") && sprite_index != get_charactersprite("spr_breakdanceuppercut") && sprite_index != get_charactersprite("spr_breakdanceuppercutend"))) || (state == states.backkick || (state == states.shoulder || state == states.uppunch))))
+if (state == states.throwin || ((state == states.punch && (sprite_index != get_charactersprite("spr_Sjumpcancelstart") && sprite_index != get_charactersprite("spr_Sjumpcancel") && sprite_index != get_charactersprite("spr_kungfujump") && sprite_index != get_charactersprite("spr_breakdanceuppercut") && sprite_index != get_charactersprite("spr_breakdanceuppercutend"))) || (state == states.backkick || (state == states.shoulder || state == states.uppunch))))
     grabbing = 1;
 else
     grabbing = 0;
 
-if (state == states.faceplant || state == states.slidekick || state == states.kungfu || sprite_index == get_charactersprite("spr_swingding") || state == states.mach3 || state == states.machslide || ((state == 47 && (sprite_index == get_charactersprite("spr_Sjumpcancelstart") || sprite_index == get_charactersprite("spr_Sjumpcancel") || sprite_index == get_charactersprite("spr_kungfujump") || sprite_index == get_charactersprite("spr_breakdanceuppercut") || sprite_index == get_charactersprite("spr_breakdanceuppercutend"))) || (state == states.slipnslide || ((state == states.hurt && thrown == 1) || (state == states.climbwall || (state == states.freefall || ((state == states.tumble && (sprite_index == get_charactersprite("spr_tumblestart") || sprite_index == get_charactersprite("spr_tumble") || sprite_index == get_charactersprite("spr_tumbleend"))) || (state == 6 || (state == 7 || (state == 9 || (state == states.lawnmower || (state == 35 || (state == states.Sjump || (state == states.machroll || (state == states.machfreefall || (state == 10 || ((state == states.superslam && sprite_index == get_charactersprite("spr_piledriver")) || (state == UnknownEnum.Value_24 || (state == UnknownEnum.Value_25 || (state == UnknownEnum.Value_18 || (state == 15 || (state == states.zombieattack || state == 11))))))))))))))))))))))
+if (state == states.faceplant || state == states.slidekick || state == states.kungfu || sprite_index == get_charactersprite("spr_swingding") || state == states.mach3 || state == states.machslide || ((state == states.punch && (sprite_index == get_charactersprite("spr_Sjumpcancelstart") || sprite_index == get_charactersprite("spr_Sjumpcancel") || sprite_index == get_charactersprite("spr_kungfujump") || sprite_index == get_charactersprite("spr_breakdanceuppercut") || sprite_index == get_charactersprite("spr_breakdanceuppercutend"))) || (state == states.slipnslide || ((state == states.hurt && thrown == 1) || (state == states.climbwall || (state == states.freefall || ((state == states.tumble && (sprite_index == get_charactersprite("spr_tumblestart") || sprite_index == get_charactersprite("spr_tumble") || sprite_index == get_charactersprite("spr_tumbleend"))) || (state == 6 || (state == 7 || (state == 9 || (state == states.lawnmower || (state == 35 || (state == states.Sjump || (state == states.machroll || (state == states.machfreefall || (state == states.tacklecharge || ((state == states.superslam && sprite_index == get_charactersprite("spr_piledriver")) || (state == states.unknown24 || (state == states.unknown25 || (state == states.unknown18 || (state == 15 || (state == states.zombieattack || state == 11))))))))))))))))))))))
     instakillmove = 1;
 else
     instakillmove = 0;
@@ -633,7 +633,7 @@ if (state != states.normal)
     dashdust = 0;
 }
 
-if (state != states.mach1 && (state != states.jump && (state != 9 && (state != states.handstandjump && (state != states.normal && (state != states.mach2 && (state != states.mach3 && (state != states.freefallprep && (state != UnknownEnum.Value_24 && (state != states.shotgun && state != UnknownEnum.Value_18))))))))))
+if (state != states.mach1 && (state != states.jump && (state != 9 && (state != states.handstandjump && (state != states.normal && (state != states.mach2 && (state != states.mach3 && (state != states.freefallprep && (state != states.unknown24 && (state != states.shotgun && state != states.unknown18))))))))))
     momemtum = 0;
 
 if (state != states.Sjump && state != states.Sjumpprep)
@@ -656,7 +656,7 @@ if (state != states.jump)
 
 var m3 = false;
 
-if (state == 3 || (state == states.punch && (sprite_index == get_charactersprite("spr_kungfujump") || sprite_index == get_charactersprite("spr_Sjumpcancel") || sprite_index == get_charactersprite("spr_Sjumpcancelstart") || ((sprite_index == get_charactersprite("spr_breakdanceuppercut") || sprite_index == get_charactersprite("spr_breakdanceuppercutend")) && vsp < 0))) || state == states.mach3 || (state == states.grabbed && instance_exists(obj_player2) && obj_player2.state == states.mach3) || state == 9 || state == states.mach2 || state == states.Sjump || (state == states.actor && sprite_index == get_charactersprite("spr_spinjump")) || state == 10 || state == states.machroll || state == states.slidekick || (state == states.chainsaw && mach2 >= 100) || state == states.kungfu)
+if (state == 3 || (state == states.punch && (sprite_index == get_charactersprite("spr_kungfujump") || sprite_index == get_charactersprite("spr_Sjumpcancel") || sprite_index == get_charactersprite("spr_Sjumpcancelstart") || ((sprite_index == get_charactersprite("spr_breakdanceuppercut") || sprite_index == get_charactersprite("spr_breakdanceuppercutend")) && vsp < 0))) || state == states.mach3 || (state == states.grabbed && instance_exists(obj_player2) && obj_player2.state == states.mach3) || state == 9 || state == states.mach2 || state == states.Sjump || (state == states.actor && sprite_index == get_charactersprite("spr_spinjump")) || state == states.tacklecharge || state == states.machroll || state == states.slidekick || (state == states.chainsaw && mach2 >= 100) || state == states.kungfu)
     m3 = true;
 
 if (m3)
@@ -674,7 +674,7 @@ if (m3)
             image_xscale = other.xscale;
             sprite_index = other.spritereal;
             alarm[1] = 10;
-            type = UnknownEnum.Value_1;
+            type = afterimgs.runningcolors;
             
             output_add = function()
             {
@@ -756,7 +756,7 @@ if ((y > (room_height + 300) || y < -800) && state != states.gameover && room !=
 
 if (!place_meeting(x, y, obj_solid))
 {
-    if (state != states.bump && (sprite_index != get_charactersprite("spr_bombpepintro") && (sprite_index != get_charactersprite("spr_knightpepthunder") && (state != states.tumble && (state != 6 && (state != states.crouch && (state != 15 && ((state != UnknownEnum.Value_39 && sprite_index != get_charactersprite("spr_crouchshoot")) && (state != states.Sjumpprep && (state != states.chainsaw && (state != states.machroll && state != states.slidekick && (state != states.hurt && (state != states.crouchslide && state != states.crouchjump)))))))))))))
+    if (state != states.bump && (sprite_index != get_charactersprite("spr_bombpepintro") && (sprite_index != get_charactersprite("spr_knightpepthunder") && (state != states.tumble && (state != 6 && (state != states.crouch && (state != 15 && ((state != states.unknown39 && sprite_index != get_charactersprite("spr_crouchshoot")) && (state != states.Sjumpprep && (state != states.chainsaw && (state != states.machroll && state != states.slidekick && (state != states.hurt && (state != states.crouchslide && state != states.crouchjump)))))))))))))
         mask_index = spr_player_mask;
     else
         mask_index = spr_crouchmask;
@@ -797,10 +797,10 @@ if (!grounded)
 
 scr_collide_destructibles();
 
-if (state != 8 && (state != states.grabbed && (state != states.debugstate && (state != states.door && (state != states.Sjump && (state != 4 && (state != states.comingoutdoor && (state != UnknownEnum.Value_88 && (state != states.keyget && (state != states.victory && (state != states.portal && (state != states.timesup && (state != states.gottreasure && state != states.gameover)))))))))))))
+if (state != 8 && (state != states.grabbed && (state != states.debugstate && (state != states.door && (state != states.Sjump && (state != 4 && (state != states.comingoutdoor && (state != states.unknown88 && (state != states.keyget && (state != states.victory && (state != states.portal && (state != states.timesup && (state != states.gottreasure && state != states.gameover)))))))))))))
     scr_collision();
 
-if (state == UnknownEnum.Value_88)
+if (state == states.unknown88)
     scr_collision();
 
 if (sprite_index != get_charactersprite("spr_supertaunt1") && sprite_index != get_charactersprite("spr_supertaunt2") && sprite_index != get_charactersprite("spr_supertaunt3") && sprite_index != get_charactersprite("spr_supertaunt4"))
@@ -810,7 +810,7 @@ for (var i = 0; i < 2; i++)
 {
     with (instance_create(x, y, obj_afterimage))
     {
-        type = UnknownEnum.Value_2;
+        type = afterimgs.unusedimg;
         invert = (i == 0) ? 1 : -1;
         image_speed = other.image_speed;
         sprite_index = other.sprite_index;

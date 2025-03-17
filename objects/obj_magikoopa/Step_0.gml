@@ -64,7 +64,7 @@ if (bombreset > 0)
 
 var p = instance_nearest(x, y, obj_player);
 
-if (x != p.x && (p.state != UnknownEnum.Value_18 && (p.state != UnknownEnum.Value_24 && (state != baddiestates.unknown && (bombreset == 0 && grounded)))))
+if (x != p.x && (p.state != states.unknown18 && (p.state != states.unknown24 && (state != baddiestates.unknown && (bombreset == 0 && grounded)))))
 {
     if ((p.x > (x - 400) && p.x < (x + 400)) && (y <= (p.y + 20) && y >= (p.y - 20)))
     {

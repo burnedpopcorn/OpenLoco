@@ -14,7 +14,7 @@ function scr_player_grabbed()
                 y = obj_player1.y;
             }
             
-            if (obj_player1.state == states.grabbing || (obj_player1.state == states.grab || (obj_player1.state == states.throwin || (obj_player1.state == states.slam || obj_player1.state == 10))))
+            if (obj_player1.state == states.grabbing || (obj_player1.state == states.grab || (obj_player1.state == states.throwin || (obj_player1.state == states.slam || obj_player1.state == states.tacklecharge))))
             {
                 x = obj_player1.x;
                 
@@ -58,7 +58,7 @@ function scr_player_grabbed()
                     }
                 }
                 
-                if ((state == states.grab) ^^ (state == states.mach3 && fightball == 1) ^^ (state == states.finishingblow) ^^ (state == states.grabbing) ^^ (state == states.throwin) ^^ (state == states.slam) ^^ (state == 10) ^^ (state == 47) ^^ (state == states.superslam) ^^ (state == states.backkick) ^^ (state == states.uppunch) ^^ (state == states.shoulder))
+                if ((state == states.grab) ^^ (state == states.mach3 && fightball == 1) ^^ (state == states.finishingblow) ^^ (state == states.grabbing) ^^ (state == states.throwin) ^^ (state == states.slam) ^^ (state == states.tacklecharge) ^^ (state == states.punch) ^^ (state == states.superslam) ^^ (state == states.backkick) ^^ (state == states.uppunch) ^^ (state == states.shoulder))
                 {
                     other.x = x;
                     other.y = y;
@@ -270,7 +270,7 @@ function scr_player_grabbed()
                 y = obj_player2.y;
             }
             
-            if (obj_player2.state == states.grabbing || (obj_player2.state == states.grab || (obj_player2.state == states.throwin || (obj_player2.state == states.slam || obj_player2.state == 10))))
+            if (obj_player2.state == states.grabbing || (obj_player2.state == states.grab || (obj_player2.state == states.throwin || (obj_player2.state == states.slam || obj_player2.state == states.tacklecharge))))
             {
                 x = obj_player2.x;
                 
@@ -314,7 +314,7 @@ function scr_player_grabbed()
                     }
                 }
                 
-                if (!(state == states.grab || ((state == states.mach3 && fightball == 1) || (state == states.finishingblow || (state == states.grabbing || (state == states.throwin || (state == states.slam || (state == 10 || (state == 47 || (state == states.superslam || (state == states.backkick || (state == states.uppunch || state == states.shoulder))))))))))))
+                if (!(state == states.grab || ((state == states.mach3 && fightball == 1) || (state == states.finishingblow || (state == states.grabbing || (state == states.throwin || (state == states.slam || (state == states.tacklecharge || (state == states.punch || (state == states.superslam || (state == states.backkick || (state == states.uppunch || state == states.shoulder))))))))))))
                 {
                     other.x = x;
                     other.y = y;

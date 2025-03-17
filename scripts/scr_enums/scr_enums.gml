@@ -81,23 +81,39 @@ enum states
 	genobeam		= 122,
 	slidekick		= 123,
 	cappythrow		= 125,
-	unknown			= 126, // in obj_secretportal for some reason
 	cape			= 127,
 	capefall		= 128,
 	
 	geno_normal		= 129,
 	geno_jump		= 130,
 	geno_shoot		= 131,
+	
+	// missing states
+	unknown126		= 126, // in obj_secretportal for some reason
+	unknown95		= 95,
+	unknown88		= 88,
+	unknown79		= 79,
+	unknown53		= 53,
+	unknown39		= 39,
+	unknown27		= 27,
+	unknown25		= 25,
+	unknown24		= 24,
+	unknown18		= 18,
+	unknown15		= 15,
+	unknown12		= 12,
+	unknown9		= 9,
 }
 
+// player special attacks
 enum playerspecialmove
 {
 	kungfu			= 0,
 	shoulderbash	= 1,
 	faceplant		= 2,
-	cappy			= 3,
+	cappy			= 3, // default
 }
-	
+
+// enemy states
 enum baddiestates
 {
 	// idk man, its just like that in the original
@@ -112,7 +128,7 @@ enum baddiestates
 	grabbed			= 106,
 	rage			= 125,
 	
-	// rarely used ones
+	// unused ones kinda
 	bounce			= 1,
 	unknown			= 126,
 }
@@ -133,11 +149,54 @@ enum afterimgs
 	unusedimg		= 2, // never could get it to trigger
 }
 
+// transformation text
+enum texteffect
+{
+	smoothupdown	= 0,
+	crazyshake		= 1,
+	randupdown		= 2,
+}
+
+enum TVstates
+{
+	maintv			= 0,
+	whitenoise		= 1,
+	delay			= 2, //whitenoise timer to switch to main
+	
+	start			= 3,
+}
+
+// temp name
+enum combonum
+{
+	state0			= 0,
+	state1			= 1,
+	state2			= 2,
+}
+
 // patrick pillar
 enum pillar
 {
 	idle			= 0,
 	hit				= 1,
+}
+
+// obj_textbox | Yoshi NPC
+enum npctext
+{
+	startidle	= 0,
+	opentextbox	= 1,
+	npctalk		= 2,
+	checktxtbox = 3,
+	endidle		= 4,
+}
+
+// for obj_savesystem
+enum savestate
+{
+	idle		= 0,
+	bufdelete	= 1,
+	bufload		= 2,
 }
 
 // for obj_gatespawnplayer CHANGE ENUM NAME
@@ -155,6 +214,12 @@ enum spawnbaddies
 	checkplayer		= 1,
 	spawn			= 2,
 	die				= 3,
+}
+
+enum antileakcounter
+{
+	disabled		= 0,
+	enabled			= 1,
 }
 
 // for obj_fakepep (unused, but still)
@@ -217,124 +282,3 @@ enum colmesh_enum
     Value_13,
     Value_14,
 }
-	
-// temporary
-enum UnknownEnum {
-    Value_m5 = -5,
-    Value_m1 = -1,
-    Value_0,
-    Value_1,
-    Value_2,
-    Value_3,
-    Value_4,
-    Value_5,
-    Value_6,
-    Value_7,
-    Value_8,
-    Value_9,
-    Value_10,
-    Value_11,
-    Value_12,
-    Value_13,
-    Value_14,
-    Value_15,
-    Value_16,
-    Value_17,
-    Value_18,
-    Value_19,
-    Value_20,
-    Value_21,
-    Value_22,
-    Value_23,
-    Value_24,
-    Value_25,
-    Value_26,
-    Value_27,
-    Value_28,
-    Value_29,
-    Value_30,
-    Value_31,
-    Value_32,
-    Value_33,
-    Value_34,
-    Value_35,
-    Value_36,
-    Value_37,
-    Value_38,
-    Value_39,
-    Value_40,
-    Value_41,
-    Value_42,
-    Value_43,
-    Value_44,
-    Value_45,
-    Value_46,
-    Value_47,
-    Value_48,
-    Value_49,
-    Value_50,
-    Value_51,
-    Value_52,
-    Value_53,
-    Value_54,
-    Value_55,
-    Value_56,
-    Value_57,
-    Value_58,
-    Value_59,
-    Value_60,
-    Value_61,
-    Value_62,
-    Value_63,
-    Value_64,
-    Value_65,
-    Value_66,
-    Value_67,
-    Value_68,
-    Value_69,
-    Value_70,
-    Value_71,
-    Value_72,
-    Value_73,
-    Value_74,
-    Value_75,
-    Value_76,
-    Value_77,
-    Value_78,
-    Value_79,
-    Value_80,
-    Value_81,
-    Value_87 = 87,
-    Value_88,
-    Value_89,
-    Value_91 = 91,
-    Value_92,
-    Value_93,
-    Value_96 = 96,
-    Value_97,
-    Value_106 = 106,
-    Value_107,
-    Value_108,
-    Value_109,
-    Value_110,
-    Value_111,
-    Value_112,
-    Value_113,
-    Value_114,
-    Value_115,
-    Value_116,
-    Value_117,
-    Value_118,
-    Value_119,
-    Value_120,
-    Value_121,
-    Value_122,
-    Value_123,
-    Value_125 = 125,
-    Value_126,
-    Value_127,
-    Value_128,
-    Value_129,
-    Value_130,
-    Value_131,
-};

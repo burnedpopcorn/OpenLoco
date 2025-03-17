@@ -32,7 +32,7 @@ function scr_player_hurt()
     if (grounded && vsp > 0)
     {
         movespeed = 0;
-        state = 0;
+        state = states.normal;
     }
     
     if (scr_solid(x + hsp, y))

@@ -1,4 +1,4 @@
-if (obj_player.state == UnknownEnum.Value_24 || (obj_player.state == UnknownEnum.Value_25 || obj_player.state == UnknownEnum.Value_18))
+if (obj_player.state == states.unknown24 || (obj_player.state == states.unknown25 || obj_player.state == states.unknown18))
     sprite_index = spr_swordstonetaken;
 else
     sprite_index = spr_swordstone;

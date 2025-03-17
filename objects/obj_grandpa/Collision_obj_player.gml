@@ -1,10 +1,10 @@
 with (obj_player)
 {
-    if ((state == UnknownEnum.Value_24 || (state == UnknownEnum.Value_25 || state == UnknownEnum.Value_18)) && cutscene == 0)
+    if ((state == states.unknown24 || (state == states.unknown25 || state == states.unknown18)) && cutscene == 0)
     {
         instance_destroy(other.id);
     }
-    else if (state == UnknownEnum.Value_27 && hurted == 0)
+    else if (state == states.unknown27 && hurted == 0)
     {
     }
     else if (state == 15)

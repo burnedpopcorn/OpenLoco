@@ -2,10 +2,10 @@ function scr_hurtplayer(argument0)
 {
     with (argument0)
     {
-        if ((state == UnknownEnum.Value_24 || (state == UnknownEnum.Value_25 || state == UnknownEnum.Value_18)) && cutscene == 0)
+        if ((state == states.unknown24 || (state == states.unknown25 || state == states.unknown18)) && cutscene == 0)
             continue;
         
-        if (state == UnknownEnum.Value_27 && hurted == 0)
+        if (state == states.unknown27 && hurted == 0)
             continue;
         
         if (state == states.portal)
@@ -20,7 +20,7 @@ function scr_hurtplayer(argument0)
         if (state == states.chainsaw)
             continue;
         
-        if (state == UnknownEnum.Value_15)
+        if (state == states.unknown15)
             continue;
         
         if (state == states.debugstate)

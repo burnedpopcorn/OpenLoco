@@ -22,6 +22,6 @@ portrait =
 textbox_xscale = 1;
 textbox_sprite = spr_textbox;
 font = font_dialogue;
-state = states.normal;
+state = npctext.startidle;
 sound = undefined;
 fmod_studio_event_oneshot("event:/sfx/transitions/circleout");

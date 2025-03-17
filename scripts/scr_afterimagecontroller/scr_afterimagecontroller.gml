@@ -1,4 +1,4 @@
-function create_afterimage(argument0 = UnknownEnum.Value_0, argument1 = sprite_index, argument2 = image_index, argument3 = 0, argument4 = image_xscale, argument5 = image_yscale, argument6 = image_angle, argument7 = 0.8, argument8 = image_blend)
+function create_afterimage(argument0 = 0, argument1 = sprite_index, argument2 = image_index, argument3 = 0, argument4 = image_xscale, argument5 = image_yscale, argument6 = image_angle, argument7 = 0.8, argument8 = image_blend)
 {
     var _afterimg = 
     {

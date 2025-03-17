@@ -4,17 +4,17 @@ var error = ds_map_find_value(async_load, "error");
 
 switch (state)
 {
-    case 1:
+    case savestate.bufdelete:
         if (ident == saveid)
         {
             buffer_delete(savebuff);
             trace("Save status: ", status, ", error: ", error);
-            state = states.normal;
+            state = savestate.idle;
         }
         
         break;
     
-    case 2:
+    case savestate.bufload:
         if (ident == loadid)
         {
             var buffstring = buffer_read(loadbuff, buffer_string);
@@ -31,7 +31,7 @@ switch (state)
             buffer_delete(loadbuff);
             trace("inistr: ", ini_str);
             trace("buffstring: ", buffstring);
-            state = states.normal;
+            state = savestate.idle;
         }
         
         break;

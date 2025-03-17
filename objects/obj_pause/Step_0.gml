@@ -25,7 +25,7 @@ if (!pause)
             with (obj_fmod_studio_manager)
             {
                 music_set_paused(true);
-                fmod_studio_bus_stop_all_events(sfx_bus, UnknownEnum.Value_1);
+                fmod_studio_bus_stop_all_events(sfx_bus, FMOD_STUDIO_STOP_MODE.IMMEDIATE);
             }
             
             instance_deactivate_all(true);

@@ -2,7 +2,7 @@ with (other)
 {
     if (state != states.Sjump)
     {
-        if (state == UnknownEnum.Value_24 || (state == UnknownEnum.Value_25 || state == UnknownEnum.Value_18))
+        if (state == states.unknown24 || (state == states.unknown25 || state == states.unknown18))
         {
             with (instance_create(x, y, obj_knightdebris))
                 image_index = 0;
@@ -25,7 +25,7 @@ with (other)
         
         x = other.x;
         
-        if (state == UnknownEnum.Value_27)
+        if (state == states.unknown27)
             instance_create(x, y, obj_bombexplosion);
         
         if (other.image_yscale == 1)

@@ -43,7 +43,7 @@ if (place_meeting(x, y - 1, obj_haystack) && sprite_index == spr_haystackburning
 if (floor(image_index) == (image_number - 1) && sprite_index == spr_haystackburningup)
     sprite_index = spr_haystackburning;
 
-if (sprite_index == spr_haystackburning && (obj_player.state != 6 && (obj_player.state != UnknownEnum.Value_24 && place_meeting(x, y - 1, obj_player))))
+if (sprite_index == spr_haystackburning && (obj_player.state != 6 && (obj_player.state != states.unknown24 && place_meeting(x, y - 1, obj_player))))
 {
     obj_player.state = 6;
     obj_player.image_index = 0;

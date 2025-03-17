@@ -2,7 +2,7 @@ with (obj_player1)
 {
     if (place_meeting(x, y, other.id))
     {
-        if (state != UnknownEnum.Value_27 && (state != UnknownEnum.Value_24 && (state != 11 && (state != 15 && (state != 13 && (state != UnknownEnum.Value_25 && (state != UnknownEnum.Value_18 && state != states.hurt)))))))
+        if (state != states.unknown27 && (state != states.unknown24 && (state != 11 && (state != 15 && (state != 13 && (state != states.unknown25 && (state != states.unknown18 && state != states.hurt)))))))
         {
             instance_destroy(other.id);
             global.key_inv = 1;
@@ -19,7 +19,7 @@ with (obj_player2)
 {
     if (place_meeting(x, y, other.id))
     {
-        if (state != UnknownEnum.Value_27 && (state != UnknownEnum.Value_24 && (state != 11 && (state != 15 && (state != 13 && (state != UnknownEnum.Value_25 && (state != UnknownEnum.Value_18 && state != states.hurt)))))))
+        if (state != states.unknown27 && (state != states.unknown24 && (state != 11 && (state != 15 && (state != 13 && (state != states.unknown25 && (state != states.unknown18 && state != states.hurt)))))))
         {
             instance_destroy(other.id);
             global.key_inv = 1;

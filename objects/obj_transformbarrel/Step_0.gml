@@ -3,7 +3,7 @@ if (vsp < 12)
 
 if (place_meeting(x, y - 1, obj_player) && ((obj_player.x >= (x - 8) && obj_player.x <= (x + 8)) && (obj_player.state == states.normal || (obj_player.state == states.crouch || obj_player.state == states.mach1))))
 {
-    obj_player.state = UnknownEnum.Value_79;
+    obj_player.state = states.unknown79;
     obj_player.image_index = 0;
     obj_player.barrel = 1;
     obj_player.vsp = 10;

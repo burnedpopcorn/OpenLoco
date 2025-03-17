@@ -2,13 +2,13 @@ function gamesave_async_load()
 {
     with (obj_savesystem)
     {
-        if (state == states.normal)
+        if (state == savestate.idle)
         {
             loadbuff = buffer_create(1, buffer_grow, 1);
             buffer_async_group_begin("saves");
             buffer_load_async(loadbuff, get_savefile_ini(), 0, -1);
             loadid = buffer_async_group_end();
-            state = 2;
+            state = savestate.bufload;
         }
     }
     
@@ -19,7 +19,7 @@ function gamesave_async_save()
 {
     with (obj_savesystem)
     {
-        if (state == states.normal)
+        if (state == savestate.idle)
         {
             showicon = 1;
             icon_alpha = 3;

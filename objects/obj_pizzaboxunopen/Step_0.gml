@@ -174,7 +174,7 @@ if ((place_meeting(x, y, obj_player) || (instance_exists(obj_cappy) && place_mee
             txt = langstr_get("plushie_text1");
         
         var txt = embed_value_string(txt, [6 - global.toppintotal]);
-        create_transfotext(txt, UnknownEnum.Value_1);
+        create_transfotext(txt, texteffect.crazyshake);
         fmod_studio_event_oneshot_3d("event:/sfx/level_structure/collects/plushie");
     }
     

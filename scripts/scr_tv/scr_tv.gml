@@ -2,9 +2,9 @@ function tv_trigger_whitenoise(argument0, argument1 = 0.25, argument2 = false, a
 {
     with (obj_tv)
     {
-        if (state != UnknownEnum.Value_1 || argument2)
+        if (state != TVstates.whitenoise || argument2)
         {
-            state = UnknownEnum.Value_1;
+            state = TVstates.whitenoise;
             whitenoise_index = 0;
             whitenoise_speed = argument1;
             whitenoise_sprite = argument3;
@@ -23,7 +23,7 @@ function tv_trigger_expression(argument0, argument1, argument2, argument3 = 0.35
         if (expression_sprite == _spr)
             exit;
         
-        if (state == states.tumble && expression_priority > argument2)
+        if (state == TVstates.delay && expression_priority > argument2)
         {
             var _info = 
             {
@@ -45,13 +45,13 @@ function tv_trigger_expression(argument0, argument1, argument2, argument3 = 0.35
         if (!argument6)
         {
             tvsprite = expression_sprite;
-            tv_trigger_whitenoise(UnknownEnum.Value_2);
+            tv_trigger_whitenoise(TVstates.delay);
         }
         else
         {
             tvsprite = expression_sprite;
             sprite_index = tvsprite;
-            state = states.tumble;
+            state = TVstates.delay;
         }
         
         usepalette = argument4;
@@ -65,7 +65,7 @@ function tv_turnoff()
 {
     with (obj_tv)
     {
-        state = states.finishingblow;
+        state = TVstates.start;
         sprite_index = get_charactersprite("spr_tvoff");
     }
     
@@ -128,7 +128,7 @@ function tv_push_prompt(argument0, argument1, argument2, argument3)
         }
         
         if (play)
-            state = 0;
+            state = TVstates.maintv;
     }
     
     exit;

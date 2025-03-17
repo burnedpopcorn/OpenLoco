@@ -7,6 +7,6 @@ if (grounded && (other.sprite_index == spr_swordstone && state == states.handsta
     image_index = 0;
     image_speed = 0.35;
     sprite_index = spr_knightpepstart;
-    state = UnknownEnum.Value_24;
+    state = states.unknown24;
     hsp = 0;
 }

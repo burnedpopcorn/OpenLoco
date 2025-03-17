@@ -8,7 +8,7 @@ function scr_genobeam()
     
     with (instance_create(0, 0, obj_transformationtext))
     {
-        effect = UnknownEnum.Value_1;
+        effect = texteffect.crazyshake;
         message = "[G] Hold to charge!";
     }
     

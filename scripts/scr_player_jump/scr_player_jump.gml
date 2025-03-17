@@ -243,7 +243,7 @@ function scr_player_jump()
         repeat (2)
             fmod_studio_event_oneshot_3d("event:/sfx/player/misc/kill");
         
-        state = 38;
+        state = states.shotgun;
         
         with (instance_create(x, y, obj_pistoleffect))
             image_xscale = other.image_xscale;

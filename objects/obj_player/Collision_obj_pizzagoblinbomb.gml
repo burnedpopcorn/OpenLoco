@@ -1,7 +1,7 @@
-if (cutscene == 0 && (other.grounded == 1 && (state != UnknownEnum.Value_27 && (state == states.handstandjump || character == "S"))))
+if (cutscene == 0 && (other.grounded == 1 && (state != states.unknown27 && (state == states.handstandjump || character == "S"))))
 {
     bombpeptimer = 100;
-    state = UnknownEnum.Value_27;
+    state = states.unknown27;
     image_index = 0;
     sprite_index = spr_bombpepintro;
     instance_destroy(other.id);

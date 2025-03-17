@@ -90,7 +90,7 @@ if (cigar == 0)
     stunspr = spr_ancho_chargestart;
     recoveryspr = spr_airdash1_damian;
     stompedspr = spr_arenagate_close;
-    grabbedspr = spr_baddie;//UnknownEnum.Value_128; // uh what
+    grabbedspr = spr_baddie;
 }
 
 if (cigar == 1 && (cigarcreate == 0 && (state == baddiestates.idle || (state == baddiestates.walk || (state == 98 || state == baddiestates.land)))))

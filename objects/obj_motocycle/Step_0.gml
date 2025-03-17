@@ -4,7 +4,7 @@ if (grabbed == 1)
     grav = 0;
     obj_player.baddiegrabbedID = id;
     
-    if (obj_player.state == states.grabbing || (obj_player.state == states.grab || (obj_player.state == states.throwin || (obj_player.state == states.slam || obj_player.state == 10))))
+    if (obj_player.state == states.grabbing || (obj_player.state == states.grab || (obj_player.state == states.throwin || (obj_player.state == states.slam || obj_player.state == states.tacklecharge))))
     {
         grounded = 0;
         x = obj_player.x;
@@ -28,7 +28,7 @@ if (grabbed == 1)
         scr_getinput();
         move = key_left2 + key_right2;
         
-        if (!(state == states.grab || (state == states.grabbing || (state == states.throwin || (state == states.slam || (state == 10 || (state == 47 || (state == states.superslam || (state == states.backkick || (state == states.uppunch || state == states.shoulder))))))))))
+        if (!(state == states.grab || (state == states.grabbing || (state == states.throwin || (state == states.slam || (state == states.tacklecharge || (state == states.punch || (state == states.superslam || (state == states.backkick || (state == states.uppunch || state == states.shoulder))))))))))
         {
             other.x = x;
             other.y = y;
@@ -38,7 +38,7 @@ if (grabbed == 1)
     
     hsp = 0;
     
-    if (obj_player.state == 47)
+    if (obj_player.state == states.punch)
     {
         instance_create(x + (obj_player.xscale * 30), y, obj_bumpeffect);
         grabbed = 0;
@@ -125,7 +125,7 @@ if (grabbed == 1)
         }
     }
     
-    if (obj_player.state == 10)
+    if (obj_player.state == states.tacklecharge)
     {
         x = obj_player.x + (obj_player.xscale * 15);
         y = obj_player.y;

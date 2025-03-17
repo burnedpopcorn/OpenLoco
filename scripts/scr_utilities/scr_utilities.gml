@@ -244,7 +244,7 @@ function saveroom_check(argument0 = id)
     return ds_list_find_value(global.saveroom, argument0) != undefined;
 }
 
-function create_transfotext(argument0, argument1 = UnknownEnum.Value_2)
+function create_transfotext(argument0, argument1 = texteffect.randupdown)
 {
     with (instance_create(x, y, obj_transformationtext))
     {
@@ -253,7 +253,7 @@ function create_transfotext(argument0, argument1 = UnknownEnum.Value_2)
     }
 }
 
-function create_transfotext_lang(argument0, argument1 = UnknownEnum.Value_2)
+function create_transfotext_lang(argument0, argument1 = texteffect.randupdown)
 {
     create_transfotext(langstr_get(argument0), argument1);
 }

@@ -62,16 +62,16 @@ for (var i = 0; i < string_length(message); i++)
     
     switch (effect)
     {
-        case UnknownEnum.Value_0:
+        case effect.smoothupdown:
             shiftY += (sin((so * pi * freq) / room_speed) * amplitude);
             break;
         
-        case UnknownEnum.Value_1:
+        case texteffect.crazyshake:
             shiftY += irandom_range(-1, 1);
             shiftX += irandom_range(-1, 1);
             break;
         
-        case UnknownEnum.Value_2:
+        case texteffect.randupdown:
             shiftY += floor(wave(-1, 1, 0.2, 0) * ((((i + 1) % 2) == 0) ? -1 : 1));
             break;
     }

@@ -1,7 +1,7 @@
 if (room == rank_room || room == timesuproom)
     visible = false;
 
-if (obj_player.state == UnknownEnum.Value_53)
+if (obj_player.state == states.unknown53)
     visible = false;
 
 if (global.miniboss == 0)

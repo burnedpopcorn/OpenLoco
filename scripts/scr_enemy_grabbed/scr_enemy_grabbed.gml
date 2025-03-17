@@ -6,7 +6,7 @@ function scr_enemy_grabbed()
     stunned = 200;
     _obj_player.baddiegrabbedID = id;
     
-    if (_obj_player.state == states.grabbing || (_obj_player.state == states.grab || (_obj_player.state == states.throwin || (_obj_player.state == states.slam || _obj_player.state == 10))))
+    if (_obj_player.state == states.grabbing || (_obj_player.state == states.grab || (_obj_player.state == states.throwin || (_obj_player.state == states.slam || _obj_player.state == states.tacklecharge))))
     {
         x = _obj_player.x;
         
@@ -29,7 +29,7 @@ function scr_enemy_grabbed()
         suplexhavetomash = other.hp - 1;
         move = key_left2 + key_right2;
         
-        if (!(state == states.grab || state == states.finishingblow || state == states.grabbing || (state == states.chainsaw && tauntstoredstate == 43) || state == states.throwin || state == states.slam || state == 10 || state == 47 || state == states.superslam || state == states.backkick || state == states.uppunch || state == states.shoulder))
+        if (!(state == states.grab || state == states.finishingblow || state == states.grabbing || (state == states.chainsaw && tauntstoredstate == 43) || state == states.throwin || state == states.slam || state == states.tacklecharge || state == states.punch || state == states.superslam || state == states.backkick || state == states.uppunch || state == states.shoulder))
         {
             other.x = x;
             other.y = y;
@@ -40,7 +40,7 @@ function scr_enemy_grabbed()
     
     hsp = 0;
     
-    if (_obj_player.state == 47)
+    if (_obj_player.state == states.punch)
     {
         alarm[3] = 3;
         global.hit += 1;
@@ -264,7 +264,7 @@ function scr_enemy_grabbed()
         check_grabbed_solid(_obj_player);
     }
     
-    if (_obj_player.state == 10)
+    if (_obj_player.state == states.tacklecharge)
     {
         x = _obj_player.x + (_obj_player.xscale * 15);
         y = _obj_player.y;

@@ -4,4 +4,4 @@ with (obj_music)
     event_perform(ev_other, ev_room_start);
 }
 
-state = 1;
+state = antileakcounter.enabled;

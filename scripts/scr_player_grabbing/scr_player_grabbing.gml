@@ -28,7 +28,7 @@ function scr_player_grabbing()
     {
         movespeed = 0;
         image_index = 0;
-        state = 46;
+        state = states.grab;
     }
     
     if (key_attack && !grounded)

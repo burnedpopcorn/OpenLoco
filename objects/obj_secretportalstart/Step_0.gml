@@ -20,7 +20,7 @@ switch (sprite_index)
             cutscene = 1;
             visible = false;
             
-            if (state != UnknownEnum.Value_24 && state != UnknownEnum.Value_18)
+            if (state != states.unknown24 && state != states.unknown18)
                 state = states.normal;
         }
         
@@ -33,7 +33,7 @@ switch (sprite_index)
             
             with (obj_player)
             {
-                if (state != UnknownEnum.Value_24 && state != UnknownEnum.Value_18)
+                if (state != states.unknown24 && state != states.unknown18)
                 {
                     visible = true;
                     cutscene = 0;

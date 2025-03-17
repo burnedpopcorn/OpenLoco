@@ -7,7 +7,7 @@ if (obj_player.state == 7 && (place_meeting(x + 1, y, obj_player) || (place_meet
         vsp = -4;
         image_index = 0;
         sprite_index = spr_bombpep_end;
-        state = UnknownEnum.Value_27;
+        state = states.unknown27;
         bombpeptimer = 0;
     }
 }

@@ -2,7 +2,7 @@ scr_getinput();
 
 switch (state)
 {
-    case states.normal:
+    case npctext.startidle:
         portrait.sprite = portrait.idle;
         var target = sprite_get_width(portrait.idle) + 20;
         portrait.xoff = lerp(portrait.xoff, target, 0.5);
@@ -10,25 +10,25 @@ switch (state)
         if ((target - portrait.xoff) < 1)
         {
             portrait.xoff = target;
-            state = UnknownEnum.Value_1;
+            state = npctext.opentextbox;
         }
         
         break;
     
-    case UnknownEnum.Value_1:
+    case npctext.opentextbox:
         var target = obj_screen.actualWidth - portrait.xoff - 20 - 68.5;
         textbox_xscale = lerp(textbox_xscale, target, 0.25);
         
         if ((target - textbox_xscale) < 1)
         {
             textbox_xscale = target;
-            state = states.tumble;
+            state = npctext.npctalk;
             alarm[1] = irandom_range(10, 30);
         }
         
         break;
     
-    case states.tumble:
+    case npctext.npctalk:
         var box = id;
         var length = string_length(text);
         writer.done = writer.ch >= length;
@@ -89,23 +89,23 @@ switch (state)
         }
         
         if (key_jump && writer.done)
-            state = states.finishingblow;
+            state = npctext.checktxtbox;
         
         break;
     
-    case states.finishingblow:
+    case npctext.checktxtbox:
         textbox_xscale = lerp(textbox_xscale, 1, 0.25);
         writer.alpha = lerp(writer.alpha, 0, 0.4);
         
         if (textbox_xscale >= 0.9 && textbox_xscale < 1.1)
         {
             textbox_xscale = 1;
-            state = states.ejected;
+            state = npctext.endidle;
         }
         
         break;
     
-    case states.ejected:
+    case npctext.endidle:
         portrait.sprite = portrait.idle;
         portrait.xoff = lerp(portrait.xoff, -sprite_get_width(portrait.sprite) - 10, 0.5);
         

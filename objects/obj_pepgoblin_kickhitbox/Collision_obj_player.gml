@@ -2,7 +2,7 @@ with (other.id)
 {
     if (!(global.laps >= 5))
     {
-        if (instance_exists(other.baddieID) && (state != states.tumble && (state != states.backbreaker && (state != UnknownEnum.Value_24 && state != UnknownEnum.Value_18))))
+        if (instance_exists(other.baddieID) && (state != states.tumble && (state != states.backbreaker && (state != states.unknown24 && state != states.unknown18))))
         {
             state = 2;
             xscale = other.baddieID.image_xscale;

@@ -5,7 +5,7 @@ timer_ystart = obj_screen.actualHeight - 76;
 if (room == rank_room || room == NoRoom || room == rm_intro || room == rm_titlecard || string_letters(roomname) == "Tutori" || string_letters(roomname) == "Tutorii" || room == hub_start || room == hub_cafe || room == hub_afterstart || room == hub_hall || room == hub_afterhall || room == hub_magmamine || room == hub_boss1 || room == hub_lobby || room == hub_hallway || room == hub_locotown || room == hub_forestmaze || room == rm_introcustene || room == rm_titleselect || room == Realtitlescreen || room == Disclamer || room == Titlescreen || room == Scootertransition || room == credits || room == timesuproom || room == boss_room1 || room == characterselect || room == rm_antileak)
 {
     visible = false;
-    state = states.finishingblow;
+    state = TVstates.start;
 }
 else
 {
@@ -64,7 +64,7 @@ if (obj_player1.state == states.backbreaker || obj_player1.state == states.chain
 
 switch (state)
 {
-    case states.finishingblow:
+    case TVstates.start:
         if (!visible)
         {
             image_index = 0;
@@ -72,12 +72,12 @@ switch (state)
         }
         else if (alpha == alphaend)
         {
-            tv_trigger_whitenoise(UnknownEnum.Value_0, 0.35, true, get_charactersprite("spr_tvopen"));
+            tv_trigger_whitenoise(TVstates.maintv, 0.35, true, get_charactersprite("spr_tvopen"));
         }
         
         break;
     
-    case states.normal:
+    case TVstates.maintv:
         standard_sprite = global.panic ? get_charactersprite("spr_tvpanic") : get_charactersprite("spr_tvidle");
         
         if (global.laps >= 3)
@@ -99,8 +99,8 @@ switch (state)
         
         switch (_charstate)
         {
-            case UnknownEnum.Value_71:
-            case UnknownEnum.Value_91:
+            case states.machslide:
+            case states.mach3:
                 _transfo = false;
                 var _machslide = obj_player1.sprite_index == get_charactersprite("spr_machslide") || obj_player1.sprite_index == get_charactersprite("spr_machslidestart") || obj_player1.sprite_index == get_charactersprite("spr_machslideend") || obj_player1.sprite_index == get_charactersprite("spr_machslideboost");
                 
@@ -116,19 +116,19 @@ switch (state)
                 
                 break;
             
-            case UnknownEnum.Value_73:
+            case states.hurt:
                 _transfo = false;
                 standard_sprite = get_charactersprite("spr_tvhurt");
                 break;
             
-            case UnknownEnum.Value_13:
-            case UnknownEnum.Value_112:
-            case UnknownEnum.Value_117:
+            case states.zombie:
+            case states.zombiejump:
+            case states.zombieattack:
                 _transfo = true;
                 standard_sprite = get_charactersprite("spr_tvzombie");
                 break;
             
-            case UnknownEnum.Value_111:
+            case states.debugstate:
                 _transfo = true;
                 standard_sprite = spr_tvnoclip_damian;
                 break;
@@ -181,13 +181,13 @@ switch (state)
         else if (tvsprite != standard_sprite || sprite_index == expression_sprite)
         {
             tvsprite = standard_sprite;
-            tv_trigger_whitenoise(UnknownEnum.Value_0);
+            tv_trigger_whitenoise(TVstates.maintv);
         }
         
         image_speed = _anim_speed;
         break;
     
-    case UnknownEnum.Value_1:
+    case TVstates.whitenoise:
         whitenoise_index += whitenoise_speed;
         var _whitenoise_frames = sprite_get_number(get_charactersprite("spr_tvwhitenoise")) - 1;
         
@@ -200,7 +200,7 @@ switch (state)
         
         break;
     
-    case states.tumble:
+    case TVstates.delay:
         if (expression_time > 0)
         {
             expression_time--;
@@ -218,12 +218,12 @@ switch (state)
             {
                 tvsprite = expression_sprite;
                 sprite_index = tvsprite;
-                state = states.tumble;
+                state = TVstates.delay;
             }
             else
             {
                 tvsprite = expression_sprite;
-                tv_trigger_whitenoise(UnknownEnum.Value_2);
+                tv_trigger_whitenoise(TVstates.delay);
             }
             
             ds_list_delete(expression_que, 0);
@@ -231,7 +231,7 @@ switch (state)
         else
         {
             expression_priority = 0;
-            state = states.normal;
+            state = TVstates.maintv;
         }
         
         break;
@@ -310,7 +310,7 @@ if (showtext == 0)
         yi += 1;
 }
 
-if (!(obj_player.state == UnknownEnum.Value_24 && obj_player.state == UnknownEnum.Value_25 && obj_player.state == UnknownEnum.Value_18))
+if (!(obj_player.state == states.unknown24 && obj_player.state == states.unknown25 && obj_player.state == states.unknown18))
     once = 0;
 
 var change_pos = 0;
@@ -331,7 +331,7 @@ if (global.combotime > 0 && global.combo != 0)
 {
     switch (combo_state)
     {
-        case 0:
+        case combonum.state0:
             combo_posY += combo_vsp;
             combo_vsp += 0.5;
             
@@ -340,7 +340,7 @@ if (global.combotime > 0 && global.combo != 0)
             
             break;
         
-        case 1:
+        case combonum.state1:
             combo_posY = lerp(combo_posY, 0, 0.05);
             
             if (combo_posY < 1)
@@ -352,7 +352,7 @@ if (global.combotime > 0 && global.combo != 0)
             
             break;
         
-        case 2:
+        case combonum.state2:
             if (global.combotime < 30)
             {
                 combo_posY += combo_vsp;
@@ -381,7 +381,7 @@ else
 {
     combo_posY = Approach(combo_posY, -500, 5);
     combo_vsp = 0;
-    combo_state = UnknownEnum.Value_0;
+    combo_state = combonum.state0;
 }
 
 combofill_index += 0.35;

@@ -1,6 +1,6 @@
 function scr_angleplayerspecial_rotate()
 {
-    if (state == states.normal || state == 1) // state 1 doesn't exist
+    if (state == states.normal || state == 1)
     {
         if (grounded && !place_meeting(x, y + 1, obj_solid))
         {

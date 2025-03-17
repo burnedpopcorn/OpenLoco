@@ -4,7 +4,7 @@ if (invframes == 0)
     {
         with (obj_player)
         {
-            if (y > other.y && (other.vsp > 1 && (other.grounded == 0 && other.state == UnknownEnum.Value_1)))
+            if (y > other.y && (other.vsp > 1 && (other.grounded == 0 && other.state == baddiestates.bounce)))
                 other.caughtplayer = 1;
             
             if (y < other.y && (attacking == 0 && (state == states.jump && (vsp > 0 && sprite_index != get_charactersprite("spr_stompprep")))))

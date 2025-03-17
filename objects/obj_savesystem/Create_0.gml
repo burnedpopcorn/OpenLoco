@@ -8,6 +8,6 @@ if (instance_number(object_index) > 1)
 
 showicon = 0;
 ini_str = "";
-state = states.normal;
+state = savestate.idle;
 icon_index = 0;
 icon_max = 3;

@@ -67,7 +67,7 @@ if (state != baddiestates.stun)
 if (bombreset > 0)
     bombreset--;
 
-if (x != obj_player1.x && (obj_player1.state != UnknownEnum.Value_27 && (state != baddiestates.throwing && (bombreset == 0 && grounded))))
+if (x != obj_player1.x && (obj_player1.state != states.unknown27 && (state != baddiestates.throwing && (bombreset == 0 && grounded))))
 {
     if ((obj_player1.x > (x - 400) && obj_player1.x < (x + 400)) && (y <= (obj_player1.y + 20) && y >= (obj_player1.y - 20)))
     {
@@ -82,7 +82,7 @@ if (x != obj_player1.x && (obj_player1.state != UnknownEnum.Value_27 && (state !
 
 if (instance_exists(obj_player2))
 {
-    if (x != obj_player2.x && (obj_player2.state != UnknownEnum.Value_27 && (state != baddiestates.throwing && (bombreset == 0 && grounded))))
+    if (x != obj_player2.x && (obj_player2.state != states.unknown27 && (state != baddiestates.throwing && (bombreset == 0 && grounded))))
     {
         if ((obj_player2.x > (x - 400) && obj_player2.x < (x + 400)) && (y <= (obj_player2.y + 20) && y >= (obj_player2.y - 20)))
         {

@@ -1,2 +1,2 @@
-if (state == 1)
+if (state == antileakcounter.enabled)
     bgalpha = Approach(bgalpha, 1, 0.05);

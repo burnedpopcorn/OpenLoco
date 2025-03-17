@@ -31,7 +31,7 @@ function scr_playerreset()
     obj_player1.spotlight = 1;
     obj_player2.x = -1000;
     obj_player2.y = 500;
-    obj_player2.state = 8;
+    obj_player2.state = states.titlescreen;
     
     if (instance_exists(obj_coopflag))
         instance_destroy(obj_coopflag);

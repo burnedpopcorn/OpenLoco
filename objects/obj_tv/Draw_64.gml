@@ -33,7 +33,7 @@ if (!surface_exists(tvbg_surface))
 {
     tvbg_surface = surface_create(161, 124);
 }
-else if (surface_exists(tvbg_surface) && state != states.finishingblow)
+else if (surface_exists(tvbg_surface) && state != TVstates.start)
 {
     var _surforigin = [surface_get_width(tvbg_surface) / 2, surface_get_height(tvbg_surface) / 2];
     surface_set_target(tvbg_surface);
@@ -69,7 +69,7 @@ draw_sprite_ext(sprite_index, image_index, tv_x, tv_y + hud_posY, 1, 1, 0, c_whi
 shader_reset();
 var _frame = get_charactersprite("spr_tvframe");
 
-if (state == UnknownEnum.Value_1)
+if (state == TVstates.whitenoise)
     _frame = get_charactersprite("spr_tvwhitenoise");
 
 if (sprite_index != spr_tvnoclip_damian)

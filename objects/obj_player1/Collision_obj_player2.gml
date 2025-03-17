@@ -1,6 +1,6 @@
 with (obj_player2)
 {
-    if (state == states.handstandjump && (other.hurted == 0 && (other.state != states.hurt && (other.state != UnknownEnum.Value_18 && (other.state != UnknownEnum.Value_24 && (other.state != states.tumble && (other.state != 6 && (other.state != UnknownEnum.Value_27 && (other.cutscene == 0 && (other.hurted == 0 && hurted == 0))))))))))
+    if (state == states.handstandjump && (other.hurted == 0 && (other.state != states.hurt && (other.state != states.unknown18 && (other.state != states.unknown24 && (other.state != states.tumble && (other.state != 6 && (other.state != states.unknown27 && (other.cutscene == 0 && (other.hurted == 0 && hurted == 0))))))))))
     {
         if (obj_player1.spotlight == 1)
         {

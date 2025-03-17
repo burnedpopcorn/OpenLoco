@@ -6,7 +6,7 @@ if (followid != -4 && !instance_exists(obj_player1))
 
 playerid = obj_player1.id;
 
-if (playerid.state != 93 && playerid.state != 112 && playerid.state != 95)
+if (playerid.state != states.Sjumpland && playerid.state != states.zombiejump && playerid.state != states.unknown95)
 {
     if (space < maxspace && dir == -1)
         space += spaceaccel;

@@ -1,4 +1,4 @@
-if (state != states.normal)
+if (state != savestate.idle)
 {
     showicon = 1;
     icon_alpha = 3;

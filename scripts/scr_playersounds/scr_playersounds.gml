@@ -72,7 +72,7 @@ function update_playersounds()
     else if (sprite_index != get_charactersprite("spr_machroll"))
         fmod_studio_event_instance_stop(machrollsnd, FMOD_STUDIO_STOP_MODE.IMMEDIATE);
     
-    fmod_studio_event_instance_set_parameter_by_name(tumblesnd, "state", _playerstate == UnknownEnum.Value_72);
+    fmod_studio_event_instance_set_parameter_by_name(tumblesnd, "state", _playerstate == states.bump);
     
     if (sprite_index != get_charactersprite("spr_tumble") && sprite_index != get_charactersprite("spr_tumblestart") && sprite_index != get_charactersprite("spr_tumbleend"))
         fmod_studio_event_instance_stop(tumblesnd, FMOD_STUDIO_STOP_MODE.IMMEDIATE);

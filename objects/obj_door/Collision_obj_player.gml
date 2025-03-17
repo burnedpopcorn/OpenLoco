@@ -2,7 +2,7 @@ if (!place_meeting(x, y, obj_doorblocked))
 {
     with (other.id)
     {
-        if (key_up && ((state == states.normal || (state == states.mach1 || (state == states.mach2 || (state == states.mach3 || state == states.Sjumpprep)))) && (y == (other.y + UnknownEnum.Value_50) && (!instance_exists(obj_noisesatellite) && (!instance_exists(obj_fadeout) && (state != states.door && (state != states.comingoutdoor && ((obj_player1.spotlight == 1 && object_index == obj_player1) || (obj_player1.spotlight == 0 && object_index == obj_player2)))))))))
+        if (key_up && ((state == states.normal || (state == states.mach1 || (state == states.mach2 || (state == states.mach3 || state == states.Sjumpprep)))) && (y == (other.y + 50) && (!instance_exists(obj_noisesatellite) && (!instance_exists(obj_fadeout) && (state != states.door && (state != states.comingoutdoor && ((obj_player1.spotlight == 1 && object_index == obj_player1) || (obj_player1.spotlight == 0 && object_index == obj_player2)))))))))
         {
             lastroom_x = other.x;
             lastroom_y = other.y;
