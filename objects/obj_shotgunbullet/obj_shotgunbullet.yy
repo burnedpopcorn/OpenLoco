@@ -11,8 +11,8 @@
   "name":"obj_shotgunbullet",
   "overriddenProperties":[],
   "parent":{
-    "name":"Player",
-    "path":"folders/Objects/Level/Player.yy",
+    "name":"Pizza Tower Leftovers",
+    "path":"folders/Objects/Pizza Tower Leftovers.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -12,8 +12,8 @@
   "name":"obj_shyguy_lance",
   "overriddenProperties":[],
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Objects/UNSORTED.yy",
+    "name":"Enemies",
+    "path":"folders/Objects/Baddie/Enemies.yy",
   },
   "parentObjectId":null,
   "persistent":false,

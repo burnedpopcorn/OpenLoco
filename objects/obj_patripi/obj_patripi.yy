@@ -11,8 +11,8 @@
   "name":"obj_patripi",
   "overriddenProperties":[],
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Objects/UNSORTED.yy",
+    "name":"Showtime Chasers",
+    "path":"folders/Objects/Baddie/Showtime Chasers.yy",
   },
   "parentObjectId":null,
   "persistent":true,

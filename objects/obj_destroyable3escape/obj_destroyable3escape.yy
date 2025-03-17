@@ -14,8 +14,8 @@
   "name":"obj_destroyable3escape",
   "overriddenProperties":[],
   "parent":{
-    "name":"Miscellanous",
-    "path":"folders/Objects/Miscellanous.yy",
+    "name":"Pizza Tower Leftovers",
+    "path":"folders/Objects/Pizza Tower Leftovers.yy",
   },
   "parentObjectId":{
     "name":"obj_bigdestructibles",

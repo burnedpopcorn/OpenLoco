@@ -10,8 +10,8 @@
   "name":"obj_dashpad",
   "overriddenProperties":[],
   "parent":{
-    "name":"World 3",
-    "path":"folders/Objects/Room Structure/World 3.yy",
+    "name":"Levels",
+    "path":"folders/Objects/Room Structure/Levels.yy",
   },
   "parentObjectId":null,
   "persistent":false,

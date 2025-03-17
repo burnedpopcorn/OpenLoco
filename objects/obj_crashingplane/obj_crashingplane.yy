@@ -9,8 +9,8 @@
   "name":"obj_crashingplane",
   "overriddenProperties":[],
   "parent":{
-    "name":"Unused",
-    "path":"folders/Objects/Level/Unused.yy",
+    "name":"Visuals",
+    "path":"folders/Objects/Visuals.yy",
   },
   "parentObjectId":null,
   "persistent":false,

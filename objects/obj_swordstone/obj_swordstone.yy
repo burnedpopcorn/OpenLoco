@@ -9,8 +9,8 @@
   "name":"obj_swordstone",
   "overriddenProperties":[],
   "parent":{
-    "name":"World 1",
-    "path":"folders/Objects/Room Structure/World 1.yy",
+    "name":"Levels",
+    "path":"folders/Objects/Room Structure/Levels.yy",
   },
   "parentObjectId":null,
   "persistent":false,

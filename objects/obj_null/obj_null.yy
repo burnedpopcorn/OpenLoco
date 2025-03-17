@@ -6,8 +6,8 @@
   "name":"obj_null",
   "overriddenProperties":[],
   "parent":{
-    "name":"Miscellanous",
-    "path":"folders/Objects/Miscellanous.yy",
+    "name":"Pizza Tower Leftovers",
+    "path":"folders/Objects/Pizza Tower Leftovers.yy",
   },
   "parentObjectId":null,
   "persistent":false,

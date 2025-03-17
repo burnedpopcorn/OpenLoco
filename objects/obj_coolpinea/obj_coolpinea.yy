@@ -13,8 +13,8 @@
   "name":"obj_coolpinea",
   "overriddenProperties":[],
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Objects/UNSORTED.yy",
+    "name":"Baddies",
+    "path":"folders/Objects/Pizza Tower Leftovers/Baddies.yy",
   },
   "parentObjectId":{
     "name":"obj_baddie",

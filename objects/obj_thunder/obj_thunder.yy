@@ -8,8 +8,8 @@
   "name":"obj_thunder",
   "overriddenProperties":[],
   "parent":{
-    "name":"World 1",
-    "path":"folders/Objects/Level/World 1.yy",
+    "name":"Pizza Tower Leftovers",
+    "path":"folders/Objects/Pizza Tower Leftovers.yy",
   },
   "parentObjectId":null,
   "persistent":false,

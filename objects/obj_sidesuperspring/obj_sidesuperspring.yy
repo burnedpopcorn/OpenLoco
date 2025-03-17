@@ -10,8 +10,8 @@
   "name":"obj_sidesuperspring",
   "overriddenProperties":[],
   "parent":{
-    "name":"World 1",
-    "path":"folders/Objects/Room Structure/World 1.yy",
+    "name":"Pizza Tower Leftovers",
+    "path":"folders/Objects/Pizza Tower Leftovers.yy",
   },
   "parentObjectId":null,
   "persistent":false,

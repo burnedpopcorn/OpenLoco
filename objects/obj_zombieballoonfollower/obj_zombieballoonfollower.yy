@@ -11,8 +11,8 @@
   "name":"obj_zombieballoonfollower",
   "overriddenProperties":[],
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Objects/UNSORTED.yy",
+    "name":"Zombie Arena",
+    "path":"folders/Objects/Level/Zombie Arena.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -11,8 +11,8 @@
   "name":"obj_doorblocked",
   "overriddenProperties":[],
   "parent":{
-    "name":"Unused",
-    "path":"folders/Objects/Room Structure/Unused.yy",
+    "name":"Hub",
+    "path":"folders/Objects/Room Structure/Hub.yy",
   },
   "parentObjectId":null,
   "persistent":false,

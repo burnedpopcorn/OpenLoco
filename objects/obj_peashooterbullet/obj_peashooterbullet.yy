@@ -12,8 +12,8 @@
   "name":"obj_peashooterbullet",
   "overriddenProperties":[],
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Objects/UNSORTED.yy",
+    "name":"Peashooter",
+    "path":"folders/Objects/Baddie/Enemies/Peashooter.yy",
   },
   "parentObjectId":null,
   "persistent":false,

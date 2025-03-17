@@ -13,8 +13,8 @@
   "name":"obj_waluigiboss",
   "overriddenProperties":[],
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Objects/UNSORTED.yy",
+    "name":"Boss",
+    "path":"folders/Objects/Baddie/Boss.yy",
   },
   "parentObjectId":{
     "name":"par_boss",

@@ -13,8 +13,8 @@
   "name":"obj_pizzaball",
   "overriddenProperties":[],
   "parent":{
-    "name":"World 3",
-    "path":"folders/Objects/Room Structure/World 3.yy",
+    "name":"Pizza Tower Leftovers",
+    "path":"folders/Objects/Pizza Tower Leftovers.yy",
   },
   "parentObjectId":{
     "name":"obj_baddie",

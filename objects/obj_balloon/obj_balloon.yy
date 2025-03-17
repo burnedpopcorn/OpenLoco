@@ -10,8 +10,8 @@
   "name":"obj_balloon",
   "overriddenProperties":[],
   "parent":{
-    "name":"World 3",
-    "path":"folders/Objects/Room Structure/World 3.yy",
+    "name":"Pizza Tower Leftovers",
+    "path":"folders/Objects/Pizza Tower Leftovers.yy",
   },
   "parentObjectId":null,
   "persistent":false,

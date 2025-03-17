@@ -9,8 +9,8 @@
   "name":"obj_breakabledoor",
   "overriddenProperties":[],
   "parent":{
-    "name":"Unused",
-    "path":"folders/Objects/Room Structure/Unused.yy",
+    "name":"Pizza Tower Leftovers",
+    "path":"folders/Objects/Pizza Tower Leftovers.yy",
   },
   "parentObjectId":{
     "name":"obj_destructibles",

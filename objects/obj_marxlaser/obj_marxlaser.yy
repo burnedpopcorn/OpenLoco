@@ -11,8 +11,8 @@
   "name":"obj_marxlaser",
   "overriddenProperties":[],
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Objects/UNSORTED.yy",
+    "name":"Marx",
+    "path":"folders/Objects/Baddie/Showtime Chasers/Marx.yy",
   },
   "parentObjectId":null,
   "persistent":true,

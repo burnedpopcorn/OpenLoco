@@ -10,8 +10,8 @@
   "name":"obj_boxcrusher",
   "overriddenProperties":[],
   "parent":{
-    "name":"World 4",
-    "path":"folders/Objects/Room Structure/World 4.yy",
+    "name":"Pizza Tower Leftovers",
+    "path":"folders/Objects/Pizza Tower Leftovers.yy",
   },
   "parentObjectId":null,
   "persistent":false,

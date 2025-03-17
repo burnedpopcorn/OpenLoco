@@ -21,8 +21,8 @@
   "name":"obj_piraneapple",
   "overriddenProperties":[],
   "parent":{
-    "name":"Enemies",
-    "path":"folders/Objects/Baddie/Enemies.yy",
+    "name":"Baddies",
+    "path":"folders/Objects/Pizza Tower Leftovers/Baddies.yy",
   },
   "parentObjectId":null,
   "persistent":false,

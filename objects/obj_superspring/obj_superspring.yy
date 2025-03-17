@@ -11,8 +11,8 @@
   "name":"obj_superspring",
   "overriddenProperties":[],
   "parent":{
-    "name":"World 2",
-    "path":"folders/Objects/Room Structure/World 2.yy",
+    "name":"Levels",
+    "path":"folders/Objects/Room Structure/Levels.yy",
   },
   "parentObjectId":null,
   "persistent":false,

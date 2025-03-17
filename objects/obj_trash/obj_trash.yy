@@ -11,8 +11,8 @@
   "name":"obj_trash",
   "overriddenProperties":[],
   "parent":{
-    "name":"World 4",
-    "path":"folders/Objects/Room Structure/World 4.yy",
+    "name":"Pizza Tower Leftovers",
+    "path":"folders/Objects/Pizza Tower Leftovers.yy",
   },
   "parentObjectId":{
     "name":"obj_baddie",

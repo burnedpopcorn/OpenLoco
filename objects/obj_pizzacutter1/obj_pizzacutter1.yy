@@ -9,8 +9,8 @@
   "name":"obj_pizzacutter1",
   "overriddenProperties":[],
   "parent":{
-    "name":"World 1",
-    "path":"folders/Objects/Room Structure/World 1.yy",
+    "name":"Pizza Tower Leftovers",
+    "path":"folders/Objects/Pizza Tower Leftovers.yy",
   },
   "parentObjectId":null,
   "persistent":false,

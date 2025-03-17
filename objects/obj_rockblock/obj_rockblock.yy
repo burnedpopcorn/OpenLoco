@@ -12,8 +12,8 @@
   "name":"obj_rockblock",
   "overriddenProperties":[],
   "parent":{
-    "name":"World 2",
-    "path":"folders/Objects/Room Structure/World 2.yy",
+    "name":"Pizza Tower Leftovers",
+    "path":"folders/Objects/Pizza Tower Leftovers.yy",
   },
   "parentObjectId":{
     "name":"obj_solid",

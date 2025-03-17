@@ -10,8 +10,8 @@
   "name":"obj_ranksign",
   "overriddenProperties":[],
   "parent":{
-    "name":"Hub",
-    "path":"folders/Objects/Room Structure/Hub.yy",
+    "name":"Pizza Tower Leftovers",
+    "path":"folders/Objects/Pizza Tower Leftovers.yy",
   },
   "parentObjectId":null,
   "persistent":false,

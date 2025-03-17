@@ -9,8 +9,8 @@
   "name":"obj_marxarrow",
   "overriddenProperties":[],
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Objects/UNSORTED.yy",
+    "name":"Marx",
+    "path":"folders/Objects/Baddie/Showtime Chasers/Marx.yy",
   },
   "parentObjectId":{
     "name":"obj_hurtbox",

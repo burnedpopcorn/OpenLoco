@@ -14,8 +14,8 @@
   "name":"obj_sausageman",
   "overriddenProperties":[],
   "parent":{
-    "name":"Enemies",
-    "path":"folders/Objects/Baddie/Enemies.yy",
+    "name":"Baddies",
+    "path":"folders/Objects/Pizza Tower Leftovers/Baddies.yy",
   },
   "parentObjectId":{
     "name":"obj_baddie",

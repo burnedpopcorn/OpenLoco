@@ -12,8 +12,8 @@
   "name":"obj_portalend",
   "overriddenProperties":[],
   "parent":{
-    "name":"Unused",
-    "path":"folders/Objects/Room Structure/Unused.yy",
+    "name":"Levels",
+    "path":"folders/Objects/Room Structure/Levels.yy",
   },
   "parentObjectId":null,
   "persistent":false,
