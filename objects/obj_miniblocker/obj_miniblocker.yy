@@ -12,8 +12,8 @@
   "name":"obj_miniblocker",
   "overriddenProperties":[],
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Objects/UNSORTED.yy",
+    "name":"Blocks",
+    "path":"folders/Objects/Room Structure/Generic/Blocks.yy",
   },
   "parentObjectId":null,
   "persistent":false,

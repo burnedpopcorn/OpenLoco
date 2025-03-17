@@ -11,8 +11,8 @@
   "name":"obj_noisebomb",
   "overriddenProperties":[],
   "parent":{
-    "name":"Followers",
-    "path":"folders/Objects/Level/Followers.yy",
+    "name":"Pizza Tower Leftovers",
+    "path":"folders/Objects/Pizza Tower Leftovers.yy",
   },
   "parentObjectId":null,
   "persistent":false,

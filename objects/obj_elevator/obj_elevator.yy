@@ -11,8 +11,8 @@
   "name":"obj_elevator",
   "overriddenProperties":[],
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Objects/UNSORTED.yy",
+    "name":"Warps",
+    "path":"folders/Objects/Room Structure/Generic/Warps.yy",
   },
   "parentObjectId":null,
   "persistent":false,

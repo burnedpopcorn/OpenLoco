@@ -9,8 +9,8 @@
   "name":"obj_reverseminipillarslope",
   "overriddenProperties":[],
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Objects/UNSORTED.yy",
+    "name":"Blocks",
+    "path":"folders/Objects/Room Structure/Generic/Blocks.yy",
   },
   "parentObjectId":{
     "name":"obj_slope",

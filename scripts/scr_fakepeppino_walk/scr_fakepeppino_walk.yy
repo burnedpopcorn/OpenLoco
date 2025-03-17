@@ -6,7 +6,7 @@
   "name":"scr_fakepeppino_walk",
   "parent":{
     "name":"Fakepep States",
-    "path":"folders/Scripts/Fakepep States.yy",
+    "path":"folders/Scripts/Enemies/Fakepep States.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

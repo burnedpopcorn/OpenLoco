@@ -102,7 +102,7 @@
     {"$GMFolder":"","%Name":"Privates","folderPath":"folders/Scripts/Discord Webhook/Privates.yy","name":"Privates","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Enemies","folderPath":"folders/Scripts/Enemies.yy","name":"Enemies","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"States","folderPath":"folders/Scripts/Enemies/States.yy","name":"States","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Fakepep States","folderPath":"folders/Scripts/Fakepep States.yy","name":"Fakepep States","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Fakepep States","folderPath":"folders/Scripts/Enemies/Fakepep States.yy","name":"Fakepep States","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"GMS1 Compatiblity Scripts","folderPath":"folders/Scripts/GMS1 Compatiblity Scripts.yy","name":"GMS1 Compatiblity Scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Input","folderPath":"folders/Scripts/Input.yy","name":"Input","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Player","folderPath":"folders/Scripts/Player.yy","name":"Player","resourceType":"GMFolder","resourceVersion":"2.0",},

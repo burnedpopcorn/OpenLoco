@@ -11,8 +11,8 @@
   "name":"obj_magikoopa",
   "overriddenProperties":[],
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Objects/UNSORTED.yy",
+    "name":"Enemies",
+    "path":"folders/Objects/Baddie/Enemies.yy",
   },
   "parentObjectId":{
     "name":"obj_baddie",

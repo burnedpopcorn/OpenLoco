@@ -24,12 +24,17 @@ function scr_parallax_start()
         surface_set_target(global.parallaxbg_surface);
         draw_clear_alpha(c_black, 0);
         
-        for (var i = 0; i < array_length(obj_parrallax.BG_arr); i++)
-        {
-            var _id = obj_parrallax.BG_arr[i];
-            layer_x(_id, layer_get_x(_id) - camera_get_view_x(view_camera[0]));
-            layer_y(_id, layer_get_y(_id) - camera_get_view_y(view_camera[0]));
-        }
+		// fix plane crash crash
+		// crashes because gamemaker update shit
+		try 
+		{
+	        for (var i = 0; i < array_length(obj_parrallax.BG_arr); i++)
+	        {
+	            var _id = obj_parrallax.BG_arr[i];
+	            layer_x(_id, layer_get_x(_id) - camera_get_view_x(view_camera[0]));
+	            layer_y(_id, layer_get_y(_id) - camera_get_view_y(view_camera[0]));
+	        }
+		} catch (e) {}
     }
 }
 

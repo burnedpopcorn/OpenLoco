@@ -8,8 +8,8 @@
   "name":"obj_hidetile",
   "overriddenProperties":[],
   "parent":{
-    "name":"UNSORTED",
-    "path":"folders/Objects/UNSORTED.yy",
+    "name":"Generic",
+    "path":"folders/Objects/Room Structure/Generic.yy",
   },
   "parentObjectId":{
     "name":"obj_secrettile",
