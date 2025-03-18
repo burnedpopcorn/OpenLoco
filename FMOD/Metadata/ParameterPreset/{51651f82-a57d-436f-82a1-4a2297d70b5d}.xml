@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{51651f82-a57d-436f-82a1-4a2297d70b5d}">
+		<property name="name">
+			<value>pillardistance</value>
+		</property>
+		<relationship name="folder">
+			<destination>{daa438a2-df53-45c0-a917-7d3610c0d432}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{3326d19b-9049-4e83-a6ad-4824828f8b67}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{3326d19b-9049-4e83-a6ad-4824828f8b67}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>11</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

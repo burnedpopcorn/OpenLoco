@@ -19,7 +19,7 @@ if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == 0)
         shake_mag_acc = 3 / room_speed;
     }
     
-    if (state == 1)
+    if (state == pillar.hit)
     {
         with (instance_create(obj_player1.x + (obj_player1.xscale * 15), obj_player1.y, obj_genericpoofeffect))
         {
