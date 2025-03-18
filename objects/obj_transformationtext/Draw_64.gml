@@ -62,7 +62,7 @@ for (var i = 0; i < string_length(message); i++)
     
     switch (effect)
     {
-        case effect.smoothupdown:
+        case texteffect.smoothupdown:
             shiftY += (sin((so * pi * freq) / room_speed) * amplitude);
             break;
         
