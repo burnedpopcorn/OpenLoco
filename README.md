@@ -1,7 +1,7 @@
 # OpenLoco
 A Decompilation of Loco Tower, including a FMOD Recreation
 
-GameMaker Version Used: ```2024.6```
+GameMaker Version Used: ```2024.6.2.162```
 
 ### ABOUT
 This Decompilation is for the latest publicly available build of the game (the leaked August 2024 build)
