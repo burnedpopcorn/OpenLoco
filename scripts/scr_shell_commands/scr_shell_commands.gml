@@ -150,9 +150,8 @@ function toggle_collision_function()
     
     var array = global.showcollisionarray;
     var length = array_length(array);
-    var i = length - 1;
     
-    while (i >= 0)
+    for (var i = length - 1; i >= 0; i--;)
     {
         with (array[i])
         {
@@ -162,8 +161,6 @@ function toggle_collision_function()
                 image_alpha = 1;
             }
         }
-        
-        i--;
     }
 }
 

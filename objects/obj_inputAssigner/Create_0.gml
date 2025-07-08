@@ -21,8 +21,6 @@ function CheckUsedIndex(argument0, argument1, argument2, argument3)
     
     if (argument3 != undefined)
         vibration[argument0][2] = argument3;
-    
-    exit;
 }
 
 function CheckUsedIndex(argument0)
@@ -30,8 +28,8 @@ function CheckUsedIndex(argument0)
     for (var _x = 0; _x < 2; _x++)
     {
         if (player_input_device[_x] == argument0)
-            return 1;
+            return true;
     }
     
-    return 0;
+    return false;
 }
