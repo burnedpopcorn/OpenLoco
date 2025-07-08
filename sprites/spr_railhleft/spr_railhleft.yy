@@ -28,7 +28,7 @@
   "origin":0,
   "parent":{
     "name":"Factory",
-    "path":"folders/Sprites/Level Structure/Pizza Tower Leftovers/Factory.yy",
+    "path":"folders/Sprites/Pizza Tower Leftovers/Level Structure/Factory.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

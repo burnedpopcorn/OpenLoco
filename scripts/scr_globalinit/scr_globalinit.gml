@@ -126,6 +126,3 @@ function scr_globalinit()
     global.treasurelastdoor = "A";
     global.boxhp = 20;
 }
-
-// very important
-__global_object_depths();

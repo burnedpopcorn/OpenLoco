@@ -12,7 +12,7 @@ if (instance_exists(ID))
     {
         if (object_index == obj_shyguy || object_index == obj_zombie || (object_index == obj_indiancheese || object_index == obj_noisey))
         {
-            if (state != baddiestates.walk)
+            if (state != states.actor)
             {
                 hitboxcreate = 0;
                 instance_destroy(other.id);
@@ -36,7 +36,7 @@ if (instance_exists(ID))
         
         if (object_index == obj_noisecrusher)
         {
-            if (state != baddiestates.bounce)
+            if (state != states.bounce)
             {
                 hitboxcreate = 0;
                 instance_destroy(other.id);
@@ -45,7 +45,7 @@ if (instance_exists(ID))
         
         if (object_index == obj_peasanto || (object_index == obj_fencer || (object_index == obj_charginchuck || (object_index == obj_ninja || (object_index == obj_pizzice || (object_index == obj_zombiewater || object_index == obj_ancho))))))
         {
-            if (state != baddiestates.charge)
+            if (state != states.charge)
             {
                 hitboxcreate = 0;
                 instance_destroy(other.id);

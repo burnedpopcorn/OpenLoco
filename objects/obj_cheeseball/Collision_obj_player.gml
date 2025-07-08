@@ -1,4 +1,4 @@
-if (obj_player.state == states.unknown24 || obj_player.state == states.unknown25)
+if (obj_player.state == states.knightpep || obj_player.state == states.knightpepattack)
 {
     instance_create(x, y, obj_slimedebris);
     instance_create(x, y, obj_slimedebris);

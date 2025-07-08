@@ -1,43 +1,43 @@
 switch (state)
 {
-    case baddiestates.idle:
+    case states.normal:
         scr_enemy_idle();
         break;
     
-    case baddiestates.charge:
+    case states.charge:
         scr_enemy_charge();
         break;
     
-    case baddiestates.turn:
+    case states.cape:
         scr_enemy_turn();
         break;
     
-    case baddiestates.walk:
+    case states.actor:
         scr_enemy_walk();
         break;
     
-    case baddiestates.land:
+    case states.land:
         scr_enemy_land();
         break;
     
-    case baddiestates.hit:
+    case states.hit:
         scr_enemy_hit();
         break;
     
-    case baddiestates.stun:
+    case states.capefall:
         scr_enemy_stun();
         break;
     
-    case baddiestates.throwing:
+    case states.throwing:
         scr_pizzagoblin_throw();
         break;
     
-    case baddiestates.grabbed:
+    case states.grabbed:
         scr_enemy_grabbed();
         break;
 }
 
-if (state == baddiestates.stun && (stunned > 40 && birdcreated == 0))
+if (state == states.capefall && (stunned > 40 && birdcreated == 0))
 {
     birdcreated = 1;
     
@@ -45,10 +45,10 @@ if (state == baddiestates.stun && (stunned > 40 && birdcreated == 0))
         ID = other.id;
 }
 
-if (state == baddiestates.idle || state == baddiestates.walk)
-    state = baddiestates.charge;
+if (state == states.normal || state == states.actor)
+    state = states.charge;
 
-if (hitboxcreate == 0 && (state == baddiestates.charge && (obj_player.state != states.mach3 && obj_player.state != states.mach2)))
+if (hitboxcreate == 0 && (state == states.charge && (obj_player.state != states.mach3 && obj_player.state != states.mach2)))
 {
     hitboxcreate = 1;
     
@@ -59,16 +59,16 @@ if (hitboxcreate == 0 && (state == baddiestates.charge && (obj_player.state != s
     }
 }
 
-if (state != baddiestates.stun)
+if (state != states.capefall)
     birdcreated = 0;
 
 if (flash == 1 && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (state != baddiestates.grabbed)
+if (state != states.grabbed)
     depth = 0;
 
-if (state != baddiestates.stun)
+if (state != states.capefall)
     thrown = 0;
 
 if (boundbox == 0)

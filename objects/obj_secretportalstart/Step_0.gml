@@ -20,7 +20,7 @@ switch (sprite_index)
             cutscene = 1;
             visible = false;
             
-            if (state != states.unknown24 && state != states.unknown18)
+            if (state != states.knightpep && state != states.knightpepslopes)
                 state = states.normal;
         }
         
@@ -33,7 +33,7 @@ switch (sprite_index)
             
             with (obj_player)
             {
-                if (state != states.unknown24 && state != states.unknown18)
+                if (state != states.knightpep && state != states.knightpepslopes)
                 {
                     visible = true;
                     cutscene = 0;

@@ -15,7 +15,7 @@ function scr_enemy_lungeattack()
         }
         else
         {
-            state = baddiestates.stun;
+            state = states.capefall;
             hsp = hithsp;
             vsp = hitvsp;
             stunned = 200;

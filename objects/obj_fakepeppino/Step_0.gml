@@ -2,19 +2,19 @@ if (global.panic == 1)
 {
     switch (state)
     {
-        case fakepepmoves.idle:
+        case states.normal:
             scr_fakepeppino_idle();
             break;
         
-        case fakepepmoves.walk:
+        case states.actor:
             scr_fakepeppino_walk();
             break;
         
-        case fakepepmoves.hit:
+        case states.hit:
             scr_fakepeppino_hit();
             break;
         
-        case fakepepmoves.jump:
+        case states.jump:
             scr_fakepeppino_jump();
             break;
     }
@@ -37,7 +37,7 @@ if (appeartimer == 0)
 
 if (obj_player.x > (x - 200) && obj_player.x < (x + 200) && sprite_index == spr_fakepeppino_walk && y == obj_player.y)
 {
-    state = fakepepmoves.hit;
+    state = states.hit;
     sprite_index = spr_fakepeppino_grabdash;
     image_index = 0;
     movespeed = 8;

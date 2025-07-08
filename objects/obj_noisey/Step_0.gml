@@ -1,43 +1,43 @@
 switch (state)
 {
-    case baddiestates.idle:
+    case states.normal:
         scr_enemy_idle();
         break;
     
-    case baddiestates.charge:
+    case states.charge:
         scr_enemy_charge();
         break;
     
-    case baddiestates.turn:
+    case states.cape:
         scr_enemy_turn();
         break;
     
-    case baddiestates.walk:
+    case states.actor:
         scr_enemy_walk();
         break;
     
-    case baddiestates.land:
+    case states.land:
         scr_enemy_land();
         break;
     
-    case baddiestates.hit:
+    case states.hit:
         scr_enemy_hit();
         break;
     
-    case baddiestates.stun:
+    case states.capefall:
         scr_enemy_stun();
         break;
     
-    case baddiestates.throwing:
+    case states.throwing:
         scr_pizzagoblin_throw();
         break;
     
-    case baddiestates.grabbed:
+    case states.grabbed:
         scr_enemy_grabbed();
         break;
 }
 
-if (state == baddiestates.stun && (stunned > 100 && birdcreated == 0))
+if (state == states.capefall && (stunned > 100 && birdcreated == 0))
 {
     birdcreated = 1;
     
@@ -45,7 +45,7 @@ if (state == baddiestates.stun && (stunned > 100 && birdcreated == 0))
         ID = other.id;
 }
 
-if (state != baddiestates.grabbed)
+if (state != states.grabbed)
     birdcreated = 0;
 
 if (global.miniboss == 0)
@@ -53,9 +53,9 @@ if (global.miniboss == 0)
 
 if ((obj_player1.x > (x - 400) && obj_player1.x < (x + 400)) && (y <= (obj_player1.y + 60) && y >= (obj_player1.y - 60)))
 {
-    if (state != baddiestates.idle && obj_player1.state == states.mach3)
+    if (state != states.normal && obj_player1.state == states.mach3)
     {
-        state = baddiestates.idle;
+        state = states.normal;
         sprite_index = scaredspr;
         
         if (x != obj_player1.x)
@@ -67,9 +67,9 @@ if (instance_exists(obj_player2))
 {
     if ((obj_player2.x > (x - 400) && obj_player2.x < (x + 400)) && (y <= (obj_player2.y + 60) && y >= (obj_player2.y - 60)))
     {
-        if (state != baddiestates.idle && obj_player2.state == states.mach3)
+        if (state != states.normal && obj_player2.state == states.mach3)
         {
-            state = baddiestates.idle;
+            state = states.normal;
             sprite_index = scaredspr;
             
             if (x != obj_player2.x)
@@ -81,7 +81,7 @@ if (instance_exists(obj_player2))
 if (flash == 1 && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (hitboxcreate == 0 && state == baddiestates.walk)
+if (hitboxcreate == 0 && state == states.actor)
 {
     hitboxcreate = 1;
     
@@ -89,10 +89,10 @@ if (hitboxcreate == 0 && state == baddiestates.walk)
         ID = other.id;
 }
 
-if (state != baddiestates.grabbed)
+if (state != states.grabbed)
     depth = 0;
 
-if (state != baddiestates.grabbed)
+if (state != states.grabbed)
     thrown = 0;
 
 if (boundbox == 0)

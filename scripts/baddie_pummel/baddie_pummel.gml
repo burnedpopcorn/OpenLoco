@@ -43,7 +43,7 @@ function baddie_pummel()
                     hsp = image_xscale * -25;
                     hithsp = image_xscale * -25;
                     vsp = 0;
-                    state = baddiestates.stun;
+                    state = states.capefall;
                     obj_player1.vsp = -6;
                 }
                 

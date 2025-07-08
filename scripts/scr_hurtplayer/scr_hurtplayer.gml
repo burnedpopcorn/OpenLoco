@@ -2,10 +2,10 @@ function scr_hurtplayer(argument0)
 {
     with (argument0)
     {
-        if ((state == states.unknown24 || (state == states.unknown25 || state == states.unknown18)) && cutscene == 0)
+        if ((state == states.knightpep || (state == states.knightpepattack || state == states.knightpepslopes)) && cutscene == 0)
             continue;
         
-        if (state == states.unknown27 && hurted == 0)
+        if (state == states.bombpep && hurted == 0)
             continue;
         
         if (state == states.portal)

@@ -1,3 +1,4 @@
+__global_object_depths();
 function __global_object_depths()
 {
     global.__objectDepths[0] = 98;

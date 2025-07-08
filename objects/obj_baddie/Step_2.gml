@@ -1,13 +1,13 @@
-if (state == baddiestates.grabbed)
+if (state == states.grabbed)
     scr_enemy_grabbed();
 
 if (state == states.superslam)
     scr_enemy_lungeattack();
 
-if (obj_player1.state != states.lungeattack && obj_player1.state != states.chainsaw && obj_player1.state != states.handstandjump && state != states.superslam && state != baddiestates.hit && lunged)
+if (obj_player1.state != states.lungeattack && obj_player1.state != states.chainsaw && obj_player1.state != states.handstandjump && state != states.superslam && state != states.hit && lunged)
     lunged = 0;
 
-if (state != baddiestates.grabbed && state != 126)
+if (state != states.grabbed && state != 126)
 {
     scr_collision();
     
@@ -29,10 +29,10 @@ if (y > (room_height + 100))
 if (thrown && (x > (room_width + 100) || x < -100 || y < -100))
     instance_destroy();
 
-if (state == baddiestates.walk)
+if (state == states.actor)
     image_speed = 0.35 + (global.baddiespeed * 0.05);
 
-if (obj_player1.baddiegrabbedID == id && state == baddiestates.grabbed)
+if (obj_player1.baddiegrabbedID == id && state == states.grabbed)
     persistent = true;
 else
     persistent = false;
@@ -52,7 +52,7 @@ with (instance_nearest(x, y, obj_player))
     {
         other.stunned = 0;
         
-        if (other.state != baddiestates.unknown && !other.provoked && other.bombreset > 0)
+        if (other.state != states.unknown126 && !other.provoked && other.bombreset > 0)
         {
             other.bombreset = 0;
             other.provoked = true;
@@ -60,7 +60,7 @@ with (instance_nearest(x, y, obj_player))
         
         other.scaredbuffer = 0;
     }
-    else if (other.state != baddiestates.unknown)
+    else if (other.state != states.unknown126)
     {
         other.provoked = false;
     }
@@ -68,7 +68,7 @@ with (instance_nearest(x, y, obj_player))
 
 fmod_studio_event_instance_move(stun_snd);
 
-if (!fmod_studio_event_instance_is_playing(stun_snd) && state == baddiestates.stun)
+if (!fmod_studio_event_instance_is_playing(stun_snd) && state == states.capefall)
     fmod_studio_event_instance_start(stun_snd);
-else if (state != baddiestates.stun)
+else if (state != states.capefall)
     fmod_studio_event_instance_stop(stun_snd, FMOD_STUDIO_STOP_MODE.IMMEDIATE);

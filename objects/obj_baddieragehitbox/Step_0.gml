@@ -7,7 +7,7 @@ if (instance_exists(ID))
     
     with (ID)
     {
-        if (state != baddiestates.rage)
+        if (state != states.cappythrow)
         {
             ragehitbox = 0;
             instance_destroy(other);

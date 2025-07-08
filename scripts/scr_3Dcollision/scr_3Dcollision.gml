@@ -1,3 +1,1 @@
-function scr_3Dcollision()
-{
-}
+function scr_3Dcollision() { }

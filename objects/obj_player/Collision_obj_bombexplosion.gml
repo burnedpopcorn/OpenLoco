@@ -1,6 +1,6 @@
-if (hurted == 0 && (cutscene == 0 && ((state != states.unknown27 && sprite_index != spr_bombpep_end) && (state != states.Sjump && state != states.Sjumpprep))))
+if (hurted == 0 && (cutscene == 0 && ((state != states.bombpep && sprite_index != spr_bombpep_end) && (state != states.Sjump && state != states.Sjumpprep))))
 {
-    if (state == states.unknown24 || state == states.unknown25)
+    if (state == states.knightpep || state == states.knightpepattack)
     {
         with (instance_create(x, y, obj_knightdebris))
             image_index = 0;
@@ -28,6 +28,6 @@ if (hurted == 0 && (cutscene == 0 && ((state != states.unknown27 && sprite_index
     hurted = 1;
     vsp = -4;
     sprite_index = spr_bombpepend;
-    state = states.unknown27;
+    state = states.bombpep;
     bombpeptimer = 0;
 }

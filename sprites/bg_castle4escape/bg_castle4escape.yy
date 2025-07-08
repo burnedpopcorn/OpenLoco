@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Mansion",
-    "path":"folders/Sprites/Backgrounds/Pizza Tower Leftovers/Mansion.yy",
+    "path":"folders/Sprites/Pizza Tower Leftovers/Backgrounds/Mansion.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

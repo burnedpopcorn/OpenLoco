@@ -1,43 +1,43 @@
 switch (state)
 {
-    case baddiestates.idle:
+    case states.normal:
         scr_enemy_idle();
         break;
     
-    case baddiestates.charge:
+    case states.charge:
         scr_enemy_charge();
         break;
     
-    case baddiestates.turn:
+    case states.cape:
         scr_enemy_turn();
         break;
     
-    case baddiestates.walk:
+    case states.actor:
         scr_enemy_walk();
         break;
     
-    case baddiestates.land:
+    case states.land:
         scr_enemy_land();
         break;
     
-    case baddiestates.hit:
+    case states.hit:
         scr_enemy_hit();
         break;
     
-    case baddiestates.stun:
+    case states.capefall:
         scr_enemy_stun();
         break;
     
-    case baddiestates.throwing:
+    case states.throwing:
         scr_pizzagoblin_throw();
         break;
     
-    case baddiestates.grabbed:
+    case states.grabbed:
         scr_enemy_grabbed();
         break;
 }
 
-if (state == baddiestates.stun && (stunned > 100 && birdcreated == 0))
+if (state == states.capefall && (stunned > 100 && birdcreated == 0))
 {
     birdcreated = 1;
     
@@ -45,16 +45,16 @@ if (state == baddiestates.stun && (stunned > 100 && birdcreated == 0))
         ID = other.id;
 }
 
-if (state != baddiestates.stun)
+if (state != states.capefall)
     birdcreated = 0;
 
 if (flash == 1 && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (state != baddiestates.grabbed)
+if (state != states.grabbed)
     depth = 0;
 
-if (state != baddiestates.stun)
+if (state != states.capefall)
     thrown = 0;
 
 scr_scareenemy();
@@ -64,16 +64,16 @@ if (bombreset > 0)
 
 var p = instance_nearest(x, y, obj_player);
 
-if (x != p.x && (p.state != states.unknown18 && (p.state != states.unknown24 && (state != baddiestates.unknown && (bombreset == 0 && grounded)))))
+if (x != p.x && (p.state != states.knightpepslopes && (p.state != states.knightpep && (state != states.unknown126 && (bombreset == 0 && grounded)))))
 {
     if ((p.x > (x - 400) && p.x < (x + 400)) && (y <= (p.y + 20) && y >= (p.y - 20)))
     {
-        if (state == baddiestates.walk)
+        if (state == states.actor)
         {
             image_index = 0;
             sprite_index = spr_pizzard_shoot;
             image_xscale = -sign(x - obj_player1.x);
-            state = baddiestates.unknown;
+            state = states.unknown126;
         }
     }
 }

@@ -90,7 +90,7 @@ switch (state)
         
         if (instance_exists(par_boss))
         {
-            if (par_boss.state == baddiestates.hit && !registered_hit)
+            if (par_boss.state == states.hit && !registered_hit)
             {
                 hp.boss--;
                 registered_hit = true;
@@ -103,7 +103,7 @@ switch (state)
                 };
             }
             
-            if (par_boss.state != baddiestates.hit && registered_hit)
+            if (par_boss.state != states.hit && registered_hit)
                 registered_hit = false;
         }
         

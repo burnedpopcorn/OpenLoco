@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":3,
   "parent":{
-    "name":"Pizza Tower Leftovers",
-    "path":"folders/Sprites/Backgrounds/Pizza Tower Leftovers.yy",
+    "name":"Backgrounds",
+    "path":"folders/Sprites/Pizza Tower Leftovers/Backgrounds.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

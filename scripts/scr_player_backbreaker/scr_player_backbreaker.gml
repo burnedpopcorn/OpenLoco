@@ -69,7 +69,7 @@ function scr_player_backbreaker()
                     if (point_in_camera(x, y, view_camera[0]))
                     {
                         hp = -99;
-                        state = baddiestates.hit;
+                        state = states.hit;
                         hitLag = lag;
                         hitX = x;
                         hitY = y;

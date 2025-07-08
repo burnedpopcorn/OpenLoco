@@ -1,2 +1,2 @@
-if (!instance_exists(baddieID) || baddieID.state != baddiestates.throwing)
+if (!instance_exists(baddieID) || baddieID.state != states.throwing)
     instance_destroy();

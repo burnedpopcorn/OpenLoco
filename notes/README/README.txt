@@ -6,7 +6,7 @@ OpenLoco - A Loco Tower Decompilation
 Original GameMaker Version: 2024.6
 
 Some Organization was from Deggcomplanted
-	dispite Loco Tower most likely not being an Eggplant mod
+	dispite Loco Tower using SAGE 2019 as a base
 	
 -----------------------------------------------------------
 Packages Added

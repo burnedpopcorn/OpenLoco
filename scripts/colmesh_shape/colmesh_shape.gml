@@ -50,13 +50,13 @@ function colmesh_shapes(argument0) constructor
         
         array_copy(oldReg, 0, argument0._getRegions(getMinMax()), 0, 6);
         
-        if (type == colmesh_enum.Value_6)
+        if (type == Colmesh_shapes.block)
         {
             M[12] = argument1;
             M[13] = argument2;
             M[14] = argument3;
         }
-        else if (type == colmesh_enum.Value_7)
+        else if (type == Colmesh_shapes.dynamicmesh)
         {
             M[12] = argument1;
             M[13] = argument2;
@@ -134,7 +134,7 @@ function colmesh_shapes(argument0) constructor
         return "ColMesh shape: None. Group: " + string(group);
     };
     
-    type = colmesh_enum.Value_8;
+    type = Colmesh_shapes.none;
     group = argument0 ?? 1;
 }
 
@@ -711,7 +711,7 @@ function colmesh_mesh(argument0 = "mesh" + string(ds_map_size(global.ColMeshMesh
     };
     
     name = argument0;
-    type = colmesh_enum.Value_0;
+    type = Colmesh_shapes.defaultmesh;
     solid = true;
     triangle = -1;
     shapeList = ds_list_create();
@@ -894,13 +894,13 @@ function colmesh_sphere(argument0, argument1, argument2, argument3, argument4 = 
     
     static debugDraw = function(argument0 = -1)
     {
-        static vbuff = global.ColMeshDebugShapes[colmesh_enum.Value_1];
+        static vbuff = global.ColMeshDebugShapes[Colmesh_shapes.sphere];
         static M = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1];
         
         if (vbuff < 0)
         {
-            global.ColMeshDebugShapes[colmesh_enum.Value_1] = colmesh_create_sphere(20, 16, 1, 1);
-            vbuff = global.ColMeshDebugShapes[colmesh_enum.Value_1];
+            global.ColMeshDebugShapes[Colmesh_shapes.sphere] = colmesh_create_sphere(20, 16, 1, 1);
+            vbuff = global.ColMeshDebugShapes[Colmesh_shapes.sphere];
         }
         
         M[12] = x;
@@ -919,7 +919,7 @@ function colmesh_sphere(argument0, argument1, argument2, argument3, argument4 = 
         return "ColMesh shape: Sphere. Group: " + string(group) + ". X,Y,Z,R: " + string([x, y, z, R]);
     };
     
-    type = colmesh_enum.Value_1;
+    type = Colmesh_shapes.sphere;
     x = argument0;
     y = argument1;
     z = argument2;
@@ -1144,13 +1144,13 @@ function colmesh_capsule(argument0, argument1, argument2, argument3, argument4, 
     
     static debugDraw = function(argument0 = -1)
     {
-        static vbuff = global.ColMeshDebugShapes[colmesh_enum.Value_2];
+        static vbuff = global.ColMeshDebugShapes[Colmesh_shapes.capsule];
         static M = array_create(16);
         
         if (vbuff < 0)
         {
-            global.ColMeshDebugShapes[colmesh_enum.Value_2] = colmesh_create_capsule(20, 20, 1, 1);
-            vbuff = global.ColMeshDebugShapes[colmesh_enum.Value_2];
+            global.ColMeshDebugShapes[Colmesh_shapes.capsule] = colmesh_create_capsule(20, 20, 1, 1);
+            vbuff = global.ColMeshDebugShapes[Colmesh_shapes.capsule];
         }
         
         colmesh_matrix_build_from_vector(x, y, z, xup, yup, zup, 1, 1, H, M);
@@ -1168,7 +1168,7 @@ function colmesh_capsule(argument0, argument1, argument2, argument3, argument4, 
         return "ColMesh shape: Capsule. Group: " + string(group) + ". X,Y,Z,R,H: " + string([x, y, z, R, H]) + ". xup,yup,zup: " + string([xup, yup, zup]);
     };
     
-    type = colmesh_enum.Value_2;
+    type = Colmesh_shapes.capsule;
     x = argument0;
     y = argument1;
     z = argument2;
@@ -1494,13 +1494,13 @@ function colmesh_cylinder(argument0, argument1, argument2, argument3, argument4,
     
     static debugDraw = function(argument0 = -1)
     {
-        static vbuff = global.ColMeshDebugShapes[colmesh_enum.Value_3];
+        static vbuff = global.ColMeshDebugShapes[Colmesh_shapes.cylinder];
         static M = array_create(16);
         
         if (vbuff < 0)
         {
-            global.ColMeshDebugShapes[colmesh_enum.Value_3] = colmesh_create_cylinder(20, 1, 1);
-            vbuff = global.ColMeshDebugShapes[colmesh_enum.Value_3];
+            global.ColMeshDebugShapes[Colmesh_shapes.cylinder] = colmesh_create_cylinder(20, 1, 1);
+            vbuff = global.ColMeshDebugShapes[Colmesh_shapes.cylinder];
         }
         
         colmesh_matrix_build_from_vector(x, y, z, xup, yup, zup, R, R, H, M);
@@ -1517,7 +1517,7 @@ function colmesh_cylinder(argument0, argument1, argument2, argument3, argument4,
         return "ColMesh shape: Cylinder. Group: " + string(group) + ". X,Y,Z,R,H: " + string([x, y, z, R, H]) + ". xup,yup,zup: " + string([xup, yup, zup]);
     };
     
-    type = colmesh_enum.Value_3;
+    type = Colmesh_shapes.cylinder;
     x = argument0;
     y = argument1;
     z = argument2;
@@ -1839,7 +1839,7 @@ function colmesh_unfinished_cone(argument0, argument1, argument2, argument3, arg
         return true;
     };
     
-    type = colmesh_enum.Value_10;
+    type = Colmesh_shapes.cone;
     x = argument0;
     y = argument1;
     z = argument2;
@@ -2054,13 +2054,13 @@ function colmesh_torus(argument0, argument1, argument2, argument3, argument4, ar
     
     static debugDraw = function(argument0 = -1)
     {
-        static vbuff = global.ColMeshDebugShapes[colmesh_enum.Value_4];
+        static vbuff = global.ColMeshDebugShapes[Colmesh_shapes.torus];
         static M = array_create(16);
         
         if (vbuff < 0)
         {
-            global.ColMeshDebugShapes[colmesh_enum.Value_4] = colmesh_create_torus(32, 20, 1, 1);
-            vbuff = global.ColMeshDebugShapes[colmesh_enum.Value_4];
+            global.ColMeshDebugShapes[Colmesh_shapes.torus] = colmesh_create_torus(32, 20, 1, 1);
+            vbuff = global.ColMeshDebugShapes[Colmesh_shapes.torus];
         }
         
         colmesh_matrix_build_from_vector(x, y, z, xup, yup, zup, R, R, R, M);
@@ -2078,7 +2078,7 @@ function colmesh_torus(argument0, argument1, argument2, argument3, argument4, ar
         return "ColMesh shape: Torus. Group: " + string(group) + ". X,Y,Z,R,r: " + string([x, y, z, R, r]) + ". xup,yup,zup: " + string([xup, yup, zup]);
     };
     
-    type = colmesh_enum.Value_4;
+    type = Colmesh_shapes.torus;
     x = argument0;
     y = argument1;
     z = argument2;
@@ -2295,13 +2295,13 @@ function colmesh_disk(argument0, argument1, argument2, argument3, argument4, arg
     
     static debugDraw = function(argument0 = -1)
     {
-        static vbuff = global.ColMeshDebugShapes[colmesh_enum.Value_9];
+        static vbuff = global.ColMeshDebugShapes[Colmesh_shapes.disk];
         static M = array_create(16);
         
         if (vbuff < 0)
         {
-            global.ColMeshDebugShapes[colmesh_enum.Value_9] = colmesh_create_disk(32, 20, 1, 1);
-            vbuff = global.ColMeshDebugShapes[colmesh_enum.Value_9];
+            global.ColMeshDebugShapes[Colmesh_shapes.disk] = colmesh_create_disk(32, 20, 1, 1);
+            vbuff = global.ColMeshDebugShapes[Colmesh_shapes.disk];
         }
         
         colmesh_matrix_build_from_vector(x, y, z, xup, yup, zup, R, R, R, M);
@@ -2319,7 +2319,7 @@ function colmesh_disk(argument0, argument1, argument2, argument3, argument4, arg
         return "ColMesh shape: Disk. Group: " + string(group) + ". X,Y,Z,R,r: " + string([x, y, z, R, r]) + ". xup,yup,zup: " + string([xup, yup, zup]);
     };
     
-    type = colmesh_enum.Value_9;
+    type = Colmesh_shapes.disk;
     x = argument0;
     y = argument1;
     z = argument2;
@@ -2624,13 +2624,13 @@ function colmesh_cube(argument0, argument1, argument2, argument3, argument4, arg
     
     static debugDraw = function(argument0 = -1)
     {
-        static vbuff = global.ColMeshDebugShapes[colmesh_enum.Value_5];
+        static vbuff = global.ColMeshDebugShapes[Colmesh_shapes.cube];
         static M = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1];
         
         if (vbuff < 0)
         {
-            global.ColMeshDebugShapes[colmesh_enum.Value_5] = colmesh_create_block(1, 1);
-            vbuff = global.ColMeshDebugShapes[colmesh_enum.Value_5];
+            global.ColMeshDebugShapes[Colmesh_shapes.cube] = colmesh_create_block(1, 1);
+            vbuff = global.ColMeshDebugShapes[Colmesh_shapes.cube];
         }
         
         M[0] = halfX;
@@ -2652,7 +2652,7 @@ function colmesh_cube(argument0, argument1, argument2, argument3, argument4, arg
         return "ColMesh shape: Cube. Group: " + string(group) + ". X,Y,Z,halfx,halfy,halfz: " + string([x, y, z, halfX, halfY, halfZ]);
     };
     
-    type = colmesh_enum.Value_5;
+    type = Colmesh_shapes.cube;
     x = argument0;
     y = argument1;
     z = argument2;
@@ -2937,12 +2937,12 @@ function colmesh_block(argument0, argument1 = 1) : colmesh_shapes(argument1) con
     
     static debugDraw = function(argument0 = -1)
     {
-        static vbuff = global.ColMeshDebugShapes[colmesh_enum.Value_6];
+        static vbuff = global.ColMeshDebugShapes[Colmesh_shapes.block];
         
         if (vbuff < 0)
         {
-            global.ColMeshDebugShapes[colmesh_enum.Value_6] = colmesh_create_block(1, 1);
-            vbuff = global.ColMeshDebugShapes[colmesh_enum.Value_6];
+            global.ColMeshDebugShapes[Colmesh_shapes.block] = colmesh_create_block(1, 1);
+            vbuff = global.ColMeshDebugShapes[Colmesh_shapes.block];
         }
         
         var sh = shader_current();
@@ -2958,7 +2958,7 @@ function colmesh_block(argument0, argument1 = 1) : colmesh_shapes(argument1) con
         return "ColMesh shape: Block. Group: " + string(group) + ". Matrix: " + string(M);
     };
     
-    type = colmesh_enum.Value_6;
+    type = Colmesh_shapes.block;
     lx = 1 / point_distance_3d(0, 0, 0, argument0[0], argument0[1], argument0[2]);
     ly = 1 / point_distance_3d(0, 0, 0, argument0[4], argument0[5], argument0[6]);
     lz = 1 / point_distance_3d(0, 0, 0, argument0[8], argument0[9], argument0[10]);
@@ -2991,7 +2991,7 @@ function colmesh_dynamic(argument0, argument1, argument2 = 1) : colmesh_shapes(a
     
     static checkAABB = function(argument0, argument1, argument2, argument3, argument4, argument5)
     {
-        if (shape.type == colmesh_enum.Value_13)
+        if (shape.type == Colmesh_shapes.uninitializedmesh)
         {
             mm = shape.getMinMax();
             var block = matrix_multiply(matrix_build((mm[0] + mm[3]) * 0.5, (mm[1] + mm[4]) * 0.5, (mm[2] + mm[5]) * 0.5, 0, 0, 0, (mm[3] - mm[0]) * 0.5, (mm[4] - mm[1]) * 0.5, (mm[5] - mm[2]) * 0.5), M);
@@ -3112,7 +3112,7 @@ function colmesh_dynamic(argument0, argument1, argument2 = 1) : colmesh_shapes(a
         array_copy(_ray, 0, matrix_transform_vertex(I, argument0[0], argument0[1], argument0[2]), 0, 3);
         array_copy(_ray, 3, matrix_transform_vertex(I, argument0[3], argument0[4], argument0[5]), 0, 3);
         
-        if (shape.type == colmesh_enum.Value_13)
+        if (shape.type == Colmesh_shapes.uninitializedmesh)
         {
             if (global.ColMeshRecursionCounter >= 8)
                 return true;
@@ -3147,7 +3147,7 @@ function colmesh_dynamic(argument0, argument1, argument2 = 1) : colmesh_shapes(a
     
     static _getClosestPoint = function(argument0, argument1, argument2)
     {
-        if (shape.type == colmesh_enum.Value_13)
+        if (shape.type == Colmesh_shapes.uninitializedmesh)
         {
             p = matrix_transform_vertex(I, argument0, argument1, argument2);
             var bx = p[0];
@@ -3186,7 +3186,7 @@ function colmesh_dynamic(argument0, argument1, argument2 = 1) : colmesh_shapes(a
     {
         static ret = array_create(3);
         
-        if (shape.type == colmesh_enum.Value_13)
+        if (shape.type == Colmesh_shapes.uninitializedmesh)
         {
             ret[0] = argument0;
             ret[1] = argument1;
@@ -3202,7 +3202,7 @@ function colmesh_dynamic(argument0, argument1, argument2 = 1) : colmesh_shapes(a
     
     static _intersectsCube = function(argument0, argument1, argument2, argument3)
     {
-        if (shape.type == colmesh_enum.Value_13)
+        if (shape.type == Colmesh_shapes.uninitializedmesh)
         {
             mm = shape.getMinMax();
             var b = matrix_transform_vertex(I, argument1, argument2, argument3);
@@ -3259,7 +3259,7 @@ function colmesh_dynamic(argument0, argument1, argument2 = 1) : colmesh_shapes(a
         argument0.transform(I, scale);
         var col = false;
         
-        if (shape.type == colmesh_enum.Value_13)
+        if (shape.type == Colmesh_shapes.uninitializedmesh)
         {
             if (global.ColMeshRecursionCounter < 8)
             {
@@ -3296,7 +3296,7 @@ function colmesh_dynamic(argument0, argument1, argument2 = 1) : colmesh_shapes(a
     
     static _getPriority = function(argument0, argument1, argument2, argument3)
     {
-        if (shape.type == colmesh_enum.Value_13)
+        if (shape.type == Colmesh_shapes.uninitializedmesh)
             return 0;
         
         var p = matrix_transform_vertex(I, argument0, argument1, argument2);
@@ -3309,7 +3309,7 @@ function colmesh_dynamic(argument0, argument1, argument2 = 1) : colmesh_shapes(a
         var W = matrix_get(2);
         matrix_set(2, matrix_multiply(M, W));
         
-        if (shape.type == colmesh_enum.Value_13)
+        if (shape.type == Colmesh_shapes.uninitializedmesh)
         {
             if (global.ColMeshRecursionCounter < 8)
             {
@@ -3326,7 +3326,7 @@ function colmesh_dynamic(argument0, argument1, argument2 = 1) : colmesh_shapes(a
         matrix_set(2, W);
     };
     
-    type = colmesh_enum.Value_7;
+    type = Colmesh_shapes.dynamicmesh;
     shape = argument0;
     colMesh = -1;
     M = matrix_build_identity();
@@ -3388,5 +3388,5 @@ function colmesh_none() constructor
         return false;
     };
     
-    type = colmesh_enum.Value_8;
+    type = Colmesh_shapes.none;
 }

@@ -7,12 +7,12 @@ global.ColMeshFormat = vertex_format_end();
 
 function colmesh_debug_draw_block(argument0, argument1)
 {
-    static vbuff = global.ColMeshDebugShapes[colmesh_enum.Value_6];
+    static vbuff = global.ColMeshDebugShapes[Colmesh_shapes.block];
     
     if (vbuff < 0)
     {
-        global.ColMeshDebugShapes[colmesh_enum.Value_6] = colmesh_create_block(1, 1);
-        vbuff = global.ColMeshDebugShapes[colmesh_enum.Value_6];
+        global.ColMeshDebugShapes[Colmesh_shapes.block] = colmesh_create_block(1, 1);
+        vbuff = global.ColMeshDebugShapes[Colmesh_shapes.block];
     }
     
     shader_set(sh_colmesh_debug);
@@ -27,7 +27,7 @@ function colmesh_debug_draw_block(argument0, argument1)
 
 function colmesh_debug_draw_capsule(argument0, argument1, argument2, argument3, argument4, argument5, argument6, argument7, argument8)
 {
-    var type = colmesh_enum.Value_2;
+    var type = Colmesh_shapes.capsule;
     var vbuff = global.ColMeshDebugShapes[type];
     
     if (vbuff < 0)
@@ -47,7 +47,7 @@ function colmesh_debug_draw_capsule(argument0, argument1, argument2, argument3, 
 
 function colmesh_debug_draw_cylinder(argument0, argument1, argument2, argument3, argument4, argument5, argument6, argument7, argument8)
 {
-    var type = colmesh_enum.Value_3;
+    var type = Colmesh_shapes.cylinder;
     var vbuff = global.ColMeshDebugShapes[type];
     
     if (vbuff < 0)
@@ -67,7 +67,7 @@ function colmesh_debug_draw_cylinder(argument0, argument1, argument2, argument3,
 
 function colmesh_debug_draw_sphere(argument0, argument1, argument2, argument3, argument4)
 {
-    var type = colmesh_enum.Value_1;
+    var type = Colmesh_shapes.sphere;
     var vbuff = global.ColMeshDebugShapes[type];
     
     if (vbuff < 0)

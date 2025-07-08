@@ -17,6 +17,6 @@ with (other)
     swingdingendcooldown = 0;
     state = states.grab;
     baddiegrabbedID = other.id;
-    other.state = baddiestates.grabbed;
+    other.state = states.grabbed;
     other.grabber = id;
 }

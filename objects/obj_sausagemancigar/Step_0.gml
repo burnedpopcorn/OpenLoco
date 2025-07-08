@@ -23,7 +23,7 @@ if (ID.sprite_index == spr_sausageman_land)
 
 with (ID)
 {
-    if (state != baddiestates.idle && (state != baddiestates.walk && (state != baddiestates.turn && state != baddiestates.land)))
+    if (state != states.normal && (state != states.actor && (state != states.cape && state != states.land)))
     {
         cigarcreate = 0;
         instance_destroy(other.id);

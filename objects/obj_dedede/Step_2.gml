@@ -1,2 +1,2 @@
-if (state != baddiestates.grabbed)
+if (state != states.grabbed)
     scr_collide();

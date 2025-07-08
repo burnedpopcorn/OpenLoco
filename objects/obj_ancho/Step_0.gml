@@ -1,43 +1,43 @@
 switch (state)
 {
-    case baddiestates.idle:
+    case states.normal:
         scr_enemy_idle();
         break;
     
-    case baddiestates.charge:
+    case states.charge:
         scr_enemy_charge();
         break;
     
-    case baddiestates.turn:
+    case states.cape:
         scr_enemy_turn();
         break;
     
-    case baddiestates.walk:
+    case states.actor:
         scr_enemy_walk();
         break;
     
-    case baddiestates.land:
+    case states.land:
         scr_enemy_land();
         break;
     
-    case baddiestates.hit:
+    case states.hit:
         scr_enemy_hit();
         break;
     
-    case baddiestates.stun:
+    case states.capefall:
         scr_enemy_stun();
         break;
     
-    case baddiestates.throwing:
+    case states.throwing:
         scr_pizzagoblin_throw();
         break;
     
-    case baddiestates.grabbed:
+    case states.grabbed:
         scr_enemy_grabbed();
         break;
 }
 
-if (state == baddiestates.stun && (stunned > 100 && birdcreated == 0))
+if (state == states.capefall && (stunned > 100 && birdcreated == 0))
 {
     birdcreated = 1;
     
@@ -45,16 +45,16 @@ if (state == baddiestates.stun && (stunned > 100 && birdcreated == 0))
         ID = other.id;
 }
 
-if (state != baddiestates.stun)
+if (state != states.capefall)
     birdcreated = 0;
 
-if (state == baddiestates.walk && (y > ystart && !scr_solid(x, y - 1)))
+if (state == states.actor && (y > ystart && !scr_solid(x, y - 1)))
     y--;
 
-if (state == baddiestates.walk && (y < ystart && !scr_solid(x, y + 1)))
+if (state == states.actor && (y < ystart && !scr_solid(x, y + 1)))
     y++;
 
-if (state == baddiestates.stun)
+if (state == states.capefall)
     grav = 0.5;
 else
     grav = 0;
@@ -62,14 +62,14 @@ else
 if (flash == 1 && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (state != baddiestates.grabbed)
+if (state != states.grabbed)
     depth = 0;
 
 scr_scareenemy();
 
 if (sprite_index == spr_ancho_chargestart && floor(image_index) == (image_number - 1))
 {
-    if (hitboxcreate == 0 && state == baddiestates.charge)
+    if (hitboxcreate == 0 && state == states.charge)
     {
         hitboxcreate = 1;
         
@@ -81,15 +81,15 @@ if (sprite_index == spr_ancho_chargestart && floor(image_index) == (image_number
     movespeed = 10;
 }
 
-if (x != obj_player1.x && (state != baddiestates.charge && y == ystart))
+if (x != obj_player1.x && (state != states.charge && y == ystart))
 {
     if ((obj_player1.x > (x - 200) && obj_player1.x < (x + 200)) && (y <= (obj_player1.y + 50) && y >= (obj_player1.y - 50)))
     {
-        if (state == baddiestates.walk)
+        if (state == states.actor)
         {
             image_index = 0;
             image_xscale = -sign(x - obj_player.x);
-            state = baddiestates.charge;
+            state = states.charge;
             sprite_index = spr_ancho_chargestart;
         }
     }
@@ -97,25 +97,25 @@ if (x != obj_player1.x && (state != baddiestates.charge && y == ystart))
 
 if (instance_exists(obj_player2))
 {
-    if (x != obj_player2.x && (state != baddiestates.charge && y == ystart))
+    if (x != obj_player2.x && (state != states.charge && y == ystart))
     {
         if ((obj_player2.x > (x - 200) && obj_player2.x < (x + 200)) && (y <= (obj_player2.y + 50) && y >= (obj_player2.y - 50)))
         {
-            if (state == baddiestates.walk)
+            if (state == states.actor)
             {
                 image_index = 0;
                 image_xscale = -sign(x - obj_player.x);
-                state = baddiestates.charge;
+                state = states.charge;
                 sprite_index = spr_ancho_chargestart;
             }
         }
     }
 }
 
-if (state == baddiestates.stun || state == baddiestates.walk)
+if (state == states.capefall || state == states.actor)
     movespeed = 0;
 
-if (state != baddiestates.stun)
+if (state != states.capefall)
     thrown = 0;
 
 if (boundbox == 0)

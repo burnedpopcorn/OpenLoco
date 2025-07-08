@@ -1,9 +1,34 @@
+enum Colmesh_shapes
+{
+	// shapes
+	defaultmesh = 0,
+	sphere = 1,
+	capsule = 2,
+	cylinder = 3,
+	torus = 4,
+	cube = 5,
+	block = 6,
+	dynamicmesh = 7,
+	none = 8,
+	disk = 9,
+	
+	// unfinished
+	cone = 10,
+	// unknown (and possibly unfinished shapes)
+	unknown_mesh11 = 11,
+	unknown_mesh12 = 12,
+	
+	// other shit
+	uninitializedmesh = 13,
+	enumlength = 14,
+}
+
 global.ColMeshCallingObject = -1;
 global.ColMeshRecursionCounter = 0;
 global.ColMeshRayMap = ds_map_create();
 global.ColMeshMeshMap = ds_map_create();
 global.ColMeshDefaultParent = new colmesh_mesh();
-global.ColMeshDebugShapes = array_create(colmesh_enum.Value_14, -1);
+global.ColMeshDebugShapes = array_create(Colmesh_shapes.enumlength, -1);
 
 function colmesh() : colmesh_mesh() constructor
 {
@@ -28,7 +53,7 @@ function colmesh() : colmesh_mesh() constructor
     {
         if (is_struct(argument0))
         {
-            if (argument0.type == colmesh_enum.Value_0)
+            if (argument0.type == Colmesh_shapes.defaultmesh)
             {
                 var num = array_length(argument0.triangles);
                 
@@ -52,7 +77,7 @@ function colmesh() : colmesh_mesh() constructor
                 return argument0;
             }
             
-            if (argument0.type == colmesh_enum.Value_7)
+            if (argument0.type == Colmesh_shapes.dynamicmesh)
                 argument0.colMesh = self;
         }
         
@@ -835,7 +860,7 @@ function colmesh() : colmesh_mesh() constructor
             {
                 if ((group & 1) == 0 && !argument1)
                 {
-                    buffer_write(tempBuff, buffer_u8, colmesh_enum.Value_8);
+                    buffer_write(tempBuff, buffer_u8, Colmesh_shapes.none);
                 }
                 else
                 {
@@ -843,7 +868,7 @@ function colmesh() : colmesh_mesh() constructor
                     
                     switch (type)
                     {
-                        case colmesh_enum.Value_0:
+                        case Colmesh_shapes.defaultmesh:
                             var index = ds_map_find_value(meshMap, name);
                             
                             if (is_undefined(index))
@@ -860,7 +885,7 @@ function colmesh() : colmesh_mesh() constructor
                             
                             break;
                         
-                        case colmesh_enum.Value_1:
+                        case Colmesh_shapes.sphere:
                             buffer_write(tempBuff, buffer_u32, group);
                             buffer_write(tempBuff, buffer_f32, x);
                             buffer_write(tempBuff, buffer_f32, y);
@@ -868,19 +893,7 @@ function colmesh() : colmesh_mesh() constructor
                             buffer_write(tempBuff, buffer_f32, R);
                             break;
                         
-                        case colmesh_enum.Value_2:
-                            buffer_write(tempBuff, buffer_u32, group);
-                            buffer_write(tempBuff, buffer_f32, x);
-                            buffer_write(tempBuff, buffer_f32, y);
-                            buffer_write(tempBuff, buffer_f32, z);
-                            buffer_write(tempBuff, buffer_f32, xup);
-                            buffer_write(tempBuff, buffer_f32, yup);
-                            buffer_write(tempBuff, buffer_f32, zup);
-                            buffer_write(tempBuff, buffer_f32, R);
-                            buffer_write(tempBuff, buffer_f32, H);
-                            break;
-                        
-                        case colmesh_enum.Value_3:
+                        case Colmesh_shapes.capsule:
                             buffer_write(tempBuff, buffer_u32, group);
                             buffer_write(tempBuff, buffer_f32, x);
                             buffer_write(tempBuff, buffer_f32, y);
@@ -892,7 +905,19 @@ function colmesh() : colmesh_mesh() constructor
                             buffer_write(tempBuff, buffer_f32, H);
                             break;
                         
-                        case colmesh_enum.Value_4:
+                        case Colmesh_shapes.cylinder:
+                            buffer_write(tempBuff, buffer_u32, group);
+                            buffer_write(tempBuff, buffer_f32, x);
+                            buffer_write(tempBuff, buffer_f32, y);
+                            buffer_write(tempBuff, buffer_f32, z);
+                            buffer_write(tempBuff, buffer_f32, xup);
+                            buffer_write(tempBuff, buffer_f32, yup);
+                            buffer_write(tempBuff, buffer_f32, zup);
+                            buffer_write(tempBuff, buffer_f32, R);
+                            buffer_write(tempBuff, buffer_f32, H);
+                            break;
+                        
+                        case Colmesh_shapes.torus:
                             buffer_write(tempBuff, buffer_u32, group);
                             buffer_write(tempBuff, buffer_f32, x);
                             buffer_write(tempBuff, buffer_f32, y);
@@ -904,7 +929,7 @@ function colmesh() : colmesh_mesh() constructor
                             buffer_write(tempBuff, buffer_f32, r);
                             break;
                         
-                        case colmesh_enum.Value_5:
+                        case Colmesh_shapes.cube:
                             buffer_write(tempBuff, buffer_u32, group);
                             buffer_write(tempBuff, buffer_f32, x);
                             buffer_write(tempBuff, buffer_f32, y);
@@ -914,7 +939,7 @@ function colmesh() : colmesh_mesh() constructor
                             buffer_write(tempBuff, buffer_f32, halfH);
                             break;
                         
-                        case colmesh_enum.Value_6:
+                        case Colmesh_shapes.block:
                             buffer_write(tempBuff, buffer_u32, group);
                             buffer_write(tempBuff, buffer_f32, M[0]);
                             buffer_write(tempBuff, buffer_f32, M[1]);
@@ -1028,7 +1053,7 @@ function colmesh() : colmesh_mesh() constructor
             
             switch (type)
             {
-                case colmesh_enum.Value_0:
+                case Colmesh_shapes.defaultmesh:
                     var index = buffer_read(tempBuff, buffer_u32);
                     var parent = ds_map_find_value(global.ColMeshMeshMap, array_get(meshNames, index));
                     var V = array_create(9);
@@ -1039,7 +1064,7 @@ function colmesh() : colmesh_mesh() constructor
                     addTriangle(V, parent);
                     break;
                 
-                case colmesh_enum.Value_1:
+                case Colmesh_shapes.sphere:
                     var group = buffer_read(tempBuff, buffer_u32);
                     var _x = buffer_read(tempBuff, buffer_f32);
                     var _y = buffer_read(tempBuff, buffer_f32);
@@ -1048,7 +1073,7 @@ function colmesh() : colmesh_mesh() constructor
                     addShape(new colmesh_sphere(_x, _y, _z, R, group));
                     break;
                 
-                case colmesh_enum.Value_2:
+                case Colmesh_shapes.capsule:
                     var group = buffer_read(tempBuff, buffer_u32);
                     var _x = buffer_read(tempBuff, buffer_f32);
                     var _y = buffer_read(tempBuff, buffer_f32);
@@ -1061,7 +1086,7 @@ function colmesh() : colmesh_mesh() constructor
                     addShape(new colmesh_capsule(_x, _y, _z, xup, yup, zup, R, H, group));
                     break;
                 
-                case colmesh_enum.Value_3:
+                case Colmesh_shapes.cylinder:
                     var group = buffer_read(tempBuff, buffer_u32);
                     var _x = buffer_read(tempBuff, buffer_f32);
                     var _y = buffer_read(tempBuff, buffer_f32);
@@ -1074,7 +1099,7 @@ function colmesh() : colmesh_mesh() constructor
                     addShape(new colmesh_cylinder(_x, _y, _z, xup, yup, zup, R, H, group));
                     break;
                 
-                case colmesh_enum.Value_4:
+                case Colmesh_shapes.torus:
                     var group = buffer_read(tempBuff, buffer_u32);
                     var _x = buffer_read(tempBuff, buffer_f32);
                     var _y = buffer_read(tempBuff, buffer_f32);
@@ -1087,7 +1112,7 @@ function colmesh() : colmesh_mesh() constructor
                     addShape(new colmesh_torus(_x, _y, _z, xup, yup, zup, R, r, group));
                     break;
                 
-                case colmesh_enum.Value_5:
+                case Colmesh_shapes.cube:
                     var group = buffer_read(tempBuff, buffer_u32);
                     var _x = buffer_read(tempBuff, buffer_f32);
                     var _y = buffer_read(tempBuff, buffer_f32);
@@ -1098,7 +1123,7 @@ function colmesh() : colmesh_mesh() constructor
                     addShape(new colmesh_cube(_x, _y, _z, halfW * 2, halfW * 2, halfH * 2, group));
                     break;
                 
-                case colmesh_enum.Value_6:
+                case Colmesh_shapes.block:
                     var group = buffer_read(tempBuff, buffer_u32);
                     var M = array_create(16);
                     M[0] = buffer_read(tempBuff, buffer_f32);
@@ -1117,11 +1142,11 @@ function colmesh() : colmesh_mesh() constructor
                     addShape(new colmesh_block(M, group));
                     break;
                 
-                case colmesh_enum.Value_8:
+                case Colmesh_shapes.none:
                     addShape(new colmesh_none());
                     break;
                 
-                case colmesh_enum.Value_7:
+                case Colmesh_shapes.dynamicmesh:
                     addShape(new colmesh_none());
                     break;
             }
@@ -1148,7 +1173,7 @@ function colmesh() : colmesh_mesh() constructor
                     
                     if (is_struct(shape))
                     {
-                        if (shape.type == colmesh_enum.Value_7 || shape.type == colmesh_enum.Value_8)
+                        if (shape.type == Colmesh_shapes.dynamicmesh || shape.type == Colmesh_shapes.none)
                             continue;
                     }
                     
@@ -1245,12 +1270,12 @@ function colmesh() : colmesh_mesh() constructor
         if (argument0 < 0)
             argument0 = shapeList;
         
-        var triVbuff = global.ColMeshDebugShapes[colmesh_enum.Value_0];
+        var triVbuff = global.ColMeshDebugShapes[Colmesh_shapes.defaultmesh];
         
         if (triVbuff < 0)
         {
-            global.ColMeshDebugShapes[colmesh_enum.Value_0] = vertex_create_buffer();
-            triVbuff = global.ColMeshDebugShapes[colmesh_enum.Value_0];
+            global.ColMeshDebugShapes[Colmesh_shapes.defaultmesh] = vertex_create_buffer();
+            triVbuff = global.ColMeshDebugShapes[Colmesh_shapes.defaultmesh];
         }
         
         if (global.ColMeshRecursionCounter == 0)
@@ -1349,7 +1374,7 @@ function colmesh() : colmesh_mesh() constructor
         return str;
     };
     
-    type = colmesh_enum.Value_13;
+    type = Colmesh_shapes.uninitializedmesh;
     spHash = -1;
     originX = 0;
     originY = 0;

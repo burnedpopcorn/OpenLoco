@@ -1,23 +1,23 @@
 switch (state)
 {
-    case baddiestates.idle:
+    case states.normal:
         scr_enemy_idle();
         break;
     
-    case baddiestates.bounce:
+    case states.bounce:
         scr_enemy_bounce();
         break;
     
-    case baddiestates.stun:
+    case states.capefall:
         scr_enemy_stun();
         break;
     
-    case baddiestates.grabbed:
+    case states.grabbed:
         scr_enemy_grabbed();
         break;
 }
 
-if (state == baddiestates.grabbed && stunned > 40 && birdcreated == 0)
+if (state == states.grabbed && stunned > 40 && birdcreated == 0)
 {
     birdcreated = 1;
     
@@ -25,20 +25,20 @@ if (state == baddiestates.grabbed && stunned > 40 && birdcreated == 0)
         ID = other.id;
 }
 
-if (state != baddiestates.grabbed)
+if (state != states.grabbed)
     birdcreated = 0;
 
-if (state == baddiestates.idle && obj_player.x != x)
+if (state == states.normal && obj_player.x != x)
     image_xscale = sign(obj_player.x - x);
 
-if (state == baddiestates.idle)
+if (state == states.normal)
     attack--;
 
-if (attack <= 0 && state == baddiestates.idle)
+if (attack <= 0 && state == states.normal)
 {
     sprite_index = jumpprepspr;
     image_index = 0;
-    state = baddiestates.bounce;
+    state = states.bounce;
 }
 
 if (global.bosshealth == 5)
@@ -96,10 +96,10 @@ if (caughtplayer == 1 && grounded)
 if (flash == 1 && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (state != baddiestates.grabbed)
+if (state != states.grabbed)
     depth = 0;
 
 scr_collide();
 
-if (state != baddiestates.grabbed)
+if (state != states.grabbed)
     thrown = 0;

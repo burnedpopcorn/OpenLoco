@@ -1,16 +1,16 @@
 if (invframes == 0)
 {
-    if (state != baddiestates.grabbed && (obj_player.state != 15 && obj_player.state != states.bump))
+    if (state != states.grabbed && (obj_player.state != 15 && obj_player.state != states.bump))
     {
         with (obj_player)
         {
-            if (other.state == baddiestates.stun && state == states.handstandjump)
+            if (other.state == states.capefall && state == states.handstandjump)
             {
                 movespeed = 0;
                 image_index = 0;
                 sprite_index = spr_haulingstart;
                 state = 46;
-                other.state = baddiestates.grabbed;
+                other.state = states.grabbed;
                 other.grabbedby = 1;
             }
             
@@ -24,7 +24,7 @@ if (invframes == 0)
                     other.stunned = 200;
                     other.vsp = -5;
                     other.hsp = -other.image_xscale * 3;
-                    other.state = baddiestates.stun;
+                    other.state = states.capefall;
                     other.image_index = 0;
                 }
                 else
@@ -44,7 +44,7 @@ if (invframes == 0)
                     vsp = -9;
             }
             
-            if ((state == states.mach2 || (state == states.mach3 || state == states.grab)) && (other.grounded == 1 && other.state == baddiestates.stun))
+            if ((state == states.mach2 || (state == states.mach3 || state == states.grab)) && (other.grounded == 1 && other.state == states.capefall))
             {
                 global.hit += 1;
                 instance_create(other.x, other.y, obj_slapstar);
@@ -60,7 +60,7 @@ if (invframes == 0)
                 other.hsp = xscale;
                 other.image_index = 0;
                 other.stunned = 200;
-                other.state = baddiestates.stun;
+                other.state = states.capefall;
                 machpunchAnim = 1;
                 
                 if (!grounded && (state != states.freefall && key_jump2))
@@ -70,7 +70,7 @@ if (invframes == 0)
                 }
             }
             
-            if (!(y < other.y) && (state != states.bump && (state != states.hurt && (other.state != baddiestates.grabbed && other.state != baddiestates.stun))))
+            if (!(y < other.y) && (state != states.bump && (state != states.hurt && (other.state != states.grabbed && other.state != states.capefall))))
             {
                 instance_create(x, y, obj_bumpeffect);
                 

@@ -34,7 +34,7 @@ function scr_collide_destructibles()
             }
         }
         
-        if (state == states.crouchslide || (state == states.mach3 || (state == states.cape || state == states.crouchslide || (state == states.climbwall && sprite_index == get_charactersprite("spr_climbwalldash")) || (state == states.zombieattack || (state == states.machroll || (state == states.unknown18 || (state == states.tumble || state == 9)))))))
+        if (state == states.crouchslide || (state == states.mach3 || (state == states.cape || state == states.crouchslide || (state == states.climbwall && sprite_index == get_charactersprite("spr_climbwalldash")) || (state == states.zombieattack || (state == states.machroll || (state == states.knightpepslopes || (state == states.tumble || state == 9)))))))
         {
             if (place_meeting(x + hsp, y, obj_destructibles))
             {
@@ -131,7 +131,7 @@ function scr_collide_destructibles()
             }
         }
         
-        if ((state == states.unknown24 || (state == states.superslam || state == 9)) && vsp > 0)
+        if ((state == states.knightpep || (state == states.superslam || state == 9)) && vsp > 0)
         {
             if (place_meeting(x, y + 1, obj_destructibles))
             {
@@ -212,7 +212,7 @@ function scr_collide_destructibles()
             }
         }
         
-        if (state == states.mach2 || (state == states.mach3 || (state == states.cape || (state == states.machroll || (state == states.unknown18 || (state == states.tumble || state == 9))))))
+        if (state == states.mach2 || (state == states.mach3 || (state == states.cape || (state == states.machroll || (state == states.knightpepslopes || (state == states.tumble || state == 9))))))
         {
             if (place_meeting(x + hsp, y, obj_destructibles))
             {
@@ -224,7 +224,7 @@ function scr_collide_destructibles()
             }
         }
         
-        if ((state == states.unknown24 || (state == states.superslam || state == 9)) && vsp > 0)
+        if ((state == states.knightpep || (state == states.superslam || state == 9)) && vsp > 0)
         {
             if (place_meeting(x, y + 1, obj_destructibles))
             {

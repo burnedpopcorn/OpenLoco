@@ -310,7 +310,7 @@ if (showtext == 0)
         yi += 1;
 }
 
-if (!(obj_player.state == states.unknown24 && obj_player.state == states.unknown25 && obj_player.state == states.unknown18))
+if (!(obj_player.state == states.knightpep && obj_player.state == states.knightpepattack && obj_player.state == states.knightpepslopes))
     once = 0;
 
 var change_pos = 0;

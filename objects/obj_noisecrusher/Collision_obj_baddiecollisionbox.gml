@@ -2,9 +2,9 @@ if (instance_exists(other.baddieID))
 {
     with (other.id)
     {
-        if (((baddieID.state == baddiestates.stun && (baddieID.hsp != 0 && baddieID.thrown == 1)) && other.state != baddiestates.stun) || (baddieID.state == baddiestates.grabbed && obj_player.state == states.superslam))
+        if (((baddieID.state == states.capefall && (baddieID.hsp != 0 && baddieID.thrown == 1)) && other.state != states.capefall) || (baddieID.state == states.grabbed && obj_player.state == states.superslam))
         {
-            other.state = baddiestates.grabbed;
+            other.state = states.grabbed;
             instance_create(other.x, other.y, obj_slapstar);
             instance_create(other.x, other.y, obj_baddiegibs);
             other.flash = 1;

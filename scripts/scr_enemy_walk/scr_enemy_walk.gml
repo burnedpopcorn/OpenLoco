@@ -22,7 +22,7 @@ function scr_enemy_walk()
             image_xscale *= -1;
             image_index = 0;
             sprite_index = spr_forknight_turn;
-            state = baddiestates.idle;
+            state = states.normal;
         }
         else
         {
@@ -41,21 +41,21 @@ function scr_enemy_walk()
                     vsp = -11;
                     image_index = 0;
                     image_xscale = -sign(x - obj_player.x);
-                    state = baddiestates.charge;
+                    state = states.charge;
                 }
                 else if (object_index == obj_shyguy)
                 {
                     image_xscale *= -1;
                     image_index = 0;
                     sprite_index = spr_forknight_turn;
-                    state = baddiestates.idle;
+                    state = states.normal;
                 }
                 else if (object_index == obj_zombie)
                 {
                     image_xscale *= -1;
                     image_index = 0;
                     sprite_index = spr_forknight_turn;
-                    state = baddiestates.idle;
+                    state = states.normal;
                     movealarm = 100;
                 }
                 else
@@ -77,7 +77,7 @@ function scr_enemy_walk()
                 image_xscale *= -1;
                 image_index = 0;
                 sprite_index = spr_forknight_turn;
-                state = baddiestates.idle;
+                state = states.normal;
             }
         }
     }

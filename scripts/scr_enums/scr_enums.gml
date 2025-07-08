@@ -1,107 +1,145 @@
 enum states 
 {
-    normal			= 0,
-    grabbed			= 106,
-    finishingblow	= 3,
-    tumble			= 2,
-	titlescreen		= 8,
-    ejected			= 4,
-    firemouth		= 7,
-    fireass			= 6,
-    tacklecharge	= 10,
-    zombie			= 13,
-    climbwall		= 17,
-    portal			= 19,
-    chainsawbump	= 21,
-    handstandjump	= 22,
-    gottreasure		= 23,
-    meteorpep		= 26,
-    grabbing		= 28,
-	chainsawpogo	= 29,
-	shotgunjump		= 30,
-	stunned			= 31,
-	highjump		= 32,
-	chainsaw		= 33,
-	facestomp		= 34,
-	timesup			= 36,
-	machroll		= 37,
-	shotgun			= 38,
-	machfreefall	= 40,
-	throwin			= 41,
-	superslam		= 43,
-	slam			= 42,
-	lawnmower		= 44,
-	grind			= 45,
-	grab			= 46,
-	punch			= 47,
-	backkick		= 48,
-	uppunch			= 49,
-	shoulder		= 50,
-	backbreaker		= 51,
-	bossintro		= 54,
-	gameover		= 55,
-	Sjumpland		= 93,
-	freefallprep	= 92,
-	keyget			= 56,
-	tackle			= 57,
-	slipnslide		= 60,
-	ladder			= 59,
-	jump			= 58,
-	victory			= 64,
-	comingoutdoor	= 61,
-	Sjump			= 63,
-	Sjumpprep		= 65,
-	crouch			= 66,
-	crouchjump		= 67,
-	crouchslide		= 68,
-	mach1			= 69,
-	mach2			= 70,
-	mach3			= 91,
-	machslide		= 71,
-	bump			= 72,
-	hurt			= 73,
-	freefall		= 74,
-	freefallland	= 77,
-	hang			= 75,
-	door			= 78,
-	current			= 87,
-	taxi			= 89,
-	actor			= 110,
-	debugstate		= 111,
-	zombiejump		= 112,
-	parrying		= 113,
-	faceplant		= 114,
-	gateeject		= 115,
-	bubble			= 116,
-	zombieattack	= 117,
-	lawnmowerslide	= 118,
-	slipbanana		= 119,
-	lungeattack		= 120,
-	kungfu			= 121,
-	genobeam		= 122,
-	slidekick		= 123,
-	cappythrow		= 125,
-	cape			= 127,
-	capefall		= 128,
+    normal				= 0,
+	bounce				= 1,
+	tumble				= 2,
+    finishingblow		= 3,
+    ejected				= 4,
+	transitioncutscene	= 5, // unused
+	fireass				= 6,
+    firemouth			= 7,
+	titlescreen			= 8,
+	hookshot			= 9,
+    tacklecharge		= 10,
+	// 11
 	
-	geno_normal		= 129,
-	geno_jump		= 130,
-	geno_shoot		= 131,
+	// the idk section
+	unknown12			= 12,
+    zombie				= 13,
+	// 14
+	unknown15			= 15,
+	// 16
 	
-	// missing states
-	unknown126		= 126, // in obj_secretportal for some reason
-	unknown95		= 95,
-	unknown88		= 88,
-	unknown79		= 79,
-	unknown53		= 53,
-	unknown39		= 39,
-	unknown27		= 27,
-	unknown25		= 25,
-	unknown24		= 24,
-	unknown18		= 18,
-	unknown15		= 15,
-	unknown12		= 12,
-	unknown9		= 9,
+    climbwall			= 17,
+	knightpepslopes		= 18,
+    portal				= 19,
+	secondjump			= 20, // unused
+    chainsawbump		= 21,
+    handstandjump		= 22,
+    gottreasure			= 23,
+	knightpep			= 24,
+    knightpepattack		= 25,
+    meteorpep			= 26,
+	bombpep				= 27,
+    grabbing			= 28,
+	chainsawpogo		= 29,
+	shotgunjump			= 30,
+	stunned				= 31,
+	highjump			= 32,
+	chainsaw			= 33,
+	facestomp			= 34,
+	// 35
+	timesup				= 36,
+	machroll			= 37,
+	shotgun				= 38,
+	pistol				= 39,
+	machfreefall		= 40,
+	throwin				= 41,
+	slam				= 42,
+	superslam			= 43,
+	lawnmower			= 44,
+	grind				= 45,
+	grab				= 46,
+	punch				= 47,
+	backkick			= 48,
+	uppunch				= 49,
+	shoulder			= 50,
+	backbreaker			= 51,
+	bossdefeat			= 52, // unused
+	pizzathrow			= 53,
+	bossintro			= 54,
+	gameover			= 55,
+	keyget				= 56,
+	tackle				= 57,
+	jump				= 58,
+	ladder				= 59,
+	slipnslide			= 60,
+	comingoutdoor		= 61,
+	smirk				= 62, // unused
+	Sjump				= 63,
+	victory				= 64,
+	Sjumpprep			= 65,
+	crouch				= 66,
+	crouchjump			= 67,
+	crouchslide			= 68,
+	mach1				= 69,
+	mach2				= 70,
+	machslide			= 71,
+	bump				= 72,
+	hurt				= 73,
+	freefall			= 74,
+	hang				= 75,
+	// 76
+	freefallland		= 77,
+	door				= 78,
+	barrelcrouch		= 79,
+    barrelfloat			= 80, // unused
+    barrelmach2			= 81, // unused
+    barrelmach1			= 82, // unused
+    barrelfall			= 83, // unused
+    barrelnormal		= 84, // unused
+    barrelslipnslide	= 85, // unused
+    barrelroll			= 86, // unused
+	current				= 87,
+	
+	// idk section 2.0
+	unknown88			= 88,
+	taxi				= 89,
+	// 90
+	mach3				= 91,
+	freefallprep		= 92,
+	Sjumpland			= 93,
+	// 94
+	unknown95			= 95,
+	// 96
+	throwing			= 97,
+	// 98
+	// 99
+	// 100
+	// 101
+	// 102
+	// 103
+	// 104
+	// 105
+	
+	// enemy states
+	grabbed				= 106,
+	hit					= 107,
+	land				= 108,
+	charge				= 109,
+	actor				= 110,
+	
+	debugstate			= 111,
+	zombiejump			= 112,
+	parrying			= 113,
+	faceplant			= 114,
+	gateeject			= 115,
+	bubble				= 116,
+	zombieattack		= 117,
+	lawnmowerslide		= 118,
+	slipbanana			= 119,
+	lungeattack			= 120,
+	kungfu				= 121,
+	genobeam			= 122,
+	slidekick			= 123,
+	// 124
+	cappythrow			= 125,
+	unknown126			= 126,
+	cape				= 127,
+	capefall			= 128,
+	geno_normal			= 129,
+	geno_jump			= 130,
+	geno_shoot			= 131,
 }
 
 // player special attacks
@@ -111,26 +149,6 @@ enum playerspecialmove
 	shoulderbash	= 1,
 	faceplant		= 2,
 	cappy			= 3, // default
-}
-
-// enemy states
-enum baddiestates
-{
-	// idk man, its just like that in the original
-	idle			= 0,
-	charge			= 109,
-	turn			= 127,
-	walk			= 110,
-	land			= 108,
-	hit				= 107,
-	stun			= 128,
-	throwing		= 97,
-	grabbed			= 106,
-	rage			= 125,
-	
-	// unused ones kinda
-	bounce			= 1,
-	unknown			= 126,
 }
 
 // for cappy
@@ -199,7 +217,7 @@ enum savestate
 	bufload		= 2,
 }
 
-// for obj_gatespawnplayer CHANGE ENUM NAME
+// for obj_gatespawnplayer
 enum gatespawn
 {
 	init			= 0,
@@ -220,15 +238,6 @@ enum antileakcounter
 {
 	disabled		= 0,
 	enabled			= 1,
-}
-
-// for obj_fakepep (unused, but still)
-enum fakepepmoves
-{
-	idle			= 0,
-	walk			= 110,
-	hit				= 107,
-	jump			= 58,
 }
 
 // obj_bosscontroller
@@ -261,24 +270,4 @@ enum zarena
 	startcheck		= 2,
 	gameloop		= 3,
 	ending			= 4,
-}
-
-// temp enums for colmesh
-enum colmesh_enum 
-{
-    Value_0,
-    Value_1,
-    Value_2,
-    Value_3,
-    Value_4,
-    Value_5,
-    Value_6,
-    Value_7,
-    Value_8,
-    Value_9,
-    Value_10,
-    Value_11,
-    Value_12,
-    Value_13,
-    Value_14,
 }

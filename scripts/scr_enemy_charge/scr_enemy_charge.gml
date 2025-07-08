@@ -54,7 +54,7 @@ function scr_enemy_charge()
         
         if (place_meeting(x + hsp, y, obj_solid))
         {
-            state = baddiestates.stun;
+            state = states.capefall;
             stunned = 100;
         }
     }
@@ -81,7 +81,7 @@ function scr_enemy_charge()
                     {
                         movespeed = 0;
                         charging = 0;
-                        state = baddiestates.walk;
+                        state = states.actor;
                     }
                 }
             }
@@ -97,7 +97,7 @@ function scr_enemy_charge()
             movespeed = 0;
             hsp = -(image_xscale * 4);
             vsp = -5;
-            state = baddiestates.stun;
+            state = states.capefall;
             stunned = 100;
         }
     }
@@ -129,7 +129,7 @@ function scr_enemy_charge()
         image_speed = 0.35;
         
         if (grounded && vsp > 0)
-            state = baddiestates.walk;
+            state = states.actor;
         
         if (((scr_solid(x + 1, y) && image_xscale == 1) || (scr_solid(x - 1, y) && image_xscale == -1)) && !place_meeting(x + sign(hsp), y, obj_slope))
             image_xscale *= -1;

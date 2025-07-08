@@ -1,4 +1,4 @@
-if (obj_player.state == states.unknown24 || (obj_player.state == states.unknown25 || obj_player.state == states.unknown18))
+if (obj_player.state == states.knightpep || (obj_player.state == states.knightpepattack || obj_player.state == states.knightpepslopes))
     sprite_index = spr_swordstonetaken;
 else
     sprite_index = spr_swordstone;

@@ -1,43 +1,43 @@
 switch (state)
 {
-    case baddiestates.idle:
+    case states.normal:
         scr_enemy_idle();
         break;
     
-    case baddiestates.charge:
+    case states.charge:
         scr_enemy_charge();
         break;
     
-    case baddiestates.turn:
+    case states.cape:
         scr_enemy_turn();
         break;
     
-    case baddiestates.walk:
+    case states.actor:
         scr_enemy_walk();
         break;
     
-    case baddiestates.land:
+    case states.land:
         scr_enemy_land();
         break;
     
-    case baddiestates.hit:
+    case states.hit:
         scr_enemy_hit();
         break;
     
-    case baddiestates.stun:
+    case states.capefall:
         scr_enemy_stun();
         break;
     
-    case baddiestates.throwing:
+    case states.throwing:
         scr_pizzagoblin_throw();
         break;
     
-    case baddiestates.grabbed:
+    case states.grabbed:
         scr_enemy_grabbed();
         break;
 }
 
-if (state == baddiestates.stun && (stunned > 100 && birdcreated == 0))
+if (state == states.capefall && (stunned > 100 && birdcreated == 0))
 {
     birdcreated = 1;
     
@@ -45,7 +45,7 @@ if (state == baddiestates.stun && (stunned > 100 && birdcreated == 0))
         ID = other.id;
 }
 
-if (state != baddiestates.grabbed)
+if (state != states.grabbed)
     birdcreated = 0;
 
 scr_scareenemy();
@@ -54,14 +54,14 @@ if (x != obj_player1.x && grounded)
 {
     if ((obj_player1.x > (x - 400) && obj_player1.x < (x + 400)) && (y <= (obj_player1.y + 20) && y >= (obj_player1.y - 20)))
     {
-        if (state == baddiestates.walk && charging == 0)
+        if (state == states.actor && charging == 0)
         {
             with (instance_create(x, y, obj_forkhitbox))
                 ID = other.id;
             
             vsp = -7;
             charging = 1;
-            state = baddiestates.charge;
+            state = states.charge;
             movespeed = 2;
             fmod_studio_event_oneshot_3d("event:/sfx/enemy/charge");
             
@@ -79,13 +79,13 @@ if (instance_exists(obj_player2))
     {
         if ((obj_player2.x > (x - 400) && obj_player2.x < (x + 400)) && (y <= (obj_player2.y + 20) && y >= (obj_player2.y - 20)))
         {
-            if (state == baddiestates.walk && charging == 0)
+            if (state == states.actor && charging == 0)
             {
                 with (instance_create(x, y, obj_forkhitbox))
                     ID = other.id;
                 
                 charging = 1;
-                state = baddiestates.charge;
+                state = states.charge;
                 movespeed = 5;
                 vsp = -7;
                 sprite_index = spr_fencer_chargestart;
@@ -94,7 +94,7 @@ if (instance_exists(obj_player2))
     }
 }
 
-if (state == baddiestates.stun || state == baddiestates.walk)
+if (state == states.capefall || state == states.actor)
 {
     charging = 0;
     movespeed = 0;
@@ -106,7 +106,7 @@ if (sprite_index == spr_fencer_chargestart && floor(image_index) == (image_numbe
 if (flash == 1 && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (hitboxcreate == 0 && state == baddiestates.walk)
+if (hitboxcreate == 0 && state == states.actor)
 {
     hitboxcreate = 1;
     
@@ -114,10 +114,10 @@ if (hitboxcreate == 0 && state == baddiestates.walk)
         ID = other.id;
 }
 
-if (state != baddiestates.grabbed)
+if (state != states.grabbed)
     depth = 0;
 
-if (state != baddiestates.stun)
+if (state != states.capefall)
     thrown = 0;
 
 if (boundbox == 0)

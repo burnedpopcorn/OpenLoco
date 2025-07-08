@@ -1,7 +1,7 @@
-if (invframes == 0 && state == baddiestates.stun)
+if (invframes == 0 && state == states.capefall)
 {
     instance_create(x + (obj_player.xscale * 40), y, obj_punchdust);
-    state = baddiestates.grabbed;
+    state = states.grabbed;
     obj_player.state = 46;
     instance_destroy(other.id);
     obj_player.suplexhavetomash = 5;

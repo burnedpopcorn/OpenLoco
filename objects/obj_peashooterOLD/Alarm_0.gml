@@ -1,4 +1,4 @@
-if (state != baddiestates.idle)
+if (state != states.normal)
     exit;
 
 var nearest = instance_nearest(x, y, obj_zombie);

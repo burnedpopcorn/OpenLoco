@@ -1,23 +1,23 @@
 switch (state)
 {
-    case baddiestates.idle:
+    case states.normal:
         scr_enemy_idle();
         break;
     
-    case baddiestates.bounce:
+    case states.bounce:
         scr_enemy_bounce();
         break;
     
-    case baddiestates.stun:
+    case states.capefall:
         scr_enemy_stun();
         break;
     
-    case baddiestates.grabbed:
+    case states.grabbed:
         scr_enemy_grabbed();
         break;
 }
 
-if (state == baddiestates.stun && stunned > 40 && birdcreated == 0)
+if (state == states.capefall && stunned > 40 && birdcreated == 0)
 {
     birdcreated = 1;
     
@@ -25,17 +25,17 @@ if (state == baddiestates.stun && stunned > 40 && birdcreated == 0)
         ID = other.id;
 }
 
-if (state != baddiestates.stun)
+if (state != states.capefall)
     birdcreated = 0;
 
-if (state == baddiestates.idle && obj_player.x != x)
+if (state == states.normal && obj_player.x != x)
     image_xscale = sign(obj_player.x - x);
 
 if (flash == 1 && alarm[2] <= 0)
     alarm[2] = 0.15 * room_speed;
 
-if (state != baddiestates.grabbed)
+if (state != states.grabbed)
     depth = 0;
 
-if (state != baddiestates.stun)
+if (state != states.capefall)
     thrown = 0;
