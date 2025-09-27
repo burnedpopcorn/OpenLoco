@@ -10,9 +10,7 @@ function scr_enemy_lungeattack()
     if (_l)
     {
         if (hitLag > 0)
-        {
             hitLag--;
-        }
         else
         {
             state = states.capefall;
@@ -28,6 +26,4 @@ function scr_enemy_lungeattack()
             }
         }
     }
-    
-    exit;
 }

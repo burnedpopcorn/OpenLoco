@@ -20,9 +20,7 @@ function scr_player_ladder()
         image_speed = 0.35;
         
         if (steppybuffer > 0)
-        {
             steppybuffer--;
-        }
         else
         {
             create_particle(x, y + 43, 1, 0);

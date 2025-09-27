@@ -90,9 +90,7 @@ function scr_player_handstandjump()
         var _bump = slope_check_up(x + sign(hsp), y, 32);
         
         if (_bump != 0)
-        {
             y -= _bump;
-        }
         else
         {
             fmod_studio_event_oneshot_3d("event:/sfx/player/misc/bump");

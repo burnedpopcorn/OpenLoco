@@ -20,9 +20,7 @@ function scr_player_titlescreen()
         }
     }
     else
-    {
         sprite_index = get_charactersprite("spr_idle");
-    }
     
     image_speed = 0.35;
 }

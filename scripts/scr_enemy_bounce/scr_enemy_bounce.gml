@@ -86,9 +86,7 @@ function scr_enemy_bounce()
     if (sprite_index == landspr && floor(image_index) == (image_number - 1))
     {
         if (global.bosshealth == 8 && !instance_exists(obj_noisey))
-        {
             instance_create(room_width - (room_width / 4), 60, obj_noisey);
-        }
         else if (global.bosshealth == 7 && !instance_exists(obj_noisey))
         {
             instance_create(room_width - (room_width / 4), 60, obj_noisey);

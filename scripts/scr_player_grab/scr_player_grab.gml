@@ -47,9 +47,7 @@ function scr_player_grab()
                         movespeed = 6;
                 }
                 else
-                {
                     movespeed = 0;
-                }
                 
                 if (movespeed > 6)
                     movespeed -= 0.1;
@@ -65,9 +63,7 @@ function scr_player_grab()
                     movespeed = 4;
             }
             else
-            {
                 movespeed = 0;
-            }
             
             if (movespeed > 4)
                 movespeed -= 0.1;
@@ -88,9 +84,7 @@ function scr_player_grab()
                     image_speed = 0.6;
             }
             else
-            {
                 image_speed = 0.35;
-            }
         }
     }
     

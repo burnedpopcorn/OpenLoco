@@ -28,9 +28,7 @@ function scr_player_zombie()
         movespeed = Approach(movespeed, 6, 0.4);
     }
     else
-    {
         movespeed = Approach(movespeed, 0, 0.25);
-    }
     
     if (sprite_index == get_charactersprite("spr_zombiewalk"))
         image_speed = abs(movespeed) / 11;

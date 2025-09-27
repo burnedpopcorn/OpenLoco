@@ -75,9 +75,7 @@ function scr_player_mach3()
             upsidedown = false;
         }
         else
-        {
             vsp = -11;
-        }
     }
     
     if (fightball == 0)
@@ -97,9 +95,7 @@ function scr_player_mach3()
             sprite_index = get_charactersprite("spr_crazyrun");
         }
         else if (movespeed <= 16 && sprite_index == get_charactersprite("spr_crazyrun"))
-        {
             sprite_index = get_charactersprite("spr_mach4");
-        }
     }
     
     if (sprite_index == get_charactersprite("spr_crazyrun") && !instance_exists(crazyruneffectid))
@@ -114,9 +110,7 @@ function scr_player_mach3()
     if (sprite_index == get_charactersprite("spr_crazyrun"))
     {
         if (flamecloud_buffer > 0)
-        {
             flamecloud_buffer--;
-        }
         else
         {
             flamecloud_buffer = 10;

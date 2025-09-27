@@ -1,9 +1,7 @@
-function calculate_parrallax_still_x(argument0)
+function calculate_parrallax_still_x(_x)
 {
     if (is_undefined(sprite) || sprite == -1)
-    {
         return 0;
-    }
     else
     {
         var w = room_width - obj_screen.actualWidth;
@@ -20,18 +18,16 @@ function calculate_parrallax_still_x(argument0)
             _w = 540;
         
         var sw = _w - obj_screen.actualWidth;
-        var r = sw * per_x * argument0;
+        var r = sw * per_x * _x;
         r = max(r, 0);
         return r;
     }
 }
 
-function calculate_parrallax_still_y(argument0)
+function calculate_parrallax_still_y(_y)
 {
     if (is_undefined(sprite) || sprite == -1)
-    {
         return 0;
-    }
     else
     {
         var h = room_height - obj_screen.actualHeight;
@@ -48,44 +44,44 @@ function calculate_parrallax_still_y(argument0)
             _h = 540;
         
         var sh = _h - obj_screen.actualHeight;
-        var r = sh * per_y * argument0;
+        var r = sh * per_y * _y;
         r = max(r, 0);
         return r;
     }
 }
 
-function safe_layer_depth(argument0, argument1)
+function safe_layer_depth(_id, _depth)
 {
-    if (layer_exists(argument0))
-        layer_depth(argument0, argument1);
+    if (layer_exists(_id))
+        layer_depth(_id, _depth);
 }
 
-function parallaxAdd(argument0, argument1)
+function parallaxAdd(_layer, _per)
 {
     var q = 
     {
-        per: argument1
+        per: _per
     };
-    global.parallaxMap[? argument0] = q;
+    global.parallaxMap[? _layer] = q;
     return q;
 }
 
-function parallaxGroupAdd(argument0)
+function parallaxGroupAdd(_layers)
 {
-    for (var i = 0; i < array_length(argument0); i++)
+    for (var i = 0; i < array_length(_layers); i++)
     {
-        var l = argument0[i];
+        var l = _layers[i];
         parallaxAdd(l[0], l[1]);
     }
 }
 
-function get_layer(argument0)
+function get_layer(_layer)
 {
     for (var i = 0; i < ds_list_size(BG_list); i++)
     {
         var l = BG_list[| i];
         
-        if (l.name == argument0)
+        if (l.name == _layer)
         {
             return l;
             break;
@@ -140,9 +136,9 @@ function parrallax_load()
             
             if (BG_arr != [])
             {
-                array_sort(BG_arr, function(argument0, argument1)
+                array_sort(BG_arr, function(_id1, _id2)
                 {
-                    return layer_get_depth(argument1) - layer_get_depth(argument0);
+                    return layer_get_depth(_id2) - layer_get_depth(_id1);
                 });
             }
         }

@@ -63,6 +63,4 @@ function scr_player_slipbanana()
         xscale *= -1;
         scr_sleep(1);
     }
-    
-    exit;
 }

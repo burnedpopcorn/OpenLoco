@@ -34,9 +34,7 @@ function scr_boss_grabbed()
             hithsp = sign(hithsp) * f;
     }
     else if (abs(hitvsp) < f)
-    {
         hitvsp = sign(hitvsp) * f;
-    }
     
     vsp = hitvsp;
     hsp = hithsp;

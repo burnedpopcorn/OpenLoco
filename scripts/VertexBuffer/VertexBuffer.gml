@@ -4,28 +4,34 @@ vertex_format_add_texcoord();
 vertex_format_add_color();
 global.vFormat = vertex_format_end();
 
-function vertex_create_face(argument0, argument1, argument2, argument3, argument4, argument5, argument6, argument7, argument8)
+function vertex_create_face(_vbuff, _vert1, _vert2, _vert3, _vert4, _col, _alpha, _width, _height)
 {
     static _texSize = 32;
     
-    var _texW = argument7 / _texSize;
-    var _texH = argument8 / _texSize;
-    vertex_position_3d(argument0, argument1.x, argument1.y, argument1.z);
-    vertex_texcoord(argument0, 0, 0);
-    vertex_color(argument0, argument5, argument6);
-    vertex_position_3d(argument0, argument2.x, argument2.y, argument2.z);
-    vertex_texcoord(argument0, _texW, 0);
-    vertex_color(argument0, argument5, argument6);
-    vertex_position_3d(argument0, argument3.x, argument3.y, argument3.z);
-    vertex_texcoord(argument0, _texW, _texH);
-    vertex_color(argument0, argument5, argument6);
-    vertex_position_3d(argument0, argument1.x, argument1.y, argument1.z);
-    vertex_texcoord(argument0, 0, 0);
-    vertex_color(argument0, argument5, argument6);
-    vertex_position_3d(argument0, argument3.x, argument3.y, argument3.z);
-    vertex_texcoord(argument0, _texW, _texH);
-    vertex_color(argument0, argument5, argument6);
-    vertex_position_3d(argument0, argument4.x, argument4.y, argument4.z);
-    vertex_texcoord(argument0, 0, _texH);
-    vertex_color(argument0, argument5, argument6);
+    var _texW = _width / _texSize;
+    var _texH = _height / _texSize;
+	
+    vertex_position_3d(_vbuff, _vert1.x, _vert1.y, _vert1.z);
+    vertex_texcoord(_vbuff, 0, 0);
+    vertex_color(_vbuff, _col, _alpha);
+	
+    vertex_position_3d(_vbuff, _vert2.x, _vert2.y, _vert2.z);
+    vertex_texcoord(_vbuff, _texW, 0);
+    vertex_color(_vbuff, _col, _alpha);
+	
+    vertex_position_3d(_vbuff, _vert3.x, _vert3.y, _vert3.z);
+    vertex_texcoord(_vbuff, _texW, _texH);
+    vertex_color(_vbuff, _col, _alpha);
+	
+    vertex_position_3d(_vbuff, _vert1.x, _vert1.y, _vert1.z);
+    vertex_texcoord(_vbuff, 0, 0);
+    vertex_color(_vbuff, _col, _alpha);
+	
+    vertex_position_3d(_vbuff, _vert3.x, _vert3.y, _vert3.z);
+    vertex_texcoord(_vbuff, _texW, _texH);
+    vertex_color(_vbuff, _col, _alpha);
+	
+    vertex_position_3d(_vbuff, _vert4.x, _vert4.y, _vert4.z);
+    vertex_texcoord(_vbuff, 0, _texH);
+    vertex_color(_vbuff, _col, _alpha);
 }

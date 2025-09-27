@@ -128,11 +128,11 @@ function instakill()
     state = states.chainsaw;
 }
 
-function bcb_doHitstun(argument0 = 10, argument1)
+function bcb_doHitstun(_hitLag = 10, _baddie)
 {
     with (obj_player1)
     {
-        hitLag = argument0;
+        hitLag = _hitLag;
         hitX = x;
         hitY = y;
         
@@ -145,16 +145,16 @@ function bcb_doHitstun(argument0 = 10, argument1)
         }
     }
     
-    argument1.hitLag = argument0;
-    argument1.hitX = argument1.x;
-    argument1.hitY = argument1.y;
-    argument1.invtime = 25;
-    argument1.hithsp = -argument1.image_xscale * (abs(hsp) + 2);
+    _baddie.hitLag = _hitLag;
+    _baddie.hitX = _baddie.x;
+    _baddie.hitY = _baddie.y;
+    _baddie.invtime = 25;
+    _baddie.hithsp = -_baddie.image_xscale * (abs(hsp) + 2);
     
-    if (abs(argument1.hithsp) < 10)
-        argument1.hithsp = -argument1.image_xscale;
+    if (abs(_baddie.hithsp) < 10)
+        _baddie.hithsp = -_baddie.image_xscale;
     
-    argument1.hitvsp = -5;
-    argument1.state = states.hit;
+    _baddie.hitvsp = -5;
+    _baddie.state = states.hit;
     obj_player1.state = states.chainsaw;
 }

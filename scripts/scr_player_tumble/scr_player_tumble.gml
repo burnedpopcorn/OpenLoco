@@ -34,9 +34,7 @@ function scr_player_tumble()
             image_index = 0;
         }
         else
-        {
             sprite_index = get_charactersprite("spr_machroll");
-        }
     }
     
     if (sprite_index == get_charactersprite("spr_dive") && key_jump)
@@ -110,9 +108,7 @@ function scr_player_tumble()
                 image_index = 0;
             }
             else
-            {
                 state = states.normal;
-            }
         }
     }
     

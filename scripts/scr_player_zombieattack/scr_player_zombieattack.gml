@@ -20,9 +20,7 @@ function scr_player_zombieattack()
             movespeed = Approach(movespeed, 0, 0.25);
     }
     else
-    {
         movespeed = Approach(movespeed, 0, 0.25);
-    }
     
     if (sprite_index == get_charactersprite("spr_zombieattack") && floor(image_index) == (image_number - 1))
     {

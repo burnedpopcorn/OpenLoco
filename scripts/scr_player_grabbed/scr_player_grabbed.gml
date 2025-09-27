@@ -247,9 +247,7 @@ function scr_player_grabbed()
             }
             
             if (obj_player1.state != states.mach3)
-            {
                 sprite_index = get_charactersprite("spr_hurt");
-            }
             else
             {
                 sprite_index = get_charactersprite("spr_fightball");
@@ -511,9 +509,7 @@ function scr_player_grabbed()
             }
             
             if (obj_player2.state != states.mach3)
-            {
                 sprite_index = get_charactersprite("spr_hurt", obj_player2);
-            }
             else
             {
                 sprite_index = get_charactersprite("spr_fightball");

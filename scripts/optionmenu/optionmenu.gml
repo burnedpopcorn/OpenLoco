@@ -1,45 +1,46 @@
-function add_option(argument0, argument1)
+#region Menu Functions
+function add_option(_type, _data)
 {
     array_push(options, 
     {
-        type: argument0,
-        data: argument1
+        type: _type,
+        data: _data
     });
 }
 
-function add_toggle(argument0, argument1 = false)
+function add_toggle(_name, _toggle = false)
 {
     add_option("toggle", 
     {
-        name: argument0,
-        toggle: argument1
+        name: _name,
+        toggle: _toggle
     });
 }
 
-function add_select(argument0, argument1, argument2)
+function add_select(_name, _options, _index)
 {
     add_option("select", 
     {
-        name: argument0,
-        options: argument1,
-        index: argument2 ?? 0
+        name: _name,
+        options: _options,
+        index: _index ?? 0
     });
 }
 
-function add_button(argument0, argument1)
+function add_button(_name, _func)
 {
-    pause_options_map[? argument0] = {
-        name: argument0,
-        func: argument1
+    pause_options_map[? _name] = {
+        name: _name,
+        func: _func
     };
 }
 
-function add_button2(argument0, argument1)
+function add_button2(_name, _callback)
 {
     add_option("button", 
     {
-        name: argument0,
-        callback: argument1
+        name: _name,
+        callback: _callback
     });
 }
 
@@ -50,6 +51,7 @@ function add_hr()
         name: undefined
     });
 }
+#endregion
 
 function optionmenu_render()
 {

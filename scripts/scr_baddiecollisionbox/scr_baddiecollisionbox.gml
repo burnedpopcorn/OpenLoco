@@ -1,24 +1,24 @@
-function bcb_update(argument0)
+function bcb_update(_baddie)
 {
-    if (!instance_exists(argument0) || obj_player1.cutscene || obj_player1.state == 7)
+    if (!instance_exists(_baddie) || obj_player1.cutscene || obj_player1.state == states.firemouth)
         exit;
     
     if (place_meeting(x, y, obj_player1))
     {
         var p = instance_place(x, y, obj_player);
         
-        if (argument0.state != states.grabbed && instance_exists(argument0))
+        if (_baddie.state != states.grabbed && instance_exists(_baddie))
         {
             with (p)
             {
-                if (instakillmove == 1 && argument0.invtime == 0)
+                if (instakillmove == 1 && _baddie.invtime == 0)
                     instakill();
                 
-                if (y < argument0.y && attacking == 0 && !argument0.linethrown && !argument0.thrown && sprite_index != get_charactersprite("spr_mach2jump") && (state == states.jump || state == states.grab) && vsp > 0 && argument0.vsp >= 0 && sprite_index != get_charactersprite("spr_stompprep"))
+                if (y < _baddie.y && attacking == 0 && !_baddie.linethrown && !_baddie.thrown && sprite_index != get_charactersprite("spr_mach2jump") && (state == states.jump || state == states.grab) && vsp > 0 && _baddie.vsp >= 0 && sprite_index != get_charactersprite("spr_stompprep"))
                 {
                     fmod_studio_event_oneshot_3d("event:/sfx/enemy/stomped");
                     
-                    with (argument0)
+                    with (_baddie)
                     {
                         xscale = 1.4;
                         yscale = 0.6;
@@ -48,12 +48,12 @@ function bcb_update(argument0)
                     }
                 }
                 
-                if (argument0.stuntouchbuffer <= 0 && argument0.state != states.throwing && argument0.vsp > 0 && (state == states.mach2 || state == states.tumble))
+                if (_baddie.stuntouchbuffer <= 0 && _baddie.state != states.throwing && _baddie.vsp > 0 && (state == states.mach2 || state == states.tumble))
                 {
-                    argument0.stuntouchbuffer = 15;
+                    _baddie.stuntouchbuffer = 15;
                     var lag = 0;
                     
-                    with (argument0)
+                    with (_baddie)
                     {
                         instance_create(x, y, obj_bangeffect);
                         state = states.hit;
@@ -82,13 +82,13 @@ function bcb_update(argument0)
                     }
                 }
                 
-                if (state == states.handstandjump && sprite_index == get_charactersprite("spr_shoulderbashstart") && argument0.state != states.hit)
+                if (state == states.handstandjump && sprite_index == get_charactersprite("spr_shoulderbashstart") && _baddie.state != states.hit)
                 {
-                    argument0.stuntouchbuffer = 15;
+                    _baddie.stuntouchbuffer = 15;
                     var lag = 10;
                     var spd = [0, 0];
                     
-                    with (argument0)
+                    with (_baddie)
                     {
                         instance_create(x, y, obj_parryeffect);
                         state = states.hit;
@@ -106,29 +106,29 @@ function bcb_update(argument0)
                         {
                             image_index = 1;
                             spd = [0, -25];
-                            argument0.linethrown = 1;
+                            _baddie.linethrown = 1;
                         }
                         else
                         {
                             image_index = 2;
-                            spd = [-25 * argument0.image_xscale, 0];
-                            argument0.linethrown = 1;
+                            spd = [-25 * _baddie.image_xscale, 0];
+                            _baddie.linethrown = 1;
                         }
                     }
                     else if (key_up)
                     {
                         image_index = 1;
                         spd = [0, -25];
-                        argument0.linethrown = 1;
+                        _baddie.linethrown = 1;
                     }
                     else if (-key_down)
                     {
                         image_index = 0;
                         spd = [0, 25];
-                        argument0.linethrown = 1;
+                        _baddie.linethrown = 1;
                     }
                     
-                    with (argument0)
+                    with (_baddie)
                     {
                         hithsp = spd[0];
                         hitvsp = spd[1];
@@ -169,11 +169,11 @@ function bcb_update(argument0)
                         
                         swingdingendcooldown = 0;
                         state = states.grab;
-                        baddiegrabbedID = argument0;
-                        argument0.state = states.grabbed;
-                        argument0.grabbedby = 1;
+                        baddiegrabbedID = _baddie;
+                        _baddie.state = states.grabbed;
+                        _baddie.grabbedby = 1;
                         
-                        with (argument0)
+                        with (_baddie)
                         {
                             if (object_index == obj_waluigiboss)
                                 scr_boss_grabbed();
@@ -181,9 +181,9 @@ function bcb_update(argument0)
                     }
                     else
                     {
-                        baddiegrabbedID = argument0;
-                        argument0.state = states.grabbed;
-                        argument0.grabbedby = 1;
+                        baddiegrabbedID = _baddie;
+                        _baddie.state = states.grabbed;
+                        _baddie.grabbedby = 1;
                         sprite_index = get_charactersprite("spr_piledriver");
                         vsp = -14;
                         state = states.superslam;
@@ -191,13 +191,13 @@ function bcb_update(argument0)
                         image_index = 0;
                     }
                 }
-                else if ((state == states.handstandjump || state == states.lungeattack) && argument0.lunged == 0 && argument0.state != states.superslam && global.laps >= 6)
+                else if ((state == states.handstandjump || state == states.lungeattack) && _baddie.lunged == 0 && _baddie.state != states.superslam && global.laps >= 6)
                 {
                     fmod_studio_event_oneshot_3d("event:/sfx/player/misc/kill");
-                    argument0.state = states.superslam;
-                    argument0.image_xscale = -xscale;
-                    argument0.lungeHP--;
-                    argument0.lunged = 1;
+                    _baddie.state = states.superslam;
+                    _baddie.image_xscale = -xscale;
+                    _baddie.lungeHP--;
+                    _baddie.lunged = 1;
                     trace("Lungeattack1");
                     state = states.lungeattack;
                     
@@ -206,7 +206,7 @@ function bcb_update(argument0)
                     
                     image_index = 0;
                     lunge_hits++;
-                    bcb_doHitstun(10, argument0);
+                    bcb_doHitstun(10, _baddie);
                 }
             }
         }

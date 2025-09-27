@@ -63,9 +63,7 @@ function scr_player_slipnslide()
         }
     }
     else
-    {
         grav = 0.5;
-    }
     
     if (movespeed == 0 && !scr_slope() && !place_meeting(x, y, obj_currentwater))
     {

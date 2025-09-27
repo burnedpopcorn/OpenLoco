@@ -5,5 +5,4 @@ function scr_pummel()
     state = states.tackle;
     movespeed = 4;
     vsp = -3;
-    exit;
 }

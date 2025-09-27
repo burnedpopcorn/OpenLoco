@@ -15,9 +15,7 @@ function scr_player_meteorpep()
         hsp = floor(-xscale * movespeed);
     }
     else
-    {
         hsp = 0;
-    }
     
     if (scr_solid(x - 1, y) && (xscale == 1 && hsp != 0))
     {

@@ -14,9 +14,7 @@ function scr_player_superslam()
     if (sprite_index == get_charactersprite("spr_piledriver") && vsp >= 0)
         vsp += 0.5;
     
-    if (key_special2 && vsp < 0)
-    {
-    }
+    if (key_special2 && vsp < 0) { }
     
     if (grounded && !place_meeting(x, y + 1, obj_destructibles) && sprite_index == get_charactersprite("spr_piledriver") && vsp > 0)
     {
@@ -63,9 +61,7 @@ function scr_player_superslam()
             movespeed = 6;
     }
     else
-    {
         movespeed = 0;
-    }
     
     if (movespeed > 6)
         movespeed -= 0.1;
@@ -77,6 +73,4 @@ function scr_player_superslam()
         image_speed = 0.35;
     else
         image_speed = 0.5;
-    
-    exit;
 }

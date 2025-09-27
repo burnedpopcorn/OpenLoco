@@ -16,7 +16,5 @@ function scr_player_lawnmowerslide()
         }
     }
     else
-    {
         image_speed = 0.35;
-    }
 }

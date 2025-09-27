@@ -71,9 +71,7 @@ function scr_player_crouch()
         crouchAnim = 0;
         
         if (steppybuffer > 0)
-        {
             steppybuffer--;
-        }
         else
         {
             create_particle(x, y + 43, 1, 0);

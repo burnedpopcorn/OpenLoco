@@ -1,6 +1,5 @@
-function scr_panicbg_init()
-{
-}
+// unused
+function scr_panicbg_init() { }
 
 function scr_parallax_init()
 {
@@ -45,6 +44,4 @@ function scr_parallax_end()
         if (surface_exists(global.parallaxbg_surface))
             surface_reset_target();
     }
-    
-    exit;
 }

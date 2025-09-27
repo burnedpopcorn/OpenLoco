@@ -82,9 +82,7 @@ function scr_player_grabbing()
             movespeed = 6;
     }
     else
-    {
         movespeed = 0;
-    }
     
     if (move != 0 && grounded)
     {
@@ -96,9 +94,7 @@ function scr_player_grabbing()
             image_speed = 0.6;
     }
     else
-    {
         image_speed = 0.35;
-    }
     
     if (!instance_exists(obj_cloudeffect) && (!place_meeting(x, y, obj_water2) && (grounded && (move != 0 && (floor(image_index) == 4 || floor(image_index) == 10)))))
         instance_create(x, y + 43, obj_cloudeffect);

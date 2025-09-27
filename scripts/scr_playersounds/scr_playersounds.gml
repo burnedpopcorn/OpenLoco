@@ -1,6 +1,5 @@
-function audio_safe_stop(argument0)
-{
-}
+// unused
+function audio_safe_stop(argument0) { }
 
 function init_playersounds()
 {
@@ -34,7 +33,35 @@ function init_playersounds()
 
 function update_playersounds()
 {
-    var _snd_array = [idlevoice, happyvoice, hurtvoice, jumpsnd, grabsnd, uppercutsnd, groundpoundsnd, machsnd, machrollsnd, mach2jumpsnd, machdriftsnd, machslidesnd, divesnd, superjumpsnd, tauntsnd, styledtauntsnd, supertauntsnd, tumblesnd, slipbanansnd, slipendsnd, shotgunsnd, capegetsnd, capeupsnd, capedownsnd, rollgetupsnd, genowalksnd];
+    var _snd_array = 
+	[
+		idlevoice, 
+		happyvoice, 
+		hurtvoice, 
+		jumpsnd, 
+		grabsnd, 
+		uppercutsnd, 
+		groundpoundsnd, 
+		machsnd, 
+		machrollsnd, 
+		mach2jumpsnd, 
+		machdriftsnd, 
+		machslidesnd, 
+		divesnd, 
+		superjumpsnd, 
+		tauntsnd, 
+		styledtauntsnd, 
+		supertauntsnd, 
+		tumblesnd, 
+		slipbanansnd, 
+		slipendsnd, 
+		shotgunsnd, 
+		capegetsnd, 
+		capeupsnd, 
+		capedownsnd, 
+		rollgetupsnd, 
+		genowalksnd
+	];
     var _playerstate = state;
     
     if (state == states.chainsaw)
@@ -44,9 +71,7 @@ function update_playersounds()
         fmod_studio_event_instance_move(_snd_array[i]);
     
     if (_playerstate != states.mach2 && _playerstate != states.mach3 && _playerstate != states.climbwall)
-    {
         fmod_studio_event_instance_stop(machsnd, FMOD_STUDIO_STOP_MODE.IMMEDIATE);
-    }
     else
     {
         var _machnum = 0;
@@ -88,9 +113,7 @@ function update_playersounds()
             fmod_studio_event_instance_start(superjumpsnd);
     }
     else
-    {
         fmod_studio_event_instance_stop(superjumpsnd, FMOD_STUDIO_STOP_MODE.IMMEDIATE);
-    }
     
     if ((_playerstate != states.freefall && _playerstate != states.freefall) || sprite_index == get_charactersprite("spr_Sjumpcancelstart"))
         fmod_studio_event_instance_stop(groundpoundsnd, FMOD_STUDIO_STOP_MODE.IMMEDIATE);

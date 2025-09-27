@@ -41,13 +41,9 @@ function scr_player_slidekick()
         sprite_index = get_charactersprite("spr_rollgetup");
         
         if (abs(movespeed) >= 12 && key_attack)
-        {
             state = states.mach3;
-        }
         else if (abs(movespeed) < 12 && abs(movespeed) > 5 && key_attack)
-        {
             state = states.mach2;
-        }
         else if (abs(movespeed) <= 5 || !key_attack)
         {
             sprite_index = get_charactersprite("spr_land");

@@ -31,7 +31,7 @@ function baddie_pummel()
                 if (bID.elite)
                     bID.elitehit--;
                 
-                state = states.superslam;//uhhhh, why 43
+                state = states.superslam;
                 image_xscale = -obj_player1.xscale;
                 
                 if (set_throw)
@@ -64,7 +64,7 @@ function baddie_pummel()
                         redo_lunge = 1;
                     
                     if (redo_lunge)
-                        bID.state = 43;
+                        bID.state = states.superslam;
                 }
                 
                 if (set_throw)
@@ -75,6 +75,4 @@ function baddie_pummel()
             }
         }
     }
-    
-    exit;
 }

@@ -50,9 +50,7 @@ function scr_player_chainsawpogo()
             sprite_index = get_charactersprite("spr_chainsawpogo2");
     }
     else if (floor(image_index) == 4)
-    {
         sprite_index = get_charactersprite("spr_chainsawpogo2");
-    }
     
     image_speed = 0.35;
     

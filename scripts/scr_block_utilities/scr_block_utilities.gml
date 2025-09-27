@@ -28,8 +28,6 @@ function scr_destroy_tiles(argument0, argument1, argument2 = 0)
             yy++;
         }
     }
-    
-    exit;
 }
 
 function scr_destroy_tile(argument0, argument1, argument2)
@@ -37,15 +35,14 @@ function scr_destroy_tile(argument0, argument1, argument2)
     var data = tilemap_get_at_pixel(argument2, argument0, argument1);
     data = tile_set_empty(data);
     tilemap_set_at_pixel(argument2, data, argument0, argument1);
-    exit;
 }
 
-function scr_solid_line(argument0)
+function scr_solid_line(_obj)
 {
-    if (collision_line(x, y, argument0.x, argument0.y, obj_solid, false, true) != noone)
+    if (collision_line(x, y, _obj.x, _obj.y, obj_solid, false, true) != noone)
         return true;
     
-    if (collision_line(x, y, argument0.x, argument0.y, obj_slope, false, true) != noone)
+    if (collision_line(x, y, _obj.x, _obj.y, obj_slope, false, true) != noone)
         return true;
     
     return false;
@@ -61,10 +58,10 @@ function scr_destroy_nearby_tiles()
     }
 }
 
-function scr_cutoff_get_angle(argument0)
+function scr_cutoff_get_angle(_obj)
 {
-    var a = argument0.image_angle + 90;
-    var d = point_direction(0, 0, lengthdir_x(1, a) * argument0.image_yscale, lengthdir_y(1, a) * argument0.image_yscale);
+    var a = _obj.image_angle + 90;
+    var d = point_direction(0, 0, lengthdir_x(1, a) * _obj.image_yscale, lengthdir_y(1, a) * _obj.image_yscale);
     return d;
 }
 
@@ -97,9 +94,7 @@ function scr_cutoff()
                 with (b)
                 {
                     if (!place_meeting(x, y, obj_solid))
-                    {
                         instance_destroy();
-                    }
                     else if (other.object_index == obj_tiledestroy || ((object_index != obj_cutoffsmall || object_index != obj_cutoffsmallwhite || other.object_index == obj_secretblock) && (object_index != obj_cutoff || object_index != obj_cutoffwhite || other.object_index == obj_secretbigblock || other.object_index == obj_secretmetalblock)))
                     {
                         var a = scr_cutoff_get_angle(b);

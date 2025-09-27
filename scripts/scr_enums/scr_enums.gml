@@ -1,3 +1,10 @@
+// NOTE
+// - Any unknown{val} enums are used in code somewhere, but rarely and are basically unused
+// - ones labeled as unused dont appear anywhere in code, but are here because they are present in SAGE build 
+// - lines like // {val} means that entry existed, but doesn't exist in the code, and idk the would be name of it
+
+// also you could just remove the unknown and unused ones and the values for every entry
+// they're just here to be faithful to the original build
 enum states 
 {
     normal				= 0,
@@ -5,7 +12,7 @@ enum states
 	tumble				= 2,
     finishingblow		= 3,
     ejected				= 4,
-	transitioncutscene	= 5, // unused
+	transitioncutscene	= 5, // unused except one place
 	fireass				= 6,
     firemouth			= 7,
 	titlescreen			= 8,

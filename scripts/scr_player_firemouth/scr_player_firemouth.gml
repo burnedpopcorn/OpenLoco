@@ -101,9 +101,7 @@ function scr_player_firemouth()
             image_speed = 0.6;
     }
     else
-    {
         image_speed = 0.35;
-    }
     
     if (hsp != 0 && ((floor(image_index) == 0 || floor(image_index) == 2) && (steppy == 0 && grounded)))
         steppy = 1;

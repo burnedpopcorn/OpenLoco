@@ -1,14 +1,12 @@
-function get_charactersprite(argument0 = "spr_idle", argument1 = object_index)
+function get_charactersprite(_sprite_name = "spr_idle", _player = object_index)
 {
     var _sprite_extension = "_damian";
     
-    if (argument1 != obj_player1)
-    {
-        argument1 = obj_player1;
-    }
+    if (_player != obj_player1)
+        _player = obj_player1;
     else
     {
-        switch (argument1.character)
+        switch (_player.character)
         {
             default:
                 _sprite_extension = "_damian";
@@ -24,29 +22,27 @@ function get_charactersprite(argument0 = "spr_idle", argument1 = object_index)
         }
     }
     
-    var _fullsprite = asset_get_index(argument0 + _sprite_extension);
-    var _damiansprite = asset_get_index(argument0 + "_damian");
-    var _placeholderspr = string_starts_with(argument0, "spr_tv") ? spr_tv_placeholder : spr_idle_damian;
+    var _fullsprite = asset_get_index(_sprite_name + _sprite_extension);
+    var _damiansprite = asset_get_index(_sprite_name + "_damian");
+    var _placeholderspr = string_starts_with(_sprite_name, "spr_tv") ? spr_tv_placeholder : spr_idle_damian;
     
     if (sprite_exists(_fullsprite))
         return _fullsprite;
     else if (sprite_exists(_damiansprite) && !sprite_exists(_fullsprite))
-        return asset_get_index(argument0 + "_damian");
+        return asset_get_index(_sprite_name + "_damian");
     else if (!sprite_exists(_fullsprite) && !sprite_exists(_damiansprite))
         return _placeholderspr;
 }
 
-function get_charactername(argument0 = object_index)
+function get_charactername(_player = object_index)
 {
     var _charname = "Damian";
     
-    if (argument0 != obj_player1)
-    {
-        argument0 = obj_player1;
-    }
+    if (_player != obj_player1)
+        _player = obj_player1;
     else
     {
-        switch (argument0.character)
+        switch (_player.character)
         {
             default:
                 _charname = "Damian";

@@ -42,9 +42,7 @@ function scr_player_mach2()
             upsidedown = false;
         }
         else
-        {
             vsp = -11;
-        }
     }
     
     if (grounded && vsp > 0)
@@ -201,9 +199,7 @@ function scr_player_mach2()
         var _bump = slope_check_up(x + sign(hsp), y, 32);
         
         if (_bump != 0)
-        {
             y -= _bump;
-        }
         else
         {
             fmod_studio_event_oneshot_3d("event:/sfx/player/misc/wallsplat");

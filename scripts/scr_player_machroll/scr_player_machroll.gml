@@ -45,9 +45,7 @@ function scr_player_machroll()
         instance_create(x, y + 43, obj_cloudeffect);
     
     if (grounded)
-    {
         sprite_index = get_charactersprite("spr_machroll");
-    }
     else if (sprite_index != get_charactersprite("spr_dive"))
     {
         sprite_index = get_charactersprite("spr_dive");

@@ -6,9 +6,7 @@ function scr_deactivate_escape()
             event_perform(ev_other, ev_room_start);
     }
     
-    with (obj_comboend)
-    {
-    }
+    with (obj_comboend) { }
 }
 
 function activate_escape()

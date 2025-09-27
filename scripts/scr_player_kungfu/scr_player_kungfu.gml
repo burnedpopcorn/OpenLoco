@@ -29,9 +29,7 @@ function scr_player_kungfu()
                 sprite_index = get_charactersprite("spr_kungfuair3");
         }
         else
-        {
             kungfu_transition();
-        }
     }
     
     if (scr_solid(x + xscale, y) && !place_meeting(x + sign(hsp), y, obj_destructibles))

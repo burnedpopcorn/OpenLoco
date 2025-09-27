@@ -10,9 +10,7 @@ function scr_player_backbreaker()
             movespeed = 0;
         }
         else
-        {
             hsp = xscale * movespeed;
-        }
         
         landAnim = 0;
         

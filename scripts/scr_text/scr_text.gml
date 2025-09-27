@@ -1,3 +1,2 @@
-function scr_text(argument0, argument1)
-{
-}
+// unused
+function scr_text(argument0, argument1) { }

@@ -49,9 +49,7 @@ function scr_player_jump()
             movespeed = 0;
     }
     else
-    {
         movespeed = 0;
-    }
     
     if (movespeed > 8)
         movespeed -= 0.1;

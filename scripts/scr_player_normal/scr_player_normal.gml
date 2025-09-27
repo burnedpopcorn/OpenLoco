@@ -216,9 +216,7 @@ function scr_player_normal()
                         }
                     }
                     else
-                    {
                         steppybuffer = 0;
-                    }
                 }
             }
             
@@ -358,9 +356,7 @@ function scr_player_normal()
             movespeed = 6;
     }
     else
-    {
         movespeed = 0;
-    }
     
     if (movespeed > 6)
         movespeed -= 0.1;

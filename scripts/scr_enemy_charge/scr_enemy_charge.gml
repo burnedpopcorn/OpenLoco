@@ -86,9 +86,7 @@ function scr_enemy_charge()
                 }
             }
             else
-            {
                 movespeed = Approach(movespeed, 16, 0.5);
-            }
         }
         
         if ((place_meeting_solid(x + sign(hsp), y) && !place_meeting_slope(x + sign(hsp), y + 1)) || (grounded && ((place_meeting_collision(x + sign(hsp), y - 64) || place_meeting_solid(x + sign(hsp), y - 64)) && place_meeting_slope(x, y + 1))))

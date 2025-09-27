@@ -1,4 +1,4 @@
-function scr_genoshoot(argument0 = false)
+function scr_genoshoot(_downwards = false)
 {
     breakdance_pressed = 0;
     genodelay = genodelay_max;
@@ -14,13 +14,11 @@ function scr_genoshoot(argument0 = false)
     image_index = 0;
     sprite_index = spr_shotgunshoot;
     
-    if (argument0)
+    if (_downwards)
     {
         with (instance_create(x + (xscale * 20), y + 20, obj_genobullet))
             downwards = true;
     }
     else
-    {
         instance_create(x + (xscale * 20), y + 20, obj_genobullet);
-    }
 }

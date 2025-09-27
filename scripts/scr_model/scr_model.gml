@@ -1,8 +1,8 @@
-function load_model(argument0, argument1)
+function load_model(_file, _vertex_info)
 {
     model = vertex_create_buffer();
-    vertex_begin(model, argument1.vertex_format);
-    var file = file_text_open_read(argument0);
+    vertex_begin(model, _vertex_info.vertex_format);
+    var file = file_text_open_read(_file);
     var version = file_text_read_real(file);
     
     if (version != 100)
@@ -171,9 +171,7 @@ function load_obj(argument0, argument1, argument2)
                 terms[index] = "";
             }
             else
-            {
                 terms[index] = terms[index] + string_char_at(line, i);
-            }
         }
         
         switch (terms[0])
@@ -226,9 +224,7 @@ function load_obj(argument0, argument1, argument2)
                 terms[index] = "";
             }
             else
-            {
                 terms[index] += string_char_at(line, i);
-            }
         }
         
         switch (terms[0])
@@ -264,9 +260,7 @@ function load_obj(argument0, argument1, argument2)
                             data[index] = "";
                         }
                         else
-                        {
                             data[index] += string_char_at(terms[n], i);
-                        }
                     }
                     
                     var xx = vertex_x[| real(data[0]) - 1];

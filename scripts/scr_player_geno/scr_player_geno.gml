@@ -31,9 +31,7 @@ function scr_geno_normal()
         hsp = approach(hsp, 7 * move, 0.75);
     }
     else
-    {
         hsp = approach(hsp, 7 * move, 0.35);
-    }
     
     if (!grounded)
     {
@@ -80,9 +78,7 @@ function scr_geno_normal()
             fmod_studio_event_instance_start(genowalksnd);
     }
     else if (move == 0)
-    {
         fmod_studio_event_instance_stop(genowalksnd, FMOD_STUDIO_STOP_MODE.IMMEDIATE);
-    }
     
     if (key_attack2)
     {

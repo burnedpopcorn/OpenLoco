@@ -1,7 +1,6 @@
-function draw_sprite_ext_flash(argument0, argument1, argument2, argument3, argument4, argument5, argument6, argument7, argument8)
+function draw_sprite_ext_flash(_sprite, _subimg, _x, _y, _xscale, _yscale, _rot, _col, _alpha)
 {
-    gpu_set_fog(true, argument7, 0, 1);
-    draw_sprite_ext(argument0, argument1, argument2, argument3, argument4, argument5, argument6, argument7, argument8);
+    gpu_set_fog(true, _col, 0, 1);
+    draw_sprite_ext(_sprite, _subimg, _x, _y, _xscale, _yscale, _rot, _col, _alpha);
     gpu_set_fog(false, c_black, 0, 0);
-    exit;
 }

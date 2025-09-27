@@ -23,9 +23,7 @@ function scr_player_lawnmower()
                 sprite_index = get_charactersprite("spr_mowerland");
             }
             else if (sprite_index != get_charactersprite("spr_mowerland") && sprite_index != get_charactersprite("spr_mowerturnend") && !(move == -xscale))
-            {
                 sprite_index = get_charactersprite("spr_mower");
-            }
         }
         
         if (move == -xscale && movespeed >= 6)
@@ -169,9 +167,7 @@ function scr_player_lawnmowerOLD()
             sprite_index = get_charactersprite("spr_mowerland");
         }
         else if (sprite_index != get_charactersprite("spr_mowerland"))
-        {
             sprite_index = get_charactersprite("spr_mower");
-        }
     }
     
     if (floor(image_index) == (image_number - 1))

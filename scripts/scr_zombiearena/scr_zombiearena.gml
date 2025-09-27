@@ -6,9 +6,7 @@ function tombstone_wave_add(argument0, argument1)
             array_push(argument0, argument[i]);
     }
     else
-    {
         array_push(argument0, argument1);
-    }
 }
 
 function tombstone_wave_create(argument0)

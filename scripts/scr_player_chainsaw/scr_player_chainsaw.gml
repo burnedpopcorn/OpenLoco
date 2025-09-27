@@ -19,7 +19,7 @@ function scr_player_chainsaw()
     else
         image_speed = 0;
     
-    if (_st == 120)
+    if (_st == states.lungeattack)
     {
         if (key_slap && input_attack_buffer < 25)
             input_attack_buffer = 40;
@@ -63,9 +63,7 @@ function scr_player_chainsaw()
             jumpstop = 0;
             image_index = 0;
         }
-        else if (tauntstoredstate == states.handstandjump || tauntstoredstate == 3)
-        {
+        else if (tauntstoredstate == states.handstandjump || tauntstoredstate == states.finishingblow)
             state = states.normal;
-        }
     }
 }

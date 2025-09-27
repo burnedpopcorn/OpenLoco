@@ -1,4 +1,4 @@
-function scr_savescore(argument0)
+function scr_savescore(_level)
 {
     if (global.collect >= global.srank)
     {
@@ -8,21 +8,13 @@ function scr_savescore(argument0)
             global.rank = "l";
     }
     else if (global.collect > global.arank)
-    {
         global.rank = "a";
-    }
     else if (global.collect > global.brank)
-    {
         global.rank = "b";
-    }
     else if (global.collect > global.crank)
-    {
         global.rank = "c";
-    }
     else
-    {
         global.rank = "d";
-    }
     
     with (obj_camera)
     {
@@ -35,44 +27,44 @@ function scr_savescore(argument0)
     
     ini_open_from_string(obj_savesystem.ini_str);
     
-    if (ini_read_real("Highscore", argument0, 0) < global.collect)
-        ini_write_real("Highscore", argument0, global.collect);
+    if (ini_read_real("Highscore", _level, 0) < global.collect)
+        ini_write_real("Highscore", _level, global.collect);
     
-    if (ini_read_real("Treasure", argument0, 0) == 0)
-        ini_write_real("Treasure", argument0, global.treasure);
+    if (ini_read_real("Treasure", _level, 0) == 0)
+        ini_write_real("Treasure", _level, global.treasure);
     
     if (global.secretfound > 3)
         global.secretfound = 3;
     
-    if (ini_read_real("Secret", argument0, 0) < global.secretfound)
-        ini_write_string("Secret", argument0, global.secretfound);
+    if (ini_read_real("Secret", _level, 0) < global.secretfound)
+        ini_write_string("Secret", _level, global.secretfound);
     
-    if (ini_read_real("Toppin", argument0 + "1", 0) == 0)
-        ini_write_real("Toppin", argument0 + "1", global.shroomfollow);
+    if (ini_read_real("Toppin", _level + "1", 0) == 0)
+        ini_write_real("Toppin", _level + "1", global.shroomfollow);
     
-    if (ini_read_real("Toppin", argument0 + "2", 0) == 0)
-        ini_write_real("Toppin", argument0 + "2", global.cheesefollow);
+    if (ini_read_real("Toppin", _level + "2", 0) == 0)
+        ini_write_real("Toppin", _level + "2", global.cheesefollow);
     
-    if (ini_read_real("Toppin", argument0 + "3", 0) == 0)
-        ini_write_real("Toppin", argument0 + "3", global.tomatofollow);
+    if (ini_read_real("Toppin", _level + "3", 0) == 0)
+        ini_write_real("Toppin", _level + "3", global.tomatofollow);
     
-    if (ini_read_real("Toppin", argument0 + "4", 0) == 0)
-        ini_write_real("Toppin", argument0 + "4", global.sausagefollow);
+    if (ini_read_real("Toppin", _level + "4", 0) == 0)
+        ini_write_real("Toppin", _level + "4", global.sausagefollow);
     
-    if (ini_read_real("Toppin", argument0 + "5", 0) == 0)
-        ini_write_real("Toppin", argument0 + "5", global.pineapplefollow);
+    if (ini_read_real("Toppin", _level + "5", 0) == 0)
+        ini_write_real("Toppin", _level + "5", global.pineapplefollow);
     
-    scr_write_rank(argument0);
+    scr_write_rank(_level);
     
-    if (global.lap == 1 && ini_read_real("Laps", argument0, 0) < global.laps)
-        ini_write_string("Laps", argument0, global.laps);
+    if (global.lap == 1 && ini_read_real("Laps", _level, 0) < global.laps)
+        ini_write_string("Laps", _level, global.laps);
     
     obj_savesystem.ini_str = ini_close();
 }
 
-function scr_write_rank(argument0)
+function scr_write_rank(_level)
 {
-    var _rank = ini_read_string("Ranks", argument0, "d");
+    var _rank = ini_read_string("Ranks", _level, "d");
     var _map = ds_map_create();
     _map[? "d"] = 0;
     _map[? "c"] = 1;
@@ -82,8 +74,7 @@ function scr_write_rank(argument0)
     _map[? "l"] = 5;
     
     if (_map[? global.rank] >= _map[? _rank])
-        ini_write_string("Ranks", argument0, global.rank);
+        ini_write_string("Ranks", _level, global.rank);
     
     ds_map_destroy(_map);
-    exit;
 }

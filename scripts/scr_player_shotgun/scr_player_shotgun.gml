@@ -15,9 +15,7 @@ function scr_player_shotgun()
             movespeed = Approach(movespeed, -8, 0.2);
     }
     else
-    {
         movespeed = Approach(movespeed, 0, 0.1);
-    }
     
     if (floor(image_index) == (image_number - 1) && !instance_exists(obj_genobeam))
     {

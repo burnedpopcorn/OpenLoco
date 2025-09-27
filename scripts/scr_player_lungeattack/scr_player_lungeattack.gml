@@ -19,9 +19,7 @@ function scr_player_lungeattack()
             state = states.mach2;
     }
     else if (input_attack_buffer <= 0)
-    {
         state = states.mach2;
-    }
     
     if (key_slap && input_attack_buffer < 25)
         input_attack_buffer = 40;
@@ -33,6 +31,4 @@ function scr_player_lungeattack()
     
     if (input_attack_buffer <= 0 && sprite_index != get_charactersprite("spr_suplexmash1"))
         state = states.normal;
-    
-    exit;
 }

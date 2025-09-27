@@ -119,9 +119,7 @@ function scr_enemy_stun()
             flash = 0;
         }
         else if (destroyable)
-        {
             instance_destroy();
-        }
     }
     
     if (grounded && elite)

@@ -1,3 +1,2 @@
-function play_voiceline(argument0)
-{
-}
+// unused
+function play_voiceline(argument0) { }

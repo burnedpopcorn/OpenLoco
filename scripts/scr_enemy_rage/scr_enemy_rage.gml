@@ -14,9 +14,7 @@ function scr_enemy_rage()
                 }
             }
             else
-            {
                 hsp = 0;
-            }
             
             if (floor(image_index) == (image_number - 1))
             {

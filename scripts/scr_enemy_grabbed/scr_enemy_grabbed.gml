@@ -495,6 +495,4 @@ function check_grabbed_solid(argument0)
             }
         }
     }
-    
-    exit;
 }

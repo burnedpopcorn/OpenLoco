@@ -18,9 +18,8 @@ function dograb()
     }
 }
 
-function scr_do_geno_shit()
-{
-}
+// unused
+function scr_do_geno_shit() { }
 
 function do_groundpound()
 {
@@ -64,13 +63,9 @@ function scr_dotaunt()
             obj_camera.spdzooming = 0.1;
         }
         else if (supercharged && key_up)
-        {
             fmod_studio_event_instance_start(supertauntsnd);
-        }
         else
-        {
             fmod_studio_event_instance_start(tauntsnd);
-        }
         
         taunttimer = 20;
         tauntstoredmovespeed = movespeed;
@@ -119,9 +114,9 @@ function taunt_resetvariables()
     tauntstoredvsp = noone;
 }
 
-function do_specialmoves(argument0 = special_attack)
+function do_specialmoves(_attack = special_attack)
 {
-    switch (argument0)
+    switch (_attack)
     {
         case playerspecialmove.shoulderbash:
             sprite_index = get_charactersprite("spr_shoulderbashstart");

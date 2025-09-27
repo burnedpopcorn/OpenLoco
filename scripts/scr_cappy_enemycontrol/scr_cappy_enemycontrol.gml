@@ -49,9 +49,7 @@ function scr_cappy_enemycontrol()
                     sprite_index = get_charactersprite("spr_mach2jump");
                 }
                 else
-                {
                     sprite_index = get_charactersprite("spr_mach4");
-                }
             }
             else
             {

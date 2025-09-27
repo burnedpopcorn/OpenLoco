@@ -38,9 +38,7 @@ function scr_player_freefallland()
             }
         }
         else
-        {
             state = states.normal;
-        }
         
         jumpstop = 1;
     }

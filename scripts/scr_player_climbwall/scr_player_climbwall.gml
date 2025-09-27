@@ -24,9 +24,7 @@ function scr_player_climbwall()
         }
     }
     else
-    {
         wallspeed += 0.3;
-    }
     
     crouchslideAnim = 1;
     

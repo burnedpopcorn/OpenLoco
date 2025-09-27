@@ -1,6 +1,6 @@
-function scr_hurtplayer(argument0)
+function scr_hurtplayer(_player)
 {
-    with (argument0)
+    with (_player)
     {
         if ((state == states.knightpep || (state == states.knightpepattack || state == states.knightpepslopes)) && cutscene == 0)
             continue;

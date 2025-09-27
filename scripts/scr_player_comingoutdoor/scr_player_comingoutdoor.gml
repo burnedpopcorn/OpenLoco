@@ -42,9 +42,7 @@ function scr_player_comingoutdoor()
     if (sprite_index != get_charactersprite("spr_timesup"))
     {
         if (steppybuffer > 0)
-        {
             steppybuffer--;
-        }
         else
         {
             steppybuffer = 16;

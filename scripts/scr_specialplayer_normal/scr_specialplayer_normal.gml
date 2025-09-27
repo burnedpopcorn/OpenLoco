@@ -26,14 +26,12 @@ function scr_specialplayer_normal()
         {
             image_speed = 0.35;
             image_index = 0;
-            state = 1;
+            state = states.bounce;
             sprite_index = spr_machslideboost;
             fmod_studio_event_oneshot_3d("event:/sfx/player/mach/drift");
         }
         else
-        {
             xscale *= -1;
-        }
     }
     
     if (key_jump)
@@ -63,7 +61,7 @@ function scr_specialplayer_normal()
         if (_bump)
         {
             fmod_studio_event_oneshot_3d("event:/sfx/player/misc/bump");
-            state = 3;
+            state = states.finishingblow;
             image_index = 0;
             sprite_index = get_charactersprite("spr_wallsplat");
         }
@@ -71,7 +69,7 @@ function scr_specialplayer_normal()
     
     if (key_slap2 && input_attack_buffer == 8 && cantpunch == 0)
     {
-        state = 5;
+        state = states.transitioncutscene;
         flash = 1;
         fmod_studio_event_oneshot("event:/sfx/player/grabdash");
         
@@ -94,6 +92,6 @@ function scr_specialplayer_normal()
         if (vsp > 0)
             vsp -= wallspeed;
         
-        state = 2;
+        state = states.tumble;
     }
 }

@@ -29,9 +29,7 @@ function scr_player_uppunch()
                 movespeed = 7;
         }
         else
-        {
             movespeed = 0;
-        }
         
         if (movespeed > 7)
             movespeed -= 0.1;
@@ -46,9 +44,7 @@ function scr_player_uppunch()
                 image_speed = 0.6;
         }
         else
-        {
             image_speed = 0.35;
-        }
     }
     
     if (!grounded)

@@ -12,6 +12,7 @@ function scr_pizzagoblin_throw()
         global.throw_frame[obj_kentukykenny] = 8;
         global.throw_frame[obj_magikoopa] = 6;
         global.throw_frame[obj_pepgoblin] = 0;
+		
         global.throw_sprite = spr_plug;
         global.throw_sprite[obj_pizzagoblin] = spr_pizzagoblin_throwbomb;
         global.throw_sprite[obj_cheeserobot] = spr_cheeserobot_attack;
@@ -22,6 +23,7 @@ function scr_pizzagoblin_throw()
         global.throw_sprite[obj_kentukykenny] = spr_kentukykenny_throw;
         global.throw_sprite[obj_magikoopa] = spr_pizzard_shoot;
         global.throw_sprite[obj_pepgoblin] = spr_pepgoblin_kick;
+		
         global.reset_timer = 0;
         global.reset_timer[obj_pizzagoblin] = 200;
         global.reset_timer[obj_cheeserobot] = 200;

@@ -57,9 +57,7 @@ function scr_player_punch()
                     movespeed -= 0.1;
             }
             else if (move == xscale && movespeed < 6 && sprite_index == get_charactersprite("spr_kungfujump"))
-            {
                 movespeed += 0.2;
-            }
         }
     }
     
@@ -92,9 +90,7 @@ function scr_player_punch()
                     movespeed = 7;
             }
             else
-            {
                 movespeed = 0;
-            }
             
             if (movespeed > 7)
                 movespeed -= 0.1;
@@ -109,9 +105,7 @@ function scr_player_punch()
                     image_speed = 0.6;
             }
             else
-            {
                 image_speed = 0.35;
-            }
         }
         
         if (!grounded)
@@ -212,9 +206,7 @@ function scr_player_punch()
                 image_index = 0;
             }
             else
-            {
                 state = states.normal;
-            }
         }
     }
     

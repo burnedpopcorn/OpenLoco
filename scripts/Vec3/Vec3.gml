@@ -1,6 +1,6 @@
-function Vec3(argument0, argument1, argument2) constructor
+function Vec3(xx, yy, zz) constructor
 {
-    x = argument0;
-    y = argument1;
-    z = argument2;
+    x = xx;
+    y = yy;
+    z = zz;
 }

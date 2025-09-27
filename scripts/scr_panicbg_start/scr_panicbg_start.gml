@@ -7,7 +7,14 @@ function scr_panicbg_start()
     {
         surface_set_target(global.panicbg_surface);
         draw_clear_alpha(c_black, 0);
-        var arr = ["Backgrounds_", "Backgrounds_Ground", "Backgrounds_still", "Backgrounds_skystill", "Backgrounds_sky"];
+        var arr = 
+		[
+			"Backgrounds_", 
+			"Backgrounds_Ground", 
+			"Backgrounds_still", 
+			"Backgrounds_skystill", 
+			"Backgrounds_sky"
+		];
         
         for (var i = 0; i < array_length(arr); i++)
         {
@@ -23,6 +30,4 @@ function scr_panicbg_start()
             }
         }
     }
-    
-    exit;
 }

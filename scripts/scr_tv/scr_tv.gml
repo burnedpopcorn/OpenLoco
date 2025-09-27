@@ -1,48 +1,46 @@
-function tv_trigger_whitenoise(argument0, argument1 = 0.25, argument2 = false, argument3 = get_charactersprite("spr_tvwhitenoise"))
+function tv_trigger_whitenoise(_prev_state, _speed = 0.25, _override = false, _sprite = get_charactersprite("spr_tvwhitenoise"))
 {
     with (obj_tv)
     {
-        if (state != TVstates.whitenoise || argument2)
+        if (state != TVstates.whitenoise || _override)
         {
             state = TVstates.whitenoise;
             whitenoise_index = 0;
-            whitenoise_speed = argument1;
-            whitenoise_sprite = argument3;
+            whitenoise_speed = _speed;
+            whitenoise_sprite = _sprite;
         }
         
-        previous_state = argument0;
+        previous_state = _prev_state;
     }
 }
 
-function tv_trigger_expression(argument0, argument1, argument2, argument3 = 0.35, argument4 = true, argument5 = true, argument6 = false)
+function tv_trigger_expression(_sprite, _duration, _priority, _anim_spd = 0.35, _usepal = true, _forced = true, _instant = false)
 {
     with (obj_tv)
     {
-        var _spr = get_charactersprite(argument0);
+        var _spr = get_charactersprite(_sprite);
         
         if (expression_sprite == _spr)
             exit;
         
-        if (state == TVstates.delay && expression_priority > argument2)
+        if (state == TVstates.delay && expression_priority > _priority)
         {
             var _info = 
             {
                 sprite: _spr,
-                duration: argument1,
-                prio: argument2,
-                anim_speed: argument3,
-                usepal: argument4,
-                forced: argument5,
-                instant: argument6
+                duration: _duration,
+                prio: _priority,
+                anim_speed: _anim_spd,
+                usepal: _usepal,
+                forced: _forced,
+                instant: _instant
             };
             ds_list_add(expression_que, _info);
         }
         else
-        {
             expression_sprite = _spr;
-        }
         
-        if (!argument6)
+        if (!_instant)
         {
             tvsprite = expression_sprite;
             tv_trigger_whitenoise(TVstates.delay);
@@ -54,9 +52,9 @@ function tv_trigger_expression(argument0, argument1, argument2, argument3 = 0.35
             state = TVstates.delay;
         }
         
-        usepalette = argument4;
-        expression_forced = argument5;
-        expression_time = argument1;
+        usepalette = _usepal;
+        expression_forced = _forced;
+        expression_time = _duration;
         return _spr;
     }
 }
@@ -68,8 +66,6 @@ function tv_turnoff()
         state = TVstates.start;
         sprite_index = get_charactersprite("spr_tvoff");
     }
-    
-    exit;
 }
 
 function tv_create_prompt(argument0, argument1, argument2, argument3)
@@ -130,25 +126,18 @@ function tv_push_prompt(argument0, argument1, argument2, argument3)
         if (play)
             state = TVstates.maintv;
     }
-    
-    exit;
 }
 
-function tv_push_prompt_array(argument0)
+function tv_push_prompt_array(_tv_array)
 {
-    var i = 0;
-    var b = 0;
-    
-    for (i = 0; i < array_length(argument0); i++)
+    for (var i = 0; i < array_length(_tv_array); i++)
     {
         with (obj_tv)
         {
-            b = argument0[i];
+            var b = _tv_array[i];
             tv_push_prompt(b[0], b[1], b[2], b[3]);
         }
     }
-    
-    exit;
 }
 
 function tv_default_condition()

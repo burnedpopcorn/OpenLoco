@@ -1,47 +1,47 @@
-function music_set_paused(argument0)
+function music_set_paused(_pause)
 {
     var _truepause = 
     {
-        main_music: argument0 ? argument0 : obj_music.secret,
-        secret_music: argument0 ? argument0 : !obj_music.secret
+        main_music: _pause ? _pause : obj_music.secret,
+        secret_music: _pause ? _pause : !obj_music.secret
     };
     
     with (global.music)
     {
         fmod_studio_event_instance_set_paused(event_instance, _truepause.main_music);
         fmod_studio_event_instance_set_paused(secret_event_instance, _truepause.secret_music);
-        fmod_studio_event_instance_set_paused(pillar_instance, argument0);
+        fmod_studio_event_instance_set_paused(pillar_instance, _pause);
     }
 }
 
-function music_set_volume(argument0)
+function music_set_volume(_volume)
 {
     with (global.music)
     {
-        fmod_studio_event_instance_set_volume(event_instance, argument0);
-        fmod_studio_event_instance_set_volume(secret_event_instance, argument0);
-        fmod_studio_event_instance_set_volume(pillar_instance, argument0);
+        fmod_studio_event_instance_set_volume(event_instance, _volume);
+        fmod_studio_event_instance_set_volume(secret_event_instance, _volume);
+        fmod_studio_event_instance_set_volume(pillar_instance, _volume);
     }
 }
 
-function change_music(argument0, argument1, argument2 = false, func = function()
+function change_music(_main_mus, _secret_mus, _dont_force = false, _func = function()
 {
     fmod_studio_event_instance_set_parameter_by_name(global.music.event_instance, "state", 0);
 })
 {
     with (global.music)
     {
-        if (fmod_studio_event_instance_get_description(event_instance) != fmod_studio_system_get_event(argument0) || !argument2)
+        if (fmod_studio_event_instance_get_description(event_instance) != fmod_studio_system_get_event(_main_mus) || !_dont_force)
         {
             fmod_studio_event_instance_kill(event_instance);
-            event_instance = fmod_studio_event_description_create_instance(fmod_studio_system_get_event(argument0));
+            event_instance = fmod_studio_event_description_create_instance(fmod_studio_system_get_event(_main_mus));
             fmod_studio_event_instance_start(event_instance);
         }
         
-        if (fmod_studio_event_instance_get_description(secret_event_instance) != fmod_studio_system_get_event(argument1) || !argument2)
+        if (fmod_studio_event_instance_get_description(secret_event_instance) != fmod_studio_system_get_event(_secret_mus) || !_dont_force)
         {
             fmod_studio_event_instance_kill(secret_event_instance);
-            secret_event_instance = fmod_studio_event_description_create_instance(fmod_studio_system_get_event(argument1));
+            secret_event_instance = fmod_studio_event_description_create_instance(fmod_studio_system_get_event(_secret_mus));
             fmod_studio_event_instance_start(secret_event_instance);
         }
         
@@ -49,20 +49,20 @@ function change_music(argument0, argument1, argument2 = false, func = function()
         fmod_studio_event_instance_set_paused(secret_event_instance, !obj_music.secret);
     }
     
-    func();
+    _func();
 }
 
-function add_music(argument0, argument1, argument2, argument3 = function()
+function add_music(_rm, _mus, _secret_mus, _func = function()
 {
     fmod_studio_event_instance_set_parameter_by_name(global.music.event_instance, "state", 0);
 })
 {
     var _data = 
     {
-        rm: argument0,
-        music: argument1,
-        secret_music: argument2,
-        func: argument3
+        rm: _rm,
+        music: _mus,
+        secret_music: _secret_mus,
+        func: _func
     };
     
     if (is_array(_data.rm))
@@ -71,9 +71,7 @@ function add_music(argument0, argument1, argument2, argument3 = function()
             ds_map_add(obj_music.music_map, _data.rm[i], _data);
     }
     else
-    {
         ds_map_add(obj_music.music_map, _data.rm, _data);
-    }
 }
 
 function restart_music()

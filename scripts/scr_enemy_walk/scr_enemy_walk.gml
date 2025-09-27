@@ -25,9 +25,7 @@ function scr_enemy_walk()
             state = states.normal;
         }
         else
-        {
             image_xscale *= -1;
-        }
     }
     
     if (object_index != obj_ancho)
@@ -59,9 +57,7 @@ function scr_enemy_walk()
                     movealarm = 100;
                 }
                 else
-                {
                     image_xscale *= -1;
-                }
             }
         }
     }

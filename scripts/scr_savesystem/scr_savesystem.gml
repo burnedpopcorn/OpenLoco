@@ -11,8 +11,6 @@ function gamesave_async_load()
             state = savestate.bufload;
         }
     }
-    
-    exit;
 }
 
 function gamesave_async_save()
@@ -32,6 +30,4 @@ function gamesave_async_save()
             saveid = buffer_async_group_end();
         }
     }
-    
-    exit;
 }

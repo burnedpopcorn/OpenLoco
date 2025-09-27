@@ -1,15 +1,15 @@
-function create_afterimage(argument0 = 0, argument1 = sprite_index, argument2 = image_index, argument3 = 0, argument4 = image_xscale, argument5 = image_yscale, argument6 = image_angle, argument7 = 0.8, argument8 = image_blend)
+function create_afterimage(_unused = 0, _spr_index = sprite_index, _img_index = image_index, _img_speed = 0, _xscale = image_xscale, _yscale = image_yscale, _angle = image_angle, _alpha = 0.8, _blend = image_blend)
 {
     var _afterimg = 
     {
-        sprite_index: argument1,
-        image_index: argument2,
-        image_speed: argument3,
-        image_xscale: argument4,
-        image_yscale: argument5,
-        image_angle: argument6,
-        image_alpha: argument7,
-        image_blend: argument8
+        sprite_index: _spr_index,
+        image_index: _img_index,
+        image_speed: _img_speed,
+        image_xscale: _xscale,
+        image_yscale: _yscale,
+        image_angle: _angle,
+        image_alpha: _alpha,
+        image_blend: _blend
     };
     array_push(global.afterimage_array, _afterimg);
 }

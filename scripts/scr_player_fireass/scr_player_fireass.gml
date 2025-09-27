@@ -30,22 +30,16 @@ function scr_player_fireass()
                 xscale = move;
         }
         else
-        {
             movespeed = Approach(movespeed, 0, 0.1);
-        }
         
         if (place_meeting(x, y + 1, obj_haystack))
-        {
             vsp = -20;
-        }
         else if (grounded && vsp > 0)
         {
             movespeed = 6;
             
             if (sprite_index == get_charactersprite("spr_fireass"))
-            {
                 sprite_index = get_charactersprite("spr_fireassground");
-            }
             else
             {
                 movespeed = 0;

@@ -49,9 +49,7 @@ function scr_player_freefall()
         if (vsp >= 2)
         {
             if (steppybuffer > 0)
-            {
                 steppybuffer--;
-            }
             else
             {
                 create_particle(x + irandom_range(-25, 25), y + irandom_range(-10, 35), 1, 0);

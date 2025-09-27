@@ -79,9 +79,7 @@ function scr_fakepeppino_hit()
             }
             
             if (obj_player.shotgunAnim == 0)
-            {
                 global.playerhealth -= 1;
-            }
             else if (obj_player.shotgunAnim == 1)
             {
                 obj_player.shotgunAnim = 0;

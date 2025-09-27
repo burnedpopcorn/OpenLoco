@@ -14,6 +14,4 @@ function scr_panicbg_end()
             shader_reset();
         }
     }
-    
-    exit;
 }
