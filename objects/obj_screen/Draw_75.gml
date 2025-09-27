@@ -38,7 +38,7 @@ if (mouseVisible)
     
     for (var i = 0; i < ds_list_size(afterimg); i++)
     {
-        var b = ds_list_find_value(afterimg, i);
+        var b = afterimg[| i];
         
         if (!is_undefined(b))
         {

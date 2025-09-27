@@ -6,8 +6,8 @@ fmod_studio_system_set_listener_weight(0, listener_weight);
 
 for (var i = 0; i < ds_list_size(oneshot_events); i++)
 {
-    if (fmod_studio_event_instance_is_valid(ds_list_find_value(oneshot_events, i)))
-        fmod_studio_event_instance_move(ds_list_find_value(oneshot_events, i), camera_get_view_x(view_camera[0]) + (camera_get_view_width(view_camera[0]) / 2), camera_get_view_y(view_camera[0]) + (camera_get_view_height(view_camera[0]) / 2));
+    if (fmod_studio_event_instance_is_valid(oneshot_events[| i]))
+        fmod_studio_event_instance_move(oneshot_events[| i], camera_get_view_x(view_camera[0]) + (camera_get_view_width(view_camera[0]) / 2), camera_get_view_y(view_camera[0]) + (camera_get_view_height(view_camera[0]) / 2));
     else
         ds_list_delete(oneshot_events, i);
 }

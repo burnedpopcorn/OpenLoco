@@ -8,16 +8,16 @@ if (floor(image_index) == (image_number - 1))
 if (image_index == 7 && !changebg)
 {
     var rank_map = ds_map_create();
-    ds_map_set(rank_map, "l", 6);
-    ds_map_set(rank_map, "s", 5);
-    ds_map_set(rank_map, "a", 4);
-    ds_map_set(rank_map, "b", 3);
-    ds_map_set(rank_map, "c", 2);
-    ds_map_set(rank_map, "d", 1);
+    rank_map[? "l"] = 6;
+    rank_map[? "s"] = 5;
+    rank_map[? "a"] = 4;
+    rank_map[? "b"] = 3;
+    rank_map[? "c"] = 2;
+    rank_map[? "d"] = 1;
     
     with (obj_endlevelfade)
     {
-        bgPalette = ds_map_find_value(rank_map, global.rank);
+        bgPalette = rank_map[? global.rank];
         flash = 1;
     }
     
@@ -187,13 +187,13 @@ if (instance_exists(obj_endlevelfade) && !fmod_studio_event_instance_is_valid(ob
             if (rank_visible == false)
             {
                 var rank_map = ds_map_create();
-                ds_map_set(rank_map, "l", 5);
-                ds_map_set(rank_map, "s", 4);
-                ds_map_set(rank_map, "a", 3);
-                ds_map_set(rank_map, "b", 2);
-                ds_map_set(rank_map, "c", 1);
-                ds_map_set(rank_map, "d", 0);
-                var rankValue = ds_map_find_value(rank_map, rank);
+                rank_map[? "l"] = 5;
+                rank_map[? "s"] = 4;
+                rank_map[? "a"] = 3;
+                rank_map[? "b"] = 2;
+                rank_map[? "c"] = 1;
+                rank_map[? "d"] = 0;
+                var rankValue = rank_map[? rank];
                 
                 if (countLs)
                 {

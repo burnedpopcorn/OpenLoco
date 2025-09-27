@@ -5,5 +5,5 @@ pizzabox_sound = fmod_studio_event_description_create_instance(fmod_studio_syste
 fmod_studio_event_instance_move(pizzabox_sound);
 color = randomize_palette(spr_pipepalette);
 
-if (ds_map_find_value(global.palettesaveroom, id) == undefined)
-    ds_map_set(global.palettesaveroom, id, color);
+if (global.palettesaveroom[? id] == undefined)
+    global.palettesaveroom[? id] = color;

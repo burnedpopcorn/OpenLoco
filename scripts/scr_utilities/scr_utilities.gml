@@ -182,13 +182,13 @@ function is_hub()
 function rank_get_value(argument0)
 {
     var rank_map = ds_map_create();
-    ds_map_set(rank_map, "l", 6);
-    ds_map_set(rank_map, "s", 5);
-    ds_map_set(rank_map, "a", 4);
-    ds_map_set(rank_map, "b", 3);
-    ds_map_set(rank_map, "c", 2);
-    ds_map_set(rank_map, "d", 1);
-    return ds_map_find_value(rank_map, argument0);
+    rank_map[? "l"] = 6;
+    rank_map[? "s"] = 5;
+    rank_map[? "a"] = 4;
+    rank_map[? "b"] = 3;
+    rank_map[? "c"] = 2;
+    rank_map[? "d"] = 1;
+    return rank_map[? argument0];
 }
 
 function shader_set_uniform_f_ext(argument0, argument1, argument2)
@@ -241,7 +241,7 @@ function saveroom_add(argument0 = id)
 
 function saveroom_check(argument0 = id)
 {
-    return ds_list_find_value(global.saveroom, argument0) != undefined;
+    return global.saveroom[| argument0] != undefined;
 }
 
 function create_transfotext(argument0, argument1 = texteffect.randupdown)

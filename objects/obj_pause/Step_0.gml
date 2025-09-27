@@ -68,5 +68,5 @@ if (pause == 1 && cantmove == 0)
     }
     
     if (key_jump)
-        ds_map_find_value(pause_options_map, pause_options_array[selected]).func();
+        pause_options_map[? pause_options_array[selected]].func();
 }

@@ -1208,7 +1208,7 @@ function compile_groups_gml_compile_group_static_proc_dot_static_init(l_actions,
 		l__g++;
 		if(gml_compile_node(l_item,l_actions,false))return true;
 	}
-	ds_list_set(l_actions,l_start,vm_v2_gml_action_closure_bind(gml_compile_curr_script.h_pos,"if (statics) jump",{gmlScript:l_gmlScript,dest:ds_list_size(l_actions)},compile_groups_gml_compile_group_static_proc_dot_static_init_lf));
+	l_actions[| l_start] = vm_v2_gml_action_closure_bind(gml_compile_curr_script.h_pos,"if (statics jump",{gmlScript:l_gmlScript,dest:ds_list_size(l_actions)},compile_groups_gml_compile_group_static_proc_dot_static_init_lf);
 	if(gml_compile_curr_script.h_is_constructor)ds_list_add(l_actions,vm_v2_gml_action_closure_bind(gml_compile_curr_script.h_pos,"set statics",{gmlScript:l_gmlScript},compile_groups_gml_compile_group_static_proc_dot_static_init_lf1));
 	return false;
 }
@@ -1241,7 +1241,7 @@ function compile_groups_gml_compile_group_static_proc_struct_static_init(l_actio
 		l__g++;
 		if(gml_compile_node(l_item,l_actions,false))return true;
 	}
-	ds_list_set(l_actions,l_start,vm_v2_gml_action_closure_bind(gml_compile_curr_script.h_pos,"if static_ready jump",{ready:gml_compile_curr_script.h_static_ready,dest:ds_list_size(l_actions)},compile_groups_gml_compile_group_static_proc_struct_static_init_lf));
+	l_actions[| l_start] = vm_v2_gml_action_closure_bind(gml_compile_curr_script.h_pos,"if static_ready jump",{ready:gml_compile_curr_script.h_static_ready,dest:ds_list_size(l_actions)},compile_groups_gml_compile_group_static_proc_struct_static_init_lf);
 	if(gml_compile_curr_script.h_is_constructor)ds_list_add(l_actions,vm_v2_gml_action_closure_bind(gml_compile_curr_script.h_pos,"set statics",{values:gml_compile_curr_script.h_static_struct},compile_groups_gml_compile_group_static_proc_struct_static_init_lf1));
 	return false;
 }
@@ -1285,7 +1285,7 @@ function compile_groups_gml_compile_group_static_proc_static_init(l_actions){
 		l__g++;
 		if(gml_compile_node(l_item,l_actions,false))return true;
 	}
-	ds_list_set(l_actions,l_start,vm_v2_gml_action_closure_bind(gml_compile_curr_script.h_pos,"if static_ready jump",{ready:gml_compile_curr_script.h_static_ready,dest:ds_list_size(l_actions)},compile_groups_gml_compile_group_static_proc_static_init_lf));
+	l_actions[| l_start] = vm_v2_gml_action_closure_bind(gml_compile_curr_script.h_pos,"if static_ready jump",{ready:gml_compile_curr_script.h_static_ready,dest:ds_list_size(l_actions)},compile_groups_gml_compile_group_static_proc_static_init_lf);
 	if(gml_compile_curr_script.h_is_constructor)ds_list_add(l_actions,vm_v2_gml_action_closure_bind(gml_compile_curr_script.h_pos,"set statics",{names:gml_compile_curr_script.h_static_names,values:gml_compile_curr_script.h_static_values},compile_groups_gml_compile_group_static_proc_static_init_lf1));
 	return false;
 }
@@ -1431,7 +1431,7 @@ function gml_func()constructor{
 			l_func=method(undefined,l_func);
 			if(l_func>=100000)self.h_is_script=true;
 		}
-		if(!gml_std_haxe_boot_isJS)ds_map_set(gml_func_name,l_rawFunc,l_name);
+		if(!gml_std_haxe_boot_isJS)gml_func_name[? l_rawFunc] = l_name;
 		self.h_name=l_name;
 		self.h_func=l_func;
 		self.h_raw_func=l_rawFunc;
@@ -1582,14 +1582,14 @@ function compile_gml_compile_bin_op_proc(l_actions,l_d,l_o,l_a,l_b){
 			l_p0=ds_list_size(l_actions);
 			ds_list_add(l_actions,gml_action_bool_and(l_d,0));
 			if(gml_compile_node(l_b,l_actions,true))return true;
-			ds_list_set(l_actions,l_p0,gml_action_bool_and(l_d,ds_list_size(l_actions)));
+			l_actions[| l_p0] = gml_action_bool_and(l_d,ds_list_size(l_actions));
 			break;
 		case 96:
 			if(gml_compile_node(l_a,l_actions,true))return true;
 			l_p0=ds_list_size(l_actions);
 			ds_list_add(l_actions,gml_action_bool_or(l_d,0));
 			if(gml_compile_node(l_b,l_actions,true))return true;
-			ds_list_set(l_actions,l_p0,gml_action_bool_or(l_d,ds_list_size(l_actions)));
+			l_actions[| l_p0] = gml_action_bool_or(l_d,ds_list_size(l_actions));
 			break;
 		default:
 			if(compile_gml_compile_args_proc(l_actions,[l_a,l_b]))return true;
@@ -1643,9 +1643,9 @@ function vm_value_gml_value_printer_print_rec(l_v,l_z){
 	if(is_string(l_v)){
 		return json_stringify(l_v);
 	} else if(is_array(l_v)){
-		l_r=ds_map_find_value(vm_value_gml_value_printer_print_refs,l_v);
+		l_r=vm_value_gml_value_printer_print_refs[? l_v];
 		if(l_r!=undefined)return l_r;
-		ds_map_set(vm_value_gml_value_printer_print_refs,l_v,"@"+string(l_id));
+		vm_value_gml_value_printer_print_refs[? l_v] = "@"+string(l_id);
 		l_n=array_length(l_v);
 		if(l_n>0){
 			if(++l_z>8)return "[...]";
@@ -3350,7 +3350,7 @@ function ast_gml_macro_proc_patch(l_tks,l_setExclude){
 	if(l_changed&&l_setExclude){
 		var l_k=0;
 		for(var l__g1=ds_list_size(ast_gml_macro_proc_next_exclude_list);l_k<l__g1;l_k++){
-			ast_gml_macro_proc_exclude_map[$ ds_list_find_value(ast_gml_macro_proc_next_exclude_list,l_k)]=true;
+			ast_gml_macro_proc_exclude_map[$ ast_gml_macro_proc_next_exclude_list[| l_k]]=true;
 		}
 	}
 	return l_changed;
@@ -3384,7 +3384,7 @@ function ast_gml_macro_proc_run(l_pg,l_builders){
 	var l__g=0;
 	var l__g1=ast_gml_macro_proc_list;
 	while(l__g<ds_list_size(l__g1)){
-		var l_m=ds_list_find_value(l__g1,l__g);
+		var l_m=l__g1[| l__g];
 		l__g++;
 		tools__dictionary_dictionary_impl__clear(ast_gml_macro_proc_exclude_map);
 		ast_gml_macro_proc_exclude_map[$ l_m.h_name]=true;
@@ -3540,7 +3540,7 @@ function gml_script(l_src,l_name,l_pos)constructor{
 			var l_this1=self.h_actions;
 			var l_i=0;
 			for(var l__g1=ds_list_size(l_this1);l_i<l__g1;l_i++){
-				var l_q=ds_list_find_value(l_this1,l_i);
+				var l_q=l_this1[| l_i];
 				if(l_q!=undefined){
 					if(l_q.__enumIndex__==97)ds_map_destroy(l_q.h_jumptable);
 				}
@@ -3942,7 +3942,7 @@ function gml_seek_adjfix_proc(l_q,l_st){
 			var l_pre;
 			l_pre=(l_q.__enumIndex__==33);
 			var l_o;
-			var l_inBlock=gml_node_tools_is_in_block(l_q,ds_list_find_value(l_st,0));
+			var l_inBlock=gml_node_tools_is_in_block(l_q,l_st[| 0]);
 			if(l_pre||l_inBlock){
 				var l__g1=l_x;
 				switch(l__g1.__enumIndex__){
@@ -3977,7 +3977,7 @@ function gml_seek_adjfix_proc(l_q,l_st){
 			var l_pre;
 			l_pre=(l_q.__enumIndex__==33);
 			var l_o;
-			var l_inBlock=gml_node_tools_is_in_block(l_q,ds_list_find_value(l_st,0));
+			var l_inBlock=gml_node_tools_is_in_block(l_q,l_st[| 0]);
 			if(l_pre||l_inBlock){
 				var l__g=l_x;
 				switch(l__g.__enumIndex__){
@@ -4267,12 +4267,12 @@ function gml_seek_idents_proc(l_q,l_st){
 			var l_flags=l_v.h_flags;
 			if((l_flags&4)!=0)gml_std_haxe_enum_tools_setTo(l_q,gml_node_env_fd(l_d,gml_node_self_hx(l_d),l_v)); else gml_std_haxe_enum_tools_setTo(l_q,gml_node_env(l_d,l_v));
 			if(ds_list_size(l_st)>0){
-				var l__g1=ds_list_find_value(l_st,0);
+				var l__g1=l_st[| 0];
 				switch(l__g1.__enumIndex__){
 					case 70:
 						var l_d1=l__g1.h_d;
 						var l_k=l__g1.h_index;
-						if((l_flags&2)!=0)gml_std_haxe_enum_tools_setTo(ds_list_find_value(l_st,0),gml_node_env1d(l_d1,l_v,l_k)); else return gml_program_seek_inst.h_error("`"+l_s+"` is not an array.",l_d1);
+						if((l_flags&2)!=0)gml_std_haxe_enum_tools_setTo(l_st[| 0],gml_node_env1d(l_d1,l_v,l_k)); else return gml_program_seek_inst.h_error("`"+l_s+"` is not an array.",l_d1);
 						break;
 					case 73:return gml_program_seek_inst.h_error("`"+l_s+"` is not a 2d array.",l__g1.h_d);
 					default:if((l_flags&2)!=0)gml_std_haxe_enum_tools_setTo(l_q,gml_node_env1d(l_d,l_v,gml_node_number(l_d,0,undefined)));
@@ -4631,7 +4631,7 @@ function live_gmlive_patcher_compile_ex(l_name,l_code){
 	var l_srci=ds_list_size(l_acc);
 	var l_srcs=array_create(l_srci);
 	while(--l_srci>=0){
-		l_srcs[@l_srci]=ds_list_find_value(l_acc,l_srci);
+		l_srcs[@l_srci]=l_acc[| l_srci];
 	}
 	var l_pg=new gml_program(l_srcs);
 	live_gmlive_patcher_error_text=l_pg.h_error_text;
@@ -4653,7 +4653,7 @@ function shader_set_live(l_sh,l_live1){
 		var l_i;
 		if(l_live1){
 			if(ds_map_exists(live_shader_live_shaders,l_sh))exit;
-			ds_map_set(live_shader_live_shaders,l_sh,true);
+			live_shader_live_shaders[? l_sh] = true;
 			l_i=ds_list_find_index(live_shader_live_shaders_stop,l_sh);
 			if(l_i>=0)ds_list_delete(live_shader_live_shaders_stop,l_i);
 			ds_list_add(live_shader_live_shaders_start,l_sh);
@@ -4788,10 +4788,10 @@ function gml_action_list_print_action_get_func_name(l_func){
 	if(is_method(l_func)){
 		var l_scr=method_get_index(l_func);
 		l_name=script_get_name(l_scr);
-		l_label=ds_map_find_value(gml_func_name,l_scr);
+		l_label=gml_func_name[? l_scr];
 	} else if(is_numeric(l_func)&&script_exists(l_func)){
 		l_name=script_get_name(l_func);
-		l_label=ds_map_find_value(gml_func_name,l_func);
+		l_label=gml_func_name[? l_func];
 	} else l_name=string(l_func);
 	if(l_label==undefined||l_label==l_name)return l_name; else return l_label+"@"+l_name;
 }
@@ -4875,7 +4875,7 @@ function gml_action_list_print(l_this1){
 	var l_r=new gml_std_StringBuf();
 	var l_i=0;
 	for(var l__g1=ds_list_size(l_this1);l_i<l__g1;l_i++){
-		var l_act=ds_list_find_value(l_this1,l_i);
+		var l_act=l_this1[| l_i];
 		if(l_i>0)l_r.h_addChar(10);
 		var l_actStr=gml_action_list_print_action(l_act);
 		l_act.__string__=l_actStr;
@@ -5036,7 +5036,7 @@ function vm__gml_value_map_gml_value_map_impl__print(l_this1){
 	for(var l__g1=array_length(l_keys);l_i<l__g1;l_i++){
 		var l_k=l_keys[l_i];
 		if(l_i>0)l_r+=", "; else l_r+=" ";
-		l_r+=gml_value_print(l_keys[l_i])+": "+gml_std_Std_stringify(ds_map_find_value(l_this1,l_k));
+		l_r+=gml_value_print(l_keys[l_i])+": "+gml_std_Std_stringify(l_this1[? l_k]);
 	}
 	return l_r+" }";
 }

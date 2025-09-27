@@ -2,8 +2,8 @@ if (!ds_list_empty(BG_list))
 {
     for (var i = 0; i < ds_list_size(BG_list); i++)
     {
-        var lay = ds_list_find_value(BG_list, i);
-        var f = ds_map_find_value(global.parallaxMap, lay.name);
+        var lay = BG_list[| i];
+        var f = global.parallaxMap[? lay.name];
         f ??= 
         {
             per: 0

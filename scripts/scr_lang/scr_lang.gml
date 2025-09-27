@@ -48,7 +48,7 @@ function embed_value_string(argument0, argument1)
 
 function langstr_get(argument0)
 {
-    var r = ds_map_find_value(global.languagemap, argument0);
+    var r = global.languagemap[? argument0];
     
     if (r == undefined)
     {

@@ -220,8 +220,8 @@ function colmesh_load_obj_to_buffer(argument0)
     
     for (var f = 0; f < vertNum; f++)
     {
-        var vnt = ds_list_find_value(F, f);
-        var v = ds_list_find_value(V, array_get(vnt, 0));
+        var vnt = F[| f];
+        var v = V[| array_get(vnt, 0)];
         
         if (!is_array(v))
             v = [0, 0, 0];
@@ -229,7 +229,7 @@ function colmesh_load_obj_to_buffer(argument0)
         buffer_write(mbuff, buffer_f32, v[0]);
         buffer_write(mbuff, buffer_f32, v[2]);
         buffer_write(mbuff, buffer_f32, v[1]);
-        var n = ds_list_find_value(N, array_get(vnt, 1));
+        var n = N[| array_get(vnt, 1)];
         
         if (!is_array(n))
             n = [0, 0, 1];
@@ -237,7 +237,7 @@ function colmesh_load_obj_to_buffer(argument0)
         buffer_write(mbuff, buffer_f32, n[0]);
         buffer_write(mbuff, buffer_f32, n[2]);
         buffer_write(mbuff, buffer_f32, n[1]);
-        var t = ds_list_find_value(T, array_get(vnt, 2));
+        var t = T[| array_get(vnt, 2)];
         
         if (!is_array(t))
             t = [0, 0];
@@ -317,7 +317,7 @@ function colmesh__region_capsule_collision(argument0, argument1, argument2, argu
     repeat (i)
     {
         global.ColMeshRecursionCounter++;
-        var col = _getShape(ds_list_find_value(argument0, --i)).capsuleCollision(argument1, argument2, argument3, argument4, argument5, argument6, argument7, argument8);
+        var col = _getShape(argument0[| --i]).capsuleCollision(argument1, argument2, argument3, argument4, argument5, argument6, argument7, argument8);
         global.ColMeshRecursionCounter--;
         
         if (col)

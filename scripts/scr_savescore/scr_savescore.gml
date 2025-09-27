@@ -74,14 +74,14 @@ function scr_write_rank(argument0)
 {
     var _rank = ini_read_string("Ranks", argument0, "d");
     var _map = ds_map_create();
-    ds_map_set(_map, "d", 0);
-    ds_map_set(_map, "c", 1);
-    ds_map_set(_map, "b", 2);
-    ds_map_set(_map, "a", 3);
-    ds_map_set(_map, "s", 4);
-    ds_map_set(_map, "l", 5);
+    _map[? "d"] = 0;
+    _map[? "c"] = 1;
+    _map[? "b"] = 2;
+    _map[? "a"] = 3;
+    _map[? "s"] = 4;
+    _map[? "l"] = 5;
     
-    if (ds_map_find_value(_map, global.rank) >= ds_map_find_value(_map, _rank))
+    if (_map[? global.rank] >= _map[? _rank])
         ini_write_string("Ranks", argument0, global.rank);
     
     ds_map_destroy(_map);

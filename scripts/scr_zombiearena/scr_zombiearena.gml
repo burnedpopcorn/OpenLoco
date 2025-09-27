@@ -14,5 +14,5 @@ function tombstone_wave_add(argument0, argument1)
 function tombstone_wave_create(argument0)
 {
     ds_list_add(content_list, []);
-    return ds_list_find_value(content_list, argument0);
+    return content_list[| argument0];
 }

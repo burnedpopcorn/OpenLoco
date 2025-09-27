@@ -170,7 +170,7 @@ if (obj_player.state != states.gameover)
     
     for (var j = 0; j < ds_list_size(global.collect_list); j++)
     {
-        var _col = ds_list_find_value(global.collect_list, j);
+        var _col = global.collect_list[| j];
         cs += _col.val;
     }
     

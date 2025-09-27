@@ -98,7 +98,7 @@ function gml_thread(l_program,l_actions,l_args1,l_locals,l_self1,l_other1,l_offs
 			var l_loop=true;
 			for(var l_pos=l_scope[2];l_pos<l_len&&l_loop;l_pos=l_scope[2]){
 				if(l_allowExceptions){
-					l_act=ds_list_find_value(l_actions,l_pos);
+					l_act=l_actions[| l_pos];
 					l_scope[@2]=l_pos+1;
 					var l_ar=l_act.__func__(l__gthis,l_act,l_scope,l_stack);
 					if(l__gthis.h_status>=4){
@@ -110,7 +110,7 @@ function gml_thread(l_program,l_actions,l_args1,l_locals,l_self1,l_other1,l_offs
 						l_stack=l_scope[5];
 					}
 				} else try{
-					l_act=ds_list_find_value(l_actions,l_pos);
+					l_act=l_actions[| l_pos];
 					l_scope[@2]=l_pos+1;
 					var l_ar1=l_act.__func__(l__gthis,l_act,l_scope,l_stack);
 					if(l__gthis.h_status>=4){

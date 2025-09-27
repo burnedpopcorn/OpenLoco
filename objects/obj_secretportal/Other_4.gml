@@ -1,5 +1,5 @@
-if (ds_map_find_value(global.palettesaveroom, id) != undefined)
-    paletteselect = ds_map_find_value(global.palettesaveroom, id);
+if (global.palettesaveroom[? id] != undefined)
+    paletteselect = global.palettesaveroom[? id];
 
 with (obj_player)
 {

@@ -1,5 +1,5 @@
 secret = instance_exists(obj_secretportal) && obj_secretportal.secret;
-var room_sng = ds_map_find_value(music_map, room);
+var room_sng = music_map[? room];
 
 with (global.music)
 {
@@ -21,4 +21,4 @@ with (global.music)
 if (global.panic || is_undefined(room_sng))
     exit;
 
-change_music(ds_map_find_value(music_map, room).music, ds_map_find_value(music_map, room).secret_music, true, ds_map_find_value(music_map, room).func);
+change_music(music_map[? room].music, music_map[? room].secret_music, true, music_map[? room].func);

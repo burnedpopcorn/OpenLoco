@@ -79,14 +79,14 @@ function gml_builder(l_pg,l_src)constructor{
 		var l_pmax=0;
 		var l_n=ds_list_size(l_ops);
 		for(l_i=0;l_i<l_n;l_i++){
-			var l_pcur=gml_op_get_priority(ds_list_find_value(l_ops,l_i));
+			var l_pcur=gml_op_get_priority(l_ops[| l_i]);
 			if(l_pcur<l_pmin)l_pmin=l_pcur;
 			if(l_pcur>l_pmax)l_pmax=l_pcur;
 		}
 		while(l_pmin<=l_pmax){
 			for(l_i=0;l_i<l_n;l_i++){
-				if(gml_op_get_priority(ds_list_find_value(l_ops,l_i))==l_pmin){
-					ds_list_set(l_nodes,l_i,gml_node_bin_op(ds_list_find_value(l_locs,l_i),ds_list_find_value(l_ops,l_i),ds_list_find_value(l_nodes,l_i),ds_list_find_value(l_nodes,l_i+1)));
+				if(gml_op_get_priority(l_ops[| l_i])==l_pmin){
+					l_nodes[| l_i] = gml_node_bin_op(l_locs[| l_i],l_ops[| l_i],l_nodes[| l_i],l_nodes[| l_i+1]);
 					ds_list_delete(l_nodes,l_i+1);
 					ds_list_delete(l_ops,l_i);
 					ds_list_delete(l_locs,l_i);
@@ -96,7 +96,7 @@ function gml_builder(l_pg,l_src)constructor{
 			}
 			l_pmin++;
 		}
-		self.h_out_node=ds_list_find_value(l_nodes,0);
+		self.h_out_node=l_nodes[| 0];
 		ds_list_destroy(l_nodes);
 		ds_list_destroy(l_ops);
 		ds_list_destroy(l_locs);

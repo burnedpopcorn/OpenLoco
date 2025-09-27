@@ -66,7 +66,7 @@ function parallaxAdd(argument0, argument1)
     {
         per: argument1
     };
-    ds_map_set(global.parallaxMap, argument0, q);
+    global.parallaxMap[? argument0] = q;
     return q;
 }
 
@@ -83,7 +83,7 @@ function get_layer(argument0)
 {
     for (var i = 0; i < ds_list_size(BG_list); i++)
     {
-        var l = ds_list_find_value(BG_list, i);
+        var l = BG_list[| i];
         
         if (l.name == argument0)
         {

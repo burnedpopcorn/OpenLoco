@@ -13,7 +13,7 @@ var spr_pair = choose([spr_sausagecollect, spr_coincolorpalette], [spr_shroomcol
 sprite_index = spr_pair[0];
 colorpalettesprite = spr_pair[1];
 
-if (ds_map_find_value(global.palettesaveroom, id) == undefined)
-    ds_map_set(global.palettesaveroom, id, colorpalette);
+if (global.palettesaveroom[? id] == undefined)
+    global.palettesaveroom[? id] = colorpalette;
 else
-    colorpalette = ds_map_find_value(global.palettesaveroom, id);
+    colorpalette = global.palettesaveroom[? id];

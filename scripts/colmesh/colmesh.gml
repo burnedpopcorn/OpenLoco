@@ -44,7 +44,7 @@ function colmesh() : colmesh_mesh() constructor
         shapeNum = ds_list_size(shapeList);
         
         for (var i = 0; i < shapeNum; i++)
-            addShapeToSubdiv(ds_list_find_value(shapeList, i));
+            addShapeToSubdiv(shapeList[| i]);
         
         colmesh_debug_message("colmesh.subdivide: Generated spatial hash with " + string(ds_map_size(spHash)) + " regions in " + string((get_timer() - debugTime) / 1000) + " milliseconds");
     };
@@ -183,12 +183,12 @@ function colmesh() : colmesh_mesh() constructor
                     if (!argument2 || struct._intersectsCube(regionSize * 0.5, _x, _y, _z))
                     {
                         var key = colmesh_get_key(xx, yy, zz);
-                        var list = ds_map_find_value(spHash, key);
+                        var list = spHash[? key];
                         
                         if (is_undefined(list))
                         {
                             list = ds_list_create();
-                            ds_map_set(spHash, key, list);
+                            spHash[? key] = list;
                         }
                         
                         ds_list_add(list, argument0);
@@ -225,7 +225,7 @@ function colmesh() : colmesh_mesh() constructor
                 {
                     zz++;
                     var key = colmesh_get_key(xx, yy, zz);
-                    var list = ds_map_find_value(spHash, key);
+                    var list = spHash[? key];
                     
                     if (is_undefined(list))
                         continue;
@@ -255,7 +255,7 @@ function colmesh() : colmesh_mesh() constructor
             
             while (!is_undefined(region))
             {
-                ds_list_destroy(ds_map_find_value(spHash, region));
+                ds_list_destroy(spHash[? region]);
                 region = ds_map_find_next(spHash, region);
             }
             
@@ -315,7 +315,7 @@ function colmesh() : colmesh_mesh() constructor
             
             repeat (i)
             {
-                var shape = ds_list_find_value(shapeList, --i);
+                var shape = shapeList[| --i];
                 
                 if (!_getShape(shape).checkAABB(minx, miny, minz, maxx, maxy, maxz))
                     continue;
@@ -346,7 +346,7 @@ function colmesh() : colmesh_mesh() constructor
                 {
                     zz++;
                     var key = colmesh_get_key(xx, yy, zz);
-                    var region = ds_map_find_value(spHash, key);
+                    var region = spHash[? key];
                     
                     if (is_undefined(region))
                         continue;
@@ -355,7 +355,7 @@ function colmesh() : colmesh_mesh() constructor
                     
                     repeat (i)
                     {
-                        var shape = ds_list_find_value(region, --i);
+                        var shape = region[| --i];
                         
                         if (ds_list_find_index(tempList, shape) >= 0)
                             continue;
@@ -443,8 +443,8 @@ function colmesh() : colmesh_mesh() constructor
         
         repeat (i)
         {
-            var shapeInd = abs(ds_list_find_value(argument0, --i));
-            var shape = _getShape(ds_list_find_value(shapeList, shapeInd));
+            var shapeInd = abs(argument0[| --i]);
+            var shape = _getShape(shapeList[| shapeInd]);
             var p = shape._getClosestPoint(argument1, argument2, argument3);
             var d = point_distance_3d(0, 0, 0, p[0] - argument1, p[1] - argument2, p[2] - argument3);
             
@@ -551,7 +551,7 @@ function colmesh() : colmesh_mesh() constructor
             }
             
             t = min(1, _t * regionSize);
-            var region = ds_map_find_value(spHash, prevKey);
+            var region = spHash[? prevKey];
             prevKey = key;
             
             if (is_undefined(region))
@@ -561,18 +561,18 @@ function colmesh() : colmesh_mesh() constructor
             
             repeat (i)
             {
-                var _shape = ds_list_find_value(region, --i);
+                var _shape = region[| --i];
                 var shape = _getShape(_shape);
                 
                 if ((argument6 & shape.group) == 0)
                     continue;
                 
-                var hit = ds_map_find_value(map, _shape);
+                var hit = map[? _shape];
                 
                 if (is_undefined(hit))
                 {
                     hit = shape._castRay(ray, argument6);
-                    ds_map_set(map, _shape, hit);
+                    map[? _shape] = hit;
                 }
                 
                 if (!is_array(hit))
@@ -614,7 +614,7 @@ function colmesh() : colmesh_mesh() constructor
         
         repeat (i)
         {
-            var shape = _getShape(ds_list_find_value(argument0, --i));
+            var shape = _getShape(argument0[| --i]);
             
             if ((argument2 & shape.group) == 0)
                 continue;
@@ -856,7 +856,7 @@ function colmesh() : colmesh_mesh() constructor
         
         for (var i = 0; i < shapeNum; i++)
         {
-            with (_getShape(ds_list_find_value(shapeList, i)))
+            with (_getShape(shapeList[| i]))
             {
                 if ((group & 1) == 0 && !argument1)
                 {
@@ -869,12 +869,12 @@ function colmesh() : colmesh_mesh() constructor
                     switch (type)
                     {
                         case Colmesh_shapes.defaultmesh:
-                            var index = ds_map_find_value(meshMap, name);
+                            var index = meshMap[? name];
                             
                             if (is_undefined(index))
                             {
                                 index = ds_map_size(meshMap);
-                                ds_map_set(meshMap, name, index);
+                                meshMap[? name] = index;
                                 array_push(meshNames, name);
                             }
                             
@@ -970,7 +970,7 @@ function colmesh() : colmesh_mesh() constructor
             
             while (!is_undefined(key))
             {
-                var region = ds_map_find_value(spHash, key);
+                var region = spHash[? key];
                 num = ds_list_size(region);
                 var n = num;
                 buffer_write(tempBuff, buffer_u64, key);
@@ -979,7 +979,7 @@ function colmesh() : colmesh_mesh() constructor
                 
                 repeat (n)
                 {
-                    var shapeInd = ds_list_find_value(region, --n);
+                    var shapeInd = region[| --n];
                     buffer_write(tempBuff, buffer_u32, ds_list_find_index(shapeList, shapeInd));
                 }
                 
@@ -1001,7 +1001,7 @@ function colmesh() : colmesh_mesh() constructor
         {
             var identifier = meshNames[i];
             buffer_write(argument0, buffer_string, identifier);
-            buffer_write(argument0, buffer_u32, ds_map_find_value(global.ColMeshMeshMap, identifier).group);
+            buffer_write(argument0, buffer_u32, global.ColMeshMeshMap[? identifier].group);
         }
         
         buffer_write(argument0, buffer_u64, buffSize);
@@ -1055,7 +1055,7 @@ function colmesh() : colmesh_mesh() constructor
             {
                 case Colmesh_shapes.defaultmesh:
                     var index = buffer_read(tempBuff, buffer_u32);
-                    var parent = ds_map_find_value(global.ColMeshMeshMap, array_get(meshNames, index));
+                    var parent = global.ColMeshMeshMap[? array_get(meshNames, index)];
                     var V = array_create(9);
                     
                     for (var j = 0; j < 9; j++)
@@ -1169,7 +1169,7 @@ function colmesh() : colmesh_mesh() constructor
                 
                 repeat (buffer_read(tempBuff, buffer_u32))
                 {
-                    var shape = ds_list_find_value(shapeList, buffer_read(tempBuff, buffer_u32));
+                    var shape = shapeList[| buffer_read(tempBuff, buffer_u32)];
                     
                     if (is_struct(shape))
                     {
@@ -1180,7 +1180,7 @@ function colmesh() : colmesh_mesh() constructor
                     ds_list_add(region, shape);
                 }
                 
-                ds_map_set(spHash, key, region);
+                spHash[? key] = region;
             }
         }
         
@@ -1224,7 +1224,7 @@ function colmesh() : colmesh_mesh() constructor
             
             repeat (i)
             {
-                var shape = _getShape(ds_list_find_value(shapeList, --i));
+                var shape = _getShape(shapeList[| --i]);
                 
                 if (shape._intersectsCube(argument0, argument1, argument2, argument3))
                     return true;
@@ -1253,7 +1253,7 @@ function colmesh() : colmesh_mesh() constructor
                 {
                     zz++;
                     var key = colmesh_get_key(xx, yy, zz);
-                    var region = ds_map_find_value(spHash, key);
+                    var region = spHash[? key];
                     
                     if (is_undefined(region))
                         continue;
@@ -1288,7 +1288,7 @@ function colmesh() : colmesh_mesh() constructor
         
         for (var i = 0; i < n; i++)
         {
-            var shape = ds_list_find_value(argument0, i);
+            var shape = argument0[| i];
             var t = ds_list_find_index(shapeList, shape);
             var alpha = 1 - ((t < 0) * 0.5);
             var col = make_color_hsv((t * 10) % 255, 255, 255 * alpha);

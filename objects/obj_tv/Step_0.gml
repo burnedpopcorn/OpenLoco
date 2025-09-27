@@ -205,16 +205,16 @@ switch (state)
         {
             expression_time--;
         }
-        else if (sprite_exists(ds_list_find_value(expression_que, 0)))
+        else if (sprite_exists(expression_que[| 0]))
         {
             trace("Queued expression");
-            expression_sprite = ds_map_find_value(expression_que, 0).sprite;
-            expression_time = ds_map_find_value(expression_que, 0).duration;
-            expression_priority = ds_map_find_value(expression_que, 0).prio;
-            usepalette = ds_map_find_value(expression_que, 0).usepal;
-            expression_forced = ds_map_find_value(expression_que, 0).forced;
+            expression_sprite = expression_que[? 0].sprite;
+            expression_time = expression_que[? 0].duration;
+            expression_priority = expression_que[? 0].prio;
+            usepalette = expression_que[? 0].usepal;
+            expression_forced = expression_que[? 0].forced;
             
-            if (ds_map_find_value(expression_que, 0).instant)
+            if (expression_que[? 0].instant)
             {
                 tvsprite = expression_sprite;
                 sprite_index = tvsprite;

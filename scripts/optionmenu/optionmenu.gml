@@ -28,11 +28,10 @@ function add_select(argument0, argument1, argument2)
 
 function add_button(argument0, argument1)
 {
-    ds_map_set(pause_options_map, argument0, 
-    {
+    pause_options_map[? argument0] = {
         name: argument0,
         func: argument1
-    });
+    };
 }
 
 function add_button2(argument0, argument1)
@@ -177,7 +176,7 @@ function load_options()
     global.option_fullscreen = ini_fullscreen;
     window_set_fullscreen(global.option_fullscreen);
     ini_resolution = ini_read_real("Option", "resolution", 0);
-    window_set_size(array_get(ds_map_find_value(global.resolutionMap, ini_resolution), 0), array_get(ds_map_find_value(global.resolutionMap, ini_resolution), 1));
+    window_set_size(array_get(global.resolutionMap[? ini_resolution], 0), array_get(global.resolutionMap[? ini_resolution], 1));
     ini_close();
     trace("load options", global.option_language, global.option_fullscreen, ini_resolution);
 }

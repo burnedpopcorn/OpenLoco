@@ -70,7 +70,7 @@ if (global.panic)
                 
                 for (var i = 0; i < ds_list_size(global.escaperoom); i++)
                 {
-                    var b = ds_list_find_value(global.escaperoom, i);
+                    var b = global.escaperoom[| i];
                     var q = ds_list_find_index(global.baddieroom, b);
                     var t = 0;
                     

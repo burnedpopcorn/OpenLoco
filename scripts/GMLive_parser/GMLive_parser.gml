@@ -48,7 +48,7 @@ function gml_parser(l_src)constructor{
 		var l_i=0;
 		var l__=0;
 		for(var l__g1=l_tkCount;l__<l__g1;l__++){
-			l_tkArr[@l_i]=ds_list_find_value(l_tkList,l_i);
+			l_tkArr[@l_i]=l_tkList[| l_i];
 			l_tkArr[l_i].__enumName__=gml_std_Type_enumConstructor(l_tkArr[l_i]);
 			l_i++;
 		}
@@ -362,7 +362,7 @@ function gml_parser(l_src)constructor{
 				l_tpl.h_str+=_gml_parser_gml_parser_string_buf_impl__to_string(l_sb);
 				var l_tk=gml_token_par_close(gml_pos_create(self.h_pos_source,self.h_row,self.h_pos-self.h_row_start,self.h_pos));
 				if(self.h_curr_macro!=undefined)array_push(self.h_curr_macro.h_tokens,l_tk); else ds_list_add(gml_parser_token_acc,l_tk);
-				ds_list_set(gml_parser_token_acc,l_tpl.h_tk_index,gml_token_cstring(l_tpl.h_pos,l_tpl.h_str));
+				gml_parser_token_acc[| l_tpl.h_tk_index] = gml_token_cstring(l_tpl.h_pos,l_tpl.h_str);
 				self.h_curr_template=l_tpl.h_next;
 				return true;
 			}
@@ -466,9 +466,9 @@ function gml_parser(l_src)constructor{
 				if(l_checkLineBreakForHeader){
 					l_checkLineBreakForHeader=false;
 					l_i=ds_list_size(gml_parser_token_acc)-1;
-					var l__g=ds_list_find_value(gml_parser_token_acc,l_i);
+					var l__g=gml_parser_token_acc[| l_i];
 					if(l__g.__enumIndex__==0){
-						if(l__g.h_lb==false)ds_list_set(gml_parser_token_acc,l_i,gml_token_header(l__g.h_d,l__g.h_name,true));
+						if(l__g.h_lb==false)gml_parser_token_acc[| l_i] = gml_token_header(l__g.h_d,l__g.h_name,true);
 					}
 				}
 				continue;

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"ExtBufferIO",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Extensions/FMOD/Scripts.yy",
+    "name":"FMOD",
+    "path":"folders/Extensions/FMOD.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

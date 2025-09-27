@@ -22,10 +22,10 @@ function colmesh_raycast_result(argument0, argument1, argument2, argument3, argu
             if ((intersection[6].group & 4) == 0)
                 continue;
             
-            if (!is_undefined(ds_map_find_value(hitMap, intersection)))
+            if (!is_undefined(hitMap[? intersection]))
                 continue;
             
-            ds_map_set(hitMap, intersection, true);
+            hitMap[? intersection] = true;
             
             if (point_distance_3d(intersection[0], intersection[1], intersection[2], x, y, z) > l)
                 continue;
@@ -147,7 +147,7 @@ function colmesh_collider_capsule(argument0, argument1, argument2, argument3, ar
         
         repeat (i)
         {
-            var col = _getShape(ds_list_find_value(argument1, --i)).capsuleCollision(x, y, z, xup, yup, zup, radius, height);
+            var col = _getShape(argument1[| --i]).capsuleCollision(x, y, z, xup, yup, zup, radius, height);
             
             if (col)
                 return true;
@@ -185,7 +185,7 @@ function colmesh_collider_capsule(argument0, argument1, argument2, argument3, ar
         
         repeat (i)
         {
-            var shapeInd = ds_list_find_value(argument1, --i);
+            var shapeInd = argument1[| --i];
             var shape = argument0._getShape(shapeInd);
             
             if ((argument2 & shape.group) == 0)

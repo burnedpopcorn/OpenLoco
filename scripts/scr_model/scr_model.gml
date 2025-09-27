@@ -187,12 +187,12 @@ function load_obj(argument0, argument1, argument2)
                 var green = real(terms[2]) * 255;
                 var blue = real(terms[3]) * 255;
                 var color = make_color_rgb(red, green, blue);
-                ds_map_set(mtl_color, mtl_name, color);
+                mtl_color[? mtl_name] = color;
                 break;
             
             case "d":
                 var alpha = real(terms[1]);
-                ds_map_set(mtl_alpha, mtl_name, alpha);
+                mtl_alpha[? mtl_name] = alpha;
                 break;
             
             default:
@@ -269,22 +269,22 @@ function load_obj(argument0, argument1, argument2)
                         }
                     }
                     
-                    var xx = ds_list_find_value(vertex_x, real(data[0]) - 1);
-                    var yy = ds_list_find_value(vertex_y, real(data[0]) - 1);
-                    var zz = ds_list_find_value(vertex_z, real(data[0]) - 1);
-                    var xtex = ds_list_find_value(vertex_xtex, real(data[1]) - 1);
-                    var ytex = ds_list_find_value(vertex_ytex, real(data[1]) - 1);
-                    var nx = ds_list_find_value(vertex_nx, real(data[2]) - 1);
-                    var ny = ds_list_find_value(vertex_ny, real(data[2]) - 1);
-                    var nz = ds_list_find_value(vertex_nz, real(data[2]) - 1);
+                    var xx = vertex_x[| real(data[0]) - 1];
+                    var yy = vertex_y[| real(data[0]) - 1];
+                    var zz = vertex_z[| real(data[0]) - 1];
+                    var xtex = vertex_xtex[| real(data[1]) - 1];
+                    var ytex = vertex_ytex[| real(data[1]) - 1];
+                    var nx = vertex_nx[| real(data[2]) - 1];
+                    var ny = vertex_ny[| real(data[2]) - 1];
+                    var nz = vertex_nz[| real(data[2]) - 1];
                     var color = c_white;
                     var alpha = 1;
                     
                     if (ds_map_exists(mtl_color, active_mtl))
-                        color = ds_map_find_value(mtl_color, active_mtl);
+                        color = mtl_color[? active_mtl];
                     
                     if (ds_map_exists(mtl_alpha, active_mtl))
-                        alpha = ds_map_find_value(mtl_alpha, active_mtl);
+                        alpha = mtl_alpha[? active_mtl];
                     
                     var t = yy;
                     yy = zz;

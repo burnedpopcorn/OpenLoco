@@ -718,7 +718,7 @@ function colmesh_mesh(argument0 = "mesh" + string(ds_map_size(global.ColMeshMesh
     triangles = [];
     matrix = -1;
     submeshes = 0;
-    ds_map_set(global.ColMeshMeshMap, argument0, self);
+    global.ColMeshMeshMap[? argument0] = self;
     
     if (!is_undefined(argument1))
     {
@@ -3240,7 +3240,7 @@ function colmesh_dynamic(argument0, argument1, argument2 = 1) : colmesh_shapes(a
                         var _z = (zz++ + 0.5) * shape.regionSize;
                         var key = colmesh_get_key(_x, _y, _z);
                         
-                        if (!is_undefined(ds_map_find_value(shape.spHash, key)))
+                        if (!is_undefined(shape.spHash[? key]))
                             return true;
                     }
                 }

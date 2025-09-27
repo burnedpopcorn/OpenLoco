@@ -948,11 +948,11 @@ function vm_group_jump_on_switch(l_th,l_act,l_scope,l_st){
 	if(gml_std_haxe_boot_isJS&&is_int64(l_val)){
 		var l_vr=real(l_val);
 		if(l_vr==l_val&&ds_map_exists(l_jt,l_vr)){
-			l_scope[@2]=ds_map_find_value(l_jt,l_vr);
+			l_scope[@2]=l_jt[? l_vr];
 			return 2;
 		}
 	}
-	if(ds_map_exists(l_jt,l_val))l_scope[@2]=ds_map_find_value(l_jt,l_val); else l_scope[@2]=l_p;
+	if(ds_map_exists(l_jt,l_val))l_scope[@2]=l_jt[? l_val]; else l_scope[@2]=l_p;
 	return 2;
 }
 

@@ -97,7 +97,7 @@ function tv_push_prompt(argument0, argument1, argument2, argument3)
                 
                 while (i < ds_list_size(tvprompts_list))
                 {
-                    var b2 = ds_list_find_value(tvprompts_list, i);
+                    var b2 = tvprompts_list[| i];
                     
                     if (b2[1] == 2)
                     {

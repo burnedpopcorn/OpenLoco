@@ -41,7 +41,7 @@ listimage = 0;
 
 appearmultiimage = function()
 {
-    globoxsprite = ds_list_find_value(imagelist, listimage);
+    globoxsprite = imagelist[| listimage];
     
     if (showbuffer > 0)
         showbuffer--;

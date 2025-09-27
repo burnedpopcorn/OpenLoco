@@ -15,10 +15,10 @@ switch (state)
         
         with (obj_zombiearena_tombstone)
         {
-            if (ds_list_find_value(content_list, other.Round) != undefined)
+            if (content_list[| other.Round] != undefined)
             {
                 var q = instance_create(x, y, obj_zombie_riseup);
-                q.obj_array = ds_list_find_value(content_list, other.Round);
+                q.obj_array = content_list[| other.Round];
                 q.num_max = array_length(q.obj_array);
             }
         }
@@ -49,7 +49,7 @@ switch (state)
         {
             for (var i = 0; i < ds_list_size(zombie_list); i++)
             {
-                if (!instance_exists(ds_list_find_value(zombie_list, i)))
+                if (!instance_exists(zombie_list[| i]))
                 {
                     ds_list_delete(zombie_list, i);
                     i--;

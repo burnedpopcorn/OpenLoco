@@ -71,7 +71,7 @@ function live_room_loader_add_layer(l_ql){
 				l_ql_sublayer_index=0;
 				var l__=0;
 				for(var l__g1=ds_list_size(l_ql_sublayers);l__<l__g1;l__++){
-					live_room_loader_add_layer(ds_list_find_value(l_ql_sublayers,l_ql_sublayer_index));
+					live_room_loader_add_layer(l_ql_sublayers[| l_ql_sublayer_index]);
 					l_ql_sublayer_index++;
 				}
 			}
@@ -87,7 +87,7 @@ function live_room_loader_add_layer(l_ql){
 					l_ql_sublayer_index=0;
 					var l__=0;
 					for(var l__g1=ds_list_size(l_ql_sublayers);l__<l__g1;l__++){
-						live_room_loader_add_layer(ds_list_find_value(l_ql_sublayers,l_ql_sublayer_index));
+						live_room_loader_add_layer(l_ql_sublayers[| l_ql_sublayer_index]);
 						l_ql_sublayer_index++;
 					}
 				}
@@ -127,7 +127,7 @@ function live_room_loader_add_layer(l_ql){
 					l_ql_sublayer_index=0;
 					var l__=0;
 					for(var l__g1=ds_list_size(l_ql_sublayers);l__<l__g1;l__++){
-						live_room_loader_add_layer(ds_list_find_value(l_ql_sublayers,l_ql_sublayer_index));
+						live_room_loader_add_layer(l_ql_sublayers[| l_ql_sublayer_index]);
 						l_ql_sublayer_index++;
 					}
 				}
@@ -165,7 +165,7 @@ function live_room_loader_add_layer(l_ql){
 					for(var l__g1=l_qth;l_y<l__g1;l_y++){
 						var l_x=0;
 						for(var l__g3=l_qtw;l_x<l__g3;l_x++){
-							var l_td=ds_list_find_value(l_qtd,l_qti++);
+							var l_td=l_qtd[| l_qti++];
 							if(tile_get_empty(l_td))l_td=0;
 							tilemap_set(l_rt,l_td,l_rx+l_x,l_ry+l_y);
 						}
@@ -184,7 +184,7 @@ function live_room_loader_add_layer(l_ql){
 					l_ql_sublayer_index=0;
 					var l__=0;
 					for(var l__g1=ds_list_size(l_ql_sublayers);l__<l__g1;l__++){
-						live_room_loader_add_layer(ds_list_find_value(l_ql_sublayers,l_ql_sublayer_index));
+						live_room_loader_add_layer(l_ql_sublayers[| l_ql_sublayer_index]);
 						l_ql_sublayer_index++;
 					}
 				}
@@ -200,11 +200,11 @@ function live_room_loader_add_layer(l_ql){
 				var l_lco=live_room_loader_object_cache;
 				l_i=l_n;
 				while(--l_i>=0){
-					var l_qinst=ds_list_find_value(l_instances,l_i);
+					var l_qinst=l_instances[| l_i];
 					var l_rnext=instance_create_layer((l_rx+l_qinst[?"x"]),(l_ry+l_qinst[?"y"]),l_rl,l_base);
 					var l_qid=l_qinst[?"name"];
-					ds_map_set(live_room_loader_inst_map_yy,l_qid,l_qinst);
-					ds_map_set(live_room_loader_inst_map_gml,l_qid,l_rnext);
+					live_room_loader_inst_map_yy[? l_qid] = l_qinst;
+					live_room_loader_inst_map_gml[? l_qid] = l_rnext;
 					with (l_rnext) {
 						gml_const_add(l_qinst[?"name"],real(int64(self.id)));
 						l_aval=l_qinst[?"rotation"];
@@ -224,10 +224,10 @@ function live_room_loader_add_layer(l_ql){
 							self.image_alpha=(l_f>>24)/255;
 						}
 						l_s=l_qinst[?"obj"];
-						var l_id=ds_map_find_value(l_lco,l_s);
+						var l_id=l_lco[? l_s];
 						if(l_id==undefined){
 							l_id=asset_get_index(l_s);
-							ds_map_set(l_lco,l_s,l_id);
+							l_lco[? l_s] = l_id;
 						}
 						instance_change(l_id,false);
 					}
@@ -245,7 +245,7 @@ function live_room_loader_add_layer(l_ql){
 					l_ql_sublayer_index=0;
 					var l__=0;
 					for(var l__g1=ds_list_size(l_ql_sublayers);l__<l__g1;l__++){
-						live_room_loader_add_layer(ds_list_find_value(l_ql_sublayers,l_ql_sublayer_index));
+						live_room_loader_add_layer(l_ql_sublayers[| l_ql_sublayer_index]);
 						l_ql_sublayer_index++;
 					}
 				}
@@ -256,14 +256,14 @@ function live_room_loader_add_layer(l_ql){
 				l_ry=live_room_loader_room_y;
 				l_i=-1;
 				while(++l_i<l_n){
-					var l_qspr=ds_list_find_value(l_sprites,l_i);
+					var l_qspr=l_sprites[| l_i];
 					l_s=l_qspr[?"sprite"];
 					var l_rspr=l_rx+l_qspr[?"x"];
 					var l_rspr1=l_ry+l_qspr[?"y"];
-					var l_id=ds_map_find_value(l_lcs,l_s);
+					var l_id=l_lcs[? l_s];
 					if(l_id==undefined){
 						l_id=asset_get_index(l_s);
-						ds_map_set(l_lcs,l_s,l_id);
+						l_lcs[? l_s] = l_id;
 					}
 					var l_rspr2=layer_sprite_create(l_rl,l_rspr,l_rspr1,l_id);
 					l_aval=l_qspr[?"frameIndex"];
@@ -295,7 +295,7 @@ function live_room_loader_add_layer(l_ql){
 					l_ql_sublayer_index=0;
 					var l__=0;
 					for(var l__g1=ds_list_size(l_ql_sublayers);l__<l__g1;l__++){
-						live_room_loader_add_layer(ds_list_find_value(l_ql_sublayers,l_ql_sublayer_index));
+						live_room_loader_add_layer(l_ql_sublayers[| l_ql_sublayer_index]);
 						l_ql_sublayer_index++;
 					}
 				}
@@ -306,7 +306,7 @@ function live_room_loader_add_layer(l_ql){
 				var l__g_list=l_fxl[?"properties"];
 				var l__g_index=0;
 				while(l__g_index<ds_list_size(l__g_list)){
-					var l_pp=ds_list_find_value(l__g_list,l__g_index++);
+					var l_pp=l__g_list[| l__g_index++];
 					switch(l_pp[?"type"]){
 						case 1:
 							l_s=l_pp[?"value"];
@@ -354,7 +354,7 @@ function live_room_loader_run_impl2(l_rm){
 		if(l_qvs!=undefined){
 			var l_i=0;
 			for(var l__g1=ds_list_size(l_qvs);l_i<l__g1;l_i++){
-				var l_qv=ds_list_find_value(l_qvs,l_i);
+				var l_qv=l_qvs[| l_i];
 				if(l_qv==undefined)continue;
 				var l_rv=l_i;
 				l_aval=l_qv[?"visible"];
@@ -397,18 +397,18 @@ function live_room_loader_run_impl2(l_rm){
 	var l_lrs=l_rm[?"layers"];
 	var l_lrk=ds_list_size(l_lrs);
 	while(--l_lrk>=0){
-		live_room_loader_add_layer(ds_list_find_value(l_lrs,l_lrk));
+		live_room_loader_add_layer(l_lrs[| l_lrk]);
 	}
 	var l__g_list=l_rm[?"instanceCreationOrderIDs"];
 	var l__g_index=0;
 	while(l__g_index<ds_list_size(l__g_list)){
-		var l_id=ds_list_find_value(l__g_list,l__g_index++);
-		var l_qinst=ds_map_find_value(live_room_loader_inst_map_yy,l_id);
+		var l_id=l__g_list[| l__g_index++];
+		var l_qinst=live_room_loader_inst_map_yy[? l_id];
 		if(l_qinst==undefined){
 			live_log(l_id+" is in instanceCreationOrderIDs but no instance exists.",1);
 			continue;
 		}
-		live_room_loader_run_yy_inst_cc(ds_map_find_value(live_room_loader_inst_map_gml,l_id),l_qinst);
+		live_room_loader_run_yy_inst_cc(live_room_loader_inst_map_gml[? l_id],l_qinst);
 	}
 	ds_map_clear(live_room_loader_inst_map_gml);
 	ds_map_clear(live_room_loader_inst_map_yy);
@@ -420,7 +420,7 @@ function live_room_start(){
 	if(live_enabled){
 		var l_rq=live_live_room;
 		if(!room_exists(l_rq))throw gml_std_haxe_Exception_thrown("No live room was specified.");
-		var l_rd=ds_map_find_value(live_live_room_data,l_rq);
+		var l_rd=live_live_room_data[? l_rq];
 		if(l_rd==undefined){
 			live_log("Warning: no live data had been received yet for "+room_get_name(l_rq)+", transitioning to the regular version.",1);
 			room_goto(l_rq);

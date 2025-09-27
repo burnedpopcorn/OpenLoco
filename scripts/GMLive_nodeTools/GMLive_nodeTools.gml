@@ -202,7 +202,7 @@ function gml_node_tools_clone(l_q){
 if(live_enabled)
 function gml_node_tools_seek_all_out(l_q,l_st,l_c,l_si,l_pg){
 	var l_w,l_i;
-	var l_par=ds_list_find_value(l_st,l_si);
+	var l_par=l_st[| l_si];
 	if(l_par==undefined)return false;
 	var l__g=l_par;
 	switch(l__g.__enumIndex__){

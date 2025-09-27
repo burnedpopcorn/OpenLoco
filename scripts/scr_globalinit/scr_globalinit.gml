@@ -60,10 +60,10 @@ function scr_globalinit()
     global.golfhit = 0;
     window_set_fullscreen(global.option_fullscreen);
     global.resolutionMap = ds_map_create();
-    ds_map_set(global.resolutionMap, 0, [480, 270]);
-    ds_map_set(global.resolutionMap, 1, [960, 540]);
-    ds_map_set(global.resolutionMap, 2, [1920, 1080]);
-    window_set_size(array_get(ds_map_find_value(global.resolutionMap, global.option_resolution), 0), array_get(ds_map_find_value(global.resolutionMap, global.option_resolution), 1));
+    global.resolutionMap[? 0] = [480, 270];
+    global.resolutionMap[? 1] = [960, 540];
+    global.resolutionMap[? 2] = [1920, 1080];
+    window_set_size(array_get(global.resolutionMap[? global.option_resolution], 0), array_get(global.resolutionMap[? global.option_resolution], 1));
     global.afterimage_array = [];
     global.style = 0;
     global.panic = 0;
