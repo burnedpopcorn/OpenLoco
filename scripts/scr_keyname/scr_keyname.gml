@@ -1,193 +1,196 @@
-function scr_keyname(argument0)
+function scr_keyname(_key)
 {
-    if (argument0 == 37)
+    if (_key == vk_left)
         return "LEFT";
     
-    if (argument0 == 39)
+    if (_key == vk_right)
         return "RIGHT";
     
-    if (argument0 == 38)
+    if (_key == vk_up)
         return "UP";
     
-    if (argument0 == 40)
+    if (_key == vk_down)
         return "DOWN";
     
-    if (argument0 == 13)
+    if (_key == vk_enter)
         return "ENTER";
     
-    if (argument0 == 27)
+    if (_key == vk_escape)
         return "ESCAPE";
     
-    if (argument0 == 32)
+    if (_key == vk_space)
         return "SPACE";
     
-    if (argument0 == 16)
+    if (_key == vk_shift)
         return "SHIFT";
     
-    if (argument0 == 17)
+    if (_key == vk_control)
         return "CONTROL";
     
-    if (argument0 == 18)
+    if (_key == vk_alt)
         return "ALT";
     
-    if (argument0 == 8)
+    if (_key == vk_backspace)
         return "BACKSPACE";
     
-    if (argument0 == 9)
+    if (_key == vk_tab)
         return "TAB";
     
-    if (argument0 == 9)
+    if (_key == vk_tab)// idk, same as vk_tab's value
         return "HOME";
     
-    if (argument0 == 36)
+	#region okay wait who fucked up these values
+    if (_key == vk_home)
         return "END";
     
-    if (argument0 == 35)
+    if (_key == vk_end)
         return "DELETE";
     
-    if (argument0 == 46)
+    if (_key == vk_delete)
         return "INSERT";
     
-    if (argument0 == 45)
+    if (_key == vk_insert)
         return "PAGE UP";
     
-    if (argument0 == 33)
+    if (_key == vk_pageup)
         return "PAGE DOWN";
     
-    if (argument0 == 34)
+    if (_key == vk_pagedown)
         return "PAUSE";
     
-    if (argument0 == 19)
+    if (_key == vk_pause)
         return "PRINTSCREEN";
     
-    if (argument0 == 44)
+    if (_key == vk_printscreen)
         return "F1";
     
-    if (argument0 == 112)
+    if (_key == vk_f1)
         return "F2";
     
-    if (argument0 == 113)
+    if (_key == vk_f2)
         return "F3";
     
-    if (argument0 == 114)
+    if (_key == vk_f3)
         return "F4";
     
-    if (argument0 == 115)
+    if (_key == vk_f4)
         return "F5";
     
-    if (argument0 == 116)
+    if (_key == vk_f5)
         return "F6";
     
-    if (argument0 == 117)
+    if (_key == vk_f6)
         return "F7";
     
-    if (argument0 == 118)
+    if (_key == vk_f7)
         return "F8";
     
-    if (argument0 == 119)
+    if (_key == vk_f8)
         return "F9";
     
-    if (argument0 == 120)
+    if (_key == vk_f9)
         return "F10";
     
-    if (argument0 == 121)
+    if (_key == vk_f10)
         return "F11";
-    
-    if (argument0 == 123)
+	#endregion
+	// whoever was responsible for the shit above needs to be burned at the stake
+	
+    if (_key == vk_f12)
         return "F12";
     
-    if (argument0 == 96)
+    if (_key == vk_numpad0)
         return "NUMPAD 0";
     
-    if (argument0 == 97)
+    if (_key == vk_numpad1)
         return "NUMPAD 1";
     
-    if (argument0 == 98)
+    if (_key == vk_numpad2)
         return "NUMPAD 2";
     
-    if (argument0 == 99)
+    if (_key == vk_numpad3)
         return "NUMPAD 3";
     
-    if (argument0 == 100)
+    if (_key == vk_numpad4)
         return "NUMPAD 4";
     
-    if (argument0 == 101)
+    if (_key == vk_numpad5)
         return "NUMPAD 5";
     
-    if (argument0 == 102)
+    if (_key == vk_numpad6)
         return "NUMPAD 6";
     
-    if (argument0 == 103)
+    if (_key == vk_numpad7)
         return "NUMPAD 7";
     
-    if (argument0 == 104)
+    if (_key == vk_numpad8)
         return "NUMPAD 8";
     
-    if (argument0 == 105)
+    if (_key == vk_numpad9)
         return "NUMPAD 9";
     
-    if (argument0 == 106)
+    if (_key == vk_multiply)
         return "MULTIPLY";
     
-    if (argument0 == 111)
+    if (_key == vk_divide)
         return "DIVIDE";
     
-    if (argument0 == 107)
+    if (_key == vk_add)
         return "ADD";
     
-    if (argument0 == 109)
+    if (_key == vk_subtract)
         return "SUBSTRACT";
     
-    if (argument0 == 110)
+    if (_key == vk_decimal)
         return "DECIMAL";
     
-    if (argument0 == -1)
+    if (_key == -1)
         return "PRESS KEY";
     
-    return chr(argument0);
+    return chr(_key);
 }
 
-function text_get_key(argument0)
+function text_get_key(_key)
 {
-    var spr = -4;
+    var spr = noone;
     var img = 0;
     var txt = "";
     
-    switch (argument0)
+    switch (_key)
     {
-        case 37:
-        case 39:
-        case 40:
-        case 38:
+        case vk_left:
+        case vk_right:
+        case vk_down:
+        case vk_up:
             spr = spr_tutorialgamepad;
             
-            if (argument0 == 38)
+            if (_key == vk_up)
                 img = 4;
             
-            if (argument0 == 40)
+            if (_key == vk_down)
                 img = 5;
             
-            if (argument0 == 37)
+            if (_key == vk_left)
                 img = 16;
             
-            if (argument0 == 39)
+            if (_key == vk_right)
                 img = 17;
             
             break;
         
-        case 16:
-        case 160:
+        case vk_shift:
+        case vk_lshift:
             spr = spr_tutorialkeyspecial;
             img = 0;
             break;
         
-        case 17:
-        case 162:
+        case vk_control:
+        case vk_lcontrol:
             spr = spr_tutorialkeyspecial;
             img = 1;
             break;
         
-        case 32:
+        case vk_space:
             spr = spr_tutorialkeyspecial;
             img = 2;
             break;
@@ -195,7 +198,7 @@ function text_get_key(argument0)
         default:
             spr = spr_tutorialkey;
             img = 0;
-            txt = chr(argument0);
+            txt = chr(_key);
             break;
     }
     

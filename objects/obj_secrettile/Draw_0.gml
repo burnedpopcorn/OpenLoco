@@ -10,7 +10,7 @@ if (hasLayer && surface_exists(tile_surface) && array_length(tiles) > 0)
     
     for (var k = 0; k < array_length(tilemap_sprite); k++)
     {
-        if (tilemap_sprite[k] != -4)
+        if (tilemap_sprite[k] != noone)
         {
             for (var i = 0; i < array_length(tiles[k]); i++)
             {

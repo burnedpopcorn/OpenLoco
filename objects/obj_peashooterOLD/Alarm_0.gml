@@ -3,7 +3,7 @@ if (state != states.normal)
 
 var nearest = instance_nearest(x, y, obj_zombie);
 
-if (nearest == -4)
+if (nearest == noone)
 {
     last_saw = false;
     exit;

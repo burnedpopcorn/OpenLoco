@@ -9,7 +9,7 @@ fmod_studio_event_instance_move(laughsound, x, y);
 highest_y = -170;
 var _instY = collision_line(obj_player1.x, obj_player1.y, obj_player1.x, obj_player1.y - 170, obj_solid, false, true);
 
-if (_instY != -4)
+if (_instY != noone)
     highest_y = -abs(obj_player1.y - (_instY.y + _instY.sprite_height)) - 32;
 
 if (image_alpha == 1)

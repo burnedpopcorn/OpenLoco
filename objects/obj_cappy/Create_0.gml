@@ -1,4 +1,4 @@
-player_id = -4;
+player_id = noone;
 state = cappystates.fly;
 elapsed_time = 0;
 seek = false;

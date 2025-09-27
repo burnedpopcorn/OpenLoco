@@ -55,8 +55,8 @@ function create_collect(argument0, argument1, argument2, argument3 = 0)
         sprite_index: argument2,
         image_index: 0,
         image_number: sprite_get_number(argument2),
-        colorpalettesprite: -4,
-        colorpalette: -4,
+        colorpalettesprite: noone,
+        colorpalette: noone,
         hsp: 0,
         vsp: 0,
         val: argument3

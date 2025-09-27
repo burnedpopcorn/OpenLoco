@@ -43,7 +43,7 @@ function scr_playerreset()
     
     with (obj_tv)
     {
-        idlespr = -4;
+        idlespr = noone;
         changingtv = 0;
         changingtvindex = 0;
         changingtvspeed = 0.25;
@@ -56,7 +56,7 @@ function scr_playerreset()
         patrickangle = 0;
         ds_list_clear(tvprompts_list);
         prompt = "";
-        bubblespr = -4;
+        bubblespr = noone;
         promptx = promptxstart;
         sprite_index = get_charactersprite("spr_tvoff");
         tvsprite = get_charactersprite("spr_tvidle");

@@ -75,7 +75,7 @@ if (state == TVstates.whitenoise)
 if (sprite_index != spr_tvnoclip_damian)
     draw_sprite_ext(_frame, whitenoise_index, tv_x, tv_y + hud_posY, 1, 1, 0, c_white, alpha);
 
-if (bubblespr != -4)
+if (bubblespr != noone)
     draw_sprite_ext(bubblespr, bubbleindex, 512, 53, 1, 1, 1, c_white, alpha);
 
 if (!surface_exists(promptsurface))

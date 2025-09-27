@@ -1,4 +1,4 @@
-BG_surface = -4;
+BG_surface = noone;
 BG_arr = [];
 BG_list = ds_list_create();
 flash = 0;
@@ -8,5 +8,5 @@ BGTint = 0;
 BGPanic = 0;
 BGWaveAccel = 0.1;
 panicState = 0;
-global.panicbg_surface = -4;
-global.parallaxbg_surface = -4;
+global.panicbg_surface = noone;
+global.parallaxbg_surface = noone;

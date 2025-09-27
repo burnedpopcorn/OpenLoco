@@ -5,7 +5,7 @@ step_func = function()
 {
     var zombeh = instance_nearest(x, y, obj_zombie);
     
-    if (zombeh != -4)
+    if (zombeh != noone)
     {
         var distancia = point_distance(x, y, zombeh.x, zombeh.y);
         

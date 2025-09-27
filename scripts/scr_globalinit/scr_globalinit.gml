@@ -16,9 +16,10 @@ function scr_globalinit()
     global.stylelock = 0;
     global.heattime = 0;
     global.stylethreshold = 0;
-    global.hub_bgsprite = -4;
+    global.hub_bgsprite = noone;
     ini_open("saveData.ini");
     
+	#region SAGE 2019
     if (!ini_section_exists("SAGE2019"))
     {
         ini_write_string("SAGE2019", "shotgunsnick", 0);
@@ -43,6 +44,8 @@ function scr_globalinit()
     global.SAGEknighttaken = 0;
     global.SAGEtoppin = ini_read_string("SAGE2019", "toppin", 0);
     global.SAGEtreasure = ini_read_string("SAGE2019", "treasure", 0);
+	#endregion
+	
     global.option_fullscreen = ini_read_real("Option", "fullscreen", 1);
     global.option_resolution = ini_read_real("Option", "resolution", 1);
     global.option_language = ini_read_string("Option", "language", 0);
@@ -98,20 +101,20 @@ function scr_globalinit()
     global.instancelist = ds_list_create();
     global.palettesaveroom = ds_map_create();
     global.currentsavefile = 1;
-    global.leveltosave = -4;
+    global.leveltosave = noone;
     global.lap = 0;
     global.laps = 1;
     global.option_vibration = 0;
     global.collectspecial = 0;
     global.collectspecialmax = 10;
     global.combodrop = 0;
-    global.leveltoreset = -4;
-    global.doortoreset = -4;
-    global.roomtorestart = -4;
+    global.leveltoreset = noone;
+    global.doortoreset = noone;
+    global.roomtorestart = noone;
     global.lap3activate = false;
     global.music = 0;
-    global.mu = -4;
-    global.secretmusic = -4;
+    global.mu = noone;
+    global.secretmusic = noone;
     global.lowpassEffect = audio_effect_create(4);
     global.lowpassEffect.cutoff = 600;
     global.lowpassEffect.q = 0;
@@ -122,7 +125,7 @@ function scr_globalinit()
     audio_emitter_bus(global.musicemitter, global.musicbus);
     global.option_speedrun_timer = 0;
     global.option_timer_type = 0;
-    global.treasurelastroom = -4;
+    global.treasurelastroom = noone;
     global.treasurelastdoor = "A";
     global.boxhp = 20;
 }

@@ -15,14 +15,13 @@ function following_character_init()
     vsp = 0;
     hsp_carry = 0;
     vsp_carry = 0;
-    platformid = -4;
+    platformid = noone;
     grav = 0.5;
     grounded = 0;
     use_collision = 0;
     interp = 0.05;
     lock = 0;
     depth = -6;
-    exit;
 }
 
 function following_character_delete()
@@ -39,12 +38,10 @@ function following_character_delete()
             if (id != _id)
             {
                 pos = ds_list_find_index(global.followerlist, id);
-                followid = (pos > 0) ? global.followerlist[| pos - 1] : -4;
+                followid = (pos > 0) ? global.followerlist[| pos - 1] : noone;
             }
         }
     }
-    
-    exit;
 }
 
 function following_character_calculate()
@@ -52,10 +49,8 @@ function following_character_calculate()
     with (obj_followcharacter)
     {
         pos = ds_list_find_index(global.followerlist, id);
-        followid = (pos > 0) ? global.followerlist[| pos - 1] : -4;
+        followid = (pos > 0) ? global.followerlist[| pos - 1] : noone;
     }
-    
-    exit;
 }
 
 function following_add_to_front()
@@ -65,9 +60,8 @@ function following_add_to_front()
     
     ds_list_insert(global.followerlist, 0, id);
     pos = ds_list_find_index(global.followerlist, id);
-    followid = (pos > 0) ? global.followerlist[| pos - 1] : -4;
+    followid = (pos > 0) ? global.followerlist[| pos - 1] : noone;
     following_character_calculate();
-    exit;
 }
 
 function following_has_follower(argument0)
@@ -77,10 +71,10 @@ function following_has_follower(argument0)
         var b = global.followerlist[| i];
         
         if (instance_exists(b) && b.object_index == argument0)
-            return 1;
+            return true;
     }
     
-    return 0;
+    return false;
 }
 
 function following_count(argument0)

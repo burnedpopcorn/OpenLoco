@@ -1,7 +1,7 @@
-obj = -4;
+obj = noone;
 zombie_y = 0;
 shake = 2;
-snd_riseup = -4;
+snd_riseup = noone;
 image_index = 0.35;
 riseup_alarm = 10;
 yoffset = 4;

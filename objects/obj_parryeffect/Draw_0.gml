@@ -1,6 +1,6 @@
 if (sprite_exists(sprite_index))
 {
-    if (palette != -4)
+    if (palette != noone)
     {
         pal_swap_set(palette, paletteindex, false);
         draw_self();

@@ -11,7 +11,7 @@ with (myplayer)
     image_speed = 0.35;
     taunttimer = 20;
     movespeed = 8;
-    parry_inst = -4;
+    parry_inst = noone;
     parry_count = parry_max;
     
     with (instance_create(x, y, obj_parryeffect))

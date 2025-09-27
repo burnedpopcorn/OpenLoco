@@ -9,7 +9,7 @@ function pal_swap_init_system()
     if (argument_count > 1 && argument[1])
         global.Pal_Map = ds_map_create();
     
-    global.Pattern_Texture_Indexed = -4;
+    global.Pattern_Texture_Indexed = noone;
     global.Base_Pattern_Color = [1, 2];
     global.Pattern_Texture = shader_get_sampler_index(shd_pal_swapper, "pattern_texture");
     global.Pattern_Enable = shader_get_uniform(shd_pal_swapper, "pattern_enabled");

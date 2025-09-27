@@ -4,11 +4,11 @@ if (global.panic)
     
     if (sprite_index == spr_pizzaportal)
     {
-        playerid = -4;
+        playerid = noone;
         
         with (obj_player1)
         {
-            if (other.playerid == -4 && place_meeting(x, y, other))
+            if (other.playerid == noone && place_meeting(x, y, other))
             {
                 if (state != states.portal)
                 {

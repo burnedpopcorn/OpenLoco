@@ -44,9 +44,9 @@ total_mms = real(mm);
 lap_monitor_ypos = -sprite_get_height(spr_ranklapcounter);
 show_laps = false;
 total_laps = global.laps;
-dark_surface = -4;
+dark_surface = noone;
 dark_alpha = 0;
-afterrankmusic = -4;
+afterrankmusic = noone;
 sprite_index = asset_get_index(concat("spr_rank", string_upper(global.rank)));
 
 create_toppin = function(argument0, argument1, argument2, argument3 = 0)
@@ -64,7 +64,14 @@ create_toppin = function(argument0, argument1, argument2, argument3 = 0)
     };
 };
 
-toppin_arr = [create_toppin(global.shroomfollow, spr_ranktoppin_locked, spr_ranktoppin_unlocked1), create_toppin(global.cheesefollow, spr_ranktoppin_locked, spr_ranktoppin_unlocked1), create_toppin(global.tomatofollow, spr_ranktoppin_locked, spr_ranktoppin_unlocked1), create_toppin(global.sausagefollow, spr_ranktoppin_locked, spr_ranktoppin_unlocked1), create_toppin(global.pineapplefollow, spr_ranktoppin_locked, spr_ranktoppin_unlocked1, 4)];
+toppin_arr = 
+[
+	create_toppin(global.shroomfollow, spr_ranktoppin_locked, spr_ranktoppin_unlocked1), 
+	create_toppin(global.cheesefollow, spr_ranktoppin_locked, spr_ranktoppin_unlocked1), 
+	create_toppin(global.tomatofollow, spr_ranktoppin_locked, spr_ranktoppin_unlocked1), 
+	create_toppin(global.sausagefollow, spr_ranktoppin_locked, spr_ranktoppin_unlocked1), 
+	create_toppin(global.pineapplefollow, spr_ranktoppin_locked, spr_ranktoppin_unlocked1, 4)
+];
 Lrank_array = [];
 add_Lranks_wait = 0;
 extraLs = 0;
@@ -95,4 +102,4 @@ egg_num = 0;
 egg_wait = 0;
 light_len = 100;
 light_angle = 100;
-music = -4;
+music = noone;

@@ -5,9 +5,9 @@ dir = 5;
 invert = 1;
 image_speed = 0;
 depth = obj_player.depth + 30;
-output_modifier = -4;
-output_resetter = -4;
-output_add = -4;
+output_modifier = noone;
+output_resetter = noone;
+output_add = noone;
 
 if (!object_exists(playerid))
     exit;

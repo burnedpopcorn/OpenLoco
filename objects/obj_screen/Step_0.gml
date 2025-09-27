@@ -8,11 +8,16 @@ bgY += 0.1;
 
 if (oldWidth != window_get_width() || oldHeight != window_get_height())
 {
-    var actSize = -4;
+    var actSize = noone;
     
     if (scaleMode == 1)
     {
-        actSize = [window_get_width(), window_get_height(), window_get_width() > 0 && window_get_height() > 0];
+        actSize = 
+		[
+			window_get_width(), 
+			window_get_height(), 
+			(window_get_width() > 0 && window_get_height() > 0)
+		];
         
         if (window_get_width() > 0 && window_get_height() > 0)
         {

@@ -21,4 +21,4 @@ t_yscale = 1;
 active = false;
 time = 0;
 alpha = 0;
-pid = -4;
+pid = noone;

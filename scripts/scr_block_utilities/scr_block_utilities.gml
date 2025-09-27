@@ -42,13 +42,13 @@ function scr_destroy_tile(argument0, argument1, argument2)
 
 function scr_solid_line(argument0)
 {
-    if (collision_line(x, y, argument0.x, argument0.y, obj_solid, false, true) != -4)
-        return 1;
+    if (collision_line(x, y, argument0.x, argument0.y, obj_solid, false, true) != noone)
+        return true;
     
-    if (collision_line(x, y, argument0.x, argument0.y, obj_slope, false, true) != -4)
-        return 1;
+    if (collision_line(x, y, argument0.x, argument0.y, obj_slope, false, true) != noone)
+        return true;
     
-    return 0;
+    return false;
 }
 
 function scr_destroy_nearby_tiles()
@@ -59,8 +59,6 @@ function scr_destroy_nearby_tiles()
         target_tiles = other.target_tiles;
         instance_destroy();
     }
-    
-    exit;
 }
 
 function scr_cutoff_get_angle(argument0)
@@ -72,7 +70,13 @@ function scr_cutoff_get_angle(argument0)
 
 function scr_cutoff()
 {
-    var dirs = [[-1, 0], [1, 0], [0, -1], [0, 1]];
+    var dirs = 
+	[
+		[-1, 0], 
+		[1, 0], 
+		[0, -1], 
+		[0, 1]
+	];
     var list = ds_list_create();
     
     for (var i = 0; i < array_length(dirs); i++)
@@ -122,5 +126,4 @@ function scr_cutoff()
     
     ds_list_clear(list);
     ds_list_destroy(list);
-    exit;
 }

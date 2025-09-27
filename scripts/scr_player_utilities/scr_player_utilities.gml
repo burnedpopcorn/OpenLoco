@@ -112,11 +112,11 @@ function scr_dotaunt()
 
 function taunt_resetvariables()
 {
-    tauntstoredmovespeed = -4;
-    tauntstoredsprite = -4;
-    tauntstoredindex = -4;
-    tauntstoredstate = -4;
-    tauntstoredvsp = -4;
+    tauntstoredmovespeed = noone;
+    tauntstoredsprite = noone;
+    tauntstoredindex = noone;
+    tauntstoredstate = noone;
+    tauntstoredvsp = noone;
 }
 
 function do_specialmoves(argument0 = special_attack)

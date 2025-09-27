@@ -4,7 +4,7 @@ image_xscale = playerid.xscale;
 
 if (instance_exists(playerid) && playerid.supercharged == 0)
 {
-    playerid.superchargedeffectid = -4;
+    playerid.superchargedeffectid = noone;
     instance_destroy();
 }
 

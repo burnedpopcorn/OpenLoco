@@ -1,6 +1,6 @@
 randomize();
 text = "testing stuff and cool other stuff |f10| anyway bye";
-sounds = [-4];
+sounds = [noone];
 writer = 
 {
     ch: 0,

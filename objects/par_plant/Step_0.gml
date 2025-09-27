@@ -6,7 +6,7 @@ hsp = approach(hsp, 0, 0.1);
 switch (state)
 {
     case states.normal:
-        if (step_func != -4)
+        if (step_func != noone)
             step_func();
         
         break;

@@ -1,6 +1,6 @@
 depth = -500;
 tiles = array_create(3, []);
-tilemap_sprite = array_create(3, -4);
+tilemap_sprite = array_create(3, noone);
 hasLayer = false;
 alpha = 1;
 tile_surface = surface_create(sprite_width, sprite_height);

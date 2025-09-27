@@ -12,7 +12,7 @@ if (other.state == states.zombie || other.state == states.zombiejump || other.st
             
             repeat (50)
             {
-                var spr_pair = choose([spr_sausagecollect, -4], [spr_shroomcollect, spr_coincolorpalette], [spr_cheesecollect, spr_fishcolorpalette], [spr_tomatocollect, spr_sposcolorpalette], [spr_pineapplecollect, spr_starcolorpalette]);
+                var spr_pair = choose([spr_sausagecollect, noone], [spr_shroomcollect, spr_coincolorpalette], [spr_cheesecollect, spr_fishcolorpalette], [spr_tomatocollect, spr_sposcolorpalette], [spr_pineapplecollect, spr_starcolorpalette]);
                 create_collect_color(x + random_range(-64, 64), y + random_range(-64, 64), spr_pair[0], spr_pair[1], random_range(0, 3), 10);
             }
         }

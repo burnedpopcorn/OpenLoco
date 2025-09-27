@@ -13,7 +13,7 @@ function scr_player_lawnmower()
         else
             movespeed = approach(movespeed, 10, 0.035);
         
-        scr_player_addslopemomentum(0.095, 0.085, true, 8, -4);
+        scr_player_addslopemomentum(0.095, 0.085, true, 8, noone);
         
         if (vsp >= 0)
         {
@@ -129,7 +129,7 @@ function scr_player_lawnmowerOLD()
             movespeed = approach(movespeed, 10, 0.035);
     }
     
-    scr_player_addslopemomentum(0.095, 0.085, true, 8, -4);
+    scr_player_addslopemomentum(0.095, 0.085, true, 8, noone);
     
     if (grounded)
     {

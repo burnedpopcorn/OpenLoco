@@ -1,4 +1,4 @@
-if (sPauseGUI != -4)
+if (sPauseGUI != noone)
 {
     draw_sprite_ext(sPause, -1, obj_screen.actualWidth / 2, obj_screen.actualHeight / 2, scalepause, scalepause, 0, c_white, 1);
     draw_sprite_ext(sPauseGUI, -1, obj_screen.actualWidth / 2, obj_screen.actualHeight / 2, scalepause, scalepause, 0, c_white, 1);

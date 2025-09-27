@@ -1,8 +1,8 @@
 global.music = 
 {
-    secret_event_instance: -4,
-    event_instance: -4,
-    pillar_instance: -4,
+    secret_event_instance: noone,
+    event_instance: noone,
+    pillar_instance: noone,
     pillar_dist: 10,
     pitch: 1
 };

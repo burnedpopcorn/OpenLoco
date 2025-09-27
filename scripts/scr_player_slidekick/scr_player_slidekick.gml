@@ -9,7 +9,7 @@ function scr_player_slidekick()
     if (sprite_index == get_charactersprite("spr_backslideland") && animation_end())
         sprite_index = get_charactersprite("spr_backslide");
     
-    scr_player_addslopemomentum(0.095, 0.085, true, -4, -4);
+    scr_player_addslopemomentum(0.095, 0.085, true, -4, noone);
     
     if (abs(movespeed) <= 1)
     {

@@ -12,7 +12,7 @@ function scr_player_slipbanana()
     
     if (sprite_index == get_charactersprite("spr_slipbanan2"))
     {
-        scr_player_addslopemomentum(0.095, 0.085, true, -4, -4);
+        scr_player_addslopemomentum(0.095, 0.085, true, -4, noone);
         
         if (!grounded)
         {

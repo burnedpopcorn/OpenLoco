@@ -92,7 +92,7 @@ function get_layer(argument0)
         }
     }
     
-    return -4;
+    return noone;
 }
 
 function parrallax_load()

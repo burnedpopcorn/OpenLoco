@@ -1,7 +1,7 @@
 image_speed = 0.35;
 mask_index = spr_pizzakinmask;
 depth = 15;
-gateid = -4;
+gateid = noone;
 move_duration = irandom_range(30, 90);
 move_cooldown = irandom_range(60, 120);
 state = "idle";

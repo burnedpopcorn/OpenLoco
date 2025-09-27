@@ -5,7 +5,7 @@ function scr_enemy_hit()
     
     if (hitLag <= 0)
     {
-        var _player = -4;
+        var _player = noone;
         
         if (grabbedby == 1)
             _player = obj_player1;

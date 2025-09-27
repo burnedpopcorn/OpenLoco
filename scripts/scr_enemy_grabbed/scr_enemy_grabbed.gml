@@ -457,7 +457,7 @@ function check_grabbed_solid(argument0)
     if (instakilled)
         exit;
     
-    if (!place_meeting(x, y, obj_destructibles) && (place_meeting_collision(x, y) || collision_line(x, y, argument0.x, argument0.y, obj_solid, false, true) != -4))
+    if (!place_meeting(x, y, obj_destructibles) && (place_meeting_collision(x, y) || collision_line(x, y, argument0.x, argument0.y, obj_solid, false, true) != noone))
     {
         var _dist = abs(x - argument0.x);
         x = argument0.x;

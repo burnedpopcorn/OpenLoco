@@ -1,5 +1,5 @@
 options = [];
-pause_music = -4;
+pause_music = noone;
 stored_panic_state = 0;
 pause_options_map = ds_map_create();
 add_button("CONTINUE", function()
@@ -13,7 +13,7 @@ add_button("CONTINUE", function()
 });
 add_button("RESTART", function()
 {
-    if (global.leveltosave != -4)
+    if (global.leveltosave != noone)
     {
         music_set_paused(false);
         fmod_studio_event_instance_kill(pause_music);
@@ -74,7 +74,7 @@ add_button("QUIT", function()
         music_set_paused(false);
         fmod_studio_event_instance_kill(pause_music);
     }
-    else if (global.leveltosave != -4)
+    else if (global.leveltosave != noone)
     {
         music_set_paused(false);
         fmod_studio_event_instance_kill(pause_music);

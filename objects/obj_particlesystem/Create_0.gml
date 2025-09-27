@@ -4,8 +4,8 @@ if (instance_number(obj_particlesystem) > 1)
     exit;
 }
 
-colorpalettesprite = -4;
-colorpalette = -4;
+colorpalettesprite = noone;
+colorpalette = noone;
 depth = -99;
 global.particle_system = part_system_create();
 global.part_map = ds_map_create();

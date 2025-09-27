@@ -31,6 +31,4 @@ function scr_getinput2()
         stickpressed = 1;
     else
         stickpressed = 0;
-    
-    exit;
 }

@@ -1,4 +1,4 @@
-baddieID = -4;
+baddieID = noone;
 active = 0;
 disappear = 0;
 state = spawnbaddies.idle;

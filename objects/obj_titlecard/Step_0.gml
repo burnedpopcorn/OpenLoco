@@ -1,4 +1,4 @@
-if (title_instance == -4)
+if (title_instance == noone)
     exit;
 
 title_x = Approach(title_x, 0, 30);

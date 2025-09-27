@@ -138,7 +138,7 @@ function scr_player_freefall()
                 var s = instance_place(x, y + 1, obj_slope);
                 var s2 = instance_place(x, y + 1, obj_slopePlatform);
                 
-                if (s2 != -4)
+                if (s2 != noone)
                     s = s2;
                 
                 with (s)

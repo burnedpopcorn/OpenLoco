@@ -164,7 +164,7 @@ function array_random(argument0, argument1 = 0, argument2 = array_length(argumen
     var index = irandom_range(argument1, argument2);
     
     if (index > (array_length(argument0) - 1) || index < 0)
-        return -4;
+        return noone;
     else
         return argument0[index];
     
@@ -231,7 +231,7 @@ function instance_create_unique(argument0, argument1, argument2)
     if (!instance_exists(argument2))
         return instance_create(argument0, argument1, argument2);
     else
-        return -4;
+        return noone;
 }
 
 function saveroom_add(argument0 = id)

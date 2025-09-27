@@ -11,7 +11,7 @@ entering = 0;
 xoff = 0;
 yoff = 0;
 going = 0;
-specialstageroom = -4;
+specialstageroom = noone;
 vertex_format_begin();
 vertex_format_add_position_3d();
 vertex_format_add_normal();

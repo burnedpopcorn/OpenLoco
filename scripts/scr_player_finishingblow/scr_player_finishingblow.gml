@@ -25,7 +25,7 @@ function scr_player_finishingblow()
             {
                 hsp = (other.sprite_index != get_charactersprite("spr_uppercutfinishingblow")) ? (9 * other.xscale) : 0;
                 vsp = (other.sprite_index == get_charactersprite("spr_uppercutfinishingblow")) ? -11 : 0;
-                grabber = -4;
+                grabber = noone;
             }
         }
         

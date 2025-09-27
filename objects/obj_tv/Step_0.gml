@@ -18,9 +18,9 @@ alpha = Approach(alpha, alphaend, 0.07);
 if (fadebg > 0)
     fadebg = Approach(fadebg, 0, 0.1);
 
-if (bubblespr != -4 && bubblespr != spr_tv_bubbleclosed)
+if (bubblespr != noone && bubblespr != spr_tv_bubbleclosed)
 {
-    if (prompt != -4)
+    if (prompt != noone)
         prompt_buffer = 2;
     
     bubbleindex += image_speed;
@@ -38,8 +38,8 @@ if (bubblespr != -4 && bubblespr != spr_tv_bubbleclosed)
             case spr_tv_bubbleclose:
                 bubblespr = spr_tv_bubbleclosed;
                 
-                if (prompt == -4 || prompt == "")
-                    bubblespr = -4;
+                if (prompt == noone || prompt == "")
+                    bubblespr = noone;
                 
                 break;
         }

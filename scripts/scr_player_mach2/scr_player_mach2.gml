@@ -89,7 +89,7 @@ function scr_player_mach2()
     if (!grounded)
         machpunchAnim = 0;
     
-    scr_player_addslopemomentum(0.095, 0.085, true, 8, -4);
+    scr_player_addslopemomentum(0.095, 0.085, true, 8, noone);
     
     if (grounded)
     {

@@ -1,4 +1,4 @@
-if (colorpalettesprite != -4)
+if (colorpalettesprite != noone)
     pal_swap_set(colorpalettesprite, colorpalette, 0);
 
 draw_self();

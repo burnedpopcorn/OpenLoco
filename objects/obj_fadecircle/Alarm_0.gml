@@ -34,7 +34,7 @@ if (room != rank_room)
         scr_playerreset();
         obj_player.failexit = true;
         playerendedit = 1;
-        global.leveltosave = -4;
+        global.leveltosave = noone;
     }
     
     circlein = 0;

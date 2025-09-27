@@ -1,5 +1,5 @@
 depth = 30;
-gateid = -4;
+gateid = noone;
 found = false;
 treasure_spr = spr_treasure1pick;
 treasureanim = 0;

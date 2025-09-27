@@ -11,7 +11,7 @@ step_func = function()
     if (instance_exists(nearest))
         zombie_id = collision_rectangle(x, y - (sprite_height / 2), x + (longRangeDistance * image_xscale), y + (sprite_height / 2), nearest, 0, 0);
     else
-        zombie_id = -4;
+        zombie_id = noone;
     
     switch (substate)
     {

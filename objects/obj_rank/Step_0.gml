@@ -29,7 +29,7 @@ if (move && sprite_index != spr_rankL)
 
 if (instance_exists(obj_endlevelfade) && !fmod_studio_event_instance_is_valid(obj_endlevelfade.music_instance))
 {
-    if (music == -4)
+    if (music == noone)
     {
         music = fmod_studio_event_description_create_instance(fmod_studio_system_get_event("event:/music/level_structure/rankresult"));
         fmod_studio_event_instance_set_parameter_by_name(music, "state", global.rank == "l", true);

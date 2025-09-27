@@ -98,8 +98,6 @@ function scr_getinput()
                 key_up = 1;
         }
     }
-    
-    exit;
 }
 
 function input_check2(argument0, argument1)
