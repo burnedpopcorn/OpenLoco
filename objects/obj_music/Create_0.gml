@@ -6,9 +6,12 @@ global.music =
     pillar_dist: 10,
     pitch: 1
 };
+
 start_bg_escape = false;
 secret = false;
 music_map = ds_map_create();
+
+#region Level Music
 add_music(rm_titleselect, "event:/music/title", "event:/music/title");
 add_music([rm_test, NoRoom], "event:/music/misc/debug", "event:/music/misc/debug", function()
 {
@@ -42,3 +45,4 @@ add_music([lawn_1, Nlocotown_4, lawn_outside1], "event:/music/world_1/crazii_law
     fmod_studio_event_instance_set_parameter_by_name(global.music.event_instance, "state", room == lawn_outside1);
 });
 add_music(forestmaze_1, "event:/music/world_1/forest_maze/maze", "event:/music/world_1/forest_maze/maze_secret");
+#endregion

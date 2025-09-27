@@ -62,9 +62,9 @@ if (global.laps >= 5)
     {
         if (check && y <= (player.y + 60) && y >= (player.y - 60))
         {
-            if (state != 125 && ragebuffer == 0)
+            if (state != states.cappythrow && ragebuffer == 0)
             {
-                state = 125;
+                state = states.cappythrow;
                 sprite_index = ragespr;
                 
                 if (x != player.x)

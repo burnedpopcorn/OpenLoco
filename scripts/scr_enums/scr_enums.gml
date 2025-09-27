@@ -18,9 +18,9 @@ enum states
 	titlescreen			= 8,
 	hookshot			= 9,
     tacklecharge		= 10,
-	// 11
 	
 	// the idk section
+	unknown11			= 11,
 	unknown12			= 12,
     zombie				= 13,
 	// 14
@@ -45,7 +45,7 @@ enum states
 	highjump			= 32,
 	chainsaw			= 33,
 	facestomp			= 34,
-	// 35
+	unknown35			= 35,
 	timesup				= 36,
 	machroll			= 37,
 	shotgun				= 38,

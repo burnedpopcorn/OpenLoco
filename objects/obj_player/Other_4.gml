@@ -88,9 +88,7 @@ if (global.smoothcam)
             secretcamexit = 0;
         }
         else
-        {
             player = obj_player1;
-        }
         
         var target = player;
         

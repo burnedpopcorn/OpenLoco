@@ -14,17 +14,11 @@ if (_score >= global.srank)
         _rank = "s";
 }
 else if (_score >= global.arank)
-{
     _rank = "a";
-}
 else if (_score >= global.brank)
-{
     _rank = "b";
-}
 else if (_score >= global.crank)
-{
     _rank = "c";
-}
 
 if (global.leveltosave == noone || room == rm_titlecard || instance_exists(obj_pointstotal))
     _rank = "noone";
@@ -46,6 +40,4 @@ if (instance_exists(obj_pointstotal))
     state_text = "Total Score: " + string(_points);
 }
 else if (global.leveltosave == noone)
-{
     state_text = "No Score";
-}

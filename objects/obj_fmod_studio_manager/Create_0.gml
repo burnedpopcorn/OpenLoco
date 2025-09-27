@@ -7,10 +7,12 @@ show_debug_message("fmod_studio_system_create: " + string(fmod_last_result()));
 fmod_studio_system_init(_max_channels, _flags_studio, _flags_core);
 show_debug_message("fmod_studio_system_init: " + string(fmod_last_result()));
 fmod_main_system = fmod_studio_system_get_core_system();
+
 master_bank = fmod_studio_system_load_bank_file(fmod_path_bundle("data\\sound\\Desktop\\Master.bank"), FMOD_STUDIO_LOAD_BANK.NORMAL);
 master_strings_bank = fmod_studio_system_load_bank_file(fmod_path_bundle("data\\sound\\Desktop\\Master.strings.bank"), FMOD_STUDIO_LOAD_BANK.NORMAL);
 music_bank = fmod_studio_system_load_bank_file(fmod_path_bundle("data\\sound\\Desktop\\Music.bank"), FMOD_STUDIO_LOAD_BANK.NORMAL);
 sfx_bank = fmod_studio_system_load_bank_file(fmod_path_bundle("data\\sound\\Desktop\\SFX.bank"), FMOD_STUDIO_LOAD_BANK.NORMAL);
+
 music_bus = fmod_studio_system_get_bus("bus:/music");
 sfx_bus = fmod_studio_system_get_bus("bus:/sfx");
 oneshot_events = ds_list_create();

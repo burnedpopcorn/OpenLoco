@@ -77,7 +77,7 @@ function scr_player_jump()
         jumpstop = 1;
     }
     
-    if ((can_jump && (input_buffer_jump < 8 && (!key_down && (!key_attack && vsp > 0)))) && !(sprite_index == get_charactersprite("spr_facestomp") || sprite_index == get_charactersprite("spr_freefall")))
+    if ((grounded && can_jump && (input_buffer_jump < 8 && (!key_down && (!key_attack && vsp > 0)))) && !(sprite_index == get_charactersprite("spr_facestomp") || sprite_index == get_charactersprite("spr_freefall")))
     {
         fmod_studio_event_instance_start(jumpsnd);
         sprite_index = get_charactersprite("spr_jump");

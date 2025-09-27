@@ -119,9 +119,7 @@ if (light_angle > 360)
 light_angle += 5;
 
 if (!surface_exists(dark_surface))
-{
     dark_surface = surface_create(obj_screen.actualWidth, obj_screen.actualWidth);
-}
 else
 {
     surface_set_target(dark_surface);

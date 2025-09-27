@@ -12,7 +12,7 @@ with (obj_player)
         else
             heavy = 0;
         
-        state = 46;
+        state = states.grab;
     }
 }
 

@@ -7,7 +7,7 @@ if (state == states.superslam)
 if (obj_player1.state != states.lungeattack && obj_player1.state != states.chainsaw && obj_player1.state != states.handstandjump && state != states.superslam && state != states.hit && lunged)
     lunged = 0;
 
-if (state != states.grabbed && state != 126)
+if (state != states.grabbed && state != states.unknown126)
 {
     scr_collision();
     
@@ -61,9 +61,7 @@ with (instance_nearest(x, y, obj_player))
         other.scaredbuffer = 0;
     }
     else if (other.state != states.unknown126)
-    {
         other.provoked = false;
-    }
 }
 
 fmod_studio_event_instance_move(stun_snd);

@@ -21,13 +21,9 @@ else if (abs(target.hsp) >= 16 && target.state != states.climbwall && target.sta
     chargecamera = Approach(chargecamera, _targetcharge, _tspeed);
 }
 else if (target.state == states.machslide)
-{
     chargecamera = Approach(chargecamera, 0, 10);
-}
 else
-{
     chargecamera = Approach(chargecamera, 0, 6);
-}
 
 if (!(room_width == 960 && room_height == 540))
 {

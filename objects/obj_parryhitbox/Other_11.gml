@@ -5,7 +5,7 @@ if (player_id == 2)
 
 with (myplayer)
 {
-    state = 113;
+    state = states.parrying;
     sprite_index = choose(get_charactersprite("spr_parry1"), get_charactersprite("spr_parry2"));
     image_index = 0;
     image_speed = 0.35;

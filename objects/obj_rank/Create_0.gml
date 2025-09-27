@@ -49,17 +49,17 @@ dark_alpha = 0;
 afterrankmusic = noone;
 sprite_index = asset_get_index(concat("spr_rank", string_upper(global.rank)));
 
-create_toppin = function(argument0, argument1, argument2, argument3 = 0)
+create_toppin = function(_collected, _sprite, _unlocked_spr, _offset = 0)
 {
     return 
     {
-        collected: argument0,
+        collected: _collected,
         resultUnlocked: false,
-        sprite_index: argument1,
+        sprite_index: _sprite,
         index: 0,
-        unlockedspr: argument2,
-        offset: argument3,
-        lockedspr: argument1,
+        unlockedspr: _unlocked_spr,
+        offset: _offset,
+        lockedspr: _sprite,
         shake: 0
     };
 };

@@ -1,11 +1,11 @@
-var b = 0;
+var b = false;
 var p = (player_id == 1) ? obj_player1.id : obj_player2.id;
 
 with (other)
 {
     if (defused)
     {
-        b = 1;
+        b = true;
         var current_hspd = abs(hsp);
         var _dir = sign(hsp);
         
@@ -22,9 +22,7 @@ with (other)
             vsp = -5;
         }
         else
-        {
             hsp = _dir * current_hspd;
-        }
     }
 }
 

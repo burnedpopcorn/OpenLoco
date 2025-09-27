@@ -10,9 +10,7 @@ if (image_alpha == 1)
     y += lengthdir_y(maxspeed, dir);
 }
 else
-{
     image_alpha += 0.01;
-}
 
 if (place_meeting(x, y, playerid) && !playerid.cutscene && playerid.state != states.actor && playerid.state != states.backbreaker && !instance_exists(obj_fadeout) && !instance_exists(obj_endlevelfade) && image_alpha == 1)
 {

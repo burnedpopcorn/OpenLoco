@@ -6,9 +6,7 @@ if (keyboard_check_pressed(ord("X")) && video_get_status() == 2)
         alarm[1] = 250;
     }
     else
-    {
         video_close();
-    }
 }
 
 if (onceagain && alpha < 1)

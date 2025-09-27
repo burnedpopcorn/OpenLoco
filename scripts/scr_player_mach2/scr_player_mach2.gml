@@ -30,7 +30,7 @@ function scr_player_mach2()
     if (grounded && vsp > 0)
         jumpstop = 0;
     
-    if (input_buffer_jump < 8 && (can_jump && (!(move == 1 && xscale == -1) && !(move == -1 && xscale == 1))))
+    if (grounded && input_buffer_jump < 8 && (can_jump && (!(move == 1 && xscale == -1) && !(move == -1 && xscale == 1))))
     {
         image_index = 0;
         sprite_index = get_charactersprite("spr_secondjump1");

@@ -13,9 +13,7 @@ with (global.music)
         fmod_studio_event_instance_start(pillar_instance);
     }
     else
-    {
         fmod_studio_event_instance_kill(pillar_instance);
-    }
 }
 
 if (global.panic || is_undefined(room_sng))

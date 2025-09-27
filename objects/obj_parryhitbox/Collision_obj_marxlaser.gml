@@ -2,7 +2,7 @@ with (other)
 {
     if (!parried)
     {
-        parried = 1;
+        parried = true;
         
         if (!instance_exists(obj_fadeout))
         {

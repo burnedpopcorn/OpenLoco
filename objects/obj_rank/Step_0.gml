@@ -86,9 +86,7 @@ if (instance_exists(obj_endlevelfade) && !fmod_studio_event_instance_is_valid(ob
                     trace("grounded");
                 }
                 else
-                {
                     cutscene_state++;
-                }
             }
             
             break;
@@ -201,9 +199,7 @@ if (instance_exists(obj_endlevelfade) && !fmod_studio_event_instance_is_valid(ob
                     add_Lranks_wait = 10;
                 }
                 else
-                {
                     alarm[1] = 50;
-                }
                 
                 if (rankValue >= 4)
                     fmod_studio_event_oneshot("event:/sfx/rank/result");
@@ -217,15 +213,11 @@ if (instance_exists(obj_endlevelfade) && !fmod_studio_event_instance_is_valid(ob
             if (showLs)
             {
                 if (add_Lranks_wait > 0)
-                {
                     add_Lranks_wait--;
-                }
                 else if ((array_length(Lrank_array) + extraLs) < (laps - 1))
                 {
                     if (array_length(Lrank_array) == 5)
-                    {
                         extraLs++;
-                    }
                     else
                     {
                         array_push(Lrank_array, 
@@ -250,9 +242,7 @@ if (instance_exists(obj_endlevelfade) && !fmod_studio_event_instance_is_valid(ob
         
         case 10:
             if (!lap)
-            {
                 cutscene_state++;
-            }
             else
             {
                 lap_monitor_ypos = lerp(lap_monitor_ypos, 0, 0.1);
@@ -336,9 +326,7 @@ if (instance_exists(obj_endlevelfade) && !fmod_studio_event_instance_is_valid(ob
         
         case 18:
             if (toppin_unlock_wait > 0)
-            {
                 toppin_unlock_wait--;
-            }
             else if (toppin_num <= (array_length(toppin_arr) - 1))
             {
                 var t = toppin_arr[toppin_num];
@@ -353,9 +341,7 @@ if (instance_exists(obj_endlevelfade) && !fmod_studio_event_instance_is_valid(ob
                 toppin_num++;
             }
             else
-            {
                 cutscene_state++;
-            }
             
             break;
         
@@ -369,9 +355,7 @@ if (instance_exists(obj_endlevelfade) && !fmod_studio_event_instance_is_valid(ob
         
         case 20:
             if (egg_wait > 0)
-            {
                 egg_wait--;
-            }
             else if (egg_num <= (array_length(egg_arr) - 1))
             {
                 if ((egg_num + 1) <= global.secretfound)
@@ -383,9 +367,7 @@ if (instance_exists(obj_endlevelfade) && !fmod_studio_event_instance_is_valid(ob
                 egg_wait = eggWaitMax;
             }
             else
-            {
                 cutscene_state++;
-            }
             
             break;
         

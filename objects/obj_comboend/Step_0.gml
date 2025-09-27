@@ -1,7 +1,5 @@
 if (timer > 0)
-{
     timer--;
-}
 else
 {
     timer = timer_max;
@@ -19,9 +17,7 @@ else
         create_collect(obj_player1.x, obj_player1.y - 100, choose(spr_sausagecollect, spr_shroomcollect, spr_cheesecollect, spr_tomatocollect, spr_pineapplecollect), round(combominus));
     }
     else if (alarm[1] == -1)
-    {
         alarm[1] = 50;
-    }
 }
 
 title_index += 0.35;

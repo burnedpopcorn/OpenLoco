@@ -15,9 +15,7 @@ if (playerid.state != states.Sjumpland && playerid.state != states.zombiejump &&
         space -= spaceaccel;
 }
 else
-{
     space = Approach(space, 0, spaceaccel);
-}
 
 if (dir != playerid.xscale)
     dir = playerid.xscale;

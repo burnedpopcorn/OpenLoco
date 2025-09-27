@@ -2,20 +2,20 @@ if (keyboard_check_pressed(vk_f1))
 {
     switch (global.debugmode)
     {
-        case 0:
-            global.debugmode = 1;
+        case false:
+            global.debugmode = true;
             break;
         
-        case 1:
-            global.debugmode = 0;
-            showcollisions = 0;
-            showdetails = 0;
+        case true:
+            global.debugmode = false;
+            showcollisions = false;
+            showdetails = false;
             fmod_studio_event_oneshot("event:/sfx/player/damage");
             break;
     }
 }
 
-if (global.debugmode == 1)
+if (global.debugmode)
 {
     if (keyboard_check_pressed(vk_f3))
         showdetails = !showdetails;

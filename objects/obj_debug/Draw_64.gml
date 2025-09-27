@@ -6,6 +6,7 @@ if (showdetails == true && !instance_exists(obj_textbox))
     var roomname = room_get_name(room);
     var spritename = sprite_get_name(obj_player1.sprite_index);
     var yy = 300;
+	
     draw_text_color(15, yy, "HSP: " + string(obj_player1.hsp), c_white, c_white, c_gray, c_gray, 1);
     yy += 24;
     draw_text_color(15, yy, "VSP: " + string(obj_player1.vsp), c_white, c_white, c_gray, c_gray, 1);

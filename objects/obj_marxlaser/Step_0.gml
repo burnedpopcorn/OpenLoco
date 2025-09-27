@@ -21,6 +21,4 @@ if (!parried && !endbuffering)
         }
     }
 }
-else
-{
-}
+else { }

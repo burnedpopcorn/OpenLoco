@@ -11,20 +11,18 @@ target_icon =
     escape: "rpc_base"
 };
 
-function add_location(argument0, argument1, argument2, argument3)
+function add_location(_location, _icon, _esc_icon, _text)
 {
     var _data = 
     {
-        location: argument0,
-        icon: argument1,
-        escape_icon: argument2,
-        text: argument3
+        location: _location,
+        icon: _icon,
+        escape_icon: _esc_icon,
+        text: _text
     };
     
     if (!is_array(_data.location))
-    {
         ds_map_add(location_map, _data.location, _data);
-    }
     else
     {
         for (var i = 0; i < array_length(_data.location); i++)
@@ -34,7 +32,7 @@ function add_location(argument0, argument1, argument2, argument3)
 
 alarm[0] = room_speed * 5;
 
-if (!np_initdiscord("1238873135952953415", true, "0") || false)
+if (!np_initdiscord(DISCORD_APP_ID, true, "0") || DISCORD_ENABLE_OVERRIDE)
 {
     trace("NekoPresence init fail");
     ds_map_destroy(location_map);
